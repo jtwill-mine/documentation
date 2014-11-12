@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gfg_fkz_xp">
+  <title>Trademarks</title>
+  <body>
+    <p>© 2014 Dell Inc. All rights reserved. Reproduction of this
+      material in any manner whatsoever without the express written permission of Dell Inc. is
+      prohibited. For more information, contact Dell. Dell, the Dell logo, and the Dell badge, and
+      PowerEdge are trademarks of Dell Inc.</p>
+    <p>Trademarks used in this text: <tm trademark="Dell" tmtype="tm">Dell</tm>, the DELL logo, <tm
+        trademark="Dell Precision" tmtype="tm">Dell Precision</tm>, <tm trademark="OptiPlex"
+        tmtype="tm">OptiPlex</tm>, <tm trademark="Latitude" tmtype="tm">Latitude</tm>, <tm
+        trademark="PowerEdge" tmtype="tm">PowerEdge</tm>, <tm trademark="PowerVault" tmtype="tm"
+        >PowerVault</tm>, <tm trademark="PowerConnect" tmtype="tm">PowerConnect</tm>, <tm
+        trademark="OpenManage" tmtype="tm">OpenManage</tm>, <tm trademark="EqualLogic" tmtype="tm"
+        >EqualLogic</tm>, <tm trademark="KACE" tmtype="tm">KACE</tm>, FlexAddress, <tm
+        trademark="Force10" tmtype="tm">Force10</tm>, and <tm trademark="Vostro" tmtype="tm"
+        >Vostro</tm> are trademarks of Dell Inc. <tm trademark="Intel" tmtype="reg">Intel</tm>, <tm
+        trademark="Pentium" tmtype="reg">Pentium</tm>, <tm trademark="Xeon" tmtype="reg">Xeon</tm>,
+        <tm trademark="Core" tmtype="reg">Core</tm>, and <tm trademark="Celeron" tmtype="reg"
+        >Celeron</tm> are registered trademarks of Intel Corporation in the U.S. and other
+      countries. <tm trademark="AMD" tmtype="reg">AMD</tm> is a registered trademark and <tm
+        trademark="AMD Opteron" tmtype="tm">AMD Opteron</tm>, <tm trademark="AMD Phenom" tmtype="tm"
+        >AMD Phenom</tm>, and <tm trademark="AMD Sempron" tmtype="tm">AMD Sempron</tm> are
+      trademarks of Advanced Micro Devices, Inc. <tm trademark="Microsoft" tmtype="reg"
+        >Microsoft</tm>, <tm trademark="Windows" tmtype="reg">Windows</tm>, <tm
+        trademark="Windows Server" tmtype="reg">Windows Server</tm>, <tm trademark="MS-DOS"
+        tmtype="reg">MS-DOS</tm>, and <tm trademark="Windows Vista" tmtype="reg">Windows Vista</tm>
+      are either trademarks or registered trademarks of Microsoft Corporation in the United States
+      and/or other countries.</p>
+    <p><tm trademark="Red Hat" tmtype="reg">Red Hat</tm>, <tm trademark="Red Hat" tmtype="reg">Red Hat</tm> <tm trademark="Enterprise Linux" tmtype="reg">Enterprise Linux</tm>, the Shadowman logo, and JBoss are
+      trademarks of Red Hat, Inc., registered in the U.S. and other countries. <tm trademark="Linux" tmtype="reg">Linux</tm> is the
+      registered trademark of Linus Torvalds in the U.S. and other countries. <tm trademark="Novell" tmtype="reg">Novell</tm> is a
+      registered trademark and <tm trademark="SUSE" tmtype="tm">SUSE</tm> is a trademark of Novell Inc. in the United States and other
+      countries. <tm trademark="Oracle" tmtype="reg">Oracle</tm> is a registered trademark of Oracle Corporation and/or its affiliates.
+      <tm trademark="Citrix" tmtype="reg">Citrix</tm>, <tm trademark="Xen" tmtype="reg">Xen</tm>, <tm trademark="XenServer" tmtype="reg">XenServer</tm> and <tm trademark="XenMotion" tmtype="reg">XenMotion</tm> are either registered trademarks or trademarks of
+      Citrix Systems, Inc. in the United States and/or other countries. <tm trademark="VMware" tmtype="reg">VMware</tm>, <tm trademark="Virtual SMP" tmtype="reg">Virtual SMP</tm>,
+      <tm trademark="vMotion" tmtype="reg">vMotion</tm>, <tm trademark="vCenter" tmtype="reg">vCenter</tm>, and <tm trademark="vSphere" tmtype="reg">vSphere</tm> are registered trademarks or trademarks of VMware, Inc. in
+      the United States or other countries.</p>
+    <p>DISCLAIMER: The <tm trademark="OpenStack" tmtype="reg">OpenStack</tm> Word Mark and OpenStack Logo
+      are either registered trademarks/service marks or trademarks/service marks of the OpenStack
+      Foundation, in the United States and other countries, and are used with the OpenStack
+      Foundation's permission. We are not affiliated with, endorsed or sponsored by the OpenStack
+      Foundation or the OpenStack community.</p>
+    <p>Other trademarks and trade names may be used in this
+      publication to refer to either the entities claiming the marks and names or their products.
+      Dell Inc. disclaims any proprietary interest in trademarks and trade names other than its
+      own.</p>
+  </body>
+</topic>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Dell Red Hat Cloud Solutions Hardware Deployment Guide - Version 2.0</title>
+ <topicref href="trademarks.dita"/>
+ <topicref href="notes_cautions_warnings.dita"/>
+ <topicref href="overview.dita"/>
+ <topicref href="configuring_hardware.dita"/>
+ <topicref href="equallogic_storage_group.dita"/>
+ <topicref href="network_configuration.dita"/>
+ <topicref href="references.dita"/>
+</map>
