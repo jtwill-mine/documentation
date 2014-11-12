@@ -1,0 +1,9 @@
+Brief notes to getting started follows: 
+
+Download the DITA Open Toolkit Full/Easy Install Binary.  http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Stable%20Release/DITA%20Open%20Toolkit%201.8/DITA-OT1.8.5_full_easy_install_bin.tar.gz/download and extract it somewhere.  This is the DITA-OT folder.
+
+Execute startcmd.bat/startcmd.sh from the DITA-OT folder so that the necessary classpath options are set.
+
+From within the startcmd console, here is an example Ant command to generate a PDF file from DITA:
+  -- ant -Dtranstype=pdf2 -Dargs.input=<HardwareDeploymentGuideDirectory>/hw_dep_guide.ditamap -Doutput.dir=out -Dcustomization.dir=<DellCustomizationDirectory>
+
