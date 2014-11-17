@@ -18,7 +18,9 @@
     <section conref="network_info.dita#ReusableComponent_xr5_fmk_zp/section_yr5_fmk_zp"/>
     <section conref="ipmi_validation.dita#ReusableComponent_vzx_3mk_zp/section_wzx_3mk_zp"/>
     <section><title>Infrastructure and Virtualization Node Settings</title>
-    <p>This section describes the settings for nodes that will be used on the Solution Admin Host, OpenStack controllers and Compute nodes.  For the R620 the settings below need to be double-checked.</p>
+    <p>This section describes the settings for nodes that will be used on the Solution Admin Host,
+        OpenStack controllers, and Compute nodes. For the R620 the settings below need to be
+        double-checked.</p>
       <table><title>R620 Virtualization Settings</title>
         <tgroup cols="3" colsep="1" rowsep="1">
           <tbody>
