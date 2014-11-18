@@ -50,7 +50,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Product Name"/>
 
     <!-- The footer that appears on odd-numbered pages. -->
-    <variable id="Body odd footer"/>
+     <variable id="Body odd footer">Dell Red Hat Cloud Solutions</variable>
 
     <!-- The footer that appears on even-numbered pages. -->
     <variable id="Body even footer"/>

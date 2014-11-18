@@ -38,7 +38,7 @@
     </xsl:attribute-set>
     
     <xsl:attribute-set name="odd__footer">
-        <xsl:attribute name="text-align">end</xsl:attribute>
+        <xsl:attribute name="text-align">center</xsl:attribute>
         <xsl:attribute name="end-indent">10pt</xsl:attribute>
         <xsl:attribute name="space-after">10pt</xsl:attribute>
         <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
