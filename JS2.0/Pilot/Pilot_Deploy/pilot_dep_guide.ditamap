@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Dell Pilot Deployment Guide - Version 2.0</title>
+ <topicref href="trademarks.dita"/>
+ <topicref href="notes_cautions_warnings.dita"/>
+ <topicref href="overview.dita"/>
+ <topicref href="configuring_foreman.dita"/>
+ <topicref href="provisioning_nodes.dita"/>
+ <topicref href="appendix_hammer_commands.dita"/>
+ <topicref href="references.dita"/>
+</map>network_configuratioo

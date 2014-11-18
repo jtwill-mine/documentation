@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ytb_3h1_yp">
+  <title>Configuring R620, R720, and R720xd Hardware</title>
+  <body>
+    <p>This section describes manually configuring Dell R720 and the Dell R720xd server hardware for
+      the Dell Red Hat Cloud Solutions with <tm trademark="Red Hat Enterprise Linux"
+        tmtype="tm">Red Hat Enterprise Linux</tm> OpenStack Platform:
+      <ul>
+        <li>IPMI Configuration</li>
+        <li>BIOS Configuration</li>
+        <li>RAID Configuration</li>
+      </ul></p>
+    <section><title>IPMI Configuration</title>
+      <p>You must perform configuration of the iDRAC on supported systems. Dell recommends that you configure these settings from the iDRAC web interface, or directly on the node console.</p>
+     </section>
+    <section conref="user_info.dita#ReusableComponent_dyj_cmk_zp/section_eyj_cmk_zp"/>
+    <section conref="network_info.dita#ReusableComponent_xr5_fmk_zp/section_yr5_fmk_zp"/>
+    <section conref="ipmi_validation.dita#ReusableComponent_vzx_3mk_zp/section_wzx_3mk_zp"/>
+    <section><title>Infrastructure and Virtualization Node Settings</title>
+    <p>This section describes the settings for nodes that will be used on the Solution Admin Host,
+        OpenStack controllers, and Compute nodes. For the R620 the settings below need to be
+        double-checked.</p>
+      <table><title>R620 Virtualization Settings</title>
+        <tgroup cols="3" colsep="1" rowsep="1">
+          <tbody>
+            <row>
+              <entry><b>Type</b></entry>
+              <entry><b>Setting</b></entry>
+              <entry><b>State</b></entry>
+            </row>
+            <row>
+              <entry>Integrated Devices </entry>
+              <entry> SR-IOV Global Enable</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Processor Setting</entry>
+              <entry>Execute Disable</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Processor Setting</entry>
+              <entry>Virtualization Technology</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Boot Settings</entry>
+              <entry>Boot Mode</entry>
+              <entry>BIOS</entry>
+            </row>
+            <row>
+              <entry>Boot Setting</entry>
+              <entry>Boot Order</entry>
+              <entry><ul id="ul_m3t_sr5_yp">
+                  <li>Boot mode</li>
+                  <li>Set PXE boot first</li>
+                  <li>Local drive second</li>
+                </ul></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

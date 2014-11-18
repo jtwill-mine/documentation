@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE oXygen:ReusableComponent [
+<!ELEMENT oXygen:ReusableComponent (oXygen:ComponentDescription, oXygen:ComponentDefinition)>
+<!ATTLIST oXygen:ReusableComponent 
+    xmlns:oXygen CDATA #FIXED "http://www.oxygenxml.com/ns/dita/reuse" 
+    id CDATA #IMPLIED
+    domains CDATA "(topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)     (topic oXygen-reuse-d) "
+    class CDATA "- topic/topic oXygen:ReusableComponent/oXygen:ReusableComponent "    
+    xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
+    ditaarch:DITAArchVersion CDATA #FIXED "1.2" 
+    >
+<!ELEMENT oXygen:ComponentDescription (#PCDATA)>
+<!ATTLIST oXygen:ComponentDescription 
+ class CDATA "- topic/title oXygen:ReusableComponent/oXygen:ComponentDescription ">
+<!ELEMENT oXygen:ComponentDefinition ANY>
+<!ATTLIST oXygen:ComponentDefinition
+    class CDATA "- topic/body oXygen:ReusableComponent/oXygen:ComponentDefinition ">
+
+<!ENTITY % dtd PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+%dtd;
+
+]>
+<oXygen:ReusableComponent id="ReusableComponent_jqc_nsq_zp">
+    <oXygen:ComponentDescription>Configuring the Dell Force10 S55 and/or S4910</oXygen:ComponentDescription>
+    <oXygen:ComponentDefinition><body id="body_kqc_nsq_zp"><p>If you are not using Dell Force 10 S55 and/or S4810 switches, you will need to program the switches to support your cloud instantiation. Your switches are expected to support the following:</p><ul><li>Support for IEEE 802.1Q vLAN traffic and port tagging</li><li>Support using one untagged and multiple tagged vLANs on the same port</li><li>Ability to provide a minimum of 170 Gigabit Ethernet ports in a non-blocking configuration within Provisioning vLAN<ul id="ul_xmd_rjw_yp"><li>Configuration can be a single switch or a combination of stacked switches to meet the additional requirements</li></ul></li><li>The ability to create link aggregation groups (LAGs) with a minimum of two physical links in each LAG</li><li>If multiple switches are stacked:<ul id="ul_tjx_yjw_yp"><li>The ability to create a LAG across stacked switches</li><li>Full-bisection bandwidth</li><li>Support for vLANs to be available across all switches in the stack</li></ul></li><li>250,000 packets-per-second capability per switch</li><li>A managed switch that supports SSH and serial line configuration</li><li>SNMP v3 support</li></ul><section><title>Configuring the Dell Force 10 S55 and/or S4810</title></section><p>The bundle workbooks are designed to help configure the cluster. Follow the steps outlined to setup your network.</p><ol><li>Fill each workbook page with all information marked required:<ol id="ol_fdv_lkw_yp"><li>On the switch config page fill in each device name, NIC connected to port.</li><li>Using your planning sheet and vLAN information, mark which vlan is either untagged or tagged for each port connected. Not all vLAN will be used on each port.</li></ol></li><li>Using the workbook you can now create your configuration:<ol id="ol_ljw_nkw_yp"><li>Individual Port Config Example for S55<codeblock>no ip address
+portmode hybrid
+switchport
+spanning-tree rstp edge-port</codeblock></li><li>Individual Port Config example for S4810<codeblock>no ip address
+portmode hybrid
+switchport
+flowcontrol rx on tx off 
+spanning-tree rstp edge-port</codeblock></li><li>Configuring vLANs. With option portmode hybrid on each port, you can program one vLAN to be untagged and other vLANs as tagged. This will send all untagged traffic to the vLAN that is marked untagged. For example, DHCP Request will be placed on that vLAN, and a DHCP server listening on that vLAN will be able to respond.<p>Example vLAN config with overlapping tagged and untagged ports:</p><codeblock>nt vlan 100
+no ip address
+! From your Spread Sheet
+tagged TenGigabitEthernet 0/1 - 47
+untagged TenGigabitEthernet 0/0
+!
+int vlan 200
+tagged TenGigabitEthernet 0/0-47
+int vlan 300
+untagged TenGigabitEther 0/1-10
+!
+!
+int vlan 300
+tagged TenGigabitEthernet 0/0-47
+int vlan 300
+untagged TenGigabitEther 0/1-10
+!</codeblock></li><li>General switch options for the S55 and S4810:<codeblock>!
+hostname YOUR_HOSTNAME
+!
+username Tome password 7 MYpassword 1 privilege 15 
+! 
+protocol spanning-tree rstp 
+no disable 
+hello-time 1 
+max-age 6 
+forward-delay 4 
+bridge-priority 16384
+!
+no ip telnet server enable
+!    
+arp learn-enable
+!
+clock timezone EST -5
+!
+ip ssh server enable
+! 
+protocol lldp 
+advertise dot1-tlv port-protocol-vlan-id 
+advertise dot3-tlv max-frame-size 
+advertise management-tlv system-description system-name 
+advertise med 
+no disable 
+!
+reload-type normal-reload
+!</codeblock></li><li>How to create a VLT Domain on the S4810:<codeblock>! 
+vlt domain 899 
+peer-link port-channel 100 
+primary-priority 4096 
+unit-id 0 
+!
+! 
+interface Port-channel 100
+description Connection to VLT peer
+no ip address
+channel-member fortyGigE 0/48
+no shutdown
+!</codeblock></li></ol></li></ol><note>You do not need to add the port-channel or the vlt to a vLAN. All vLANs will be passed on it.</note></body></oXygen:ComponentDefinition>
+</oXygen:ReusableComponent>
