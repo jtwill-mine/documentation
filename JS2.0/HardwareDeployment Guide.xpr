@@ -14,36 +14,6 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>Customization/common/vars/en.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA Map Dell PDF</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>hw_dep_guide_bookmap.ditamap</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA Map Dell PDF</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>hw_dep_guide.ditamap</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -70,6 +40,36 @@
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>DITAMAP</String>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Customization/common/vars/en.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA Map Dell PDF</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>hw_dep_guide_bookmap.ditamap</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA Map Dell PDF</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
                                         <String>DITAMAP</String>
                                     </list>
                                 </field>
@@ -160,7 +160,7 @@
                                                 <null/>
                                             </field>
                                             <field name="value">
-                                                <String>${pd}/Customization</String>
+                                                <String>D:\repos\documentation\dell_customization</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
