@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="topic_ytb_3h1_yp">
+  <title>Foreman Virtual Machine Deployment</title>
+
+  <body>
+    <p>The deployment of the Foreman virtual machine is performed using the
+    deploy-foreman-vm.sh script. This script creates a kickstart file and then
+    executes the virt-install command to install the system. </p>
+
+    <p>The generated kickstart script performs the following steps:</p>
+
+    <p><ul>
+        <li>Partitions the system </li>
+
+        <li>SELinux to permissive mode</li>
+
+        <li>Configures iptables to ensure the following services can pass
+        traffic: http, https, dns, tftp, and port 8140:tcp.</li>
+
+        <li>Configures the Foreman server to act as a NAT’d gateway between
+        the provisioning network and the public network.</li>
+
+        <li>Configures networking including the following:<ul>
+            <li>static IP addresses</li>
+
+            <li>The gateway</li>
+
+            <li>Name resolution</li>
+
+            <li>NTP time service</li>
+          </ul></li>
+
+        <li>Registers the system using the Red Hat Subscription Manager</li>
+
+        <li>Installs the Foreman installer.<ul>
+            <li>Configures the Foreman installer to not install the EPEL
+            repository.</li>
+          </ul></li>
+      </ul></p>
+
+    <section><p/><title>1.1 Setup</title>Make sure a copy of the ISO for the
+    Red Hat Enterprise Server 6 Installation DVD is in the /store/data/iso
+    directory</section>
+
+    <p>Copy the deploy-foreman-vm.sh script into the /root directory.</p>
+
+    <p/>
+
+    <section><title>1.2 Configuration</title>Create a configuration file in
+    the /root directory called foreman.cfg.</section>
+
+    <p>The file should look similar to the following file:</p>
+
+    <p><codeblock>hostname foreman.example.org
+rootpassword changeme
+timezone America/Chicago
+smuser CHANGEME
+smpassword 'CHANGEME'
+smpool 6598fg09gdf980fgdfgdfg90fdgd80f9
+
+gateway 10.19.143.254
+nameserver 10.19.143.247,10.19.143.248
+ntpserver 0.fedora.pool.ntp.org
+
+
+# Iface IP NETMASK
+eth0 10.19.139.65 255.255.248.0
+eth1 172.44.139.65 255.255.255.0</codeblock>The file contains the following
+    configuration parameters: Set the following variables:</p>
+
+    <p><table>
+        <tgroup cols="2">
+          <colspec colwidth="266*"/>
+
+          <colspec colwidth="734*"/>
+
+          <tbody>
+            <row>
+              <entry><b>hostname</b></entry>
+
+              <entry>The FQDN of the server.</entry>
+            </row>
+
+            <row>
+              <entry><b>rootpassword</b></entry>
+
+              <entry>The root user password for the system.</entry>
+            </row>
+
+            <row>
+              <entry><b>timezone</b></entry>
+
+              <entry>The timezone the system is in.</entry>
+            </row>
+
+            <row>
+              <entry><b>smuser</b></entry>
+
+              <entry>The user credential when registering with Subscription
+              Manager.</entry>
+            </row>
+
+            <row>
+              <entry><b>smpassword</b></entry>
+
+              <entry>The user password when registering with Subscription
+              Manager. The password must be enclosed in single quotes if it
+              contains certain special characters</entry>
+            </row>
+
+            <row>
+              <entry><b>smpool</b></entry>
+
+              <entry>The pool ID used when attaching the system to an
+              entitlement.</entry>
+            </row>
+
+            <row>
+              <entry><b>gateway</b></entry>
+
+              <entry>The default gateway for the system.</entry>
+            </row>
+
+            <row>
+              <entry><b>nameserver</b></entry>
+
+              <entry>A comma separated list of nameserver IP
+              addresses.</entry>
+            </row>
+
+            <row>
+              <entry><b>ntpserver</b></entry>
+
+              <entry>A comma separated list of time servers. This can be IP
+              addresses or FQDNs.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+
+    <p/>
+
+    <p>The following parameters must be specified after all the other
+    parameters.</p>
+
+    <table>
+      <tgroup cols="2">
+        <colspec colwidth="263*"/>
+
+        <colspec colwidth="737*"/>
+
+        <tbody>
+          <row>
+            <entry><b>eth0</b></entry>
+
+            <entry>This line specifies the IP address and network mask for the
+            eth0 interface. The line begins with eth0 followed by at least one
+            space and then the IP address, followed by another set of spaces
+            and then the network mask.</entry>
+          </row>
+
+          <row>
+            <entry><b>eth1</b></entry>
+
+            <entry>This line specifies the IP address and network mask for the
+            eth1 interface. The line begins with eth1 followed by at least one
+            space and then the IP address, followed by another set of spaces
+            and then the network mask.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+    <p/>
+
+    <section><title>1.3 Installing the Foreman Virtual Machine</title>To
+    install the Foreman virtual machine, invoke the deploy-foreman-vm.sh
+    script. Pass foreman.cfg as the first parameter and the full path to the
+    Red Hat Enterprise Server 6 Installation media as the second
+    option.</section>
+
+    <codeblock># ./deploy-foreman-vm.sh foreman.cfg /store/data/iso/rhel-server-6.5-x86_64-dvd.iso
+
+Starting install...
+Retrieving file .treeinfo... | 3.2 kB 00:00:00
+Retrieving file vmlinuz... | 7.9 MB 00:00:00
+Retrieving file initrd.img... | 64 MB 00:00:00
+Creating storage file foreman.img | 16 GB 00:00:00
+Creating domain... | 0 B 00:00:00
+Domain installation still in progress. You can reconnect to
+the console to complete the installation process.</codeblock>
+
+    <section>The installation will begin, but no console will be displayed. To
+    display the console, make sure you are logged into a GUI environment, open
+    a terminal and type virt-viewer foreman.</section>
+
+    <p>Note that if you are connected to the Foreman server using a Windows
+    system, you need to install Xwin Server before executing virt-viewer
+    foreman.</p>
+
+    <p>A console for the Foreman virtual machine will open.</p>
+
+    <p>After the virtual machine completes the installation, it will power
+    itself off.</p>
+
+    <p/>
+
+    <p>The power state of the virtual machine can be viewed using the virsh
+    list --all command.</p>
+
+    <codeblock># virsh list --all
+Id Name State
+----------------------------------------------------
+2 foreman running</codeblock>
+
+    <p/>
+
+    <p>The virtual machine can be started using the following command:</p>
+
+    <codeblock># virsh start foreman</codeblock>
+
+    <section><p/><title>1.4 Installing Foreman</title>To install Foreman, log
+    into the Foreman virtual machine and execute the foreman_server.sh script
+    that is located in the /usr/share/openstack-foreman-installer/bin
+    directory.</section>
+
+    <p>You must execute the script from the
+    /usr/share/openstack-foreman-installer/bin directory. The
+    FOREMAN_PROVISIONING, FOREMAN_GATEWAY, and PROVISIONING_INTERFACE
+    variables should also be set.</p>
+
+    <simpletable relcolwidth="273* 727*">
+      <strow>
+        <stentry><b>FOREMAN_PROVISIONING</b></stentry>
+
+        <stentry>Provisioning is enabled if set to true.</stentry>
+      </strow>
+
+      <strow>
+        <stentry><b>FOREMAN_GATEWAY</b></stentry>
+
+        <stentry>This defines the gateway of the provisioned hosts. Set it to
+        the ip address of the Foreman servers provisioning interface if the
+        Foreman server will act as a gateway.</stentry>
+      </strow>
+
+      <strow>
+        <stentry><b>PROVISIONING_INTERFACE</b></stentry>
+
+        <stentry>The interface used for provisioning.</stentry>
+      </strow>
+    </simpletable>
+
+    <p/>
+
+    <codeblock># cd /usr/share/openstack-foreman-installer/bin
+# FOREMAN_PROVISIONING=true FOREMAN_GATEWAY=172.44.139.65 PROVISIONING_INTERFACE=eth1 ./foreman_server.sh 2&gt;&amp;1 | tee /root/foreman_server.out
+</codeblock>
+
+    <p/>
+
+    <p>The Foreman installation can take a while.</p>
+
+    <p>After Foreman is installed, the Foreman interface can be accessed using
+    a web browser.</p>
+
+    <p>The information within the Foreman interface may not be complete until
+    the puppet agent on the Foreman server runs.</p>
+
+    <p>Waiting for the puppet agent to run can take up to 30 minutes. The
+    agent can be manually run to speed up the process.</p>
+
+    <codeblock># puppet agent -t</codeblock>
+
+    <p/>
+
+    <section><title>1.5.Foreman Password</title>The Foreman installer creates
+    a random password for the admin user. This password may no be displayed
+    during installation, but can be reset using the foreman-rake
+    permission:reset command.</section>
+
+    <codeblock># foreman-rake permissions:reset
+Reset to user: admin, password: 9FjczR82BtrNUX8y</codeblock>
+
+    <p/>
+
+    <p>Once known, the password can be set to a password of your choosing by
+    logging into the Foreman interface using the admin account and generated
+    password.</p>
+
+    <ul>
+      <li>Select the Admin User dropdown on the top right of the window.</li>
+
+      <li>Enter a new password of your choosing in the Password and Verify
+      fields.</li>
+
+      <li>Select Submit</li>
+    </ul>
+
+    <p/>
+
+    <p>After resetting the Foreman password, make sure the options.password
+    entry in the
+    /usr/share/openstack-foreman-installer/bin/quickstack_defaults.rb file is
+    set correctly.</p>
+
+    <codeblock>options.password = '9FjczR82BtrNUX8y'
+options.username = 'admin'</codeblock>
+
+    <p/>
+
+    <section><title>1.6 Next Steps</title>After the Foreman virtual machine is
+    installed and the Foreman installer is executed, the Foreman instance must
+    be configured for the environment.</section>
+
+    <p>Follow the applicable Foreman Configuration Guide. </p>
+
+    <p/>
+
+    <section><title>2 deploy-foreman-vm.sh</title></section>
+
+    <codeblock>#! /bin/bash
+
+[[ ${#@} != 2 ]] &amp;&amp; echo "This script requires two parameters, a configuration file as the first parameter and the location of the installation ISO as the second parameter." &amp;&amp; exit
+
+cfg_file=$1
+location=$2
+
+cat &lt;&lt;'EOFKS' &gt; /tmp/foreman.ks
+
+install
+text
+cdrom
+reboot
+
+# Partitioning
+zerombr
+clearpart --all
+bootloader --location=mbr
+
+part /boot --fstype=ext4 --size=500
+part pv.01 --size=8192 --grow
+
+volgroup VolGroup --pesize=4096 pv.01
+
+logvol / --fstype=ext4 --name=lv_root --vgname=VolGroup --grow --size=1024
+logvol swap --name=lv_swap --vgname=VolGroup --size=1024
+
+%include /tmp/ks_include.txt
+
+keyboard us
+lang en_US.UTF-8
+
+auth --enableshadow --passalgo=sha512
+
+skipx
+firstboot --disable
+
+%packages
+@base
+@core
+@fonts
+@input-methods
+@internet-browser
+@remote-desktop-clients
+ntp
+ntpdate
+%end
+
+%pre --log /tmp/foreman-pre.log
+EOFKS
+
+{
+ntp=``
+
+while read iface ip mask bridge
+do
+flag=``
+
+[[ ${iface} == rootpassword ]] &amp;&amp; echo "echo rootpw ${ip} &gt;&gt; /tmp/ks_include.txt"
+[[ ${iface} == timezone ]] &amp;&amp; echo "echo timezone ${ip} --utc &gt;&gt; /tmp/ks_include.txt"
+
+[[ ${iface} == hostname ]] &amp;&amp; {
+HostName=${ip}
+echo "echo HostName=${ip} &gt;&gt; /tmp/ks_post_include.txt"
+}
+
+[[ ${iface} == nameserver ]] &amp;&amp; {
+NameServers=${ip}
+echo "echo NameServers=${ip} &gt;&gt; /tmp/ks_post_include.txt"
+}
+
+[[ ${iface} == gateway ]] &amp;&amp; Gateway=${ip}
+
+[[ ${iface} == ntpserver ]] &amp;&amp; echo "echo NTPServer=${ip} &gt;&gt; /tmp/ks_post_include.txt"
+[[ ${iface} == smuser ]] &amp;&amp; echo "echo SMUser=${ip} &gt;&gt; /tmp/ks_post_include.txt"
+[[ ${iface} == smpassword ]] &amp;&amp; echo "echo SMPassword=\'${ip}\' &gt;&gt; /tmp/ks_post_include.txt"
+[[ ${iface} == smpool ]] &amp;&amp; echo "echo SMPool=${ip} &gt;&gt; /tmp/ks_post_include.txt"
+
+[[ ${iface} == eth0 ]] &amp;&amp; {
+echo "echo network --activate --onboot=true --noipv6 --device=${iface} --bootproto=static --ip=${ip} --netmask=${mask} --hostname=${HostName} --gateway=${Gateway} --nameserver=${NameServers} &gt;&gt; /tmp/ks_include.txt"
+}
+
+[[ ${iface} == eth1 ]] &amp;&amp; {
+echo "echo network --activate --onboot=true --noipv6 --device=${iface} --bootproto=static --ip=${ip} --netmask=${mask} &gt;&gt; /tmp/ks_include.txt"
+}
+done &lt;&lt;&lt; "$( grep -Ev "^#|^;|^\s*$" ${cfg_file} )"
+} &gt;&gt; /tmp/foreman.ks
+
+cat &lt;&lt;'EOFKS' &gt;&gt; /tmp/foreman.ks
+%end
+
+%post --nochroot --logfile /root/foreman-post.log
+# Copy the files created during the %pre section to /root of the installed system for later use.
+cp -v /tmp/foreman-pre.log /mnt/sysimage/root
+cp -v /tmp/ks_include.txt /mnt/sysimage/root
+cp -v /tmp/ks_post_include.txt /mnt/sysimage/root
+%end
+
+
+%post
+
+exec &lt; /dev/tty8 &gt; /dev/tty8
+chvt 8
+
+(
+# Source the variables from the %pre section
+. /root/ks_post_include.txt
+
+# Configure name resolution
+for ns in ${NameServers//,/ }
+do
+echo "nameserver ${ns}" &gt;&gt; /etc/resolv.conf
+done
+
+echo "$( ip addr show dev eth0 | awk '/inet / { print $2 }' | sed 's/\/.*//' ) ${HostName}" &gt;&gt; /etc/hosts
+
+echo "----------------------"
+ip addr
+echo "subscription-manager register --username ${SMUser} --password ********"
+echo "----------------------"
+subscription-manager register --username ${SMUser} --password ${SMPassword}
+
+SMPool=``
+
+[[ x${SMPool} = x ]] \
+&amp;&amp; SMPool=$( subscription-manager list --available | awk '/OpenStack/,/Pool/ {pool = $3} END {print pool}' )
+
+[[ -n ${SMPool} ]] \
+&amp;&amp; subscription-manager attach --pool ${SMPool} \
+|| ( echo "Could not find an OpenStack pool to attach to. - Auto-attaching to any pool." \
+subscription-manager attach --auto
+)
+
+
+# Disable all enabled repositories
+for repo in $( yum repolist all | awk '/enabled:/ { print $1}' )
+do
+yum-config-manager --disable ${repo} | grep -E "^\[|^enabled"
+done
+
+# Enable only the repositories we need
+yum-config-manager --enable rhel-6-server-rpms \
+rhel-6-server-openstack-foreman-rpms \
+rhel-server-rhscl-6-rpms
+
+yum -y install openstack-foreman-installer
+
+yum -y update
+
+# Firewall rules to allow traffic for the http, https, dns, and tftp services and tcp port 8140.
+# Also accept all traffic from eth1 to pass through to eth0 and become NAT'd on the way out of eth0.
+
+cat &lt;&lt;EOIP &gt; /etc/sysconfig/iptables
+*nat
+:PREROUTING ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o eth0 -j MASQUERADE
+COMMIT
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
+-A INPUT -i eth1 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 53 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp --dport 53 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp --dport 69 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 8140 -j ACCEPT
+-A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A FORWARD -p icmp -j ACCEPT
+-A FORWARD -i lo -j ACCEPT
+-A FORWARD -i eth1 -j ACCEPT
+-A FORWARD -o eth0 -j ACCEPT
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+COMMIT
+EOIP
+
+
+sed -i -e "s/^SELINUX=.*/SELINUX=permissive/" /etc/selinux/config
+
+sed -i -e "/^net.ipv4.ip_forward/d" /etc/sysctl.conf
+echo "net.ipv4.ip_forward = 1" &gt;&gt; /etc/sysctl.conf
+sysctl -p
+
+
+# Configure the ntp daemon
+chkconfig ntpd on
+sed -i -e "/^server /d" /etc/ntp.conf
+
+for ntps in ${NTPServers//,/ }
+do
+echo "server ${ntps}" &gt;&gt; /etc/ntp.conf
+done
+
+
+sed -i "/^class.*'foreman'.*/aconfigure_epel_repo =&gt; false," /usr/share/openstack-foreman-installer/bin/foreman_server.sh
+sed -i '/read -p/d' /usr/share/openstack-foreman-installer/bin/foreman_server.sh
+
+) 2&gt;&amp;1 | /usr/bin/tee -a /root/foreman-posts.log
+
+chvt 1
+
+%end
+
+EOFKS
+
+[[ ! -e /store/data/images ]] &amp;&amp; mkdir -p /store/data/images
+
+virt-install --name foreman \
+--ram 4096 \
+--vcpus 2 \
+--hvm \
+--os-type linux \
+--os-variant rhel6 \
+--disk /store/data/images/foreman.img,bus=virtio,size=16 \
+--network bridge=public \
+--network bridge=provision \
+--initrd-inject /tmp/foreman.ks \
+--extra-args "ks=file:/foreman.ks" \
+--noautoconsole \
+--graphics spice \
+--autostart \
+--location ${location}</codeblock>
+
+    <p/>
+
+    <p/>
+
+    <p/>
+
+    <p/>
+
+    <p/>
+  </body>
+</topic>
