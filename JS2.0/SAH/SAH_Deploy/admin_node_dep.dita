@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="topic_ytb_3h1_yp">
+  <title>Dell Admin Node Deployment</title>
+
+  <body>
+    <p>The deployment of the Dell Solution Admin Host is performed using a
+    kickstart file. This kickstart file performs the following steps when
+    properly configured.<ul>
+        <li>Partitions the system Sets</li>
+
+        <li>SELinux to permissive mode</li>
+
+        <li>Disables firewalld and uses iptables</li>
+
+        <li>Disables NetworkManager</li>
+
+        <li>Configures networking including the following: <ul>
+            <li>bonding</li>
+
+            <li>bridges</li>
+
+            <li>static IP addresses</li>
+
+            <li>The gateway</li>
+
+            <li>Name resolution</li>
+
+            <li>NTP time service</li>
+          </ul></li>
+
+        <li>Registers the system using the Red Hat Subscription Manager</li>
+      </ul></p>
+
+    <section><title>1.1.1. Determine Pool ID</title>To determine the pool id
+    needed for registration using subscription-manager, you must have an
+    existing server that is registered to the RedHat Hosted Services. This
+    server must also be registered using the same credentials as the ones
+    being used in this environment.</section>
+
+    <p>Once the server is correctly registered, execute the
+    subscription-manager list --all --available command to see the available
+    subscription pools.</p>
+
+    <p>The command will output a list of available pools. Each section of
+    information lists what the subscription provides, its pool ID, how many
+    are available, the type of system it is for, as well as other
+    information.</p>
+
+    <p>Determine the correct pool ID’s needed for this environment and take
+    note of them. Place close attention to the System Type. The System Type
+    can be Virtual or Physical. You cannot use a pool marked as Virtual for a
+    physical server.</p>
+
+    <codeblock># subscription-manager list --all --available
+
+[OUTPUT ABBREVIATED]
+
+Subscription Name: Red Hat Cloud Infrastructure, Standard (8-sockets)
+Provides:          Red Hat Beta
+                   Red Hat OpenStack Beta
+                   JBoss Enterprise Application Platform
+                   Red Hat Software Collections (for RHEL Server)
+                   Red Hat Enterprise Virtualization
+                   Oracle Java (for RHEL Server)
+                   Red Hat OpenStack
+                   Red Hat Enterprise MRG Messaging
+                   Red Hat Enterprise Linux Server
+                   Red Hat Enterprise Linux High Availability (for RHEL Server)
+                   Red Hat Software Collections Beta (for RHEL Server)
+                   Red Hat Enterprise Linux Load Balancer (for RHEL Server)
+                   Red Hat CloudForms
+SKU:               MCT2861
+Pool ID:           aaaa111bbb222ccc333ddd444eee5556
+Available:         7
+Suggested:         1
+Service Level:     Standard
+Service Type:      L1-L3
+Multi-Entitlement: No
+Ends:              09/23/2015
+System Type:       Physical
+
+
+[OUTPUT ABBREVIATED]</codeblock>
+
+    <section>The above output shows a subscription that contains the OpenStack
+    repositories. This subscription is for a physical system, so this pool ID
+    will work for the controller and compute nodes. The Foreman virtual
+    machine can use this same subscription even though the subscription is for
+    a physical system and not a virtual machine. However, the physical servers
+    cannot use a subscription type marked as Virtual.</section>
+
+    <p>The Solution Admin Host could use this same subscription since it only
+    needs the Red Hat Enterprise Server subscription and this one includes it.
+    However, this would be wasteful. Look for a subscription that contains
+    only the Red Hat Enterprise Server subscription to use for the SAH
+    host.</p>
+  </body>
+</topic>
