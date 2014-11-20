@@ -30,7 +30,7 @@
           </ul></li>
 
         <li>Registers the system using the Red Hat Subscription Manager</li>
-      </ul><p/>
+</ul></p><p/>
 
     <section><title>1.1 Setup</title>Make sure a copy of the ISO for the Red
     Hat Enterprise Server 7 Installation DVD is in the /store/data/iso
