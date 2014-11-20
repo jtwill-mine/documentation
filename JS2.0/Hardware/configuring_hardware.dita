@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="topic_ytb_3h1_yp">
+  <title>Configuring R620, R720, and R720xd Hardware</title>
+
+  <body>
+    <p>This section describes manually configuring Dell R720 and the Dell
+    R720xd server hardware for the Dell Red Hat Cloud Solutions with <tm
+    tmtype="tm" trademark="Red Hat Enterprise Linux">Red Hat Enterprise
+    Linux</tm> OpenStack Platform: <ul>
+        <li>IPMI Configuration</li>
+
+        <li>BIOS Configuration</li>
+
+        <li>RAID Configuration</li>
+      </ul></p>
+
+    <section><title>IPMI Configuration</title><p>You must perform
+    configuration of the iDRAC on supported systems. Dell recommends that you
+    configure these settings from the iDRAC web interface, or directly on the
+    node console.</p><title>Configuring Server Information</title><ol>
+        <li>Set credentials for the<b> root user</b> including changing the
+        password to a new one based on good password standards. </li>
+
+        <li>Set privileges for the user to <b>Admin</b> level privileges
+        including over LAN. </li>
+
+        <li><b>Enable</b> the user, if disabled. </li>
+      </ol><title>Configuring Server Network Settings</title><ol>
+        <li>Sets the iDRAC IP address, subnet mask, default gateway IP, and
+        default VLAN (id is 10). </li>
+
+        <li>Sets the iDRAC IP address source to be static IP addressing. </li>
+
+        <li>Sets the iDRAC NIC mode to Dedicated from Shared</li>
+      </ol><title>Validating Server IPMI Configuration</title><p>As part of
+    the IPMI setup, validation that remote commands can be executed is
+    essential. </p><ol>
+        <li>Install to your workstation the IPMI Utilities from
+        SourceForge:<ol outputclass="lower-alpha">
+            <li>For Linux - <xref
+            href="???">http://sourceforge.net/projects/ipmitool/</xref></li>
+
+            <li>For Windows -<xref href="???">
+            http://ipmiutil.sourceforge.net/</xref></li>
+
+            <li>Validate that you have all the requirements, and that it will
+            run. </li>
+          </ol></li>
+
+        <li>Plug your Ethernet port into a switch port that has the same vLAN
+        as your iDRACs</li>
+
+        <li>Configure your network to use an IP address in the iDRAC network
+        range.</li>
+
+        <li>Configure the IPMI over LAN Setting to Enabled. </li>
+
+        <li>Execute an IPMI command: <ol outputclass="lower-alpha">
+            <li>for i in $(seq 162 170); do ipmitool –P “password” –U
+            “username” –H 192.168.200.$i power status; done<p>This will
+            perform a simple, non-destructive poll of the iDRAC from
+            192.168.200.162 to 192.168.200.170, and then return the power
+            status of on or off.</p></li>
+
+            <li>You can replace the keyword status with reset, off, or on.
+            </li>
+          </ol></li>
+
+        <li>Ensure that all machines return responses to the command. </li>
+      </ol></section>
+
+    <section><title>Infrastructure and Virtualization Node Settings</title>
+    <p>This section describes the settings for nodes that will be used on the
+    Solution Admin Host, OpenStack controllers, and Compute nodes. For the
+    R620 the settings below need to be double-checked.</p> <table>
+        <title>R620 Virtualization Settings</title>
+
+        <tgroup cols="3" colsep="1" rowsep="1">
+          <tbody>
+            <row>
+              <entry><b>Type</b></entry>
+
+              <entry><b>Setting</b></entry>
+
+              <entry><b>State</b></entry>
+            </row>
+
+            <row>
+              <entry>Integrated Devices</entry>
+
+              <entry>SR-IOV Global Enable</entry>
+
+              <entry>Enabled</entry>
+            </row>
+
+            <row>
+              <entry>Processor Setting</entry>
+
+              <entry>Execute Disable</entry>
+
+              <entry>Enabled</entry>
+            </row>
+
+            <row>
+              <entry>Processor Setting</entry>
+
+              <entry>Virtualization Technology</entry>
+
+              <entry>Enabled</entry>
+            </row>
+
+            <row>
+              <entry>Boot Settings</entry>
+
+              <entry>Boot Mode</entry>
+
+              <entry>BIOS</entry>
+            </row>
+
+            <row>
+              <entry>Boot Setting</entry>
+
+              <entry>Boot Order</entry>
+
+              <entry><ul id="ul_m3t_sr5_yp">
+                  <li>Boot mode</li>
+
+                  <li>Set PXE boot first</li>
+
+                  <li>Local drive second</li>
+                </ul></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+  </body>
+</topic>
