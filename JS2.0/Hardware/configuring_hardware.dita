@@ -21,17 +21,17 @@
     configure these settings from the iDRAC web interface, or directly on the
     node console.</p><title>Configuring Server Information</title><ol>
         <li>Set credentials for the<b> root user</b> including changing the
-        password to a new one based on good password standards. </li>
+        password to a new one based on good password standards.</li>
 
         <li>Set privileges for the user to <b>Admin</b> level privileges
-        including over LAN. </li>
+        including over LAN.</li>
 
-        <li><b>Enable</b> the user, if disabled. </li>
+        <li><b>Enable</b> the user, if disabled.</li>
       </ol><title>Configuring Server Network Settings</title><ol>
         <li>Sets the iDRAC IP address, subnet mask, default gateway IP, and
-        default VLAN (id is 10). </li>
+        default VLAN (id is 10).</li>
 
-        <li>Sets the iDRAC IP address source to be static IP addressing. </li>
+        <li>Sets the iDRAC IP address source to be static IP addressing.</li>
 
         <li>Sets the iDRAC NIC mode to Dedicated from Shared</li>
       </ol><title>Validating Server IPMI Configuration</title><p>As part of
@@ -40,13 +40,13 @@
         <li>Install to your workstation the IPMI Utilities from
         SourceForge:<ol outputclass="lower-alpha">
             <li>For Linux - <xref
-            href="???">http://sourceforge.net/projects/ipmitool/</xref></li>
+            href="http://sourceforge.net/projects/ipmitool">http://sourceforge.net/projects/ipmitool/</xref></li>
 
-            <li>For Windows -<xref href="???">
+            <li>For Windows -<xref href="http://ipmitool.sourceforge.net">
             http://ipmiutil.sourceforge.net/</xref></li>
 
             <li>Validate that you have all the requirements, and that it will
-            run. </li>
+            run.</li>
           </ol></li>
 
         <li>Plug your Ethernet port into a switch port that has the same vLAN
@@ -55,7 +55,7 @@
         <li>Configure your network to use an IP address in the iDRAC network
         range.</li>
 
-        <li>Configure the IPMI over LAN Setting to Enabled. </li>
+        <li>Configure the IPMI over LAN Setting to Enabled.</li>
 
         <li>Execute an IPMI command: <ol outputclass="lower-alpha">
             <li>for i in $(seq 162 170); do ipmitool –P “password” –U
@@ -64,11 +64,11 @@
             192.168.200.162 to 192.168.200.170, and then return the power
             status of on or off.</p></li>
 
-            <li>You can replace the keyword status with reset, off, or on.
-            </li>
+            <li>You can replace the keyword status with reset, off, or
+            on.</li>
           </ol></li>
 
-        <li>Ensure that all machines return responses to the command. </li>
+        <li>Ensure that all machines return responses to the command.</li>
       </ol></section>
 
     <section><title>Infrastructure and Virtualization Node Settings</title>

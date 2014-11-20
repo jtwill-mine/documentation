@@ -13,27 +13,21 @@
 
           <tbody>
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/note.png"
-              id="image_b3l_pcy_zp"/></entry>
+              <entry><image href="note.png" id="image_b3l_pcy_zp"/></entry>
 
               <entry>A <b>Note</b> indicates important information that helps
               you make better use of your system.</entry>
             </row>
 
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/caution.png"
-              id="image_wm2_xcy_zp"/></entry>
+              <entry><image href="caution.png" id="image_wm2_xcy_zp"/></entry>
 
               <entry>A <b>Caution</b> indicates potential damage to hardware
               or loss of data if instructions are not followed.</entry>
             </row>
 
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/warning.png"
-              id="image_mcx_1dy_zp"/></entry>
+              <entry><image href="warning.png" id="image_mcx_1dy_zp"/></entry>
 
               <entry>A <b>Warning</b> indicates a potential for property
               damage, personal injury, or death.</entry>
