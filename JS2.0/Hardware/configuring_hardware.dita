@@ -38,12 +38,9 @@
     the IPMI setup, validation that remote commands can be executed is
     essential. </p><ol>
         <li>Install to your workstation the IPMI Utilities from
-        SourceForge:<ol outputclass="lower-alpha">
-            <li>For Linux - <xref
-            href="http://sourceforge.net/projects/ipmitool"></xref></li>
-
-            <li>For Windows -<xref href="http://ipmiutil.sourceforge.net"></xref></li>
-
+			SourceForge:<ol outputclass="lower-alpha">
+				<li>For Linux - <xref href="http://sourceforge.net/projects/ipmitool/" format="html" scope="external">http://sourceforge.net/projects/ipmitool/</xref></li>
+				<li>For Windows -<xref href="http://ipmiutil.sourceforge.net/" format="html" scope="external"> http://ipmiutil.sourceforge.net/</xref></li>
             <li>Validate that you have all the requirements, and that it will
             run.</li>
           </ol></li>
