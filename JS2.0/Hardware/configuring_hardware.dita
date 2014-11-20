@@ -40,9 +40,9 @@
         <li>Install to your workstation the IPMI Utilities from
         SourceForge:<ol outputclass="lower-alpha">
             <li>For Linux - <xref
-            href="http://sourceforge.net/projects/ipmitool">http://sourceforge.net/projects/ipmitool/</xref></li>
+            href="">http://sourceforge.net/projects/ipmitool/</xref></li>
 
-            <li>For Windows -<xref href="http://ipmitool.sourceforge.net">
+            <li>For Windows -<xref href="">
             http://ipmiutil.sourceforge.net/</xref></li>
 
             <li>Validate that you have all the requirements, and that it will
