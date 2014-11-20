@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?workdir /C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\DITA-OT1.8.5\temp\temp20141120155214319\JS2.0?><?workdir-uri file:/C:/Users/rick_grashel/Documents/NetBeansProjects/documentation/DITA-OT1.8.5/temp/temp20141120155214319/JS2.0/?><?path2project?><?path2project-uri ./?><topic xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_lqx_k1y_zp" ditaarch:DITAArchVersion="1.2" domains="(topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)    " class="- topic/topic " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="topic:1;3:30">
+  <title class="- topic/title " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="title:1;4:10">Notes, Cautions, and Warnings</title>
+  <body class="- topic/body " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="body:1;5:9">
+    <p class="- topic/p " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="p:1;6:8">
+      <table frame="none" class="- topic/table " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="table:1;7:27">
+        <tgroup cols="notes" colsep="0" class="- topic/tgroup " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="tgroup:1;8:41">
+          <colspec colname="col1" colwidth="20" class="- topic/colspec " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="colspec:1;9:54"/>
+          <colspec colname="col2" colwidth="76*" class="- topic/colspec " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="colspec:2;10:55"/>
+          <tbody class="- topic/tbody " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="tbody:1;11:18">
+            <row class="- topic/row " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="row:1;12:18">
+              <entry colname="col1" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:1;13:22">
+                <image href="../dell_customization/common/artwork/note.png" id="image_b3l_pcy_zp" placement="inline" class="- topic/image " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="image:1;14:100"/></entry>
+              <entry colname="col2" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:2;15:22">A <b class="+ topic/ph hi-d/b " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="b:1;15:27">Note</b> indicates important information that helps you make
+                better use of your system.</entry>
+            </row>
+            <row class="- topic/row " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="row:2;18:18">
+              <entry colname="col1" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:3;19:22">
+                <image href="../dell_customization/common/artwork/caution.png" id="image_wm2_xcy_zp" placement="inline" class="- topic/image " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="image:2;21:42"/></entry>
+              <entry colname="col2" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:4;22:22">A <b class="+ topic/ph hi-d/b " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="b:2;22:27">Caution</b> indicates potential damage to hardware or loss of
+                data if instructions are not followed.</entry>
+            </row>
+            <row class="- topic/row " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="row:3;25:18">
+              <entry colname="col1" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:5;26:22">
+                <image href="../dell_customization/common/artwork/warning.png" id="image_mcx_1dy_zp" placement="inline" class="- topic/image " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="image:3;28:19"/></entry>
+              <entry colname="col2" class="- topic/entry " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="entry:6;29:22">A <b class="+ topic/ph hi-d/b " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="b:3;29:27">Warning</b> indicates a potential for property damage, personal injury, or
+                death.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+    <p class="- topic/p " xtrf="C:\Users\rick_grashel\Documents\NetBeansProjects\documentation\JS2.0\notes_cautions_warnings.dita" xtrc="p:2;36:8">This document is for informational purposes only and may contain typographical errors and technical inaccuracies. The content is provided as is, without express or implied warranties of any kind.</p>
+  </body>
+</topic>
