@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="topic_cpy_k3w_yp">
+<topic id="network_configuration">
   <title>Network Configuration</title>
   <body>
     <p>If you are not using Dell Force 10 S55 and/or S4810 switches, you will need to program the
