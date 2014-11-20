@@ -13,8 +13,7 @@
 
           <tbody>
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/note.png"
+              <entry><image href="images/note.png"
               id="image_b3l_pcy_zp"/></entry>
 
               <entry>A <b>Note</b> indicates important information that helps
@@ -22,8 +21,7 @@
             </row>
 
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/caution.png"
+              <entry><image href="images/caution.png"
               id="image_wm2_xcy_zp"/></entry>
 
               <entry>A <b>Caution</b> indicates potential damage to hardware
@@ -31,8 +29,7 @@
             </row>
 
             <row>
-              <entry><image
-              href="../../dell_customization/common/artwork/warning.png"
+              <entry><image href="images/warning.png"
               id="image_mcx_1dy_zp"/></entry>
 
               <entry>A <b>Warning</b> indicates a potential for property
