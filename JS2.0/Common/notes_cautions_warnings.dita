@@ -14,7 +14,7 @@
           <tbody>
             <row>
               <entry><image
-              href="../Customization/OpenTopic/common/artwork/note.png"
+              href="Customization/OpenTopic/common/artwork/note.png"
               id="image_b3l_pcy_zp"/></entry>
 
               <entry>A <b>Note</b> indicates important information that helps
@@ -23,7 +23,7 @@
 
             <row>
               <entry><image
-              href="../Customization/OpenTopic/common/artwork/caution.png"
+              href="Customization/OpenTopic/common/artwork/caution.png"
               id="image_wm2_xcy_zp" width="13"/></entry>
 
               <entry>A <b>Caution</b> indicates potential damage to hardware
@@ -32,7 +32,7 @@
 
             <row>
               <entry><image
-              href="../Customization/OpenTopic/common/artwork/warning.png"
+              href="Customization/OpenTopic/common/artwork/warning.png"
               id="image_mcx_1dy_zp"/></entry>
 
               <entry>A <b>Warning</b> indicates a potential for property
