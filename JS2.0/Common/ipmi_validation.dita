@@ -1,26 +1,29 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE oXygen:ReusableComponent [
-<!ELEMENT oXygen:ReusableComponent (oXygen:ComponentDescription, oXygen:ComponentDefinition)>
-<!ATTLIST oXygen:ReusableComponent 
-    xmlns:oXygen CDATA #FIXED "http://www.oxygenxml.com/ns/dita/reuse" 
-    id CDATA #IMPLIED
-    domains CDATA "(topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)     (topic oXygen-reuse-d) "
-    class CDATA "- topic/topic oXygen:ReusableComponent/oXygen:ReusableComponent "    
-    xmlns:ditaarch CDATA #FIXED "http://dita.oasis-open.org/architecture/2005/"
-    ditaarch:DITAArchVersion CDATA #FIXED "1.2" 
-    >
-<!ELEMENT oXygen:ComponentDescription (#PCDATA)>
-<!ATTLIST oXygen:ComponentDescription 
- class CDATA "- topic/title oXygen:ReusableComponent/oXygen:ComponentDescription ">
-<!ELEMENT oXygen:ComponentDefinition ANY>
-<!ATTLIST oXygen:ComponentDefinition
-    class CDATA "- topic/body oXygen:ReusableComponent/oXygen:ComponentDefinition ">
-
-<!ENTITY % dtd PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-%dtd;
-
-]>
-<oXygen:ReusableComponent id="ReusableComponent_vzx_3mk_zp">
-    <oXygen:ComponentDescription>IPMI Validation</oXygen:ComponentDescription>
-    <oXygen:ComponentDefinition><section id="section_wzx_3mk_zp"><title>Validating Server IPMI Configuration</title><p>As part of the IPMI setup, validation that remote commands can be executed is essential.</p><ol><li>Install to your workstation the IPMI Utilities from SourceForge:<ol id="ol_y3g_1mv_yp"><li>For Linux - <xref href="http://sourceforge.net/projects/ipmitool/" format="html" scope="external">http://sourceforge.net/projects/ipmitool/</xref></li><li>For Windows -<xref href="http://ipmiutil.sourceforge.net/" format="html" scope="external"> http://ipmiutil.sourceforge.net/</xref></li><li>Validate that you have all the requirements, and that it will run.</li></ol></li><li>Plug your Ethernet port into a switch port that has the same vLAN as your iDRACs.</li><li>Configure your network to use an IP address in the iDRAC network range.</li><li>Configure the IPMI over LAN Setting to <i>Enabled</i>.</li><li>Execute an IPMI command:<ol id="ol_zv3_smv_yp"><li><codeph>for i in $(seq 162 170); do ipmitool –P “password” –U “username” –H 192.168.200.$i power status; done </codeph><p>This will perform a simple, non-destructive poll of the iDRAC from <i>192.168.200.162</i> to <i>192.168.200.170</i>, and then return the power status of <i>on</i> or <i>off</i>.</p></li><li>You can replace the keyword status with <i>reset</i>, <i>off</i>, or <i>on</i>.</li></ol></li><li>Ensure that all machines return responses to the command.</li></ol></section></oXygen:ComponentDefinition>
-</oXygen:ReusableComponent>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ipmi_validation">
+  <title>Validating Server IPMI Configuration</title>
+  <body>
+    <p>As part of the IPMI setup, validation that remote commands can be executed is essential.</p>
+    <ol>
+      <li>Install to your workstation the IPMI Utilities from SourceForge:<ol id="ol_ong_nkx_dq">
+          <li>For Linux - <xref href="http://sourceforge.net/projects/ipmitool/" format="html"
+              scope="external">http://sourceforge.net/projects/ipmitool/</xref></li>
+          <li>For Windows - <xref href="http://ipmiutil.sourceforge.net/" format="html"
+              scope="external">http://ipmiutil.sourceforge.net/</xref></li>
+          <li>Validate that you have all the requirements, and that it will run.</li>
+        </ol></li>
+      <li>Plug your Ethernet port into a switch port that has the same vLAN as your iDRACs.</li>
+      <li>Configure your network to use an IP address in the iDRAC network range.</li>
+      <li>Configure the IPMI over LAN Setting to Enabled.</li>
+      <li>Execute an IPMI command:<ol>
+        <li><codeph>for i in $(seq 162 170); do ipmitool –P “password” –U “username” –H
+              192.168.200.$i power status; done</codeph><p>This will perform a simple,
+              non-destructive poll of the iDRAC from <i>192.168.200.162</i> to
+                <i>192.168.200.170</i>, and then return the power status of <i>on</i> or
+              <i>off</i>.</p></li>
+        <li>You can replace the keyword status with <i>reset</i>, <i>off</i>, or <i>on</i>.</li>
+      </ol></li>
+      <li>Ensure that all machines return responses to the command.</li>
+    </ol>
+  </body>
+</topic>
