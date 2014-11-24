@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="intended_audience">
+  <title>Intended Audience</title>
+  <shortdesc>This guide assumes the reader is familiar with:</shortdesc>
+  <body>
+    <ul>
+      <li>OpenStack</li>
+      <li>PowerEdge R620 and R720xd RAID and BIOS configuration</li>
+      <li>Red Hat Enterprise Linux (RHEL)</li>
+      <li>Network Configuration</li>
+    </ul>
+  </body>
+</topic>
