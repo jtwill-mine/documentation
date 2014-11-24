@@ -80,6 +80,18 @@
         <xsl:attribute name="padding-top">16.8pt</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name="topic.topic.title" use-attribute-sets="common.title">
+        <xsl:attribute name="border-bottom">none</xsl:attribute>
+        <xsl:attribute name="border-bottom-width">0pt</xsl:attribute>
+        <xsl:attribute name="space-before">0pt</xsl:attribute>
+        <xsl:attribute name="space-after">16.8pt</xsl:attribute>
+        <xsl:attribute name="font-size">14pt</xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="padding-top">16.8pt</xsl:attribute>
+        <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+    </xsl:attribute-set>
 
     <xsl:attribute-set name="__fo__root" use-attribute-sets="base-font">
         <xsl:attribute name="font-family">sans-serif</xsl:attribute>
