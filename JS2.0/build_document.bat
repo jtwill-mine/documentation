@@ -40,8 +40,9 @@ IF ERRORLEVEL 1 (
 CALL :RESOLVE %%file%selection%%%
 
 ECHO selected file name: %file_name%
+ECHO Document base directory - %DOCUMENT_BASE_DIR%
 
-%DITA_DIR%\tools\ant\bin\ant -f "%DITA_DIR%\build.xml" -Dtranstype=pdf2 -Dargs.input="%file_name%" -Dtempdir="%DOCUMENT_BASE_DIR%\temp" -Doutput.dir="%DOCUMENT_BASE_DIR%\out" -Dcustomization.dir="%DOCUMENT_BASE_DIR%\..\dell_customization"
+%DITA_DIR%\tools\ant\bin\ant -f "%DITA_DIR%\build.xml" -Dtranstype=pdf2 -Dargs.input="%file_name%"  -Douter.control=quiet -Dtempdir="%DOCUMENT_BASE_DIR%/temp" -Doutput.dir="%DOCUMENT_BASE_DIR%\out" -Dcustomization.dir="%DOCUMENT_BASE_DIR%/../dell_customization"
 GOTO :EOF
 
 :RESOLVE
