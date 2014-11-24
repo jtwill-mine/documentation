@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
 <map>
- <title>Dell Pilot Hostgroups Deployment Guide - Version 2.0</title>
- <topicref href="trademarks.dita"/>
- <topicref href="notes_cautions_warnings.dita"/>
- <topicref href="overview.dita"/>
- <topicref href="configuring_xxx.dita"/>
- <topicref href="provisioning_xxx.dita"/>
- <topicref href="appendix_hammer_xxx.dita"/>
- <topicref href="references.dita"/>
-</map>network_configuratioo
+  <title>Dell Pilot Hostgroups Deployment Guide - Version 2.0</title>
+
+  <topicref href="../../Common/trademarks.dita"/>
+
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+
+  <topicref href="../../Common/overview.dita"/>
+
+  <topicref href="dell_pilot_hostgroups_deploy.dita"/>
+
+  <topicref href="../../Common/references.dita"/>
+</map>
