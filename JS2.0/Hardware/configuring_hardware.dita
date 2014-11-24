@@ -2,11 +2,11 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="configuring_hardware">
   <title>Configuring R620, R720, and R720xd Hardware</title>
+  <shortdesc>This section describes manually configuring Dell R720 and the Dell R720xd server hardware for
+    the Dell Red Hat Cloud Solutions with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red
+      Hat Enterprise Linux</tm> OpenStack Platform:</shortdesc>
   <body>
-    <p>This section describes manually configuring Dell R720 and the Dell R720xd server hardware for
-      the Dell Red Hat Cloud Solutions with <tm trademark="Red Hat Enterprise Linux"
-        tmtype="tm">Red Hat Enterprise Linux</tm> OpenStack Platform:
-      <ul>
+    <p> <ul>
         <li>IPMI Configuration</li>
         <li>BIOS Configuration</li>
         <li>RAID Configuration</li>
@@ -24,7 +24,8 @@
   <topic id="ipmi_validation" conref="../Common/ipmi_validation.dita#ipmi_validation">
     <title/>
   </topic>
-  <topic id="infrastructure_virtualization_settings" conref="../Common/infrastructure_virtualization_settings.dita#infrastructure_virtualization_settings">
+  <topic id="infrastructure_virtualization_settings"
+    conref="../Common/infrastructure_virtualization_settings.dita#infrastructure_virtualization_settings">
     <title/>
   </topic>
 </topic>
