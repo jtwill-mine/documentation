@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
 "topic.dtd">
-<topic id="topic_ytb_3h1_yp">
-  <title>Configure Foreman Server</title>
+<topic id="dell_pilot_deploy">
+  <title>Dell Pilot Deployment Guide</title>
 
   <body>
-    <p>If the provisioning interface on the provisioned host is not the first
-    interface returned in the puppet data, Foreman will overwrite the
-    configuration in the database. This can cause issues later. To prevent
-    Foreman from changing the IP and MAC information to reflect the puppet
-    data, change the <b>ignore_puppet_facts_for_provisioning</b> setting<ol>
-        <li>Log into the Foreman user interface. </li>
+    <p/>
+
+    <section><title>Configure Foreman Server</title><p>If the provisioning
+    interface on the provisioned host is not the first interface returned in
+    the puppet data, Foreman will overwrite the configuration in the database.
+    This can cause issues later. To prevent Foreman from changing the IP and
+    MAC information to reflect the puppet data, change the
+    <b>ignore_puppet_facts_for_provisioning</b> setting<ol>
+        <li>Log into the Foreman user interface.</li>
 
         <li>Move the mouse over the Administer drop down menu on the right
-        side of the interface. </li>
+        side of the interface.</li>
 
-        <li>Select Settings from the menu. </li>
+        <li>Select Settings from the menu.</li>
 
-        <li>Select the Provisioning tab. </li>
+        <li>Select the Provisioning tab.</li>
 
         <li>Select Value for the<b> ignore_puppet_facts_for_provisioning</b>
         setting. <ul>
-            <li>Change this setting to true. </li>
+            <li>Change this setting to true.</li>
           </ul></li>
-      </ol></p>
+      </ol></p></section>
 
-    <section><lines/><title>Hammer Command Preparation</title>During the steps
-    in this document, the <b>hammer</b> command is used to more easily perform
-    the configurations. Usage of the hammer command requires identifiers for
-    the various pieces of information stored within the Foreman server. This
+    <section><title>Hammer Command Preparation</title>During the steps in this
+    document, the <b>hammer</b> command is used to more easily perform the
+    configurations. Usage of the hammer command requires identifiers for the
+    various pieces of information stored within the Foreman server. This
     includes identifiers for the defined installation media, partitions,
     templates, hosts, as well as other items</section>
 
@@ -38,7 +41,7 @@
     href="???"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
 
     <p>Write the various information gathered and needed on the checklist for
-    reference as needed. </p>
+    reference as needed.</p>
 
     <p>Several steps in this document use files to configure the environment.
     These files are available in a TAR file called dell-pilot-deploy.tgz. This
@@ -64,12 +67,12 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
         <li>Configure the <b>hammer</b> command to display <b>200</b> items
         per page. This just makes it easier to read everything. <ul>
             <li>Replace the value for the <b>:per_page:</b> option in the
-            /<b>etc/hammer/cli_config.yml</b> file. </li>
+            /<b>etc/hammer/cli_config.yml</b> file.</li>
           </ul></li>
 
         <li>Configure the <b>hammer</b> command to not prompt for a
         username/password when connecting.<ul>
-            <li> Add the following to the beginning of the
+            <li>Add the following to the beginning of the
             <b>/etc/hammer/cli_config.yml </b>file. Replace the name and
             password appropriately<msgblock>:foreman:
  :username: 'admin'
@@ -84,25 +87,25 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
     <example><p/></example>
 
     <p>Configure the installation medium that will be used to provision the
-    hosts. </p>
+    hosts.</p>
 
-    <p>Use the <b>hammer medium create</b> command to add the entry. </p>
+    <p>Use the <b>hammer medium create</b> command to add the entry.</p>
 
-    <p>The command requires the --name, --os-family and --path options. </p>
+    <p>The command requires the --name, --os-family and --path options.</p>
 
     <p>The <b>name </b>option should specify a name that is appropriate for
-    the installation. </p>
+    the installation.</p>
 
-    <p>The <b>os-family</b> should remain <b>Redhat</b> in most cases. </p>
+    <p>The <b>os-family</b> should remain <b>Redhat</b> in most cases.</p>
 
     <p>The <b>path</b> option specifies the path or URL to the installation
-    tree. </p>
+    tree.</p>
 
     <section><lines/><title>Satellite Server </title></section>
 
     <p>The path included in the example below should work with most satellite
     installation, just replace <b>SATELLITE_SERVER</b> with the appropriate<b>
-    FQDN</b>. </p>
+    FQDN</b>.</p>
 
     <msgblock>hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
  --path 'http://SATELLITE_SERVER/ks/dist/ks-rhel-$arch-server-$major-$version'</msgblock>
@@ -112,9 +115,9 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
     <ol>
       <li>mkdir /usr/share/foreman/public/iso</li>
 
-      <li>Copy the RHEL7 iso to the /root directory of the foreman node </li>
+      <li>Copy the RHEL7 iso to the /root directory of the foreman node</li>
 
-      <li>Edit /etc/fstab </li>
+      <li>Edit /etc/fstab</li>
 
       <li>Add the following line to the end: <msgblock>/root/RHEL-7.0-Server-x86_64-dvd.iso /usr/share/foreman/public/iso iso9660 loop,ro 0 0</msgblock></li>
 
@@ -125,22 +128,22 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
 
     <section><lines/><title>Local ISO on Solution Admin Host</title><ol>
         <li>On the Solution Admin Host:<ol outputclass="lower-alpha">
-            <li>yum install httpd </li>
+            <li>yum install httpd</li>
 
             <li>Configure httpd with any options you want. Defaults will work,
-            but are not secure. </li>
+            but are not secure.</li>
 
-            <li>copy the ISO to the SAH in /store/data/iso </li>
+            <li>copy the ISO to the SAH in /store/data/iso</li>
 
-            <li>"mount -o loop ISO NAME /mnt" </li>
+            <li>"mount -o loop ISO NAME /mnt"</li>
 
-            <li>"mkdir /store/data/iso/RHEL6.5" (Name of the OS) </li>
+            <li>"mkdir /store/data/iso/RHEL6.5" (Name of the OS)</li>
 
-            <li>"rsync -av /mnt/ /store/data/iso/RHEL6.5" </li>
+            <li>"rsync -av /mnt/ /store/data/iso/RHEL6.5"</li>
 
-            <li>"umount /mnt" </li>
+            <li>"umount /mnt"</li>
 
-            <li>"ln -s /store/data/iso/RHEL6.5 RHEL6.5" </li>
+            <li>"ln -s /store/data/iso/RHEL6.5 RHEL6.5"</li>
           </ol></li>
 
         <li>Validate the web interface works<p><xref href="???"><?onclick play()?></xref><b>http://ipaddress
@@ -153,7 +156,7 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
     <section><lines/><title>Note the Medium ID</title></section>
 
     <p>After the medium is created, execute the <b>hammer medium list</b>
-    command. </p>
+    command.</p>
 
     <p>Take note of the <b>ID</b> (first column) for the newly created medium.
     This will be needed later</p>
@@ -161,56 +164,56 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
     <section><lines/><title>Configure the Partition Table </title></section>
 
     <p>Configure the partition table that the provisioned hosts will use.
-    These partition table is provided in the following file. </p>
+    These partition table is provided in the following file.</p>
 
-    <p>dell-pilot.partition Partition table for the nodes. </p>
+    <p>dell-pilot.partition Partition table for the nodes.</p>
 
     <p>Use the h<b>ammer partition-table create</b> command to install the
     partition table. Specify an appropriate <b>NAME</b> for each partition
-    table and specify the file that contains the data. </p>
+    table and specify the file that contains the data.</p>
 
     <msgblock># hammer partition-table create --name dell-pilot --os-family Redhat \ --file /root/pilot/dell-pilot.partition </msgblock>
 
     <p/>
 
     <p>After the partition table is created, execute the <b>hammer
-    partition-table list</b> command. </p>
+    partition-table list</b> command.</p>
 
-    <p>Take note of the ID of the newly created partition table. </p>
+    <p>Take note of the ID of the newly created partition table.</p>
 
     <section><lines/><title>Configure the Operating System </title></section>
 
     <p>A definition for the Red Hat Enterprise Linux 7.0 operating system must
-    be created. </p>
+    be created.</p>
 
     <p>Create a new operating system definition for Red Hat Enterprise Linux
-    7.0. </p>
+    7.0.</p>
 
-    <p>Use the <b>hammer os create</b> command to create the definition. </p>
+    <p>Use the <b>hammer os create</b> command to create the definition.</p>
 
     <msgblock># hammer os create --name "RedHat" --major 7 --minor 0 --family Redhat </msgblock>
 
     <p/>
 
     <p>After creating the operating system, execute the <b>hammer os list</b>
-    command. </p>
+    command.</p>
 
-    <p>Take note of the ID for the new RedHat 7.0 operating system. </p>
+    <p>Take note of the ID for the new RedHat 7.0 operating system.</p>
 
-    <p>Associate the x86_64 architecture with the RedHat 7.0 operating system.
-    </p>
+    <p>Associate the x86_64 architecture with the RedHat 7.0 operating
+    system.</p>
 
-    <p>Execute the<b> hammer os add-architecture</b> command to do this. </p>
+    <p>Execute the<b> hammer os add-architecture</b> command to do this.</p>
 
     <codeblock>hammer os add-architecture --architecture x86_64 --id OS_ID </codeblock>
 
     <p/>
 
     <p>The appropriate partition table needs to be associated with the
-    operating system. </p>
+    operating system.</p>
 
     <p>Use the <b>hammer os add-ptable</b> command to associate the partition
-    table to the operating system Id. </p>
+    table to the operating system Id.</p>
 
     <codeblock>hammer os add-ptable --ptable-id P_ID --id OS_ID</codeblock>
 
@@ -218,22 +221,22 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
 
     <p>A subnet called OpenStack was created automatically during
     installation. Execute<b> hammer subnet lis</b>t and note the ID of this
-    subnet. </p>
+    subnet.</p>
 
     <msgblock># hammer subnet list </msgblock>
 
     <p/>
 
     <p>IP addresses can be automatically assigned to newly provisioned hosts
-    from this subnet. To do this, a range of IPs to assign must be defined.
-    </p>
+    from this subnet. To do this, a range of IPs to assign must be
+    defined.</p>
 
     <p>Use the <b>hammer subnet update</b> command to assign the range of IP
-    addresses and to also set the default gateway for the provisioned hosts.
-    </p>
+    addresses and to also set the default gateway for the provisioned
+    hosts.</p>
 
     <p>If the foreman server is acting as the gateway, the gateway address is
-    the IP address of the Foreman servers provisioning interface. </p>
+    the IP address of the Foreman servers provisioning interface.</p>
 
     <msgblock># hammer subnet update --id SN_ID --from START_IP_RANGE --to END_IP_RANGE \ --gateway GATEWAY_IP </msgblock>
 
@@ -245,12 +248,12 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
       <strow>
         <stentry>dell-osp-ks.template</stentry>
 
-        <stentry>Provisioning template that provides the kickstart file.
-        </stentry>
+        <stentry>Provisioning template that provides the kickstart
+        file.</stentry>
       </strow>
 
       <strow>
-        <stentry>dell-osp-pxe.template </stentry>
+        <stentry>dell-osp-pxe.template</stentry>
 
         <stentry>PXE template that contains the PXE configuration.</stentry>
       </strow>
@@ -260,20 +263,20 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
 
         <stentry>Snippet that provides a means to configure extra interfaces
         during installation. This template is called from the kickstart
-        template. </stentry>
+        template.</stentry>
       </strow>
 
       <strow>
         <stentry>bonding_snippet.template</stentry>
 
         <stentry>Snippet that provides a means to bond interfaces during
-        installation. This template is called from the kickstart template.
-        </stentry>
+        installation. This template is called from the kickstart
+        template.</stentry>
       </strow>
     </simpletable>
 
-    <p>Create the templates using the <b>hammer template create</b> command.
-    </p>
+    <p>Create the templates using the <b>hammer template create</b>
+    command.</p>
 
     <msgblock># hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
  --operatingsystem-ids "OS_ID_RH7.0" --file /root/pilot/dell-osp-ks.template
@@ -286,31 +289,31 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
 </msgblock>
 
     <p>After the templates are created, use the <b>hammer template list</b>
-    command to determine the IDs of the templates. </p>
+    command to determine the IDs of the templates.</p>
 
     <p>The provisioning and PXE templates must be associated with the
     operating systems. Use the <b>hammer os update</b> command to update the
-    template associations. </p>
+    template associations.</p>
 
     <p>Execute the following command for the RedHat 7.0 operating system ID.
     This command also associates the installation medium to the operating
-    system. </p>
+    system.</p>
 
     <msgblock># hammer os update --config-template-ids "KS_ID, PXE_ID" \
  --medium-ids MEDIUM_ID --id OS_ID</msgblock>
 
     <p>The templates are now associated with the operating system, they must
-    now be set as the default templates for the operating systems. </p>
+    now be set as the default templates for the operating systems.</p>
 
     <p>Execute the<b> hammer os set-default</b> template command for the
     provisioning and PXELinux templates. The command will be executed two
-    times. </p>
+    times.</p>
 
     <msgblock># hammer os set-default-template --config-template-id TMPLT_ID --id OS_ID
 </msgblock>
 
     <p>The <b>hammer os info</b> command can be used to check the
-    configuration of the operating systems. </p>
+    configuration of the operating systems.</p>
 
     <msgblock># hammer os info --id 1
 Id: 1
@@ -337,7 +340,7 @@ Parameters:</msgblock>
     <section><lines/><title>Gather More Information </title></section>
 
     <p>A few more IDs are required in order to install a host. Execute the
-    following commands and take note of the <b>appropriate IDs</b>. </p>
+    following commands and take note of the <b>appropriate IDs</b>.</p>
 
     <ul>
       <li>Environments<msgblock># hammer environment list</msgblock></li>
@@ -383,20 +386,20 @@ Parameters:</msgblock>
         <stentry>subscription_manager</stentry>
 
         <stentry>Specifies that the hosts will register with Subscription
-        Manager. (true or false) </stentry>
+        Manager. (true or false)</stentry>
       </strow>
 
       <strow>
-        <stentry>subscription_manager_username </stentry>
+        <stentry>subscription_manager_username</stentry>
 
         <stentry>The username of the Subscription Manager account to register
-        to. </stentry>
+        to.</stentry>
       </strow>
 
       <strow>
-        <stentry>subscription_manager_password </stentry>
+        <stentry>subscription_manager_password</stentry>
 
-        <stentry>The password for the Subscription Manager account. </stentry>
+        <stentry>The password for the Subscription Manager account.</stentry>
       </strow>
     </simpletable>
 
@@ -422,39 +425,39 @@ Parameters:</msgblock>
     parameters can be set using the <b>hammer os set-parameter</b> command as
     above.</p><simpletable relcolwidth="271* 729*">
         <strow>
-          <stentry>subscription_manager_proxy </stentry>
+          <stentry>subscription_manager_proxy</stentry>
 
-          <stentry>The proxy server to use, if needed. </stentry>
+          <stentry>The proxy server to use, if needed.</stentry>
         </strow>
 
         <strow>
           <stentry>subscription_manager_proxy_port</stentry>
 
-          <stentry>The proxy port to use, if needed. </stentry>
+          <stentry>The proxy port to use, if needed.</stentry>
         </strow>
 
         <strow>
           <stentry>subscription_manager_proxy_user</stentry>
 
-          <stentry>The proxy username, if needed. </stentry>
+          <stentry>The proxy username, if needed.</stentry>
         </strow>
 
         <strow>
           <stentry>subscription_manager_proxy_password</stentry>
 
-          <stentry>The proxy username password, if needed. </stentry>
+          <stentry>The proxy username password, if needed.</stentry>
         </strow>
       </simpletable></section>
 
     <section><lines/><title>Provisioning the Nodes </title></section>
 
     <p>Provision the nodes using the following command. Variables are being
-    used to make it easier to use the hammer command. </p>
+    used to make it easier to use the hammer command.</p>
 
     <p>Simply set the <b>NAME, PTABLE</b>, and <b>MAC</b> variables
     appropriately for a host, then execute the <b>hammer host create</b>
     command. Once the host is created, reset the variables for the next host
-    and execute the same hammer command again. </p>
+    and execute the same hammer command again.</p>
 
     <p>Repeat this until all hosts are created. Make sure to change the root
     password on the command line as needed.</p>
@@ -463,7 +466,7 @@ Parameters:</msgblock>
       <strow>
         <stentry>NAME</stentry>
 
-        <stentry>The hostname of the provisioned host. </stentry>
+        <stentry>The hostname of the provisioned host.</stentry>
       </strow>
 
       <strow>
@@ -471,18 +474,18 @@ Parameters:</msgblock>
 
         <stentry>The ID of the partition table that should be used when
         deploying this host. This ID is the same for all the compute nodes,
-        but the controller uses a different partition table ID. </stentry>
+        but the controller uses a different partition table ID.</stentry>
       </strow>
 
       <strow>
         <stentry>MAC</stentry>
 
         <stentry>The hardware address of the provisioning interface for the
-        node. </stentry>
+        node.</stentry>
       </strow>
     </simpletable>
 
-    <p>Change the remaining IDs in the command as appropriate. </p>
+    <p>Change the remaining IDs in the command as appropriate.</p>
 
     <msgblock># NAME=CHANGEME
 # PTABLE=CHANGEME
@@ -497,10 +500,10 @@ Parameters:</msgblock>
     <section><lines/><title>Get host information </title></section>
 
     <p>The IDs of the newly defined hosts are needed to finish their
-    configuration. </p>
+    configuration.</p>
 
     <p>Execute the <b>hammer host list</b> command to get the host IDs. Take
-    note of these IDs. </p>
+    note of these IDs.</p>
 
     <msgblock># hammer host list</msgblock>
 
@@ -509,11 +512,11 @@ Parameters:</msgblock>
     <p>The controller nodes have two bonded interfaces, one with two vlans
     configured, and two remaining interfaces that are not bonded. The Public
     API network is on a pair of bonded interfaces and the Private API and
-    Storage networks are on a separate pair of bonded interfaces. </p>
+    Storage networks are on a separate pair of bonded interfaces.</p>
 
     <p>The Private API and Storage networks are VLAN tagged networks on a
     bonded interface. The Provisioning and the Management interfaces are on
-    individual non-bonded interfaces. </p>
+    individual non-bonded interfaces.</p>
 
     <p/>
 
@@ -528,15 +531,15 @@ Parameters:</msgblock>
     list of <b>key=value</b> pairs. Each pair contains the configuration
     information for a single nic. This list is entered in the same format a s
     a bash associative array. The entire value is enclosed within single
-    tickmarks and parentheses. <i>( …)</i> </p>
+    tickmarks and parentheses. <i>( …)</i></p>
 
-    <p>Each key/value is in the following format: </p>
+    <p>Each key/value is in the following format:</p>
 
     <ul>
-      <li><b>[IFACE]="parameters"</b> </li>
+      <li><b>[IFACE]="parameters"</b></li>
     </ul>
 
-    <p>An example of defining a single interface: </p>
+    <p>An example of defining a single interface:</p>
 
     <msgblock># hammer host set-parameter --host-id 3 --name nics \
  --value '([em1]="onboot static aa:bb:cc:dd:ee:ff 192.168.0.110/255.255.255.0")'</msgblock>
@@ -545,10 +548,10 @@ Parameters:</msgblock>
 
     <simpletable relcolwidth="259* 741*">
       <strow>
-        <stentry>onboot </stentry>
+        <stentry>onboot</stentry>
 
         <stentry>The interface is enabled when the system boots. Default is
-        <i>disabled</i>. </stentry>
+        <i>disabled</i>.</stentry>
       </strow>
 
       <strow>
@@ -557,7 +560,7 @@ Parameters:</msgblock>
         <stentry>The interface gets its network configuration using DHCP,· the
         network configuration is staticaly configured, or the interface has no
         network configuration. If no option is specified, <i>dhcp</i> is
-        assumed. </stentry>
+        assumed.</stentry>
       </strow>
 
       <strow>
@@ -570,13 +573,13 @@ Parameters:</msgblock>
         <stentry>x.x.x.x/y.y.y.y</stentry>
 
         <stentry>The IP address and Network mask of the interface. Used only
-        when static is specified. Must be in the format presented. </stentry>
+        when static is specified. Must be in the format presented.</stentry>
       </strow>
     </simpletable>
 
     <p>Execute the following command to set the nic parameters for the two
     other interfaces used by the controller node. Replace the <b>HOST_ID,
-    IFACE, MAC</b>, and<b> IP/MASK </b>parameters as appropriate. </p>
+    IFACE, MAC</b>, and<b> IP/MASK </b>parameters as appropriate.</p>
 
     <msgblock># hammer host set-parameter --host-id HOST_ID --name nics \
  --value '([IFACE]="onboot static MAC IP/MASK" [IFACE]="onboot static MAC IP/MASK")'
@@ -595,21 +598,21 @@ Parameters:</msgblock>
     number in the bond name.</p><p>For example:</p><msgblock>'( [bond0]="onboot none" [bond0.301]="onboot static vlan 172.30.139.62/255.255.255.0" )'</msgblock></section>
 
     <p>Created a <b>bond0</b> that is enabled at boot. It then creates a VLAN
-    tagged bond on the bond called <i>bond0.301</i>. </p>
+    tagged bond on the bond called <i>bond0.301</i>.</p>
 
-    <p>See the documentation on the bonding_snippit for more information. </p>
+    <p>See the documentation on the bonding_snippit for more information.</p>
 
     <p>The <b>bond_ifaces</b> parameter is used to specify the interfaces for
-    each bond. </p>
+    each bond.</p>
 
-    <p>For example: </p>
+    <p>For example:</p>
 
     <msgblock>'( [bond0]="em1 em2" )'</msgblock>
 
-    <p>Bonds interfaces em1 and em2 into bond0. </p>
+    <p>Bonds interfaces em1 and em2 into bond0.</p>
 
     <p>The <b>bond_opts</b> parameter specifies the bonding options to use for
-    each bond. </p>
+    each bond.</p>
 
     <p>For example:</p>
 
@@ -617,7 +620,7 @@ Parameters:</msgblock>
 
     <p>Create the three needed parameters using the <b>hammer host
     set-parameter </b>command. Replace the <b>HOST_ID</b>,<b> VLAN</b>, and<b>
-    IP/MASK</b> information as appropriate to define the bonds. </p>
+    IP/MASK</b> information as appropriate to define the bonds.</p>
 
     <msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.VLAN1]="onboot static vlan IP/MASK"
@@ -627,7 +630,7 @@ Parameters:</msgblock>
 # hammer host set-parameter --host-id HOST_ID --name bond_opts \
  --value '( [bond0]="mode=active-backup" [bond1]="mode=active-backup")'</msgblock>
 
-    <p>Repeat the parameter configuration for all the controller nodes. </p>
+    <p>Repeat the parameter configuration for all the controller nodes.</p>
 
     <p/>
 
@@ -654,22 +657,22 @@ Parameters:</msgblock>
 
     <p>Each node can use a separate pool ID and require different
     repositories. These parameters are set on a per host basis instead of an
-    operating system. </p>
+    operating system.</p>
 
     <p>The following parameters need to be set on each host.</p>
 
     <simpletable relcolwidth="320* 680*">
       <strow>
-        <stentry>subscription_manager_pool </stentry>
+        <stentry>subscription_manager_pool</stentry>
 
-        <stentry>The ID of the pool to attach the host to. </stentry>
+        <stentry>The ID of the pool to attach the host to.</stentry>
       </strow>
 
       <strow>
-        <stentry>subscription_manager_repos </stentry>
+        <stentry>subscription_manager_repos</stentry>
 
         <stentry>The repositories that should be enabled after the host is
-        registered. </stentry>
+        registered.</stentry>
       </strow>
     </simpletable>
 
@@ -732,7 +735,7 @@ System Type: Physical
  rhel-7-server-openstack-5.0-rpms,rhel-ha-for-rhel-7-server-rpms"</msgblock></section>
 
     <p>Execute the following command on each compute node to enable the needed
-    repositories. </p>
+    repositories.</p>
 
     <msgblock># hammer os set-parameter --host-id HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
