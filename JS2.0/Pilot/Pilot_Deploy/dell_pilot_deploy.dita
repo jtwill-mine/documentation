@@ -2,149 +2,1077 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
 "topic.dtd">
 <topic id="dell_pilot_deploy">
-  <title>Dell Pilot Hostgroups Deployment</title>
+  <title>Dell Pilot Deployment Guide</title>
 
   <body>
     <p/>
 
-    <section><title>Configure hostgroup parameters </title><p>IMost hostgroup
-    parameters are configured using an<b> ERB </b>file. This makes
-    configuration quicker and easier than using the Foreman interface.
-    </p><p>Edit the <b>dell-pilot.yaml.erb</b> file and change the variables
-    between the lines marked <b>Variables to Change</b> and<b> End of Variable
-    to Change</b>. </p><p>The most common variables needing changed have
-    values of <b>CHANGEME_*</b> </p><p>The <b>rubygen-foreman_api</b> package
-    must be installed to apply the changes in the <b>dell-pilot.yaml.erb
-    </b>file. </p><msgblock># yum install -y rubygem-foreman_api</msgblock><p>Change
-    to the <b>/usr/share/openstack-foreman-installer</b> directory and execute
-    the <b>bin/quickstack_defaults.rb</b> command as shown
-    below.</p><msgblock># cd /usr/share/openstack-foreman-installer
-# bin/quickstack_defaults.rb -g config/hostgroups.yaml -d ~/dell-pilot.yaml.erb -v parameters</msgblock><p>The
-    network_overrides parameter cannot easily be set using the
-    <b>dell-pilot.yaml.erb</b> file. It is set using the <b>hammer sc-param
-    update</b> command. </p><p>First, the parameter<b> ID </b>must be
-    determined, then the settings applied. Replace <b>VLAN</b> with the
-    starting VLAN number to be used in the environment. Make sure the syntax
-    of the line does not change.</p><msgblock># ParamId=$( hammer sc-param list --per-page 1000 --search network_overrides \
- | awk '/network_overrides/ {print $1}')
-# hammer sc-param update --id ${ParamId} \
- --default-value "{'vlan_start': VLAN, 'force_dhcp_release': 'false'}" --override yes</msgblock><p>Neutron
-    is not needed for this environment. Disabling Neutron should be done using
-    the Foreman user interface.</p><ol>
-        <li>Log into the Foreman UI. </li>
+    <section><title>Configure Foreman Server</title><p>If the provisioning
+    interface on the provisioned host is not the first interface returned in
+    the puppet data, Foreman will overwrite the configuration in the database.
+    This can cause issues later. To prevent Foreman from changing the IP and
+    MAC information to reflect the puppet data, change the
+    <b>ignore_puppet_facts_for_provisioning</b> setting<ol>
+        <li>Log into the Foreman user interface.</li>
 
-        <li>Select the <b>Configure</b> drop down on the top of the window.
-        </li>
+        <li>Move the mouse over the Administer drop down menu on the right
+        side of the interface.</li>
 
-        <li>Select <b>Hostgroups</b>. </li>
+        <li>Select Settings from the menu.</li>
 
-        <li>Select the <b>HA All In One Controller</b>. </li>
+        <li>Select the Provisioning tab.</li>
 
-        <li>Select the <b>Parameters</b> tab. Locate the
-        <b>quickstack::pacemaker::neutron::enabled</b> parameter and select
-        the <b>override </b>button to the right of them. </li>
+        <li>Select Value for the<b> ignore_puppet_facts_for_provisioning</b>
+        setting. <ul>
+            <li>Change this setting to true.</li>
+          </ul></li>
+      </ol></p></section>
 
-        <li>Scroll down to the bottom of the window and enter false as the
-        value for the overridden parameter. </li>
+    <section><title>Hammer Command Preparation</title>During the steps in this
+    document, the <b>hammer</b> command is used to more easily perform the
+    configurations. Usage of the hammer command requires identifiers for the
+    various pieces of information stored within the Foreman server. This
+    includes identifiers for the defined installation media, partitions,
+    templates, hosts, as well as other items</section>
 
-        <li>Select the <b>Submit</b> button.</li>
-      </ol><p/></section>
+    <p>A checklist file, dell-pilot-checklist.pdf, is available to easily keep
+    track of this information. Download and print the Dell Pilot Checklist
+    from <xref
+    href="???"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
 
-    <section><title>Ceph Configuration </title><p>Edit the
-    <b>/usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</b>
-    file and comment out the<b> file { "etc-ceph"</b> section. This prevents
-    Foreman and Puppet from over-writing the ceph configuration on the
-    controller nodes. </p><p>This can be easily done using the following
-    command:</p><codeblock># cp -v /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp{,.bak}
-# sed -i '/file { "etc-ceph":/,${s/^/#/;};$s/^#//' \
- /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</codeblock><p>To
-    ensure ceph installs packages from its repository, comment out the
-    priority line in the ceph repository.</p><codeblock># sed -i 's/^\(priority.*\)/# \1/' /etc/yum.repos.d/ceph.repo</codeblock><p/></section>
+    <p>Write the various information gathered and needed on the checklist for
+    reference as needed.</p>
 
-    <section><title>Configure Nodes</title><p>After the nodes are installed,
-    the must have a hostgroup assigned to them. </p><p>The IDs of the
-    hostgroups must be determined. Execute the <b>hammer hostgroup list</b>
-    command. Take note of the IDs for the HA All In One Controller and Compute
-    (Nova Network) hostgroups. </p><codeblock># hammer hostgroup list</codeblock></section>
+    <p>Several steps in this document use files to configure the environment.
+    These files are available in a TAR file called dell-pilot-deploy.tgz. This
+    TAR file is available from <xref
+    href="???"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
 
-    <section/>
+    <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
 
-    <section><title>Add Controller hostgroup</title><p>Apply the <b>HA All In
-    One Controller</b> hostgroup to the controller node using the <b>hammer
-    host update</b> command. </p><codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock></section>
+    <codeblock># mkdir /root/pilot
+# cd /root/pilot
+# tar xzvf /PATH/TO/FILE/dell-pilot-deploy.tgz
+</codeblock>
 
-    <section><title>Configure parameters specific to the controller
-    node</title><p>A few items should be set using the Foreman user interface.
-    These are: </p><ul>
-        <li>quickstack::pacemaker::common:: fence_ipmilan_address </li>
+    <section><lines/><title>The hammer command</title><ol>
+        <li>Install the packages that contain the <b>hammer</b>
+        command<codeblock># yum -y install "*hammer*"
+</codeblock>This should install the following packages: <msgblock>rubygem-hammer_cli-doc-0.1.1-12.el6sat.noarch
+rubygem-hammer_cli-0.1.1-12.el6sat.noarch
+rubygem-hammer_cli_foreman-0.1.1-16.el6sat.noarch
+rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
+</msgblock></li>
 
-        <li>quickstack::pacemaker::common:: fence_ipmilan_username </li>
+        <li>Configure the <b>hammer</b> command to display <b>200</b> items
+        per page. This just makes it easier to read everything. <ul>
+            <li>Replace the value for the <b>:per_page:</b> option in the
+            /<b>etc/hammer/cli_config.yml</b> file.</li>
+          </ul></li>
 
-        <li>quickstack::pacemaker::common:: fence_ipmilan_password </li>
+        <li>Configure the <b>hammer</b> command to not prompt for a
+        username/password when connecting.<ul>
+            <li>Add the following to the beginning of the
+            <b>/etc/hammer/cli_config.yml </b>file. Replace the name and
+            password appropriately<msgblock>:foreman:
+ :username: 'admin'
+ :password: 'changeme'
+</msgblock></li>
+          </ul></li>
+      </ol><p/><title>Hammer help</title>The <b>hammer</b> command takes the
+    <b>--help</b> option. This option can be used with most of its subcommands
+    as well. It is useful to see the various options that can be
+    used.<lines/><title>Configure the Installation Medium</title></section>
 
-        <li>quickstack::pacemaker::params::private_ip:: IP address of the
-        controllers nic on the Private API network. </li>
-      </ul><p>Set the<b> fence_ipmilan_*</b> parameters to the IP address and
-    authentication credentials for the nodes iDRAC. </p><ol>
-        <li>Log into the Foreman UI. </li>
+    <example><p/></example>
 
-        <li>Select the <b>Hosts</b> drop down on the top of the window. </li>
+    <p>Configure the installation medium that will be used to provision the
+    hosts.</p>
 
-        <li>Select <b>All Hosts</b>. </li>
+    <p>Use the <b>hammer medium create</b> command to add the entry.</p>
 
-        <li>Select the first controller. Select <b>Edit</b> on the next
-        screen. </li>
+    <p>The command requires the --name, --os-family and --path options.</p>
 
-        <li>Select the <b>Parameters</b> tab. Locate each of the parameters
-        that need changed and select the <b>override</b> button to the right
-        of them. </li>
+    <p>The <b>name </b>option should specify a name that is appropriate for
+    the installation.</p>
 
-        <li>Scroll down to the bottom of the window and enter the appropriate
-        value for each of the overridden parameters. </li>
+    <p>The <b>os-family</b> should remain <b>Redhat</b> in most cases.</p>
 
-        <li>Select the <b>Submit</b> button. </li>
-      </ol><p>Repeat the above steps for each of the controller nodes.
-    </p><p>Once the hostgroup is applied to all the controllers, log into each
-    of the controller nodes and execute the following command to pull the
-    hostgroup configuration. </p><p>This command must be executed on each
-    controller within minutes of each other. </p><codeblock># puppet agent -t -dv |&amp; tee /root/puppet.out</codeblock><p>This
-    command pipes a copy of the output to the /root/puppet.out file for later
-    review. Watch the output or review the <b>/root/puppet.out </b>file for
-    errors. </p><p/></section>
+    <p>The <b>path</b> option specifies the path or URL to the installation
+    tree.</p>
 
-    <section><title>Enable Services </title><p>Execute the <b>pcs status</b>
-    command on each node. The end of the output contains a <b>Daemon
-    Status</b> section. </p><p>Ensure all the daemons listed have an
-    active/enabled status. This ensure the daemons will start upon a reboot of
-    the node. </p><p>If the status is <b>active/disabled</b>, execute the
-    <b>systemctl enable DAEMON_NAME</b> command to enable it. </p><msgblock># pcs status
+    <section><lines/><title>Satellite Server </title></section>
+
+    <p>The path included in the example below should work with most satellite
+    installation, just replace <b>SATELLITE_SERVER</b> with the appropriate<b>
+    FQDN</b>.</p>
+
+    <msgblock>hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
+ --path 'http://SATELLITE_SERVER/ks/dist/ks-rhel-$arch-server-$major-$version'</msgblock>
+
+    <section><lines/><title>Local ISO on Foreman Node </title></section>
+
+    <ol>
+      <li>mkdir /usr/share/foreman/public/iso</li>
+
+      <li>Copy the RHEL7 iso to the /root directory of the foreman node</li>
+
+      <li>Edit /etc/fstab</li>
+
+      <li>Add the following line to the end: <msgblock>/root/RHEL-7.0-Server-x86_64-dvd.iso /usr/share/foreman/public/iso iso9660 loop,ro 0 0</msgblock></li>
+
+      <li>mount –a<msgblock>hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
+ --path 'http://FOREMAN_SERVER/iso'
+</msgblock></li>
+    </ol>
+
+    <section><lines/><title>Local ISO on Solution Admin Host</title><ol>
+        <li>On the Solution Admin Host:<ol outputclass="lower-alpha">
+            <li>yum install httpd</li>
+
+            <li>Configure httpd with any options you want. Defaults will work,
+            but are not secure.</li>
+
+            <li>copy the ISO to the SAH in /store/data/iso</li>
+
+            <li>"mount -o loop ISO NAME /mnt"</li>
+
+            <li>"mkdir /store/data/iso/RHEL6.5" (Name of the OS)</li>
+
+            <li>"rsync -av /mnt/ /store/data/iso/RHEL6.5"</li>
+
+            <li>"umount /mnt"</li>
+
+            <li>"ln -s /store/data/iso/RHEL6.5 RHEL6.5"</li>
+          </ol></li>
+
+        <li>Validate the web interface works<p><xref href="???"><?onclick play()?></xref><b>http://ipaddress
+        of foreman/RHEL6.5/README</b></p></li>
+      </ol></section>
+
+    <p>Configure the installation medium that will be used to provision the
+    hosts.</p>
+
+    <section><lines/><title>Note the Medium ID</title></section>
+
+    <p>After the medium is created, execute the <b>hammer medium list</b>
+    command.</p>
+
+    <p>Take note of the <b>ID</b> (first column) for the newly created medium.
+    This will be needed later</p>
+
+    <section><lines/><title>Configure the Partition Table </title></section>
+
+    <p>Configure the partition table that the provisioned hosts will use.
+    These partition table is provided in the following file.</p>
+
+    <p>dell-pilot.partition Partition table for the nodes.</p>
+
+    <p>Use the h<b>ammer partition-table create</b> command to install the
+    partition table. Specify an appropriate <b>NAME</b> for each partition
+    table and specify the file that contains the data.</p>
+
+    <msgblock># hammer partition-table create --name dell-pilot --os-family Redhat \ --file /root/pilot/dell-pilot.partition </msgblock>
+
+    <p/>
+
+    <p>After the partition table is created, execute the <b>hammer
+    partition-table list</b> command.</p>
+
+    <p>Take note of the ID of the newly created partition table.</p>
+
+    <section><lines/><title>Configure the Operating System </title></section>
+
+    <p>A definition for the Red Hat Enterprise Linux 7.0 operating system must
+    be created.</p>
+
+    <p>Create a new operating system definition for Red Hat Enterprise Linux
+    7.0.</p>
+
+    <p>Use the <b>hammer os create</b> command to create the definition.</p>
+
+    <msgblock># hammer os create --name "RedHat" --major 7 --minor 0 --family Redhat </msgblock>
+
+    <p/>
+
+    <p>After creating the operating system, execute the <b>hammer os list</b>
+    command.</p>
+
+    <p>Take note of the ID for the new RedHat 7.0 operating system.</p>
+
+    <p>Associate the x86_64 architecture with the RedHat 7.0 operating
+    system.</p>
+
+    <p>Execute the<b> hammer os add-architecture</b> command to do this.</p>
+
+    <codeblock>hammer os add-architecture --architecture x86_64 --id OS_ID </codeblock>
+
+    <p/>
+
+    <p>The appropriate partition table needs to be associated with the
+    operating system.</p>
+
+    <p>Use the <b>hammer os add-ptable</b> command to associate the partition
+    table to the operating system Id.</p>
+
+    <codeblock>hammer os add-ptable --ptable-id P_ID --id OS_ID</codeblock>
+
+    <section><lines/><title>Configure Subnets </title></section>
+
+    <p>A subnet called OpenStack was created automatically during
+    installation. Execute<b> hammer subnet lis</b>t and note the ID of this
+    subnet.</p>
+
+    <msgblock># hammer subnet list </msgblock>
+
+    <p/>
+
+    <p>IP addresses can be automatically assigned to newly provisioned hosts
+    from this subnet. To do this, a range of IPs to assign must be
+    defined.</p>
+
+    <p>Use the <b>hammer subnet update</b> command to assign the range of IP
+    addresses and to also set the default gateway for the provisioned
+    hosts.</p>
+
+    <p>If the foreman server is acting as the gateway, the gateway address is
+    the IP address of the Foreman servers provisioning interface.</p>
+
+    <msgblock># hammer subnet update --id SN_ID --from START_IP_RANGE --to END_IP_RANGE \ --gateway GATEWAY_IP </msgblock>
+
+    <section><lines/><title>Configure Templates </title></section>
+
+    <p>Four template files are provided and used to provision hosts.</p>
+
+    <simpletable relcolwidth="249* 751*">
+      <strow>
+        <stentry>dell-osp-ks.template</stentry>
+
+        <stentry>Provisioning template that provides the kickstart
+        file.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>dell-osp-pxe.template</stentry>
+
+        <stentry>PXE template that contains the PXE configuration.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>interface_config.template</stentry>
+
+        <stentry>Snippet that provides a means to configure extra interfaces
+        during installation. This template is called from the kickstart
+        template.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>bonding_snippet.template</stentry>
+
+        <stentry>Snippet that provides a means to bond interfaces during
+        installation. This template is called from the kickstart
+        template.</stentry>
+      </strow>
+    </simpletable>
+
+    <p>Create the templates using the <b>hammer template create</b>
+    command.</p>
+
+    <msgblock># hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
+ --operatingsystem-ids "OS_ID_RH7.0" --file /root/pilot/dell-osp-ks.template
+# hammer template create --name "Dell OpenStack PXE Template" --type PXELinux \
+ --operatingsystem-ids "OS_ID_RH7.0" --file /root/pilot/dell-osp-pxe.template
+# hammer template create --name "bond_interfaces" --type snippet \
+ --file /root/pilot/bonding_snippet.template
+# hammer template create --name "interface_config" --type snippet \
+ --file /root/pilot/interface_config.template
+</msgblock>
+
+    <p>After the templates are created, use the <b>hammer template list</b>
+    command to determine the IDs of the templates.</p>
+
+    <p>The provisioning and PXE templates must be associated with the
+    operating systems. Use the <b>hammer os update</b> command to update the
+    template associations.</p>
+
+    <p>Execute the following command for the RedHat 7.0 operating system ID.
+    This command also associates the installation medium to the operating
+    system.</p>
+
+    <msgblock># hammer os update --config-template-ids "KS_ID, PXE_ID" \
+ --medium-ids MEDIUM_ID --id OS_ID</msgblock>
+
+    <p>The templates are now associated with the operating system, they must
+    now be set as the default templates for the operating systems.</p>
+
+    <p>Execute the<b> hammer os set-default</b> template command for the
+    provisioning and PXELinux templates. The command will be executed two
+    times.</p>
+
+    <msgblock># hammer os set-default-template --config-template-id TMPLT_ID --id OS_ID
+</msgblock>
+
+    <p>The <b>hammer os info</b> command can be used to check the
+    configuration of the operating systems.</p>
+
+    <msgblock># hammer os info --id 1
+Id: 1
+Full name: RedHat 7.0
+Release name:
+Family: Redhat
+Name: RedHat
+Major version: 7
+Minor version: 0
+Partition tables:
+Default templates:
+ Dell OpenStack Kickstart Template (provision)
+ Dell OpenStack PXE Template (PXELinux)
+Architectures:
+Page 5 of 23Gather More Information
+Configure facts updates
+Installation media:
+ Red Hat Satellite
+Templates:
+ Dell OpenStack Kickstart Template (provision)
+ Dell OpenStack PXE Template (PXELinux)
+Parameters:</msgblock>
+
+    <section><lines/><title>Gather More Information </title></section>
+
+    <p>A few more IDs are required in order to install a host. Execute the
+    following commands and take note of the <b>appropriate IDs</b>.</p>
+
+    <ul>
+      <li>Environments<msgblock># hammer environment list</msgblock></li>
+
+      <li>Domains<msgblock># hammer domain list</msgblock></li>
+
+      <li>Puppet Proxy<msgblock># hammer proxy list</msgblock></li>
+
+      <li>Architectures<msgblock># hammer architecture list</msgblock></li>
+    </ul>
+
+    <section><lines/><title>Configure facts updates </title></section>
+
+    <section><title>Configure facts updates</title><p>Foreman updates the host
+    information using the Puppet facts. Foreman updates the provisioning
+    information with the first interface returned from the Puppet facts. To
+    prevent this, perform the following steps. </p></section>
+
+    <ol>
+      <li>Log into the Foreman UI.</li>
+
+      <li>Select the <b>Administer</b> drop down on the top right of the
+      window.</li>
+
+      <li>Select <b>Settings</b>. Select the <b>Provisioning</b> tab.</li>
+
+      <li>Edit the ignore_puppet_facts_for_provisioning setting and set it to
+      true.</li>
+    </ol>
+
+    <section><lines/><title>Configure the Operating System for Updates.
+    </title></section>
+
+    <section><title>Configure the Operating System for Updates.
+    </title><p>Configure the Operating system definition with the parameters
+    for registering the provisioned host for updates. The <b>hammer os
+    set-parameter</b> command is used to set the parameters. </p></section>
+
+    <p>The following parameters are set.</p>
+
+    <simpletable relcolwidth="256* 744*">
+      <strow>
+        <stentry>subscription_manager</stentry>
+
+        <stentry>Specifies that the hosts will register with Subscription
+        Manager. (true or false)</stentry>
+      </strow>
+
+      <strow>
+        <stentry>subscription_manager_username</stentry>
+
+        <stentry>The username of the Subscription Manager account to register
+        to.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>subscription_manager_password</stentry>
+
+        <stentry>The password for the Subscription Manager account.</stentry>
+      </strow>
+    </simpletable>
+
+    <section><p>Define the <b>OS_ID</b> variable to the ID of the operating
+    system then execute the remaining commands.</p><p>Make sure to specify the
+    appropriate <b>username, password</b>, and <b>pool ID</b> by replacing the
+    <b>CHANGEME's</b> and <b>POOL_ID.</b></p><msgblock># OS_ID=2
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+ --name subscription_manager --value true
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+ --name subscription_manager_username --value CHANGEME
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+ --name subscription_manager_password --value 'CHANGEME'</msgblock><lines/><title>Optional
+    Proxy Settings </title><p>Proxy settings for the subscription-manager and
+    yum commands can be set by defining the needed parameters. These
+    parameters are completely optional if not needed.</p><p>Although defining
+    and using the following parameters will work for most environments, they
+    may not work for all. Setting the parameters gives the provisioning
+    template the information to set the proxy information using the
+    subscription-manager config command.</p><p>If these setting do not work in
+    your environment, the kickstart file may need to be manually modified.
+    This can be done using the Foreman user interface.. </p><p>The following
+    parameters can be set using the <b>hammer os set-parameter</b> command as
+    above.</p><simpletable relcolwidth="271* 729*">
+        <strow>
+          <stentry>subscription_manager_proxy</stentry>
+
+          <stentry>The proxy server to use, if needed.</stentry>
+        </strow>
+
+        <strow>
+          <stentry>subscription_manager_proxy_port</stentry>
+
+          <stentry>The proxy port to use, if needed.</stentry>
+        </strow>
+
+        <strow>
+          <stentry>subscription_manager_proxy_user</stentry>
+
+          <stentry>The proxy username, if needed.</stentry>
+        </strow>
+
+        <strow>
+          <stentry>subscription_manager_proxy_password</stentry>
+
+          <stentry>The proxy username password, if needed.</stentry>
+        </strow>
+      </simpletable></section>
+
+    <section><lines/><title>Provisioning the Nodes </title></section>
+
+    <p>Provision the nodes using the following command. Variables are being
+    used to make it easier to use the hammer command.</p>
+
+    <p>Simply set the <b>NAME, PTABLE</b>, and <b>MAC</b> variables
+    appropriately for a host, then execute the <b>hammer host create</b>
+    command. Once the host is created, reset the variables for the next host
+    and execute the same hammer command again.</p>
+
+    <p>Repeat this until all hosts are created. Make sure to change the root
+    password on the command line as needed.</p>
+
+    <simpletable relcolwidth="279* 721*">
+      <strow>
+        <stentry>NAME</stentry>
+
+        <stentry>The hostname of the provisioned host.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>PTABLE</stentry>
+
+        <stentry>The ID of the partition table that should be used when
+        deploying this host. This ID is the same for all the compute nodes,
+        but the controller uses a different partition table ID.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>MAC</stentry>
+
+        <stentry>The hardware address of the provisioning interface for the
+        node.</stentry>
+      </strow>
+    </simpletable>
+
+    <p>Change the remaining IDs in the command as appropriate.</p>
+
+    <msgblock># NAME=CHANGEME
+# PTABLE=CHANGEME
+# MAC=CHANGEME
+# hammer host create --name "${NAME}" --root-password 'CHANGEME' \
+ --build true --enabled true --managed true --environment-id 2 \
+ --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 2 \
+ --subnet-id 1 --architecture-id 1 --medium-id 9 \
+ --partition-table-id ${PTABLE} \
+ --mac ${MAC}</msgblock>
+
+    <section><lines/><title>Get host information </title></section>
+
+    <p>The IDs of the newly defined hosts are needed to finish their
+    configuration.</p>
+
+    <p>Execute the <b>hammer host list</b> command to get the host IDs. Take
+    note of these IDs.</p>
+
+    <msgblock># hammer host list</msgblock>
+
+    <section><lines/><title>Controller Node </title></section>
+
+    <p>The controller nodes have two bonded interfaces, one with two vlans
+    configured, and two remaining interfaces that are not bonded. The Public
+    API network is on a pair of bonded interfaces and the Private API and
+    Storage networks are on a separate pair of bonded interfaces.</p>
+
+    <p>The Private API and Storage networks are VLAN tagged networks on a
+    bonded interface. The Provisioning and the Management interfaces are on
+    individual non-bonded interfaces.</p>
+
+    <p/>
+
+    <section><title>Non-Bonded Nic Configuration</title><p>The <b>nics</b>
+    parameter can be set on the hosts to provide the information needed to
+    allow the kickstart file to configure the non-bonded interfaces.
+    </p><p>Set the <b>nics</b> parameter on the controller host to configure
+    the non-bonded interfaces. The <b>Provisioning</b> interface is configured
+    by Foreman, so it does not need to be configured again.</p></section>
+
+    <p>The value for the <b>nic</b> parameter consists of a space separated
+    list of <b>key=value</b> pairs. Each pair contains the configuration
+    information for a single nic. This list is entered in the same format a s
+    a bash associative array. The entire value is enclosed within single
+    tickmarks and parentheses. <i>( …)</i></p>
+
+    <p>Each key/value is in the following format:</p>
+
+    <ul>
+      <li><b>[IFACE]="parameters"</b></li>
+    </ul>
+
+    <p>An example of defining a single interface:</p>
+
+    <msgblock># hammer host set-parameter --host-id 3 --name nics \
+ --value '([em1]="onboot static aa:bb:cc:dd:ee:ff 192.168.0.110/255.255.255.0")'</msgblock>
+
+    <p>The parameters consist of the following:</p>
+
+    <simpletable relcolwidth="259* 741*">
+      <strow>
+        <stentry>onboot</stentry>
+
+        <stentry>The interface is enabled when the system boots. Default is
+        <i>disabled</i>.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>dhcp | static | none</stentry>
+
+        <stentry>The interface gets its network configuration using DHCP,· the
+        network configuration is staticaly configured, or the interface has no
+        network configuration. If no option is specified, <i>dhcp</i> is
+        assumed.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>xx:xx:xx:xx:xx:xx</stentry>
+
+        <stentry>The hardware address of the interface.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>x.x.x.x/y.y.y.y</stentry>
+
+        <stentry>The IP address and Network mask of the interface. Used only
+        when static is specified. Must be in the format presented.</stentry>
+      </strow>
+    </simpletable>
+
+    <p>Execute the following command to set the nic parameters for the two
+    other interfaces used by the controller node. Replace the <b>HOST_ID,
+    IFACE, MAC</b>, and<b> IP/MASK </b>parameters as appropriate.</p>
+
+    <msgblock># hammer host set-parameter --host-id HOST_ID --name nics \
+ --value '([IFACE]="onboot static MAC IP/MASK" [IFACE]="onboot static MAC IP/MASK")'
+</msgblock>
+
+    <p/>
+
+    <section><title>Bonded Nic Configuration</title><p>Three parameters can be
+    set on the hosts to provide the information needed to allow the kickstart
+    file to configure the bonded interfaces. These parameters are: <b>bonds,
+    bond_ifaces</b>, and <b>bond_opts</b>.</p><p>The <b>bonds</b> parameter is
+    similar to the <b>nics</b> parameter used earlier with the addition of the
+    <i>vlan</i> option and the removal of the <i>mac address </i>option.
+    </p><p>When creating a VLAN tagged bond, use the<i> vlan</i> option to let
+    the bonding_snippet know this bond is vlan tagged. Also specify the tag
+    number in the bond name.</p><p>For example:</p><msgblock>'( [bond0]="onboot none" [bond0.301]="onboot static vlan 172.30.139.62/255.255.255.0" )'</msgblock></section>
+
+    <p>Created a <b>bond0</b> that is enabled at boot. It then creates a VLAN
+    tagged bond on the bond called <i>bond0.301</i>.</p>
+
+    <p>See the documentation on the bonding_snippit for more information.</p>
+
+    <p>The <b>bond_ifaces</b> parameter is used to specify the interfaces for
+    each bond.</p>
+
+    <p>For example:</p>
+
+    <msgblock>'( [bond0]="em1 em2" )'</msgblock>
+
+    <p>Bonds interfaces em1 and em2 into bond0.</p>
+
+    <p>The <b>bond_opts</b> parameter specifies the bonding options to use for
+    each bond.</p>
+
+    <p>For example:</p>
+
+    <msgblock>'( "[bond0]="mode=active-passive" )'</msgblock>
+
+    <p>Create the three needed parameters using the <b>hammer host
+    set-parameter </b>command. Replace the <b>HOST_ID</b>,<b> VLAN</b>, and<b>
+    IP/MASK</b> information as appropriate to define the bonds.</p>
+
+    <msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.VLAN1]="onboot static vlan IP/MASK"
+ [bond0.VLAN2]="onboot static vlan IP/MASK" [bond1]="onboot static IP/MASK")'
+# hammer host set-parameter --host-id HOST_ID --name bond_ifaces \
+ --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
+# hammer host set-parameter --host-id HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=active-backup" [bond1]="mode=active-backup")'</msgblock>
+
+    <p>Repeat the parameter configuration for all the controller nodes.</p>
+
+    <p/>
+
+    <section><title>Compute Nodes</title><p>The compute nodes have two
+    separate bonds and a single non-bonded interface for its networking. The
+    single interface is connects to the Provisioning network and is already
+    configured. </p><p>One bond connects to the Nova Public Network, while the
+    other bond connects to the Nova Private, Private_API, and Storage
+    networks. Each network on the second bond are VLAN tagged. </p><p>Set the
+    <b>bonds, bond_ifaces,</b> and<b> bond_opts</b> parameters for each
+    compute node. </p><p>Make sure the <b>bond_opts</b> sets the<b>
+    </b><b>MODE</b> to balance-tlb and <b>PROMISC</b> to yes. </p><p>An
+    example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
+ [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
+ [bond0.302]="onboot static vlan 172.40.139.110/255.255.255.0"
+ [bond1]="onboot static 172.10.139.61/255.255.255.0")'
+# hammer host set-parameter --host-id HOST_ID --name bond_ifaces \
+ --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
+# hammer host set-parameter --host-id HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb PROMISC=yes" [bond1]="mode=balance-tlb PROMISC=yes")</msgblock></section>
+
+    <section><p/><title>Set Host Update Parameters</title></section>
+
+    <p>Each node can use a separate pool ID and require different
+    repositories. These parameters are set on a per host basis instead of an
+    operating system.</p>
+
+    <p>The following parameters need to be set on each host.</p>
+
+    <simpletable relcolwidth="320* 680*">
+      <strow>
+        <stentry>subscription_manager_pool</stentry>
+
+        <stentry>The ID of the pool to attach the host to.</stentry>
+      </strow>
+
+      <strow>
+        <stentry>subscription_manager_repos</stentry>
+
+        <stentry>The repositories that should be enabled after the host is
+        registered.</stentry>
+      </strow>
+    </simpletable>
+
+    <p/>
+
+    <section><title>Determine Pool ID</title><p>To determine the pool id, you
+    must have an existing server that is registered to the RedHat Hosted
+    Services. This server must also be registered using the same credentials
+    as the ones being used in this environment. </p><p>Once the server is
+    correctly registered, execute the subscription-manager list --all
+    --available command to see the available subscription pools. </p><p>The
+    command will output a list of available pools. Each section of information
+    lists what the subscription provides, its pool ID, how many are available,
+    the type of system it is for, as well as other information.
+    </p><p>Determine the correct pool ID needed for this environment and take
+    note of it. Place close attention to the System Type. The System Type can
+    be Virtual or Physical. You cannot use a pool marked as Virtual for a
+    physical server.</p><msgblock># subscription-manager list --all --available
 [OUTPUT ABBREVIATED]
-Daemon Status:
- corosync: active/enabled
- pacemaker: active/disabled
- pcsd: active/enabled
-# systemctl enable pacemaker
-ln -s '/usr/lib/systemd/system/pacemaker.service' '/etc/systemd/system/multi-user.target.wants/pacemaker.service'
-# pcs status
-[OUTPUT ABBREVIATED]
-Daemon Status:
- corosync: active/enabled
- pacemaker: active/enabled
- pcsd: active/enabled</msgblock><p/></section>
+Subscription Name: Red Hat Cloud Infrastructure, Standard (8-sockets)
+Provides: Red Hat Beta
+ Red Hat OpenStack Beta
+ JBoss Enterprise Application Platform
+ Red Hat Software Collections (for RHEL Server)
+ Red Hat Enterprise Virtualization
+ Oracle Java (for RHEL Server)
+ Red Hat OpenStack
+ Red Hat Enterprise MRG Messaging
+ Red Hat Enterprise Linux Server
+ Red Hat Enterprise Linux High Availability (for RHEL Server)
+ Red Hat Software Collections Beta (for RHEL Server)
+ Red Hat Enterprise Linux Load Balancer (for RHEL Server)
+ Red Hat CloudForms
+SKU: MCT2861
+Pool ID: aaaa111bbb222ccc333ddd444eee5556
+Available: 7
+Suggested: 1
+Service Level: Standard
+Service Type: L1-L3
+Multi-Entitlement: No
+Ends: 09/23/2015
+System Type: Physical
+[OUTPUT ABBREVIATED]</msgblock></section>
 
-    <section><title>Add Compute hostgroup </title><p>Add the hostgroups to the
-    compute node hosts one at a time. Make sure to run <b>puppet agent -t -dv
-    |&amp; tee /root/puppet.out</b> between each. </p><p><b>Do not</b> add the
-    next host in the list until the previous one is completely finished.
-    Failure to do so can lead to a race condition that prevents proper
-    installation and configuration of the compute nodes. </p><codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock><p>Wait
-    for each compute node to finish its configuration before starting the next
-    one.</p></section>
+    <section><title>Configure the PoolID </title><p>Execute the following
+    command for each host. Substitute the <b>HOST_ID </b>and <b>POOL_ID </b>as
+    appropriate.</p><msgblock># hammer host set-parameter --host-id-id HOST_ID \
+ --name subscription_manager_pool --value POOL_ID
+</msgblock></section>
 
-    <section><title>Excluding IPs for Nova Use</title><p>IPs can be excluded
-    for Nova use. </p><p>The <b>nova fixed-ip-reserve</b> command prevents a
-    fixed ip from being used. </p><codeblock>nova fixed-ip-reserve FIXED_IP</codeblock><p>The
-    <b>nova-manage floating delete</b> command prevents a floating ip from
-    being used.</p><codeblock>nova-manage floating delete FLOAT_IP</codeblock></section>
+    <p/>
+
+    <section><title>Configure the Repositories</title><p>The controller nodes
+    and compute nodes both require the rhel-server-rhscl-7-rpms,
+    rhel-7-server-rpms, and rhel-7-server-openstack-5.0-rpms repositories.
+    </p><p>The compute nodes also require the rhel-ha-for-rhel-7-server-rpms
+    repository. </p><p>Execute the following command on each controller node
+    to enable the needed repositories. </p><msgblock># hammer os set-parameter --host-id HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms,rhel-ha-for-rhel-7-server-rpms"</msgblock></section>
+
+    <p>Execute the following command on each compute node to enable the needed
+    repositories.</p>
+
+    <msgblock># hammer os set-parameter --host-id HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms"
+</msgblock>
+
+    <p/>
+
+    <section><title>Start Provisioning</title><p>PXE boot each of the nodes.
+    After they are booted, make sure the networks are configured
+    appropriately. </p></section>
+
+    <p/>
+
+    <section><title>Ceph Deployment </title><p>If Ceph must be configured on
+    these nodes, follow the <b>Red Hat Openstack Platform Integration with
+    Ceph</b> document. </p></section>
+
+    <p/>
+
+    <section><title>Next Steps </title><p>After the Ceph configuration is
+    complete or if Ceph configuration is not needed, continue the
+    configuration using the <b>Dell Pilot Hostgroups Deployment</b> document.
+    </p></section>
+
+    <p/>
+
+    <section><title>Appendix - Example Hammer Commands
+    </title><p><b>hammer-list</b></p><msgblock>hammer medium create --name "Dell OSP Pilot" --os-family RedHat \
+ --path 'http://rh6fore.r5.lab/ks/dist/ks-rhel-$arch-server-$majo-$version'
+hammer medium list
+hammer partition-table create
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilo.partition
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilot.partition
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilot.partition
+hammer os create --name "RedHat" --major 7 --minor 0 --family Redhat
+hammer os list
+hammer os add-architecture --architecture x86_64 --id 3
+hammer os add-ptable --ptable-id 8 --id 3
+hammer subnet list
+hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
+hammer template create --name "Dell OpenStack Kickstart Template" \
+ --operatingsystem-ids "3" --file dell-osp-ks.template
+hammer template create --name "Dell OpenStack Kickstart Template" type provision \
+ --operatingsystem-ids "3" --file dell-osp-ks.template
+hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
+ --operatingsystem-ids "3" --file dell-osp-ks.template
+hammer template create --name "Dell OpenStack PXE Template" --type PXELinux \
+ --operatingsystem-ids "3" --file dell-osp-pxe.template
+hammer template create --name "bond_interfaces" --type snippet \
+hammer template create --name "bond_interfaces" --type snippet--file bonding_snippet.template
+hammer template create --name "bond_interfaces" --type snippet --file bonding_snippet.template
+hammer template create --name "interface_config" --type snippet --file interface_config.template
+hammer tempalte list
+hammer template list
+hammer os update --config-template-ids "33,34" --medium-ids 8 --id 3
+hammer os set-default-template --config-template-id 34 --id 3
+hammer os info --id 3
+hammer domain list
+hammer proxy list
+hammer architecture list
+hammer os set-parameter
+hammer os set-parameter --operatingsystem-id
+hammer os list
+hammer os set-parameter --operatingsystem-id ${OS_ID} --name subscription_manager --value true
+hammer os set-parameter --operatingsystem-id ${OS_ID} --name subscription_manager --value true
+hammer os set-parameter --operatingsystem-id ${OS_ID} --name subscription_manager --value true
+hammer os set-parameter --operatingsystem-id 3 \
+ --name subscription_manager --value true
+hammer os set-parameter --operatingsystem-id 3 \
+ --name subscription_manager_username --value dellcloudsol
+hammer os set-parameter --operatingsystem-id 3 \
+ --name subscription_manager_password --value cr0wBar!
+hammer os list</msgblock><p/><p><b>hammer-nic-bond-cntl1 </b></p><msgblock>HOST_ID='15'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name nics \
+ --value '([em2]="onboot static 192.168.110.127/255.255.255.0")'
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.130/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.41/255.255.255.0"
+ [bond1]="onboot static 10.9.244.130/255.255.254.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p5p2 p7p2" [bond1]="p5p1 p7p1" )'
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-cntl2</b>
+    </p><msgblock>HOST_ID='16'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name nics \
+ --value '([em2]="onboot static 192.168.110.128/255.255.255.0")'
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.131/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.42/255.255.255.0"
+ [bond1]="onboot static 10.9.244.131/255.255.254.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p5p2 p7p2" [bond1]="p5p1 p7p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-cntl3</b></p><msgblock>HOST_ID='21'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name nics \
+ --value '([em2]="onboot static 192.168.110.129/255.255.255.0")'
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.132/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.43/255.255.255.0"
+ [bond1]="onboot static 10.9.244.132/255.255.254.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p5p2 p6p2" [bond1]="p5p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms</msgblock><p/><p><b>hammer-nic-bond-nova1
+    </b></p><msgblock>HOST_ID='24'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.133/255.255.255.0"
+ [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.133/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.44/255.255.255.0"
+ [bond1]="onboot none" [bond1.207]="onboot static vlan 192.168.207.133/255.255.255.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p5p2 p6p2" [bond1]="p5p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com" 
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-nova2
+    </b></p><msgblock>HOST_ID='25'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.134/255.255.255.0"
+ [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.134/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.45/255.255.255.0"
+ [bond1]="onboot none" [bond1.207]="onboot static vlan 192.168.207.134/255.255.255.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p5p2 p6p2" [bond1]="p5p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-nova3
+    </b></p><msgblock>HOST_ID='26'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.135/255.255.255.0"
+ [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.135/255.255.255.0"
+ [bond0]="onboot none" [bond0.140]="onboot static vlan 192.168.123.46/255.255.255.0"
+ [bond1]="onboot none" [bond1.207]="onboot static vlan 192.168.207.135/255.255.255.0" )' 
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p1p2 p5p2" [bond1]="p1p1 p5p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph1
+    </b></p><msgblock>HOST_ID='28'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.140/255.255.255.0"
+ [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.140/255.255.255.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p4p2 p6p2" [bond1]="p4p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph2
+    </b></p><msgblock>HOST_ID='29' 
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.141/255.255.255.0"
+ [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.141/255.255.255.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p4p2 p6p2" [bond1]="p4p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph3
+    </b></p><msgblock>HOST_ID='30'
+POOLID=8a85f98744091dea0144314ba24c726c
+hammer host set-parameter --host-id $HOST_ID --name bonds \
+ --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.142/255.255.255.0"
+ [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.142/255.255.255.0" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_opts \
+ --value '( [bond0]="mode=balance-tlb miimon=100" [bond1]="mode=balance-tlb miimon=100" )'
+hammer host set-parameter --host-id $HOST_ID --name bond_ifaces \
+ --value '([bond0]="p4p2 p6p2" [bond1]="p4p1 p6p1" ) '
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy \
+ --value "proxy.us.dell.com"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_proxy_port \
+ --value "80"
+hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool \
+ --value "${POOLID}"
+hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
+ --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
+ rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-deploy-cntl1
+    </b></p><msgblock>NAME=rh7cntl1
+PTABLE=12
+MAC=B8:CA:3A:68:67:54
+IP=192.168.119.130
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-cntl2
+    </b></p><msgblock>NAME=rh7cntl2
+PTABLE=12
+MAC=B8:CA:3A:68:67:68
+IP=192.168.119.131
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-cntl3
+    </b></p><msgblock>NAME=rh7cntl3
+PTABLE=12
+MAC=B8:CA:3A:67:43:6C
+IP=192.168.119.132
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}NAME=rh7cntl3
+PTABLE=12
+MAC=B8:CA:3A:67:43:6C
+IP=192.168.119.132
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova1
+    </b></p><msgblock>NAME=rh7nova1
+PTABLE=12
+MAC=B8:CA:3A:67:3C:D0
+IP=192.168.119.133
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova2
+    </b></p><msgblock>NAME=rh7nova2
+PTABLE=12
+MAC=B8:CA:3A:67:3F:68
+IP=192.168.119.134
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova3
+    </b></p><msgblock>NAME=rh7nova3
+PTABLE=12
+MAC=B8:CA:3A:67:3D:C8
+IP=192.168.119.135
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph1</b>
+    </p><msgblock>NAME=rh7ss1
+PTABLE=12
+MAC=B8:CA:3A:67:17:4C
+IP=192.168.119.140
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph2</b></p><msgblock>NAME=rh7ss2
+PTABLE=12
+MAC=B8:CA:3A:67:0C:7C
+IP=192.168.119.141
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph3
+    </b></p><msgblock>NAME=rh7ss3
+PTABLE=12
+MAC=B8:CA:3A:67:0D:38
+IP=192.168.119.142
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+hammer host list |grep ${NAME}</msgblock></section>
+
+    <p/>
   </body>
 </topic>
