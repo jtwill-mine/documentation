@@ -82,24 +82,18 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
       </ol><p/><title>Hammer help</title>The <b>hammer</b> command takes the
     <b>--help</b> option. This option can be used with most of its subcommands
     as well. It is useful to see the various options that can be
-    used.<lines/><title>Configure the Installation Medium</title></section>
+    used.<lines/></section>
 
-    <example><p/></example>
+    <section><title>Configure the Installation Medium</title><p>Configure the
+    installation medium that will be used to provision the
+    hosts.</p></section>
 
-    <p>Configure the installation medium that will be used to provision the
-    hosts.</p>
-
-    <p>Use the <b>hammer medium create</b> command to add the entry.</p>
-
-    <p>The command requires the --name, --os-family and --path options.</p>
-
-    <p>The <b>name </b>option should specify a name that is appropriate for
-    the installation.</p>
-
-    <p>The <b>os-family</b> should remain <b>Redhat</b> in most cases.</p>
-
-    <p>The <b>path</b> option specifies the path or URL to the installation
-    tree.</p>
+    <example><p>Use the <b>hammer medium create</b> command to add the
+    entry.</p><p>The command requires the --name, --os-family and --path
+    options.</p><p>The <b>name </b>option should specify a name that is
+    appropriate for the installation.</p><p>The <b>os-family</b> should remain
+    <b>Redhat</b> in most cases.</p><p>The <b>path</b> option specifies the
+    path or URL to the installation tree.</p></example>
 
     <section><lines/><title>Satellite Server </title></section>
 
