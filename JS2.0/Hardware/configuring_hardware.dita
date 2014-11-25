@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="configuring_hardware">
   <title>Configuring R620, R720, and R720xd Hardware</title>
-  <shortdesc>This section describes manually configuring Dell R720 and the Dell R720xd server hardware for
+  <shortdesc>This section describes manually configuring Dell R720 and R720xd server hardware for
     the Dell Red Hat Cloud Solutions with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red
       Hat Enterprise Linux</tm> OpenStack Platform:</shortdesc>
   <body>
