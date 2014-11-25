@@ -3,6 +3,11 @@
 "map.dtd">
 <map>
   <title>Dell SAH Foreman Deployment Guide - Version 2.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
 
   <topicref href="../../Common/trademarks.dita"/>
 
