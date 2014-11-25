@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="glossgroup_lym_dk1_fq">
+  <title>Glossary</title>
+  <glossentry id="ddl">
+    <glossterm>BMC/IDRAC Enterprise</glossterm>
+    <glossdef>Baseboard management controller. An on-board microcontroller that monitors the system for critical events by communicating with various sensors on the system board and sends alerts and log events when certain parameters exceed their preset thresholds.</glossdef>
+  </glossentry>
+  <glossentry id="bundle">
+    <glossterm>Bundle</glossterm>
+    <glossdef>A customer orderable solution that consists of all network gear and storage hardware needed to install the solution as outlined.</glossdef>
+  </glossentry>
+  <glossentry id="cloud_computing">
+    <glossterm>Cloud Computing</glossterm>
+    <glossdef>See <xref href="http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf"
+        format="pdf" scope="external"
+        >http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf </xref><p>Cloud computing is
+      a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of
+      configurable computing resources (e.g., networks, servers, storage, applications, and
+      services) that can be rapidly provisioned and released with minimal management effort or
+      service provider interaction.</p></glossdef>
+  </glossentry>
+  <glossentry id="cluster">
+    <glossterm>Cluster</glossterm>
+    <glossdef>A set of computers dedicated to OpenStack that can be attached to a pair of distribution switches.</glossdef>
+  </glossentry>
+</glossgroup>
