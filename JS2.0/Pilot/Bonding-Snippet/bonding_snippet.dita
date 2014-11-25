@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="bonding_snippet">
+  <title>Foreman Bonding During Provisioning </title>
+
+  <body>
+    <p>This documentation describes a method to create bonded network
+    interfaces during provisioning. It has not been thoroughly tested due to
+    equipment limitations, but the resultant configuration files should be
+    correct. </p>
+
+    <section><title>Create the Provisioning Template for Bonding
+    </title><p>From the Foreman user interface, select <b>More</b> and then
+    <b>Provisioning</b> from the drop down menu. Select <b>Provisioning
+    Templates</b> from the newly presented drop down menu. </p><p>Select
+    <b>New Template</b> and a <b>New Template</b> screen appears. Enter
+    <b>bond_interfaces</b> in the <b>Name</b> field and select the<b>
+    Snippet</b> field to place a checkmark in it. </p><p>Place the following
+    code in the Template editor window. </p><p>Snippet: bond_interfaces
+    </p><codeblock>declare -A bonds=&lt;%= @host.params["bonds"] %&gt;
+declare -A bond_opts=&lt;%= @host.params["bond_opts"] %&gt;
+declare -A bond_ifaces=&lt;%= @host.params["bond_ifaces"] %&gt;
+for bond in ${!bonds[@]}
+do
+ read parms &lt;&lt;&lt; $( tr -d '\r' &lt;&lt;&lt; ${bonds[$bond]} )
+
+ unset bond_info
+ declare -A bond_info=( \
+   [DEVICE]="${bond}" \
+   [PROTO]="dhcp" \
+   [ONBOOT]="no" \
+   [NM_CONTROLLED]="no" \
+ )
+
+ for parm in ${parms}
+ do
+   case $parm in
+     onboot ) bond_info[ONBOOT]="yes"
+     ;;
+     none ) bond_info[PROTO]="none"
+     ;;
+     static ) bond_info[PROTO]="static"
+     ;;
+     dhcp ) bond_info[PROTO]="dhcp"
+     ;;
+     vlan ) bond_info[VLAN]="yes"
+     ;;
+     *.*.*.*/*.*.*.* ) read IP NETMASK &lt;&lt;&lt; $( tr '/' ' ' &lt;&lt;&lt; ${parm} )
+       bond_info[IP]="${IP}"
+       bond_info[NETMASK]="${NETMASK}"
+     ;; 
+   esac
+ done
+
+cat &lt;&lt; EOB &gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+DEVICE=${bond}
+ONBOOT=${bond_info[ONBOOT]}
+NM_CONTROLLED=${bond_info[NM_CONTROLLED]}
+BOOTPROTO=${bond_info[PROTO]}
+BONDING_OPTS="$( tr -d '\r' &lt;&lt;&lt; ${bond_opts[$bond]} )"
+EOB
+
+[[ "${bond_info[PROTO]}" = "static" ]] &amp;&amp; cat &lt;&lt; EOB &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+IPADDR=${bond_info[IP]}
+NETMASK=${bond_info[NETMASK]}
+EOB
+
+[[ "${bond_info[VLAN]}" = "yes" ]] &amp;&amp; cat &lt;&lt; EOB &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+VLAN=${bond_info[VLAN]}
+EOB
+
+for iface in $( tr -d '\r' &lt;&lt;&lt; ${bond_ifaces[$bond]} )
+do
+  cat &lt;&lt; EOI &gt; /etc/sysconfig/network-scripts/ifcfg-${iface}
+DEVICE=${iface}
+BOOTPROTO=none
+ONBOOT=${bond_info[ONBOOT]}
+MASTER=${bond}
+SLAVE=yes
+NM_CONTROLLED=no
+EOI
+  done
+done</codeblock><p>Select the <b>Submit</b> button at the bottom of the page
+    to save the newly created snippet</p><p/></section>
+
+    <section><title>Update the Kickstart Template</title><p>The kickstart
+    template must be modified to use the new snippet. Place the following line
+    inside the <b>%post</b> section of the <b>Kickstart Provisioning
+    Template</b>. </p><codeblock>&lt;%= snippets "bond_interfaces" %&gt;</codeblock><p/></section>
+
+    <section><title>Configure Host for Bonding</title><p>Bonding is configured
+    by setting three Puppet <i>Class Host Parameters</i>, the<b> bonds,
+    bond_ifaces,</b> and <b>bond_opts</b> host parameters. These are added by
+    editing the host in the Foreman interface and selecting the
+    <b>Parameters</b> tab. The <b>+ Add Parameter</b> button is used to create
+    new parameters. </p><p/></section>
+
+    <section><title>Parameters </title><p>The parameters are defined in the
+    format of bash associative arrays. When the parameters are accessed by the
+    snippet, carriage returns are are stripped from the input. This means that
+    carriage returns can be used for readability when setting the Parameter
+    Values. Care should be taken to use carriage returns only between array
+    elements and not withing the array elements themselves. </p><p/></section>
+
+    <section><title>bonds </title><p>The <b>bonds</b> parameter specifies the
+    basic bond information. It accepts the following options.
+    </p><p/><simpletable relcolwidth="260* 740*">
+        <strow>
+          <stentry>onboot </stentry>
+
+          <stentry>The bond is enabled when the system boots. Default is
+          disabled. </stentry>
+        </strow>
+
+        <strow>
+          <stentry>dhcp | static | none </stentry>
+
+          <stentry>The bond gets its network configuration using DHCP, the
+          network configuration is staticaly configured, or the bond has no
+          network configuration. If none are specified, dhcp is assumed.
+          </stentry>
+        </strow>
+
+        <strow>
+          <stentry>vlan </stentry>
+
+          <stentry>This bond is a VLAN. </stentry>
+        </strow>
+
+        <strow>
+          <stentry>x.x.x.x/y.y.y.y</stentry>
+
+          <stentry>The IP address and Network mask of the interface. Used only
+          when static is specified. Must be in the format presented.
+          </stentry>
+        </strow>
+      </simpletable></section>
+
+    <p/>
+
+    <msgblock>Usage Example:
+
+The following entry defines three bonds: bond0, bond1 and bond1.200. All three bonds are enabled
+because the onboot option is specified in each definition. bond0 is configured for dhcp. bond1 is configured
+with no network configuration. bond1.200 is configured as a vlan with static network configuration.
+  ( [bond0]="onboot dhcp" [bond1]="onboot none" [bond1.200]="onboot static vlan 192.168.100.10/255.255.255.0" )
+
+This entry can also be entered into the Foreman interface as:
+  ( [bond0]="onboot dhcp"
+  [bond1]="onboot none"
+  [bond1.200]="onboot static vlan 192.168.100.10/255.255.255.0" )
+</msgblock>
+
+    <p/>
+
+    <section><title>bond_ifaces</title><p>The bond_ifaces parameter specifies
+    the interfaces to use for each <b>bond.</b></p><msgblock>Usage Example:
+The following entry assigns eth1, eth4, and eth5 to bond0 and eth0 and eth3 to bond1.
+  ( [bond0]="eth1 eth4 eth5" [bond1]="eth0 eth3" )</msgblock><p/></section>
+
+    <section><title>bond_opts </title><p>The bond_opts parameter specifies the
+    bonding options to use for each bond. It accepts any valid interface
+    bonding parameters. </p><p/><msgblock>Usage Example:
+  ( [bond0]="mode=1 miimon=10" [bond1]="mode=802.3ad" </msgblock><p/></section>
+
+    <section><title>Example Configuration with Bonds and VLANs </title><p>The
+    following configuration will configure 5 vlans across two bonds. The first
+    bond uses eth1, eth4, and eth5 for vlans 141, 151, and 170. The second
+    bond uses eth0 and eth3 for VLANs 140 and 150. Both bonds are confgiured
+    for 802.3ad bonding mode. Each VLAN is assigned an IP address on its
+    respective network. </p><p>Eth2 is not bonded and is used for
+    provisioning.</p><p/></section>
+
+    <section><title>Configuration </title><p>Create a parameter with a
+    <b>Name</b> of <b>bonds</b>. Enter the following for its <b>Value</b>.
+    </p><msgblock>( [bond0]="onboot none"
+[bond1]="onboot none"
+[bond0.141]="onboot static vlan 192.168.141.2/255.255.255.0"
+[bond0.151]="onboot static vlan 192.168.151.2/255.255.255.0"
+[bond0.170]="onboot static vlan 192.168.170.2/255.255.255.0"
+[bond1.140]="onboot static vlan 192.168.140.2/255.255.255.0"
+[bond1.150]="onboot static vlan 192.168.150.2/255.255.255.0" )</msgblock><p>Create
+    a parameter with a<b> Name</b> of <b>bond_ifaces</b>. Enter the following
+    for its <b>Value</b>. </p><msgblock>( [bond0]="eth1 eth4 eth5"
+[bond1]="eth0 eth3" )</msgblock><p/></section>
+
+    <section><title>Screenshot</title><p>Placeholder for screenshot
+    here</p><p/></section>
+
+    <section><title>Resultant Configuration Files
+    </title><p><b>ifcfg-bond0</b></p><codeblock>DEVICE=bond0
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=none
+BONDING_OPTS="mode=803.3ad"</codeblock><p/><p><b>ifcfg-bond0.141
+    </b></p><codeblock>DEVICE=bond0.141ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.141.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock><p/><p><b>ifcfg-bond0.151 </b></p><codeblock>DEVICE=bond0.151
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.151.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock><p/><p><b>ifcfg-bond0.170 </b></p><codeblock>DEVICE=bond0.170
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.170.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock><p/><p><b>ifcfg-bond1 </b></p><codeblock>DEVICE=bond1
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=none
+BONDING_OPTS="mode=802.3ad"</codeblock><p/><p><b>ifcfg-bond1.140
+    </b></p><codeblock>DEVICE=bond1.140
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.140.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock><p/><p><b>ifcfg-bond1.150</b></p><codeblock>DEVICE=bond1.150
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.150.2
+NETMASK=255.255.255.0
+VLAN=yes
+</codeblock><p/><p><b>ifcfg-eth0 </b></p><codeblock>DEVICE=eth0
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond1
+SLAVE=yes
+NM_CONTROLLED=no
+</codeblock><p/><p><b>ifcfg-bond0.151 </b></p><codeblock>DEVICE=bond1.150
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.150.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock><p/><p><b>ifcfg-eth1 </b></p><codeblock>DEVICE=eth1
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond0
+SLAVE=yes
+NM_CONTROLLED=no</codeblock><p/><p><b>ifcfg-eth2 - Original Configuration,
+    configured by Foreman standard provisioning. </b></p><codeblock>DEVICE="eth2"
+BOOTPROTO="dhcp"
+DHCP_HOSTNAME="testhost.example.org"
+HOSTNAME="testhost.example.org"
+HWADDR="02:00:00:00:60:F0"
+IPV6INIT="yes"
+MTU="1500"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="f7527188-d3a3-4e6a-bff0-c9cc010f8a43"
+</codeblock><p/><p><b>ifcfg-eth3 </b></p><codeblock>DEVICE=eth3
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond1
+SLAVE=yes
+NM_CONTROLLED=no</codeblock><p/><p><b>ifcfg-eth4</b></p><codeblock>DEVICE=eth4
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond0
+SLAVE=yes
+NM_CONTROLLED=no
+</codeblock><p/><p><b>ifcfg-eth5 </b></p><codeblock>DEVICE=eth5
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond0
+SLAVE=yes
+NM_CONTROLLED=no</codeblock></section>
+  </body>
+</topic>
