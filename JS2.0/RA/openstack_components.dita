@@ -10,9 +10,9 @@
     <table frame="all" rowsep="1" colsep="1" id="openstack_components">
       <title>OpenStack Components</title>
       <tgroup cols="3">
-        <colspec colname="function" colnum="1" colwidth="0.25*"/>
-        <colspec colname="codename" colnum="2" colwidth="0.25*"/>
-        <colspec colname="description" colnum="3" colwidth="1.0*"/>
+        <colspec colname="function" colnum="1" colwidth="1*"/>
+        <colspec colname="codename" colnum="2" colwidth="1*"/>
+        <colspec colname="description" colnum="3" colwidth="4*"/>
         <thead>
           <row>
             <entry>Function</entry>
@@ -50,14 +50,14 @@
               that can be retrieved, leveraged, and then updated if necessary. Primary examples of
               data that best fit this type of storage model are virtual machine images, photo
               storage, email storage, and backup archiving. Having no central “brain” or master
-              point of control provides greater scalability, redundancy, and permanence. <p>Objects are
-                written to multiple hardware devices in the data center, with the OpenStack software
-                responsible for ensuring data replication and integrity across the cluster. Storage
-                clusters can scale horizontally by adding new nodes. Should a node fail, OpenStack
-                works to replicate its content from other active nodes. Because OpenStack uses
-                software logic to ensure data replication and distribution across different devices,
-                inexpensive commodity hard drives and servers can be used in lieu of more expensive
-                equipment.</p></entry>
+              point of control provides greater scalability, redundancy, and permanence. <p>Objects
+                are written to multiple hardware devices in the data center, with the OpenStack
+                software responsible for ensuring data replication and integrity across the cluster.
+                Storage clusters can scale horizontally by adding new nodes. Should a node fail,
+                OpenStack works to replicate its content from other active nodes. Because OpenStack
+                uses software logic to ensure data replication and distribution across different
+                devices, inexpensive commodity hard drives and servers can be used in lieu of more
+                expensive equipment.</p></entry>
           </row>
           <row>
             <entry>Compute/IaaS</entry>
@@ -84,29 +84,66 @@
               library for streaming virtual disk images.</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>Block Storage</entry>
+            <entry>Cinder</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-storage/" format="html"
+                scope="external">OpenStack Block Storage</xref> provides persistent block level
+              storage devices for use with OpenStack compute instances. The block storage system
+              manages the creation, attaching and detaching of the block devices to servers. Block
+              storage volumes are fully integrated into OpenStack Compute and the Dashboard enabling
+              cloud users to manage their own storage needs. In addition to using simple <tm
+                tmtype="reg" trademark="Linux">Linux</tm> server storage, it has unified storage
+              support for numerous storage devices. <p>Block storage is appropriate for performance
+                sensitive scenarios such as database storage, expandable file systems, or providing
+                a server with access to raw block level storage. Snapshot management provides
+                powerful functionality for backing up data stored on block storage volumes.
+                Snapshots can be restored or used to create a new block storage volume.</p></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>Networking</entry>
+            <entry>Neutron</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-networking/"
+                format="html" scope="external">OpenStack Networking</xref> is a pluggable, scalable
+              and API-driven system for managing networks and IP addresses. Like other aspects of
+              the cloud operating system, it can be used by administrators and users to increase the
+              value of existing datacenter assets. OpenStack Networking ensures the network will not
+              be the bottleneck or limiting factor in a cloud deployment and gives users real
+              self-service, even over their network configurations.</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>Telemetry</entry>
+            <entry>Ceilometer</entry>
+            <entry><xref href="https://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Telemetry</xref> aggregates usage and
+              performance data across the services deployed in an OpenStack cloud. This powerful
+              capability provides visibility and insight into the usage of the cloud across dozens
+              of data points and enables cloud operators to view metrics globally or by individual
+              deployed resources.</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>Orchestration</entry>
+            <entry>Heat</entry>
+            <entry><xref href="https://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Orchestration</xref> is a template-driven
+              engine that enables application developers to describe and automate the deployment of
+              infrastructure. The flexible template language can specify compute, storage and
+              networking configurations as well as detailed post-deployment activity to automate the
+              full provisioning of infrastructure as well as services and applications. Through
+              integration with the Telemetry service, the Orchestration engine can also perform
+              auto-scaling of certain infrastructure elements.</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>Database</entry>
+            <entry>Trove</entry>
+            <entry><xref href="http://www.openstack.org/software/openstack-shared-services"
+                format="html" scope="external">OpenStack Database</xref>, designed to run entirely
+              on OpenStack, has the goal of enabling users to quickly and easily utilize the
+              features of a relational database without the burden of handling complex
+              administrative tasks. Cloud users and database administrators can provision and manage
+              multiple database instances as needed. <p>Initially, the service will focus on providing
+              resource isolation at high performance while automating complex administrative tasks
+              including deployment, configuration, patching, backups, restores, and
+              monitoring.</p></entry>
           </row>
         </tbody>
       </tgroup>
