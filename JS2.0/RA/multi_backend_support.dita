@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="multi_backend_support">
+  <title>Cinder Multi-Backend Support</title>
+  <body>
+    <p>This solution can take advantage of Cinder’s Multi-Backend and Multi-Instance support, using different storage types to meet the requirements that the application requires. You can meet different use cases based on performance, large data transfers, temporary storage, and other criteria.</p>
+    <p>For example, you can create a Ceph cluster with a performance group and a second storage option of a Dell EqualLogic group to support large data transfers. Then, using Cinder multi-backend, configure the Virtual Machine Volume requirements as required.</p>
+  </body>
+</topic>
