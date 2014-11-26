@@ -7,5 +7,110 @@
       documentation for the OpenStack components is available at<xref
         href="http://www.openstack.org" format="html" scope="external">
         http://docs.openstack.org/</xref>.</p>
+    <table frame="all" rowsep="1" colsep="1" id="openstack_components">
+      <title>OpenStack Components</title>
+      <tgroup cols="3">
+        <colspec colname="function" colnum="1" colwidth="0.25*"/>
+        <colspec colname="codename" colnum="2" colwidth="0.25*"/>
+        <colspec colname="description" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Function</entry>
+            <entry>Code Name</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Identity</entry>
+            <entry>Keystone</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">Identity Service</xref> provides a central directory
+              of users mapped to the OpenStack services they can access. It acts as a common
+              authentication system across the cloud operating system and can integrate with
+              existing backend directory services.</entry>
+          </row>
+          <row>
+            <entry>Dashboard/Portal</entry>
+            <entry>Horizon</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-dashboard/" format="html"
+                scope="external">OpenStack Dashboard</xref> provides administrators and users a
+              graphical interface to access, provision and automate cloud-based resources. The
+              extensible design makes it easy to plug in and expose third party products and
+              services.</entry>
+          </row>
+          <row>
+            <entry>Object Storage</entry>
+            <entry>Swift</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-storage/" format="html"
+                scope="external">OpenStack Object Storage</xref> is open source software for
+              creating redundant, scalable object storage using clusters of standardized servers to
+              store petabytes of accessible data. It is not a file system or real-time data storage
+              system, but rather a long-term storage system for a more permanent type of static data
+              that can be retrieved, leveraged, and then updated if necessary. Primary examples of
+              data that best fit this type of storage model are virtual machine images, photo
+              storage, email storage, and backup archiving. Having no central “brain” or master
+              point of control provides greater scalability, redundancy, and permanence. <p>Objects are
+                written to multiple hardware devices in the data center, with the OpenStack software
+                responsible for ensuring data replication and integrity across the cluster. Storage
+                clusters can scale horizontally by adding new nodes. Should a node fail, OpenStack
+                works to replicate its content from other active nodes. Because OpenStack uses
+                software logic to ensure data replication and distribution across different devices,
+                inexpensive commodity hard drives and servers can be used in lieu of more expensive
+                equipment.</p></entry>
+          </row>
+          <row>
+            <entry>Compute/IaaS</entry>
+            <entry>Nova</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-compute/" format="html"
+                scope="external">OpenStack Compute</xref> is open source software designed to
+              provision and manage large networks of virtual machines, creating a redundant and
+              scalable cloud computing platform. It gives you the software, control panels, and APIs
+              required to orchestrate a cloud, including running instances, managing networks, and
+              controlling access through users and projects. OpenStack Compute strives to be both
+              hardware and hypervisor agnostic, currently supporting a variety of standard hardware
+              configurations and seven major hypervisors.</entry>
+          </row>
+          <row>
+            <entry>Virtual Images</entry>
+            <entry>Glance</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Image Service</xref> provides discovery,
+              registration, and delivery services for virtual disk images. The Image Service API
+              server provides a standard REST interface for querying information about virtual disk
+              images stored in a variety of back-end stores, including OpenStack Object Storage.
+              Clients can register new virtual disk images with the Image Service, query for
+              information on publicly available disk images, and use the Image Service’s client
+              library for streaming virtual disk images.</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
   </body>
 </topic>
