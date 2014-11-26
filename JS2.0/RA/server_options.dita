@@ -14,4 +14,12 @@
     <title/>
   </topic>
   
+  <topic id="hw_configs" conref="hw_configs.dita#hw_configs">
+    <title/>
+  </topic>
+  
+  <topic id="config_notes" conref="config_notes.dita#config_notes">
+    <title/>
+  </topic>
+  
 </topic>
