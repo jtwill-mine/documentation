@@ -17,6 +17,8 @@
  
  <topicref href="overview.dita"/>
  
+ <topicref href="openstack_architecture.dita"/>
+ 
  <topicref href="../Common/references.dita"/>
 
 </map>
