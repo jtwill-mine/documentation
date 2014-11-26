@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hardware_options">
+  <title>Hardware Options</title>
+  <shortdesc>To reduce time spent on hardware specification for an initial system this Reference Architecture offers specific choices for servers, storage and networking.:</shortdesc>
+  <body>
+    <ul>
+      <li>For evaluations, the recommended hardware is general-purpose, and enables a wide range of configuration options.</li>
+      <li>For pilots, the recommended hardware has been optimized for infrastructure, compute, and storage roles. As noted throughout this Reference Architecture, Dell constantly adds capabilities to expand this offering.</li>
+    </ul>
+    <p>Each of the Dell PowerEdge server configurations in this Reference Architecture is designed as a getting-started setup for OpenStack compute, OpenStack storage, or both simultaneously. Dell recommends starting with OpenStack software using components from this configuration because the hardware and operations processes are a flexible foundation to expand upon. By design, you can repurpose the Reference Architecture configuration as your cloud deployment grows, so your investment is protected.</p>
+  </body>
+</topic>
