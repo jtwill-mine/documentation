@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
-<glossgroup id="glossgroup_lym_dk1_fq">
+<glossgroup id="glossgroup_ra">
   <title>Glossary</title>
-  <glossentry id="ddl">
+  <glossentry id="bmc">
     <glossterm>BMC/IDRAC Enterprise</glossterm>
     <glossdef>Baseboard management controller. An on-board microcontroller that monitors the system for critical events by communicating with various sensors on the system board and sends alerts and log events when certain parameters exceed their preset thresholds.</glossdef>
   </glossentry>
@@ -23,5 +23,46 @@
   <glossentry id="cluster">
     <glossterm>Cluster</glossterm>
     <glossdef>A set of computers dedicated to OpenStack that can be attached to a pair of distribution switches.</glossdef>
+  </glossentry>
+  <glossentry id="compute_node">
+    <glossterm>Compute Node</glossterm>
+    <glossdef>The hardware configuration that best supports the hypervisor server or Nova compute roles.</glossdef>
+  </glossentry>
+  <glossentry id="devops">
+    <glossterm>DevOps</glossterm>
+    <glossdef>An operational model for managing data centers using automated deployments.</glossdef>
+  </glossentry>
+  <glossentry id="hyperscale">
+    <glossterm>Hyperscale</glossterm>
+    <glossdef>The ability of application and systems to scale out as demand increases. Typically
+      found in large cloud, grid, and/or distributed computing environments.</glossdef>
+  </glossentry>
+  <glossentry id="hypervisor">
+    <glossterm>Hypervisor</glossterm>
+    <glossdef>Software that runs virtual machines (VMs).</glossdef>
+  </glossentry>
+  <glossentry id="lag">
+    <glossterm>LAG</glossterm>
+    <glossdef>Link Aggregation Group.</glossdef>
+  </glossentry>
+  <glossentry id="lom">
+    <glossterm>LOM</glossterm>
+    <glossdef>LAN on motherboard.</glossdef>
+  </glossentry>
+  <glossentry id="node">
+    <glossterm>Node</glossterm>
+    <glossdef>One of the servers in the system.</glossdef>
+  </glossentry>
+  <glossentry id="pod">
+    <glossterm>Pod</glossterm>
+    <glossdef>An installation comprised of three racks, based upon server and network sizing.</glossdef>
+  </glossentry>
+  <glossentry id="storage_admin_host">
+    <glossterm>Storage Admin Host</glossterm>
+    <glossdef>The physical host that supports the Red Hat OpenStack Manager and the Inktank Ceph Enterprise Admin.</glossdef>
+  </glossentry>
+  <glossentry id="storage_node">
+    <glossterm>Storage Node</glossterm>
+    <glossdef>The hardware configuration that best supports storage functions such as Swift and Ceph.</glossdef>
   </glossentry>
 </glossgroup>
