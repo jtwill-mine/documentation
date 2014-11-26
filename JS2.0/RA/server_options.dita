@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="server_options">
+  <title>Server Infrastructure Options</title>
+  <body>
+    <p>The Solution includes using the PowerEdge R620, R720 and R720xd Server lines. The following sections describe the supported server models and configurations required. Detailed part lists and rack layouts are included in a Build of Materials Guide.</p>
+  </body>
+  
+  <topic id="poweredge_r620" conref="poweredge_r620.dita#poweredge_r620">
+    <title/>
+  </topic>
+  
+  <topic id="poweredge_720_r720xd" conref="poweredge_720_r720xd.dita#poweredge_720_r720xd">
+    <title/>
+  </topic>
+  
+</topic>

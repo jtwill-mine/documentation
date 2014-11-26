@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_720_r720xd">
+  <title>PowerEdge R720 and R720xd Servers</title>
+  <body>
+    <p>The PowerEdge R720 and R720xd servers are Dell’s 12G PowerEdge mainstream 2-socket 2U rack servers. They are designed to deliver the most competitive feature set, best performance, and best value. In this generation, Dell offers a large storage footprint, best-in-class I/O capabilities, and more advanced management features. The PowerEdge R720 and R720xd are technically similar, except that the R720xd has a backplane that can accommodate up to 12 3.5” or 24 2.5” drives.</p>
+    <fig>
+      <title>PowerEdge R720xd Server</title>
+      <image href="../../dell_customization/common/artwork/poweredge_720xd.png"  align="left"></image>
+    </fig>
+    <p>Advantages of the PowerEdge R720 over the PowerEdge R620 to meet the application needs include:</p>
+    <ul>
+      <li>Additional drive slots</li>
+      <li>Additional PCI slots</li>
+      <li>A larger selection of processors</li>
+    </ul>
+    <note>Dell recommends that you use the PowerEdge R620 for Infrastructure and Compute nodes.</note>
+  </body>
+</topic>
