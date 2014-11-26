@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="key_benefits">
+  <title>Key Benefits</title>
+  <body>
+    <ul>
+      <li>Co-engineered and Integrated: OpenStack depends on Linux for performance, security, hardware enablement, networking, storage, and other primary services. Red Hat Enterprise Linux OpenStack Platform delivers an OpenStack distribution with the proven performance, stability, and scalability of Red Hat Enterprise Linux, enabling you to focus on delivering the services your customers want instead of the underlying operating platform.</li>
+      <li>Deploy with confidence, as Red Hat Enterprise Linux OpenStack Platform provides a hardened and stable branch release of OpenStack and Linux, which is supported by Red Hat for three (3) year life cycles, well beyond the six-month release cycle of unsupported community OpenStack. Security fixes, bug fixes, performance enhancements, and some features can be back-ported from future releases without disrupting production environments.</li>
+      <li>Take advantage of broad application support. Red Hat Enterprise Linux running as guest virtual machines provides a stable application development platform with a broad set of certified ISV certifications, so that you can rapidly build and deploy your cloud applications.</li>
+      <li>Avoid vendor lock-in by moving to open technologies while maintaining your existing infrastructure investments.</li>
+      <li>Benefit from the world’s largest partner ecosystem: Red Hat has assembled the world’s largest ecosystem of certified partners for OpenStack compute, storage, networking, ISV software, and services for Red Hat Enterprise Linux OpenStack Platform deployments, ensuring the same level of broad support and compatibility customers enjoy today in the Red Hat Enterprise Linux ecosystem.</li>
+      <li>Bring security to the cloud. Rely on the SELinux military-grade security and container technologies of Red Hat Enterprise Linux to prevent intrusions and protect your data when running in public or private clouds.</li>
+      <li>Carrier-grade platform: Red Hat Enterprise Linux OpenStack Platform offers a carrier-grade, massively scalable platform, ideally suited for the telecommunications industry and their need for Network Functions Virtualization (NFV).</li>
+    </ul>
+  </body>
+</topic>
