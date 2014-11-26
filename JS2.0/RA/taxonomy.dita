@@ -19,6 +19,16 @@
       <li>Orchestration (Heat)</li>
       <li>Telemetry (Ceilometer)</li>
     </ul>
-    <p/>
+    <p>The taxonomy presented in Figure 1 reflects infrastructure components (shown in light green) and OpenStack-specific components (shown in red), that are under active development by the community, Dell, and Red Hat. The taxonomy reflects a DevOps perspective in that there are two sides for cloud users:</p>
+    <ul>
+      <li>Site-specific infrastructure</li>
+      <li>Standards-based API (shown in pink) interactions</li>
+    </ul>
+    <p>The standards-based APIs are the same between all OpenStack deployments, and let customers and vendor ecosystems operate across multiple clouds. The site-specific infrastructure combines open and proprietary software, Dell hardware, and operational processes to deliver cloud resources as a service.</p>
+    <p>The implementation choices for each cloud infrastructure are highly specific to the requirements of each site. Many of these choices can be standardized and automated using the tools in this Reference Architecture, and by following DevOps processes. Conforming to best practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red Hat and the broader OpenStack community.</p>
+    <fig>
+      <title>OpenStack Taxonomy</title>
+      <image href="../../dell_customization/common/artwork/taxonomy.png"  align="left"></image>
+    </fig>
   </body>
 </topic>

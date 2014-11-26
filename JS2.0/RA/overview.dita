@@ -16,4 +16,10 @@
   conref="taxonomy.dita#taxonomy">
     <title/>
   </topic>
+  
+  <topic id="hardware_options"
+    conref="hardware_options.dita#hardware_options">
+    <title/>
+  </topic>
+  
 </topic>  
