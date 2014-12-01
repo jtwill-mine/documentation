@@ -6,4 +6,8 @@
   <body>
     <p>Given a virtual machine with the characteristics of two (2) cores, 4GB of memory and 40GB of ephemeral hard disk, you can expect to run around 70 virtual machines with a 1.5 oversubscription of CPU cores. At 90 virtual machines, you will have two-to-one CPU core oversubscription and still have ephemeral storage under subscribed and memory just starting to be oversubscribed. This solution only uses LVM storage on the OpenStack Controller node.</p>
   </body>
+  
+  <topic id="poc_net_config" conref="poc_net_config.dita#poc_net_config">
+    <title/>
+  </topic>
 </topic>
