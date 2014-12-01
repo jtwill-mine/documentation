@@ -15,4 +15,12 @@
     <title/>
   </topic>
   
+  <topic id="service_layout" conref="service_layout.dita#service_layout">
+    <title/>
+  </topic>
+  
+  <topic id="deployment" conref="deployment.dita#deployment">
+    <title/>
+  </topic>
+  
 </topic>
