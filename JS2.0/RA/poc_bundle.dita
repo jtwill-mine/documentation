@@ -10,4 +10,9 @@
   <topic id="poc_net_config" conref="poc_net_config.dita#poc_net_config">
     <title/>
   </topic>
+  
+  <topic id="poc_bundle_hw_layout" conref="poc_bundle_hw_layout.dita#poc_bundle_hw_layout">
+    <title/>
+  </topic>
+  
 </topic>

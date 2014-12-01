@@ -18,4 +18,12 @@
     <title/>
   </topic>
   
+  <topic id="pilot_bundle" conref="pilot_bundle.dita#pilot_bundle">
+    <title/>
+  </topic>
+  
+  <topic id="pilot_bundles_expansion" conref="pilot_bundles_expansion.dita#pilot_bundles_expansion">
+    <title/>
+  </topic>
+  
 </topic>
