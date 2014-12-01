@@ -9,7 +9,7 @@
       <li>Compute (Nova)</li>
       <li>Dashboard (Horizon)</li>
       <li>Database (Trove)</li>
-      <li>Identity(Keystone)</li>
+      <li>Identity (Keystone)</li>
       <li>Image Service (Glance)</li>
       <li>Networking (Nova networking default; Neutron networking available)<fn>Neutron networking
           and Swift are available via custom Services engagements, for customer evaluation only.

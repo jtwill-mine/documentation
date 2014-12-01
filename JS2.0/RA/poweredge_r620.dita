@@ -2,7 +2,13 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="poweredge_r620">
   <title>PowerEdge R620 Server</title>
+  <shortdesc>The PowerEdge R620 server is a hyper-dense, two-socket, 1U rack server.</shortdesc>
   <body>
-    <p>The PowerEdge R620 server is a hyper-dense, two-socket, 1U rack server. This server has a large memory footprint and impressive I/O options that make it an exceptional platform for space-sensitive environments. With its hyper-dense memory (up to 768GB in a 1U form factor) and the Intel® Xeon® processor E5-2600 or E5-2600 v2 product families, the R620 is perfect for virtualization, high-performance computing (HPC), and workgroup collaboration applications.</p>
+    <p>This server has a large memory footprint and impressive I/O options that make it an
+      exceptional platform for space-sensitive environments. With its hyper-dense memory (up to
+      768GB in a 1U form factor) and the <tm tmtype="reg" trademark="Intel">Intel</tm> <tm tmtype="reg" trademark="Xeon">Xeon</tm> processor
+      E5-2600 or E5-2600 v2 product families, the R620 is perfect for virtualization,
+      high-performance computing (HPC), and workgroup collaboration applications.</p>
   </body>
+
 </topic>
