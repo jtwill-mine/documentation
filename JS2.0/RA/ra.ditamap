@@ -25,6 +25,10 @@
  
  <topicref href="op_notes.dita"/>
  
+ <topicref href="network_architecture.dita"/>
+ 
+ <topicref href="solution_bundles.dita"/>
+ 
  <topicref href="../Common/references.dita"/>
 
 </map>

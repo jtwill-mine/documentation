@@ -3,7 +3,7 @@
 <topic id="openstack_components">
   <title>OpenStack Components</title>
   <body>
-    <p>The following component descriptions are from the http://OpenStack.org site. Extensive
+    <p>The following component descriptions are from the OpenStack Foundation website. Extensive
       documentation for the OpenStack components is available at<xref
         href="http://www.openstack.org" format="html" scope="external">
         http://docs.openstack.org/</xref>.</p>
