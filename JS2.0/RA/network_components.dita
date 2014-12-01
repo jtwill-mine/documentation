@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_components">
+  <title>Network Components</title>
+  <shortdesc>The data network is primarily composed of the ToR and the aggregation switches. Configurations for 1GbE and 10GbE are included in this Reference Architecture. The following component blocks make up this network:</shortdesc>
+  <body>
+    <ul>
+      <li>Server Nodes</li>
+      <li>Access Switch or Top of Rack (ToR)</li>
+      <li>Aggregation Switches</li>
+      <li>Core</li>
+      <li>Layer-2 and Layer-3 Switching</li>
+      <li>Out of Band Management Network</li>
+    </ul>
+  </body>
+  
+  <topic id="server_nodes" conref="server_nodes.dita#server_nodes">
+    <title/>
+  </topic>
+  
+  <topic id="tor_switches" conref="tor_switches.dita#tor_switches">
+    <title/>
+  </topic>
+  
+  <topic id="aggregation_switches" conref="aggregation_switches.dita#aggregation_switches">
+    <title/>
+  </topic>
+  
+  <topic id="core" conref="core.dita#core">
+    <title/>
+  </topic>
+  
+  <topic id="layer2_layer3_switching" conref="layer2_layer3_switching.dita#layer2_layer3_switching">
+    <title/>
+  </topic>
+  
+  <topic id="management_network" conref="management_network.dita#management_network">
+    <title/>
+  </topic>
+  
+  <topic id="dell_openswitch" conref="dell_openswitch.dita#dell_openswitch">
+    <title/>
+  </topic>
+  
+</topic>

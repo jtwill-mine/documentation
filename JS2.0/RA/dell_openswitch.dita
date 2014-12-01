@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dell_openswitch">
+  <title>Dell OpenSwitch Solution</title>
+  <shortdesc>In addition to the Dell switch-based Reference Architecture, Dell provides an open standard that enables you to choose other brands and configurations of switches for your OpenStack environment.</shortdesc>
+  <body>
+    <p>You are expected to ensure that the switches conform to these requirements, and that they are configured according this reference architecture’s guidelines. The following list of requirements will enable other brands of switches to properly operate with Dell's required tools and configurations:</p>
+    <ul>
+      <li>Support for IEEE 802.1Q vLAN traffic and port tagging</li>
+      <li>Support using one untagged and multiple tagged vLANs on the same port</li>
+      <li>Ability to provide a minimum of 170 Gigabit Ethernet ports in a non-blocking configuration
+        within Provisioning vLAN<ul id="ul_arv_rjr_gq">
+          <li>Configuration can be a single switch or a combination of stacked switches to meet the
+            additional requirements</li>
+        </ul></li>
+      <li>The ability to create link aggregation groups (LAGs) with a minimum of two physical links in each LAG</li>
+      <li>If multiple switches are stacked:<ul id="ul_bwr_5jr_gq">
+          <li>The ability to create a LAG across stacked switches</li>
+          <li>Full-bisection bandwidth</li>
+          <li>Support for vLANs to be available across all switches in the stack</li>
+        </ul></li>
+      <li>250,000 packets-per-second capability per switch</li>
+      <li>A managed switch that supports SSH and serial line configuration</li>
+      <li>SNMP v3 support</li>
+    </ul>
+  </body>
+</topic>
