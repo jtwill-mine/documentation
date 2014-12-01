@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bundles_expansion">
+  <title>Pilot Bundles Expansion</title>
+  <shortdesc>The Pilot bundles can be expanded using the compute bundle or the storage bundle. Using this one could expand up to twenty (20) servers per rack and/or 30 Us (infrastructure, compute and storage combined).</shortdesc>
+  <body>
+    <p>Expanding beyond the first rack will require the addition of aggregation network switches as described in the networking section, additional TOR and management switches in each rack, and the appropriate power and cooling. Expansion beyond a total of three (3) racks will need to be designed and configured based on your requirements. Please work with your Sales Representative to properly architect these large cluster deployments.</p>
+  </body>
+</topic>
