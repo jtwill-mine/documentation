@@ -6,4 +6,17 @@
   <body>
     <p>Expanding beyond the first rack will require the addition of aggregation network switches as described in the networking section, additional TOR and management switches in each rack, and the appropriate power and cooling. Expansion beyond a total of three (3) racks will need to be designed and configured based on your requirements. Please work with your Sales Representative to properly architect these large cluster deployments.</p>
   </body>
+  
+  <topic id="rack_1" conref="rack_1.dita#rack_1">
+    <title/>
+  </topic>
+  
+  <topic id="rack_2" conref="rack_2.dita#rack_2">
+    <title/>
+  </topic>
+  
+  <topic id="rack_3" conref="rack_3.dita#rack_3">
+    <title/>
+  </topic>
+  
 </topic>
