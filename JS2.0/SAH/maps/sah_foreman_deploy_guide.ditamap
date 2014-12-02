@@ -2,7 +2,12 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
 "map.dtd">
 <map>
-  <title>Bonding Snippet - Version 2.0</title>
+  <title>Dell SAH Foreman Deployment Guide - Version 2.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
 
   <topicref href="../../Common/trademarks.dita"/>
 
@@ -10,7 +15,7 @@
 
   <topicref href="../../Common/overview.dita"/>
 
-  <topicref href="bonding_snippet.dita"/>
+  <topicref href="../topics/foreman_vm_dep.dita"/>
 
   <topicref href="../../Common/references.dita"/>
 </map>
