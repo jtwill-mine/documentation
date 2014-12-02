@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Bonding Snippet - Version 2.0</title>
+  <topicref href="../../Common/trademarks.dita"/>
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+  <topicref href="../../Common/overview.dita"/>
+  <topicref href="../topics/bonding_snippet.dita"/>
+  <topicref href="../../Common/references.dita"/>
+</map>
