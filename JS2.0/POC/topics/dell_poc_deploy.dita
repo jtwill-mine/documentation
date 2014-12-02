@@ -37,16 +37,16 @@
 
     <p>A checklist file, dell-pilot-checklist.pdf, is available to easily keep
     track of this information. Download and print the Dell Pilot Checklist
-    from <xref
-    href="???"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
+    from <b><xref
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</xref></b>.</p>
 
     <p>Write the various information gathered and needed on the checklist for
     reference as needed.</p>
 
     <p>Several steps in this document use files to configure the environment.
     These files are available in a TAR file called dell-pilot-deploy.tgz. This
-    TAR file is available from <xref
-    href="???"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
+    TAR file is available from <xref format="html"
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050"><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b></xref>.</p>
 
     <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
 
@@ -137,8 +137,7 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
             <li>"ln -s /store/data/iso/RHEL6.5 RHEL6.5"</li>
           </ol></li>
 
-        <li>Validate the web interface works<p><xref href="???"><?onclick play()?></xref><b>http://ipaddress
-        of foreman/RHEL6.5/README</b></p></li>
+        <li>Validate the web interface works<msgblock>http://ipaddress of foreman/RHEL6.5/README</msgblock></li>
       </ol></section>
 
     <section><p/><title>Note the Medium ID</title></section>
@@ -555,7 +554,7 @@ System Type: Physical
 
     <p>Set nics parameter on the controller host. This provides the kickstart
     file the needed information to configure the two non-provisioned (Public
-    API, Private API) interfaces. </p>
+    API, Private API) interfaces.</p>
 
     <p>The value for the parameter consists of a space separated list of
     <b>key=value</b> pairs. Each pair contains the configuration information
@@ -646,69 +645,69 @@ System Type: Physical
     each environment. The remaining parameters are noted within the file.
     </p><simpletable relcolwidth="245* 755*">
         <strow>
-          <stentry>passwd_auto </stentry>
+          <stentry>passwd_auto</stentry>
 
           <stentry>The password to use in most places.</stentry>
         </strow>
 
         <strow>
-          <stentry>controller_admin_host </stentry>
+          <stentry>controller_admin_host</stentry>
 
           <stentry>The IP address of the controller nodes interface that has
           administrative network traffic.</stentry>
         </strow>
 
         <strow>
-          <stentry>controller_priv_host </stentry>
+          <stentry>controller_priv_host</stentry>
 
           <stentry>The IP address of the controller nodes interface connected
-          to the Private API network. </stentry>
+          to the Private API network.</stentry>
         </strow>
 
         <strow>
-          <stentry>controller_pub_host </stentry>
+          <stentry>controller_pub_host</stentry>
 
           <stentry>The IP address of the controller nodes interface connected
-          to the Public API network. </stentry>
+          to the Public API network.</stentry>
         </strow>
 
         <strow>
-          <stentry>nova_public_net </stentry>
+          <stentry>nova_public_net</stentry>
 
           <stentry>Network address and mask for the Nova Public
           Network</stentry>
         </strow>
 
         <strow>
-          <stentry>nova_public_iface </stentry>
+          <stentry>nova_public_iface</stentry>
 
           <stentry>Compute nodes interface that is connected to the Nova
-          Public Network </stentry>
+          Public Network</stentry>
         </strow>
 
         <strow>
-          <stentry>nova_private_net </stentry>
+          <stentry>nova_private_net</stentry>
 
-          <stentry>Network address and mask for the Nova Private Network
-          </stentry>
+          <stentry>Network address and mask for the Nova Private
+          Network</stentry>
         </strow>
 
         <strow>
-          <stentry>nova_private_iface </stentry>
+          <stentry>nova_private_iface</stentry>
 
           <stentry>Compute nodes interface that is connected to the Nova
           Private Network</stentry>
         </strow>
 
         <strow>
-          <stentry>private_api_net </stentry>
+          <stentry>private_api_net</stentry>
 
           <stentry>Network address and mask for the Private API
           Network</stentry>
         </strow>
 
         <strow>
-          <stentry>private_api_iface </stentry>
+          <stentry>private_api_iface</stentry>
 
           <stentry>Compute nodes interface that is connected to the Private
           API Network</stentry>
