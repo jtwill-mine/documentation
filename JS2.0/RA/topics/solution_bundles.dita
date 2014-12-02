@@ -26,4 +26,8 @@
     <title/>
   </topic>
   
+  <topic id="production_bundle" conref="production_bundle.dita#production_bundle">
+    <title/>
+  </topic>
+  
 </topic>
