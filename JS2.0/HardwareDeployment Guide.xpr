@@ -6,12 +6,23 @@
             <serialized version="16.0" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
-                        <String>keys.context</String>
-                        <String>${pdu}/RA/ra.ditamap</String>
-                    </entry>
-                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>RA/maps/ra.ditamap</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA Map Dell PDF</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>RA/ra.ditamap</String>
