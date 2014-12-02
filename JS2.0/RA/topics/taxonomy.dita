@@ -28,7 +28,7 @@
     <p>The implementation choices for each cloud infrastructure are highly specific to the requirements of each site. Many of these choices can be standardized and automated using the tools in this Reference Architecture, and by following DevOps processes. Conforming to best practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red Hat and the broader OpenStack community.</p>
     <fig>
       <title>OpenStack Taxonomy</title>
-      <image href="../../dell_customization/common/artwork/taxonomy.png"  align="left"></image>
+      <image href="../../Customization/OpenTopic/common/artwork/taxonomy.png"  align="left"></image>
     </fig>
   </body>
 </topic>

@@ -14,7 +14,7 @@
     </ul>
     <fig>
       <title>Pilot Bundle with Ceph Storage</title>
-      <image href="../../JS2.0/Customization/OpenTopic/common/artwork/pilot_bundle_ceph.png"></image>
+      <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle_ceph.png"></image>
     </fig>
     <p>The Ceph cluster provides data protection through replication, block device cloning, and snapshots. By default, the data is striped across the cluster. The number of storage nodes in a single cluster can scale to hundreds of nodes and many petabytes in size. Ceph considers the physical placement of storage nodes when deciding how data is replicated. By defining fault domains, like a rack, row, and data center, and defining the Ceph position of the nodes and disks, Ceph using the position in the decision for data replication, thereby reducing the probability that a given failure results is the loss of more than one data replica.</p>
     <p>There are two services in the Ceph storage cluster, the OSD and the MON (monitor). The OSD services data to the Ceph clients from disks on the storage nodes. Generally, there is one OSD process per disk drive. All OSDs run on the storage nodes. The MON process is used by the Ceph clients and other Ceph processes to determine the composition of the cluster and where data is located. There should be a minimum of three of these MON processes for the Ceph cluster. The MON processes are installed on all OpenStack controller nodes.</p>
@@ -27,7 +27,7 @@
     <p>The storage nodes must have access to the Storage Network as previously stated and to the Storage Cluster Network vLAN.</p>
     <fig>
       <title>Pilot Bundle with Ceph Storage</title>
-      <image href="../../JS2.0/Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="left"></image>
+      <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="left"></image>
     </fig>
   </body>
 </topic>

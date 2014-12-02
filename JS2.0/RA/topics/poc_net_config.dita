@@ -8,7 +8,7 @@
     <note>Please note that all nodes are stacked together, with a single switch above them.</note>
     <fig>
       <title>PoC Networking Layout</title>
-      <image href="../../JS2.0/Customization/OpenTopic/common/artwork/poc_networking_layout.png"  align="left"></image>
+      <image href="../../Customization/OpenTopic/common/artwork/poc_networking_layout.png"  align="left"></image>
     </fig>
   </body>
 </topic>
