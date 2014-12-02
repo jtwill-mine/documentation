@@ -37,8 +37,8 @@
 
     <p>A checklist file, dell-pilot-checklist.pdf, is available to easily keep
     track of this information. Download and print the Dell Pilot Checklist
-    from <b><xref
-    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</xref></b>.</p>
+    from <b><xref format="html"
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p>
 
     <p>Write the various information gathered and needed on the checklist for
     reference as needed.</p>
@@ -46,7 +46,7 @@
     <p>Several steps in this document use files to configure the environment.
     These files are available in a TAR file called dell-pilot-deploy.tgz. This
     TAR file is available from <xref format="html"
-    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050"><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b></xref>.</p>
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050"><b>https://wiki.opencrowbar.org</b></xref>.</p>
 
     <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
 
