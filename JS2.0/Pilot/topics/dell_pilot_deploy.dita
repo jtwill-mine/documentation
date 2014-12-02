@@ -37,16 +37,16 @@
 
     <p>A checklist file, dell-pilot-checklist.pdf, is available to easily keep
     track of this information. Download and print the Dell Pilot Checklist
-    from <xref
-    href="Dell JS-2.0 Documentation"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
+    from <b><xref format="html"
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p>
 
     <p>Write the various information gathered and needed on the checklist for
     reference as needed.</p>
 
     <p>Several steps in this document use files to configure the environment.
     These files are available in a TAR file called dell-pilot-deploy.tgz. This
-    TAR file is available from <xref
-    href="Dell JS-2.0 Documentation"/><b>https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</b>.</p>
+    TAR file is available from <b><xref format="html"
+    href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p>
 
     <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
 
@@ -138,8 +138,7 @@ rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch
             <li>"ln -s /store/data/iso/RHEL6.5 RHEL6.5"</li>
           </ol></li>
 
-        <li>Validate the web interface works<p><xref href="Click Play"><?onclick play()?></xref><b>http://ipaddress
-        of foreman/RHEL6.5/README</b></p></li>
+        <li>Validate the web interface works<codeblock>http://ipaddress of foreman/RHEL6.5/README</codeblock></li>
       </ol></section>
 
     <p>Configure the installation medium that will be used to provision the
