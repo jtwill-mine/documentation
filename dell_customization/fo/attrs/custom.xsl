@@ -34,29 +34,27 @@
     </xsl:attribute-set>
     
     <xsl:attribute-set name="odd__header">
-        <xsl:attribute name="text-align">end</xsl:attribute>
-        <xsl:attribute name="end-indent">10pt</xsl:attribute>
-        <xsl:attribute name="space-before">10pt</xsl:attribute>
-        <xsl:attribute name="space-before.conditionality">retain</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="text-align">start</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="even__header">
-        <xsl:attribute name="start-indent">10pt</xsl:attribute>
-        <xsl:attribute name="space-before">10pt</xsl:attribute>
-        <xsl:attribute name="space-before.conditionality">retain</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="text-align">end</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="odd__footer">
-        <xsl:attribute name="text-align">center</xsl:attribute>
-        <xsl:attribute name="end-indent">10pt</xsl:attribute>
-        <xsl:attribute name="space-after">10pt</xsl:attribute>
-        <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="text-align">end</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="even__footer">
-        <xsl:attribute name="start-indent">10pt</xsl:attribute>
-        <xsl:attribute name="space-after">10pt</xsl:attribute>
-        <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="text-align">end</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__link">
