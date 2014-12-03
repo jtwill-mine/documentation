@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="local_iso_sah">
+  <title>Local ISO on Solution Admin Host</title>
+  <shortdesc>Run these steps to configure the installation medium from a local ISO on the Solution Admin Host (SAH):</shortdesc>
+  <body>
+    <ol>
+      <li>Run the following command on the SAH node:<codeblock># yum install httpd</codeblock></li>
+      <li>Configure <cmdname>httpd</cmdname> with any options you want. Defaults will work,
+        but are not secure.</li>
+      <li>Copy the ISO to the SAH in
+        <codeph>/store/data/iso</codeph>:<codeblock># mount -o loop ISO_NAME /mnt
+# mkdir /store/data/iso/RHEL6.5(Name of the OS) 
+# rsync -av /mnt/ /store/data/iso/RHEL6.5
+# umount /mnt
+# ln -s /store/data/iso/RHEL6.5 RHEL6.5</codeblock></li>
+      <li>Validate that the web interface works, by entering the URL to its <codeph>README</codeph>
+        file into a web browser. Replace <b>ip_address_of_foreman_node</b> with the appropriate
+        FQDN.<codeblock>http://ip_address_of_foreman_node/RHEL6.5/README</codeblock></li>
+    </ol>
+  </body>
+</topic>
