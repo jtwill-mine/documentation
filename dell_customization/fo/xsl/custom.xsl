@@ -79,6 +79,57 @@
         </fo:page-sequence>
         <xsl:call-template name="createNotices"/>
     </xsl:template>
+
+    <xsl:template name="insertBodyOddHeader">
+
+        <fo:static-content flow-name="odd-body-header">
+            <fo:block xsl:use-attribute-sets="__body__odd__header">
+                  <fo:table>
+                    <fo:table-body>
+                      <fo:table-row>
+                            <fo:table-cell padding-start="20mm">
+                              <fo:block>
+                                  <fo:retrieve-marker retrieve-class-name="current-header"/>
+                              </fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell padding-end="20mm">
+                              <fo:block text-align="right">
+                                Page <fo:page-number/>
+                              </fo:block>
+                            </fo:table-cell>
+                      </fo:table-row>
+                    </fo:table-body>
+                  </fo:table>
+          </fo:block>
+        </fo:static-content>
+
+    </xsl:template>
+    
+            
+    <xsl:template name="insertBodyEvenHeader">
+
+        <fo:static-content flow-name="even-body-header">
+            <fo:block xsl:use-attribute-sets="__body__even__header">
+                  <fo:table>
+                    <fo:table-body>
+                      <fo:table-row>
+                            <fo:table-cell padding-start="20mm">
+                              <fo:block>
+                                  <fo:retrieve-marker retrieve-class-name="current-header"/>
+                              </fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell padding-end="20mm">
+                              <fo:block text-align="right">
+                                Page <fo:page-number/>
+                              </fo:block>
+                            </fo:table-cell>
+                      </fo:table-row>
+                    </fo:table-body>
+                  </fo:table>
+          </fo:block>
+        </fo:static-content>
+
+    </xsl:template>
     
   <!-- <xsl:template name="insertBodyOddHeader"/>
         
@@ -88,6 +139,6 @@
                 
     <xsl:template name="insertBodyEvenFooter"/>
      
-    <xsl:variable name="mirror-page-margins" select="true()"/> -->
+  <xsl:variable name="mirror-page-margins" select="true()"/> -->
 
- </xsl:stylesheet>
+</xsl:stylesheet>
