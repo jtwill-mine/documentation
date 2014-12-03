@@ -5,12 +5,14 @@
   <shortdesc>Run these steps to configure the installation medium from a local ISO on the Foreman node:</shortdesc>
   <body>
     <ol>
-      <li>Run the following command:<codeblock>mkdir /usr/share/foreman/public/iso</codeblock></li>
+      <li>Run the following command on the Foreman server
+        node:<codeblock># mkdir /usr/share/foreman/public/iso</codeblock></li>
       <li>Copy the RHEL7 iso to the <codeph>/root</codeph> directory of the foreman node.</li>
       <li>Edit /etc/fstab to add the following line to the end:<codeblock>/root/RHEL-7.0-Server-x86_64-dvd.iso /usr/share/foreman/public/iso iso9660 loop,ro 0 0</codeblock></li>
-      <li>Run the following command:<codeblock>mount –a</codeblock></li>
+      <li>Run the following command:<codeblock># mount –a</codeblock></li>
       <li>Run the following command. The path included in the example below should work with most
-        satellite installations, just replace <b>FOREMAN_SERVER</b> with the appropriate FQDN. <codeblock>hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
+        satellite installations, just replace <b>FOREMAN_SERVER</b> with the appropriate FQDN.
+        <codeblock># hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
             --path 'http://FOREMAN_SERVER/iso'</codeblock></li>
     </ol>
   </body>
