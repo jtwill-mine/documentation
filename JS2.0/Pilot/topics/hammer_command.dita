@@ -11,9 +11,7 @@
       <li>rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch</li>
     </ul> 
     <ol>
-      <li>Install the packages:<ol id="ol_x2n_2vf_hq">
-          <li><codeblock># yum -y install "*hammer*"</codeblock></li>
-        </ol></li>
+      <li>Install the packages:<codeblock># yum -y install "*hammer*"</codeblock></li>
       <li>Configure the <cmdname>hammer</cmdname> command to display 200 items per page. This just
         makes it easier to read everything. <ol id="ol_vmp_pwf_hq">
           <li>Replace the value for the <b>:per_page:</b> option in the

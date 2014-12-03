@@ -29,4 +29,8 @@
     <title/>
   </topic>
   
+  <topic id="configure_install_medium" conref="configure_install_medium.dita#configure_install_medium">
+    <title/>
+  </topic>
+  
 </topic>
