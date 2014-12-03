@@ -21,4 +21,12 @@
     <title/>
   </topic>
   
+  <topic id="hammer_command" conref="hammer_command.dita#hammer_command">
+    <title/>
+  </topic>
+  
+  <topic id="hammer_help" conref="hammer_help.dita#hammer_help">
+    <title/>
+  </topic>
+  
 </topic>
