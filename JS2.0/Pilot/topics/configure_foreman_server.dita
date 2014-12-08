@@ -54,4 +54,16 @@
     <title/>
   </topic>
   
+  <topic id="gather_info" conref="gather_info.dita#gather_info">
+    <title/>
+  </topic>
+  
+  <topic id="configure_facts_updates" conref="configure_facts_updates.dita#configure_facts_updates">
+    <title/>
+  </topic>
+  
+  <topic id="configure_os_updates" conref="configure_os_updates.dita#configure_os_updates">
+    <title/>
+  </topic>
+  
 </topic>
