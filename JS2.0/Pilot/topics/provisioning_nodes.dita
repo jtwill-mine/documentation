@@ -67,4 +67,9 @@
     <title/>
   </topic>
   
+  <topic id="controller_node" conref="controller_node.dita#controller_node">
+    <title/>
+  </topic>  
+  
+    
 </topic>
