@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="configure_foreman_server">
-  <title>Configure Foreman Server</title>
+  <title>Configure the Foreman Server</title>
   <shortdesc>If the provisioning interface on the provisioned host is not the first interface returned in the puppet data, Foreman will overwrite the configuration in the database. This can cause issues later.</shortdesc>
   <body>
     <p>To prevent Foreman from changing the IP and MAC information to reflect the puppet data, change the <codeph>ignore_puppet_facts_for_provisioning</codeph> setting</p>
@@ -30,6 +30,10 @@
   </topic>
   
   <topic id="configure_install_medium" conref="configure_install_medium.dita#configure_install_medium">
+    <title/>
+  </topic>
+  
+  <topic id="note_medium_id" conref="note_medium_id.dita#note_medium_id">
     <title/>
   </topic>
   
