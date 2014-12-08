@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="non_bonded_nic_config">
+  <title>Non-Bonded NIC Configuration</title>
+  <shortdesc>The <codeph>nics</codeph> parameter can be set on the hosts to provide the information,
+    needed to allow the kickstart file to configure the non-bonded interfaces.</shortdesc>
+  <body>
+    <ol>
+      <li>Set the <codeph>nics</codeph> parameter on the controller host to configure the non-bonded
+          interfaces.<note>The Provisioning interface is configured by Foreman, so it does not need
+          to be configured again.</note>
+        <p>The value for the <codeph>nic</codeph> parameter consists of a space separated list of
+            <i>key=value</i> pairs. Each pair contains the configuration information for a single
+          NIC. This list is entered in the same format as a <cmdname>bash</cmdname> associative
+          array. The entire value is enclosed within single tick marks and parentheses. <codeph>'(
+            …)'</codeph></p>
+        <p>Each key/value is in the following format: <ul>
+            <li><i>[IFACE]="parameters" </i></li>
+          </ul> An example of defining a single interface:
+          <codeblock># hammer host set-parameter --host-id 3  --name nics \
+  --value '([em1]="onboot static aa:bb:cc:dd:ee:ff 192.168.0.110/255.255.255.0")'</codeblock></p>
+        <p>The parameters consist of the following:<table frame="all" rowsep="1" colsep="1"
+            id="table_dsg_qzq_3q">
+            <title>Non-Bonded NIC Configuration Variables</title>
+            <tgroup cols="3">
+              <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+              <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+              <thead>
+                <row>
+                  <entry>Parameter</entry>
+                  <entry>Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry><parmname>onboot</parmname></entry>
+                  <entry>The interface is enabled when the system boots. Default is disabled.
+                  </entry>
+                </row>
+                <row>
+                  <entry><parmname>dhcp | static | none</parmname></entry>
+                  <entry>The interface gets its network configuration using DHCP, the network
+                    configuration is statically configured, or the interface has no network
+                    configuration. If no option is specified, <parmname>dhcp</parmname> is
+                    assumed.</entry>
+                </row>
+                <row>
+                  <entry><parmname>xx:xx:xx:xx:xx:xx</parmname></entry>
+                  <entry>The hardware address of the interface.</entry>
+                </row>
+                <row>
+                  <entry><parmname>x.x.x.x/y.y.y.y</parmname></entry>
+                  <entry>The IP address and network mask of the interface. Used only when
+                      <parmname>static</parmname> is specified. Must be in the format
+                    presented.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table></p></li>
+      <li>Execute the following command to set the nic parameters for the two other interfaces used
+        by the controller node.<ol id="ol_qcs_d1r_3q">
+          <li>Replace the <b>HOST_ID</b>, <b>IFACE</b>, <b>MAC</b>, and <b>IP/MASK</b> parameters as
+            appropriate.<codeblock># hammer host set-parameter --host-id HOST_ID --name nics \
+            --value '([IFACE]="onboot static MAC IP/MASK" [IFACE]="onboot static MAC IP/MASK")'</codeblock></li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>
