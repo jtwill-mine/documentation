@@ -12,6 +12,7 @@
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../../Common/overview.dita"/>
   <topicref href="../topics/configure_foreman_server.dita"/>
+  <topicref href="../topics/provisioning_nodes.dita"/>
   <!-- <topicref href="../topics/dell_pilot_deploy.dita"/> -->
   <topicref href="../../Common/references.dita"/>
 </map>
