@@ -50,4 +50,8 @@
     <title/>
   </topic>
   
+  <topic id="configure_templates" conref="configure_templates.dita#configure_templates">
+    <title/>
+  </topic>
+  
 </topic>
