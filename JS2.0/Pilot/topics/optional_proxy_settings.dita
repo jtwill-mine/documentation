@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="optional_proxy_settings">
+  <title>Optional Proxy Settings</title>
+  <shortdesc>Proxy settings for the <cmdname>subscription-manager</cmdname> and <cmdname>yum</cmdname> commands can be set by defining the needed parameters. These parameters are completely optional if not needed.</shortdesc>
+  <body>
+    <p>Although defining and using the following parameters will work for most environments, they may not work for all. Setting the parameters gives the provisioning template the information to set the proxy information using the <cmdname>subscription-manager config</cmdname> command.</p>
+    <p>If these setting do not work in your environment, the kickstart file may need to be manually modified. This can be done using the Foreman user interface.</p>
+    <p>The following parameters can be set using the <cmdname>hammer os set-parameter</cmdname>
+      command as above.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_yvz_1qq_3q">
+      <title>Proxy Settings Parameters</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Parameter</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><codeph>subscription_manager_proxy</codeph></entry>
+            <entry>The proxy server to use, if needed.</entry>
+          </row>
+          <row>
+            <entry><codeph>subscription_manager_proxy_port</codeph></entry>
+            <entry>The proxy port to use, if needed.</entry>
+          </row>
+          <row>
+            <entry><codeph>subscription_manager_proxy_user</codeph></entry>
+            <entry>The proxy username, if needed.</entry>
+          </row>
+          <row>
+            <entry><codeph>subscription_manager_proxy_password</codeph></entry>
+            <entry>The proxy password, if needed.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
