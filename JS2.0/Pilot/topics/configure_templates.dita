@@ -18,7 +18,7 @@
         <tbody>
           <row>
             <entry>
-              <p>dell-osp-ks.template</p>
+              <p><codeph>dell-osp-ks.template</codeph></p>
             </entry>
             <entry>
               <p>Provisioning template that provides the kickstart file.</p>
@@ -26,7 +26,7 @@
           </row>
           <row>
             <entry>
-              <p>dell-osp-pxe.template</p>
+              <p><codeph>dell-osp-pxe.template</codeph></p>
             </entry>
             <entry>
               <p>PXE template that contains the PXE configuration.</p>
@@ -34,7 +34,7 @@
           </row>
           <row>
             <entry>
-              <p>interface_config.template</p>
+              <p><codeph>interface_config.template</codeph></p>
             </entry>
             <entry>
               <p>Snippet that provides a means to configure extra interfaces during installation.
@@ -43,7 +43,7 @@
           </row>
           <row>
             <entry>
-              <p>bonding_snippet.template</p>
+              <p><codeph>bonding_snippet.template</codeph></p>
             </entry>
             <entry>
               <p>Snippet that provides a means to bond interfaces during installation. This template
