@@ -12,4 +12,8 @@
     <title/>
   </topic> 
   
+  <topic id="bonded_nic_config" conref="bonded_nic_config.dita#bonded_nic_config">
+    <title/>
+  </topic> 
+  
 </topic>
