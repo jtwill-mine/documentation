@@ -37,4 +37,13 @@
     <title/>
   </topic>
   
+  <topic id="configure_partition_table"
+    conref="configure_partition_table.dita#configure_partition_table">
+    <title/>
+  </topic>
+  
+  <topic id="configure_os" conref="configure_os.dita#configure_os">
+    <title/>
+  </topic>
+  
 </topic>
