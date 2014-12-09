@@ -67,4 +67,16 @@
     <title/>
   </topic>
   
+  <topic id="hammer-deploy-cntl1" conref="hammer-deploy-cntl1.dita#hammer-deploy-cntl1">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-deploy-cntl2" conref="hammer-deploy-cntl2.dita#hammer-deploy-cntl2">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-deploy-cntl3" conref="hammer-deploy-cntl3.dita#hammer-deploy-cntl3">
+    <title/>
+  </topic>
+  
 </topic>
