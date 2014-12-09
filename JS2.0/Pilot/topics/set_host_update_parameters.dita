@@ -46,4 +46,8 @@
     <title/>
   </topic>
   
+  <topic id="configure_repositories" conref="configure_repositories.dita#configure_repositories">
+    <title/>
+  </topic>
+  
 </topic>
