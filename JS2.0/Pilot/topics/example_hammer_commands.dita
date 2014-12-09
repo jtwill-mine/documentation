@@ -35,4 +35,12 @@
     <title/>
   </topic>
   
+  <topic id="hammer-nic-bond-cntl2" conref="hammer-nic-bond-cntl2.dita#hammer-nic-bond-cntl2">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-nic-bond-cntl3" conref="hammer-nic-bond-cntl3.dita#hammer-nic-bond-cntl2">
+    <title/>
+  </topic>
+  
 </topic>
