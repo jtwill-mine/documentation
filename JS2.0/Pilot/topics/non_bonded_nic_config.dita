@@ -9,7 +9,7 @@
       <li>Set the <codeph>nics</codeph> parameter on the controller host to configure the non-bonded
           interfaces.<note>The Provisioning interface is configured by Foreman, so it does not need
           to be configured again.</note>
-        <p>The value for the <codeph>nic</codeph> parameter consists of a space separated list of
+        <p>The value for the <codeph>nics</codeph> parameter consists of a space separated list of
             <i>key=value</i> pairs. Each pair contains the configuration information for a single
           NIC. This list is entered in the same format as a <cmdname>bash</cmdname> associative
           array. The entire value is enclosed within single tick marks and parentheses. <codeph>'(
