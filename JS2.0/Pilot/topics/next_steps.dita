@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="next_steps">
+  <title>Next Steps</title>
+  <shortdesc>After the Ceph configuration is complete, or if Ceph configuration is not needed:</shortdesc>
+  <body>
+    <ol>
+      <li>Continue the configuration, using the Dell Pilot Hostgroups Deployment document.</li>
+    </ol>
+  </body>
+</topic>
