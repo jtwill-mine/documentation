@@ -79,4 +79,16 @@
     <title/>
   </topic>
   
+  <topic id="hammer-deploy-nova1" conref="hammer-deploy-nova1.dita#hammer-deploy-nova1">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-deploy-nova2" conref="hammer-deploy-nova2.dita#hammer-deploy-nova2">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-deploy-nova3" conref="hammer-deploy-nova3.dita#hammer-deploy-nova3">
+    <title/>
+  </topic>
+  
 </topic>
