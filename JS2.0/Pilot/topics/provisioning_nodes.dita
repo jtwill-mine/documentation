@@ -75,5 +75,9 @@
     <title/>
   </topic>
   
+  <topic id="set_host_update_parameters" conref="set_host_update_parameters.dita#set_host_update_parameters">
+    <title/>
+  </topic>
+  
     
 </topic>
