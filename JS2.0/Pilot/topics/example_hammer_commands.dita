@@ -39,11 +39,11 @@
     <title/>
   </topic>
   
-  <topic id="hammer-nic-bond-cntl3" conref="hammer-nic-bond-cntl3.dita#hammer-nic-bond-cntl2">
+  <topic id="hammer-nic-bond-cntl3" conref="hammer-nic-bond-cntl3.dita#hammer-nic-bond-cntl3">
     <title/>
   </topic>
   
-    <topic id="hammer-nic-bond-nova1" conref="hammer-nic-bond-nova1.dita#hammer-nic-bond-nova1">
+  <topic id="hammer-nic-bond-nova1" conref="hammer-nic-bond-nova1.dita#hammer-nic-bond-nova1">
     <title/>
   </topic>
   
@@ -52,6 +52,10 @@
   </topic>
   
   <topic id="hammer-nic-bond-nova3" conref="hammer-nic-bond-nova3.dita#hammer-nic-bond-nova3">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-nic-bond-ceph1" conref="hammer-nic-bond-ceph1.dita#hammer-nic-bond-ceph1">
     <title/>
   </topic>
   
