@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="example_hammer_commands">
+  <title>Example Hammer Commands</title>
+  <shortdesc>This topic presents the following <cmdname>hammer</cmdname> command
+    examples:</shortdesc>
+  <body>
+    <ul>
+      <li>hammer-list</li>
+      <li>hammer-nic-bond-cntl1</li>
+      <li>hammer-nic-bond-cntl2</li>
+      <li>hammer-nic-bond-cntl3</li>
+      <li>hammer-nic-bond-nova1</li>
+      <li>hammer-nic-bond-nova2</li>
+      <li>hammer-nic-bond-nova3</li>
+      <li>hammer-nic-bond-ceph1</li>
+      <li>hammer-nic-bond-ceph2</li>
+      <li>hammer-nic-bond-ceph3</li>
+      <li>hammer-deploy-cntl1</li>
+      <li>hammer-deploy-cntl2</li>
+      <li>hammer-deploy-cntl3</li>
+      <li>hammer-deploy-nova1</li>
+      <li>hammer-deploy-nova2</li>
+      <li>hammer-deploy-nova3</li>
+      <li>hammer-deploy-ceph1</li>
+      <li>hammer-deploy-ceph2</li>
+      <li>hammer-deploy-ceph3</li>
+    </ul>
+  </body>
+  <topic id="hammer-list_example" conref="hammer-list_example.dita#hammer-list_example">
+    <title/>
+  </topic>
+  
+  <topic id="hammer-nic-bond-cntl1" conref="hammer-nic-bond-cntl1.dita#hammer-nic-bond-cntl1">
+    <title/>
+  </topic>
+  
+</topic>
