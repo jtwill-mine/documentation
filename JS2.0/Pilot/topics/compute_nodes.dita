@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="compute_nodes">
+  <title>Compute Nodes</title>
+  <shortdesc>The compute nodes have two separate bonds and a single non-bonded interface for its networking.</shortdesc>
+  <body>
+    <p>One bond connects to the Nova Public network, while the other bond connects to the Nova Private, Private_API, and Storage networks. Each network on the second bond are vLAN tagged.</p>
+    <ol>
+      <li>Set the <b>bonds</b>, <b>bond_ifaces</b>, and <b>bond_opts</b> parameters for each compute node.</li>
+      <li>Make sure that the <b>bond_opts</b> sets the <b>MODE</b> to <i>balance-tlb</i> and <b>PROMISC</b> to <i>yes</i>.</li>
+    </ol>
+    <p>For example:</p>
+    <codeblock># hammer host set-parameter --host-id HOST_ID --name bonds \
+  --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
+  [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
+  [bond0.302]="onboot static vlan 172.40.139.110/255.255.255.0"
+  [bond1]="onboot static 172.10.139.61/255.255.255.0")'
+
+# hammer host set-parameter --host-id HOST_ID --name bond_ifaces \
+  --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
+
+# hammer host set-param</codeblock>
+  </body>
+</topic>
