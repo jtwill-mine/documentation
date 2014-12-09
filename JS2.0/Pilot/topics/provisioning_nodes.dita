@@ -79,5 +79,17 @@
     <title/>
   </topic>
   
+  <topic id="start_provisioning" conref="start_provisioning.dita#start_provisioning">
+    <title/>
+  </topic>
+  
+  <topic id="ceph_deployment" conref="ceph_deployment.dita#ceph_deployment">
+    <title/>
+  </topic>
+  
+  <topic id="next_steps" conref="next_steps.dita#next_steps">
+    <title/>
+  </topic>
+  
     
 </topic>
