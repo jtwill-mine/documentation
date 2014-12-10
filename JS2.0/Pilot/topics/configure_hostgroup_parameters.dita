@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_hostgroup_parameters">
+  <title>Configure Hostgroup Parameters</title>
+  <shortdesc>Most hostgroup parameters are configured using an <codeph>ERB</codeph> file. This makes
+    configuration quicker and easier than using the Foreman interface.</shortdesc>
+  <body>
+    <ol>
+      <li>Edit the <codeph>dell-pilot.yaml.erb</codeph> file.<ol id="ol_gwv_bgf_jq">
+          <li>Change the variables between the lines marked <b>Variables</b> to <b>Change</b>.</li>
+          <li>Change the variables between the lines marked <b>End of Variable</b> to
+            <b>Change</b>.</li>
+        </ol><note>The most common variables that require changes have values of
+          <i>CHANGEME_*</i>.</note></li>
+      <li>Install the <codeph>rubygen-foreman_api</codeph> package, in order to apply the changes in
+        the <cmdname>dell-pilot.yaml.erb</cmdname> file:<codeblock># yum install -y rubygem-foreman_api</codeblock></li>
+    </ol>
+  </body>
+</topic>
