@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bom_r620">
-  <title>Pilot Bundle Bill of Materials PowerEdge R620</title>
+  <title>Pilot Bundle Bill of Materials - PowerEdge R620</title>
   <body>
     <p>
-      <table frame="all" rowsep="1" colsep="1" id="table_tpk_x2m_jq">
-        <title>Bill of Materials PowerEdge R620 Nodes</title>
+      <table frame="all" rowsep="1" colsep="1" id="table_r620">
+        <title>Bill of Materials - PowerEdge R620 Nodes</title>
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="1.0*"/>
           <colspec colname="c2" colnum="2" colwidth="1.0*"/>
