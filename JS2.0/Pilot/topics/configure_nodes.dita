@@ -14,4 +14,8 @@
     <title/>
   </topic>
   
+  <topic id="configure_controller_node_parameters" conref="configure_controller_node_parameters.dita#configure_controller_node_parameters">
+    <title/>
+  </topic>
+  
 </topic>
