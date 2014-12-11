@@ -6,14 +6,47 @@
     configuration quicker and easier than using the Foreman interface.</shortdesc>
   <body>
     <ol>
-      <li>Edit the <codeph>dell-pilot.yaml.erb</codeph> file.<ol id="ol_gwv_bgf_jq">
+      <li>Edit the <codeph>dell-pilot.yaml.erb</codeph> file:<ol id="ol_gwv_bgf_jq">
           <li>Change the variables between the lines marked <b>Variables</b> to <b>Change</b>.</li>
           <li>Change the variables between the lines marked <b>End of Variable</b> to
             <b>Change</b>.</li>
         </ol><note>The most common variables that require changes have values of
           <i>CHANGEME_*</i>.</note></li>
       <li>Install the <codeph>rubygen-foreman_api</codeph> package, in order to apply the changes in
-        the <cmdname>dell-pilot.yaml.erb</cmdname> file:<codeblock># yum install -y rubygem-foreman_api</codeblock></li>
+        the <cmdname>dell-pilot.yaml.erb</cmdname>
+        file:<codeblock># yum install -y rubygem-foreman_api</codeblock></li>
+      <li>Change to the <codeph>/usr/share/openstack-foreman-installer</codeph> directory.</li>
+      <li>Execute the <cmdname>bin/quickstack_defaults.rb</cmdname>
+        command:<codeblock># cd /usr/share/openstack-foreman-installer
+
+# bin/quickstack_defaults.rb -g config/hostgroups.yaml -d ~/dell-pilot.yaml.erb -v parameters</codeblock></li>
+      <li>Set the <b>network_overrides</b> parameter with the <cmdname>hammer sc-param
+          update</cmdname> command, as it cannot easily be set using the
+          <cmdname>dell-pilot.yaml.erb</cmdname> file. The command determines the parameter ID, and
+        then applies the changes.<ol id="ol_cnb_msk_jq">
+          <li>Replace <b>VLAN</b> with the <b>starting VLAN number </b>to be used in the
+            environment.</li>
+          <li>Ensure that the syntax of the line does not
+            change.<codeblock># ParamId=$( hammer sc-param  list --per-page 1000 --search network_overrides \
+  | awk '/network_overrides/ {print $1}')
+
+# hammer sc-param update --id ${ParamId} \
+  --default-value "{'vlan_start': VLAN, 'force_dhcp_release': 'false'}" --override yes</codeblock></li>
+
+        </ol></li>
+      <li>Disable Neutron from the Foreman user interface; it is unneeded for this environment:<ol
+          id="ol_ngb_4wk_jq">
+          <li>Log into the Foreman UI.</li>
+          <li>Select the <b>Configure</b> dropdown on the top of the window.</li>
+          <li>Select <b>Hostgroups</b>.</li>
+          <li>Select the <b>HA All In One Controller</b>. </li>
+          <li>Select the <b>Parameters</b> tab.</li>
+          <li>Locate the <parmname>quickstack::pacemaker::neutron::enabled</parmname> parameter, and
+            then select the <b>override</b> button to the right of them.</li>
+          <li>Scroll down to the bottom of the window, and then enter <b>false</b> as the value for
+            the overridden parameter.</li>
+        <li>Select the <b>Submit</b> button.</li>
+        </ol></li>
     </ol>
   </body>
 </topic>
