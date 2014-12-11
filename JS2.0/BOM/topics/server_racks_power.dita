@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="server_racks_power">
+  <title>Server Racks and Power</title>
+  <shortdesc>Table 1 and Table 2 above do not include racks or power distribution units, as they are generally site specific. The physical dimensions and power requirements need to be reviewed. The R720 and R720xd both require rear cable management and power distribution.</shortdesc>
+  <body></body>
+</topic>
