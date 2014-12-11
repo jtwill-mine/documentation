@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="excluding_ips_for_nova">
+  <title>Excluding IP Addresses for Nova Use</title>
+  <shortdesc>IP addresses can be excluded for Nova use.</shortdesc>
+  <body>
+    <ul>
+      <li>The <cmdname>nova fixed-ip-reserve</cmdname> command prevents a fixed IP address from being used:<codeblock></codeblock></li>
+      <li>The <cmdname>nova-manage floating delete</cmdname> command prevents a floating IP address from being used:<codeblock># nova-manage floating delete FLOAT_IP</codeblock></li>
+    </ul>
+  </body>
+</topic>
