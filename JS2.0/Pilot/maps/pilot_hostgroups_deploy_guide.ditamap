@@ -14,6 +14,7 @@
   <topicref href="../../Common/overview.dita"/>
   <topicref href="../topics/configure_hostgroup_parameters.dita"/>
   <topicref href="../topics/configure_ceph.dita"/>
+  <topicref href="../topics/configure_nodes.dita"/>
   <!-- <topicref href="../topics/dell_pilot_hostgroups_deploy.dita"/> -->
   <topicref href="../../Common/references.dita"/>
 </map>
