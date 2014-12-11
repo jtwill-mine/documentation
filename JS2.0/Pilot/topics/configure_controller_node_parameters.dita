@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_controller_node_parameters">
+  <title>Configure Controller Node-Specific Parameters</title>
+  <shortdesc>A few items should be set using the Foreman user interface. These include:</shortdesc>
+  <body>
+    <p>
+      <table frame="all" rowsep="1" colsep="1" id="table_snl_xwl_jq">
+        <title>Controller Node-Specific Parameters</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Parameter</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry><parmname>quickstack::pacemaker::common</parmname></entry>
+              <entry>fence_ipmilan_address </entry>
+            </row>
+            <row>
+              <entry><parmname>quickstack::pacemaker::common</parmname></entry>
+              <entry>fence_ipmilan_username</entry>
+            </row>
+            <row>
+              <entry><parmname>quickstack::pacemaker::common</parmname></entry>
+              <entry>fence_ipmilan_password</entry>
+            </row>
+            <row>
+              <entry><parmname>quickstack::pacemaker::params::private_ip</parmname></entry>
+              <entry>IP address of the controller's NIC on the Private API network.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+    <ol>
+      <li>Set the <parmname>fence_ipmilan_*</parmname> parameters to the IP address and
+        authentication credentials for the node's iDRAC.<ol id="ol_krx_sxl_jq">
+          <li>Log into the Foreman UI.</li>
+          <li>Select the <b>Hosts</b> dropdown at the top of the window.</li>
+          <li>Select <b>All Hosts</b>. </li>
+          <li>Select the <b>first controller</b>, and then select <b>Edit</b> on the next screen. </li>
+          <li>Select the <b>Parameters</b> tab.</li>
+          <li>Locate each of the parameters that require changes, and then select the
+              <b>Override</b> button to the right.</li>
+          <li>Scroll down to the bottom of the window, and then enter the appropriate value for each
+            of the overridden parameters.</li>
+          <li>Select the <b>Submit</b> button.</li>
+        </ol></li>
+      <li>Repeat the above steps for each of the controller nodes.</li>
+      <li>Once the hostgroup is applied to all the controllers, log into each of the controller nodes.</li>
+      <li> Execute the following command to pull the hostgroup configuration:<codeblock># puppet agent -t -dv |&amp; tee /root/puppet.out</codeblock><p>This command pipes a copy of the output to the <codeph>/root/puppet.out</codeph> file for later review.</p></li>
+      <li>Watch the output, or review the <codeph>/root/puppet.out</codeph> file, for errors.</li>
+    </ol>
+  </body>
+</topic>
