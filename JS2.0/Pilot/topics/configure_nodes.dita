@@ -18,4 +18,8 @@
     <title/>
   </topic>
   
+  <topic id="add_compute_hostgroup" conref="add_compute_hostgroup.dita#add_compute_hostgroup">
+    <title/>
+  </topic>
+  
 </topic>

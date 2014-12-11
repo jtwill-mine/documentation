@@ -57,4 +57,9 @@
       <li>Watch the output, or review the <codeph>/root/puppet.out</codeph> file, for errors.</li>
     </ol>
   </body>
+  
+  <topic id="enable_servicesp" conref="enable_services.dita#enable_services">
+    <title/>
+  </topic>
+  
 </topic>
