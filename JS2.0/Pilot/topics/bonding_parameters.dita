@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bonding_parameters">
+  <title>Bonding Parameters</title>
+  <shortdesc>The parameters are defined in the format of bash associative arrays.</shortdesc>
+  <body>
+    <p>When the parameters are accessed by the snippet, carriage returns are are stripped from the input. This means that carriage returns can be used for readability when setting the Parameter Values. Care should be taken to use carriage returns only between array elements and not withing the array elements themselves.</p>
+  </body>
+</topic>
