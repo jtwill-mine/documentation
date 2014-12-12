@@ -4,6 +4,12 @@
   <title>Bonding Parameters</title>
   <shortdesc>The parameters are defined in the format of bash associative arrays.</shortdesc>
   <body>
-    <p>When the parameters are accessed by the snippet, carriage returns are are stripped from the input. This means that carriage returns can be used for readability when setting the Parameter Values. Care should be taken to use carriage returns only between array elements and not withing the array elements themselves.</p>
+    <p>When the parameters are accessed by the snippet, carriage returns are are stripped from the input. This means that carriage returns can be used for readability when setting the parameter values.</p>
+      <note>Use carriage returns <b>only</b> between array elements, and not within the array elements themselves.</note>
   </body>
+  
+  <topic id="bonds_parameter" conref="bonds_parameter.dita#bonds_parameter">
+    <title/>
+  </topic>
+  
 </topic>
