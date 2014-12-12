@@ -5,7 +5,9 @@
   <title>Bonding Snippet - Version 2.0</title>
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
-  <topicref href="../../Common/overview.dita"/>
-  <topicref href="../topics/bonding_snippet.dita"/>
+  <topicref href="../topics/bonding_snippet_overview.dita"/>
+  <topicref href="../topics/create_provisioning_template_bonding.dita"/>
+  <!-- <topicref href="../../Common/overview.dita"/>
+  <topicref href="../topics/bonding_snippet.dita"/> -->
   <topicref href="../../Common/references.dita"/>
 </map>
