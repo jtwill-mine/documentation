@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="example_config_bonds_vlans">
+  <title>Example Configuration with Bonds and vLANs</title>
+  <shortdesc>The following configuration will configure five (5) vLANs across two bonds:</shortdesc>
+  <body>
+    <ul>
+      <li>The first bond uses <codeph>eth1</codeph>, <cmdname>eth4</cmdname>, and <codeph>eth5</codeph> for vLANs 141, 151, and 170</li>
+      <li>The second bond uses <codeph>eth0</codeph> and <codeph>eth3</codeph> for vLANs 140 and 150</li>
+    </ul>
+    <p>Both bonds are configured for 802.3ad bonding mode. Each vLAN is assigned an IP address on its respective network.</p>
+    <note><codeph>eth2</codeph> is not bonded, and is used for provisioning.</note>
+  </body>
+  
+  <topic id="bonding_config_steps" conref="bonding_config_steps.dita#bonding_config_steps">
+    <title/>
+  </topic>
+  
+  
+</topic>
