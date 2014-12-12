@@ -9,5 +9,15 @@
       <li><parmname>bond_ifaces</parmname></li>
       <li><parmname>bond_opts</parmname> </li>
     </ul>
+    
   </body>
+  
+  <topic id="add_bonding_parameter" conref="add_bonding_parameter.dita#add_bonding_parameter">
+    <title/>
+  </topic>
+  
+  <topic id="bonding_parameters" conref="bonding_parameters.dita#bonding_parameters">
+    <title/>
+  </topic>
+  
 </topic>
