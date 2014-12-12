@@ -9,7 +9,6 @@
   <topicref href="../topics/create_provisioning_template_bonding.dita"/>
   <topicref href="../topics/update_kickstart_template.dita"/>
   <topicref href="../topics/configure_host_bonding.dita"/>
-  <!-- <topicref href="../../Common/overview.dita"/>
-  <topicref href="../topics/bonding_snippet.dita"/> -->
+  <topicref href="../topics/example_config_bonds_vlans.dita"/>
   <topicref href="../../Common/references.dita"/>
 </map>
