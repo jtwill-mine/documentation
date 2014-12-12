@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bond_opts_usage_example">
+  <title><codeph>bond_opts</codeph> Paremeter Usage Example</title>
+  <body>
+    <codeblock>( [bond0]="mode=1 miimon=10" [bond1]="mode=802.3ad" )</codeblock>
+  </body>
+</topic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bond_opts_parameter">
+  <title>The <codeph>bond_opts</codeph> Parameter</title>
+  <shortdesc>The <codeph>bond_opts</codeph> parameter specifies the bonding options to use for each bond. It accepts any valid interface bonding parameters.</shortdesc>
+  <body></body>
+  
+  <topic id="bond_opts_usage_example"
+    conref="bond_opts_usage_example.dita#bond_opts_usage_example">
+    <title/>
+  </topic>
+  
+</topic>
