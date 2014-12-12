@@ -2,12 +2,13 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
 "map.dtd">
 <map>
-  <title>Bonding Snippet - Version 2.0</title>
+  <title>Dell Red Hat Cloud Solutions Bonding Snippet User Guide - Version 2.0</title>
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../topics/bonding_snippet_overview.dita"/>
   <topicref href="../topics/create_provisioning_template_bonding.dita"/>
   <topicref href="../topics/update_kickstart_template.dita"/>
+  <topicref href="../topics/configure_host_bonding.dita"/>
   <!-- <topicref href="../../Common/overview.dita"/>
   <topicref href="../topics/bonding_snippet.dita"/> -->
   <topicref href="../../Common/references.dita"/>
