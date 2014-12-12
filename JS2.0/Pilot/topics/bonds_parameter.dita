@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="bonds_parameter">
-  <title>The <parmname>bonds</parmname> Parameter</title>
-  <shortdesc>The bonds parameter specifies the basic bond information. It accepts the following options.</shortdesc>
+  <title>The <codeph>bonds</codeph> Parameter</title>
+  <shortdesc>The <cmdname>bonds</cmdname> parameter specifies the basic bond information. It accepts the following options.</shortdesc>
   <body>
-    <p></p>
+    <table frame="all" rowsep="1" colsep="1" id="table_tgw_mwt_jq">
+      <title>bonds Parameter Options</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Option</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><parmname>onboot</parmname></entry>
+            <entry>The bond is enabled when the system boots. Default is <i>disabled</i>.</entry>
+          </row>
+          <row>
+            <entry><parmname>dhcp | static | none</parmname></entry>
+            <entry>The bond gets its network configuration using DHCP, the network configuration is
+              staticaly configured, or the bond has no network configuration. If none are specified,
+              DHCP is assumed.</entry>
+          </row>
+          <row>
+            <entry><parmname>vlan</parmname></entry>
+            <entry>This bond is a vLAN.</entry>
+          </row>
+          <row>
+            <entry><parmname>x.x.x.x/y.y.y.y</parmname></entry>
+            <entry>The IP address and network mask of the interface. Used only when <i>static</i> is
+              specified. Must be in the format presented.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
   </body>
+  
+    <topic id="bonds_parameter_usage_example" conref="bonds_parameter_usage_example.dita#bonds_parameter_usage_example">
+      <title/>
+    </topic>
+    
+  
 </topic>
