@@ -12,4 +12,12 @@
     <title/>
   </topic>
   
+  <topic id="bond_ifaces_parameter" conref="bond_ifaces_parameter.dita#bond_ifaces_parameter">
+    <title/>
+  </topic>
+  
+  <topic id="bond_opts_parameter" conref="bond_opts_parameter.dita#bond_opts_parameter">
+    <title/>
+  </topic>
+  
 </topic>
