@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bonds_parameter">
+  <title>The <parmname>bonds</parmname> Parameter</title>
+  <shortdesc>The bonds parameter specifies the basic bond information. It accepts the following options.</shortdesc>
+  <body>
+    <p></p>
+  </body>
+</topic>
