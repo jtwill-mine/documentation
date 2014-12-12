@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="create_provisioning_template_bonding">
+  <title>Create the Provisioning Template for Bonding</title>
+  <body>
+    <ol>
+      <li>From the Foreman user interface, select <b>More</b>, and then select <b>Provisioning</b>
+        from the dropdown menu.</li>
+      <li>Select <b>Provisioning Templates</b> from the newly-presented drop down menu.</li>
+      <li>Select <b>New Template</b>.<p>A <i>New Template</i> screen appears.</p></li>
+      <li>Enter <b>bond_interfaces</b> in the <i>Name</i> field, and then select the <b>Snippet</b>
+          field.<p>A checkmark indicates that it is selected.</p></li>
+      <li>Place the following code in the <i>Template</i> editor
+          window:<p><codeblock>declare -A bonds=&lt;%= @host.params["bonds"] %&gt;
+declare -A bond_opts=&lt;%= @host.params["bond_opts"] %&gt;
+declare -A bond_ifaces=&lt;%= @host.params["bond_ifaces"] %&gt;
+for bond in ${!bonds[@]}
+do
+ read parms &lt;&lt;&lt; $( tr -d '\r' &lt;&lt;&lt; ${bonds[$bond]} )
+
+ unset bond_info
+ declare -A bond_info=( \
+   [DEVICE]="${bond}" \
+   [PROTO]="dhcp" \
+   [ONBOOT]="no" \
+   [NM_CONTROLLED]="no" \
+ )
+
+ for parm in ${parms}
+ do
+   case $parm in
+     onboot ) bond_info[ONBOOT]="yes"
+     ;;
+     none ) bond_info[PROTO]="none"
+     ;;
+     static ) bond_info[PROTO]="static"
+     ;;
+     dhcp ) bond_info[PROTO]="dhcp"
+     ;;
+     vlan ) bond_info[VLAN]="yes"
+     ;;
+     *.*.*.*/*.*.*.* ) read IP NETMASK &lt;&lt;&lt; $( tr '/' ' ' &lt;&lt;&lt; ${parm} )
+       bond_info[IP]="${IP}"
+       bond_info[NETMASK]="${NETMASK}"
+     ;; 
+   esac
+ done
+
+cat &lt;&lt; EOB &gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+DEVICE=${bond}
+ONBOOT=${bond_info[ONBOOT]}
+NM_CONTROLLED=${bond_info[NM_CONTROLLED]}
+BOOTPROTO=${bond_info[PROTO]}
+BONDING_OPTS="$( tr -d '\r' &lt;&lt;&lt; ${bond_opts[$bond]} )"
+EOB
+
+[[ "${bond_info[PROTO]}" = "static" ]] &amp;&amp; cat &lt;&lt; EOB &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+IPADDR=${bond_info[IP]}
+NETMASK=${bond_info[NETMASK]}
+EOB
+
+[[ "${bond_info[VLAN]}" = "yes" ]] &amp;&amp; cat &lt;&lt; EOB &gt;&gt; /etc/sysconfig/network-scripts/ifcfg-${bond}
+VLAN=${bond_info[VLAN]}
+EOB
+
+for iface in $( tr -d '\r' &lt;&lt;&lt; ${bond_ifaces[$bond]} )
+do
+  cat &lt;&lt; EOI &gt; /etc/sysconfig/network-scripts/ifcfg-${iface}
+DEVICE=${iface}
+BOOTPROTO=none
+ONBOOT=${bond_info[ONBOOT]}
+MASTER=${bond}
+SLAVE=yes
+NM_CONTROLLED=no
+EOI
+  done
+done</codeblock></p></li>
+      <li>Select the <b>Submit</b> button at the bottom of the page to save the newly created
+        snippet.</li>
+    </ol>
+  </body>
+</topic>
