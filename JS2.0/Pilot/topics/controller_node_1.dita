@@ -6,11 +6,12 @@
   <body>
   </body>
   
-  <topic id="controller_node1_bonds" conref="controller_node1_bonds.dita#controller_node1_bonds">
+  <topic id="controller_node_bonds" conref="controller_node_bonds.dita#controller_node_bonds">
     <title/>
   </topic>
   
-  <topic id="controller_node1_interfaces" conref="controller_node1_interfaces.dita#controller_node1_interfaces">
+  <topic id="controller_node_interfaces"
+    conref="controller_node_interfaces.dita#controller_node_interfaces">
     <title/>
   </topic>
   

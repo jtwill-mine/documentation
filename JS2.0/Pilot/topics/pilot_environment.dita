@@ -23,4 +23,12 @@
     <title/>
   </topic>
   
+  <topic id="controller_node_2" conref="controller_node_2.dita#controller_node_2">
+    <title/>
+  </topic>
+  
+  <topic id="controller_node_3" conref="controller_node_3.dita#controller_node_3">
+    <title/>
+  </topic>
+  
 </topic>
