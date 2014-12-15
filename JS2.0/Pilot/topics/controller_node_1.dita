@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="controller_node_1">
+  <title>Controller Node 1</title>
+  <shortdesc>Bonds and Interfaces for Controller Node 1:</shortdesc>
+  <body>
+  </body>
+  
+  <topic id="controller_node1_bonds" conref="controller_node1_bonds.dita#controller_node1_bonds">
+    <title/>
+  </topic>
+  
+  <topic id="controller_node1_interfaces" conref="controller_node1_interfaces.dita#controller_node1_interfaces">
+    <title/>
+  </topic>
+  
+</topic>
