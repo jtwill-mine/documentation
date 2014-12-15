@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_environment">
+  <title>Pilot Environment</title>
+  <shortdesc>Use this checklist to document your Dell Red Hat Cloud Solutions
+    with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm>
+    OpenStack Platform environment.</shortdesc>
+  <body></body>
+  
+  <topic id="pilot_networks" conref="pilot_networks.dita#pilot_networks">
+    <title/>
+  </topic>
+  
+  <topic id="foreman_server" conref="foreman_server.dita#foreman_server">
+    <title/>
+  </topic>
+  
+</topic>
