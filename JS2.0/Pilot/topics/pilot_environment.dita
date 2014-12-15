@@ -20,49 +20,4 @@
       <li><xref href="compute_node_5.dita#compute_node_5" type="topic"></xref></li>
     </ul>
   </body>
-  
-  <!-- <topic id="pilot_networks" conref="pilot_networks.dita#pilot_networks">
-    <title/>
-  </topic>
-  
-  <topic id="foreman_server" conref="foreman_server.dita#foreman_server">
-    <title/>
-  </topic>
-  
-  <topic id="vips" conref="vips.dita#vips">
-    <title/>
-  </topic>
-  
-  <topic id="controller_node_1" conref="controller_node_1.dita#controller_node_1">
-    <title/>
-  </topic>
-  
-  <topic id="controller_node_2" conref="controller_node_2.dita#controller_node_2">
-    <title/>
-  </topic>
-  
-  <topic id="controller_node_3" conref="controller_node_3.dita#controller_node_3">
-    <title/>
-  </topic>
-  
-  <topic id="compute_node_1" conref="compute_node_1.dita#compute_node_1">
-    <title/>
-  </topic>
-  
-  <topic id="compute_node_2" conref="compute_node_2.dita#compute_node_2">
-    <title/>
-  </topic>
-  
-  <topic id="compute_node_3" conref="compute_node_3.dita#compute_node_3">
-    <title/>
-  </topic>
-  
-  <topic id="compute_node_4" conref="compute_node_4.dita#compute_node_4">
-    <title/>
-  </topic>
-  
-  <topic id="compute_node_5" conref="compute_node_5.dita#compute_node_5">
-    <title/>
-  </topic> -->
-  
 </topic>

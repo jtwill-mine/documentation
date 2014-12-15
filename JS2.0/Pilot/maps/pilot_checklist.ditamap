@@ -9,5 +9,6 @@
   <topicref href="../topics/pilot_environment.dita">
     <mapref href="pilot_checklist_nodes.ditamap" format="ditamap"/>
   </topicref>
+  <topicref href="../topics/foreman_hammer_config_info.dita"/>
   <topicref href="../../Common/references.dita"/>
 </map>

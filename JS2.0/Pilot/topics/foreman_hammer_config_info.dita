@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_hammer_config_info">
+  <title>Foreman Hammer Configuration Information</title>
+  <shortdesc>Use this set of checklists to document your Foreman <codeph>hammer</codeph> configuration. Checklists include:</shortdesc>
+  <body>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</topic>
