@@ -22,7 +22,7 @@
               <p>bond1</p>
             </entry>
             <entry>
-              <p>Public API</p>
+              <p>PublicAPI</p>
             </entry>
             <entry/>
           </row>
@@ -31,7 +31,7 @@
               <p>bond0</p>
             </entry>
             <entry>
-              <p>Private API</p>
+              <p>PrivateAPI</p>
             </entry>
             <entry/>
           </row>
