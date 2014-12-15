@@ -16,5 +16,9 @@
     <title/>
   </topic>
   
+  <topic id="resultant_config_files" conref="resultant_config_files.dita#resultant_config_files">
+    <title/>
+  </topic>
+  
   
 </topic>
