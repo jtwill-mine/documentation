@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="resultant_config_files">
+  <title>Resultant Configuration Files</title>
+  <shortdesc>The following configuration files are created as a result of the bonding procedure described above:</shortdesc>
+  <body>
+    <ul>
+      <li>ifcfg-bond0</li>
+      <li>ifcfg-bond0.141</li>
+      <li>ifcfg-bond0.151</li>
+      <li>ifcfg-bond0.170</li>
+      <li>ifcfg-bond1</li>
+      <li>ifcfg-bond1.140</li>
+      <li>ifcfg-bond1.150</li>
+      <li>ifcfg-eth0</li>
+      <li>ifcfg-eth1</li>
+      <li>ifcfg-eth2 (Original Configuration, configured by Foreman standard provisioning)</li>
+      <li>ifcfg-eth3</li>
+      <li>ifcfg-eth4</li>
+      <li>ifcfg-eth5</li>
+    </ul>
+  </body>
+</topic>
