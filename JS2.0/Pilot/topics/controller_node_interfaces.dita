@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="controller_node_interfaces">
+  <title>Interfaces</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_e5k_spp_kq">
+      <title>Interfaces</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Interface</entry>
+            <entry>Network</entry>
+            <entry>IP Address</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <p>bond1</p>
+            </entry>
+            <entry>
+              <p>Public API</p>
+            </entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p>bond0</p>
+            </entry>
+            <entry>
+              <p>Private API</p>
+            </entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p>bond0</p>
+            </entry>
+            <entry>
+              <p>Storage</p>
+            </entry>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry>
+              <p>Provisioning</p>
+            </entry>
+            <entry>
+              <p>Auto-assigned</p>
+            </entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>Management</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>DRAC</entry>
+            <entry>Management</entry>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

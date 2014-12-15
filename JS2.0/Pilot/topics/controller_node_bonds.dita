@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="controller_node_bonds">
+  <title>Bonds</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_cmx_gpp_kq">
+      <title>Bonds</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Name</entry>
+            <entry>Interface</entry>
+            <entry>MAC Address</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>bond0</entry>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p> —</p>
+            </entry>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry>bond1</entry>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry>
+              <p> —</p>
+            </entry>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
