@@ -15,4 +15,8 @@
     <title/>
   </topic>
   
+  <topic id="vips" conref="vips.dita#vips">
+    <title/>
+  </topic>
+  
 </topic>
