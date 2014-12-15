@@ -2,12 +2,26 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_environment">
   <title>Pilot Environment</title>
-  <shortdesc>Use this checklist to document your Dell Red Hat Cloud Solutions
+  <shortdesc>Use this set of checklists to document your Dell Red Hat Cloud Solutions
     with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm>
-    OpenStack Platform environment.</shortdesc>
-  <body></body>
+    OpenStack Platform environment. Checklists include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="pilot_networks.dita#pilot_networks" type="topic"></xref></li>
+      <li><xref href="foreman_server.dita#foreman_server" type="topic"></xref></li>
+      <li><xref href="vips.dita#vips" type="topic"></xref></li>
+      <li><xref href="controller_node_1.dita#controller_node_1" type="topic"></xref></li>
+      <li><xref href="controller_node_2.dita#controller_node_2" type="topic"></xref></li>
+      <li><xref href="controller_node_3.dita#controller_node_3" type="topic"></xref></li>
+      <li><xref href="compute_node_1.dita#compute_node_1" type="topic"></xref></li>
+      <li><xref href="compute_node_2.dita#compute_node_2" type="topic"></xref></li>
+      <li><xref href="compute_node_3.dita#compute_node_3" type="topic"></xref></li>
+      <li><xref href="compute_node_4.dita#compute_node_4" type="topic"></xref></li>
+      <li><xref href="compute_node_5.dita#compute_node_5" type="topic"></xref></li>
+    </ul>
+  </body>
   
-  <topic id="pilot_networks" conref="pilot_networks.dita#pilot_networks">
+  <!-- <topic id="pilot_networks" conref="pilot_networks.dita#pilot_networks">
     <title/>
   </topic>
   
@@ -49,6 +63,6 @@
   
   <topic id="compute_node_5" conref="compute_node_5.dita#compute_node_5">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>

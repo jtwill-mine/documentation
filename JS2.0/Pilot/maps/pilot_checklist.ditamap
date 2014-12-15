@@ -6,6 +6,8 @@
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../../Common/overview.dita"/>
-  <topicref href="../topics/pilot_environment.dita"/>
+  <topicref href="../topics/pilot_environment.dita">
+    <mapref href="pilot_checklist_nodes.ditamap" format="ditamap"/>
+  </topicref>
   <topicref href="../../Common/references.dita"/>
 </map>
