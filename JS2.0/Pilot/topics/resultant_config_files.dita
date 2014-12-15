@@ -5,9 +5,9 @@
   <shortdesc>The following configuration files are created as a result of the bonding procedure described above:</shortdesc>
   <body>
     <ul>
-      <li>ifcfg-bond0</li>
-      <li>ifcfg-bond0.141</li>
-      <li>ifcfg-bond0.151</li>
+      <li><xref href="ifcfg-bond0.dita#ifcfg-bond0" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond0.141.dita#ifcfg-bond0.141" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond0.151.dita#ifcfg-bond0.151" type="topic"></xref></li>
       <li>ifcfg-bond0.170</li>
       <li>ifcfg-bond1</li>
       <li>ifcfg-bond1.140</li>
