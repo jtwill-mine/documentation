@@ -3,7 +3,7 @@
 <topic id="controller_node_bonds">
   <title>Bonds</title>
   <body>
-    <table frame="all" rowsep="1" colsep="1" id="table_cmx_gpp_kq">
+    <table frame="all" rowsep="1" colsep="1" id="node_bonds">
       <title>Bonds</title>
       <tgroup cols="3">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>

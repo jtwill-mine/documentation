@@ -43,4 +43,12 @@
     <title/>
   </topic>
   
+  <topic id="compute_node_4" conref="compute_node_4.dita#compute_node_4">
+    <title/>
+  </topic>
+  
+  <topic id="compute_node_5" conref="compute_node_5.dita#compute_node_5">
+    <title/>
+  </topic>
+  
 </topic>

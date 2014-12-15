@@ -3,7 +3,7 @@
 <topic id="controller_node_interfaces">
   <title>Interfaces</title>
   <body>
-    <table frame="all" rowsep="1" colsep="1" id="table_e5k_spp_kq">
+    <table frame="all" rowsep="1" colsep="1" id="controller_interfaces">
       <title>Interfaces</title>
       <tgroup cols="3">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>
