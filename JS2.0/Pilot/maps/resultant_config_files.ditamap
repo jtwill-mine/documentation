@@ -10,4 +10,9 @@
  <topicref href="../topics/ifcfg-bond1.140.dita"></topicref>
  <topicref href="../topics/ifcfg-bond1.150.dita"></topicref>
  <topicref href="../topics/ifcfg-eth0.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth1.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth2.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth3.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth4.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth5.dita"></topicref>
 </map>

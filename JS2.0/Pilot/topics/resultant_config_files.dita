@@ -13,11 +13,11 @@
       <li><xref href="ifcfg-bond1.140.dita#ifcfg-bond1.140" type="topic"></xref></li>
       <li><xref href="ifcfg-bond1.150.dita#ifcfg-bond1.150" type="topic"></xref></li>
       <li><xref href="ifcfg-eth0.dita#ifcfg-eth0" type="topic"></xref></li>
-      <li>ifcfg-eth1</li>
-      <li>ifcfg-eth2 (Original Configuration, configured by Foreman standard provisioning)</li>
-      <li>ifcfg-eth3</li>
-      <li>ifcfg-eth4</li>
-      <li>ifcfg-eth5</li>
+      <li><xref href="ifcfg-eth1.dita#ifcfg-eth1" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth2.dita#ifcfg-eth2" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth3.dita#ifcfg-eth3" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth4.dita#ifcfg-eth4" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth5.dita#ifcfg-eth5" type="topic"></xref></li>
     </ul>
   </body>
 </topic>
