@@ -14,6 +14,8 @@
       <li><xref href="foreman_hammer_config_domains.dita#foreman_hammer_config_domains" type="topic"></xref></li>
       <li><xref href="foreman_hammer_config_puppet_proxies.dita#foreman_hammer_config_puppet_proxies" type="topic"></xref></li>
       <li><xref href="foreman_hammer_config_architectures.dita#foreman_hammer_config_architectures" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_hostgroups.dita#foreman_hammer_config_hostgroups" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_hosts.dita#foreman_hammer_config_hosts" type="topic"></xref></li>
     </ul>
   </body>
 </topic>
