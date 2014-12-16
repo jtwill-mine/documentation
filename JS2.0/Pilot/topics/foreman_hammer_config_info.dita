@@ -13,6 +13,7 @@
       <li><xref href="foreman_hammer_config_environments.dita#foreman_hammer_config_environments" type="topic"></xref></li>
       <li><xref href="foreman_hammer_config_domains.dita#foreman_hammer_config_domains" type="topic"></xref></li>
       <li><xref href="foreman_hammer_config_puppet_proxies.dita#foreman_hammer_config_puppet_proxies" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_architectures.dita#foreman_hammer_config_architectures" type="topic"></xref></li>
     </ul>
   </body>
 </topic>
