@@ -5,7 +5,8 @@
   <shortdesc>Use this set of checklists to document your Foreman <codeph>hammer</codeph> configuration. Checklists include:</shortdesc>
   <body>
     <ul>
-      <li></li>
+      <li><xref href="foreman_hammer_config_media.dita#foreman_hammer_config_media" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_partition_tables.dita#foreman_hammer_config_partition_tables" type="topic"></xref></li>
     </ul>
   </body>
 </topic>
