@@ -8,4 +8,6 @@
  <topicref href="../topics/foreman_hammer_config_subnets.dita"></topicref>
  <topicref href="../topics/foreman_hammer_config_templates.dita"></topicref>
  <topicref href="../topics/foreman_hammer_config_environments.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_domains.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_puppet_proxies.dita"></topicref>
 </map>

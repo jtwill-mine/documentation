@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="foreman_hammer_config_subnets">
-  <title>Subnets</title>
+<topic id="foreman_hammer_config_puppet_proxies">
+  <title>Puppet Proxies</title>
   <body>
-    <table frame="all" rowsep="1" colsep="1" id="table_foreman_hammer_config_subnets">
-      <title>Subnets</title>
+    <table frame="all" rowsep="1" colsep="1" id="table_foreman_hammer_config_puppet_proxies">
+      <title>Puppet Proxies</title>
       <tgroup cols="2">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -18,7 +18,7 @@
           <row>
             <entry/>
             <entry>
-              <p>OpenStack</p>
+              <p>-</p>
             </entry>
           </row>
         </tbody>
