@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_node_version_locking">
+  <title>Version Locking</title>
+  <body>
+    <ol>
+      <li>Execute the following command to make the version locking files available during node
+        provisioning:<codeblock># cp -r /root/poc/vlock_files /usr/share/foreman/public</codeblock></li>
+    </ol>
+  </body>
+</topic>
