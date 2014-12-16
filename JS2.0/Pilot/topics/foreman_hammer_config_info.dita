@@ -7,6 +7,8 @@
     <ul>
       <li><xref href="foreman_hammer_config_media.dita#foreman_hammer_config_media" type="topic"></xref></li>
       <li><xref href="foreman_hammer_config_partition_tables.dita#foreman_hammer_config_partition_tables" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_op_sys.dita#foreman_hammer_config_op_sys" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_subnets.dita#foreman_hammer_config_subnets" type="topic"></xref></li>
     </ul>
   </body>
 </topic>

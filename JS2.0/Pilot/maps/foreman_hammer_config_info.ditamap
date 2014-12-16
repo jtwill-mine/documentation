@@ -4,4 +4,6 @@
  <title>Foreman Hammer Configuration Information Map</title>
  <topicref href="../topics/foreman_hammer_config_media.dita"></topicref>
  <topicref href="../topics/foreman_hammer_config_partition_tables.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_op_sys.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_subnets.dita"></topicref>
 </map>
