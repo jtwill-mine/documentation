@@ -14,6 +14,5 @@
   <topicref href="../../Common/overview.dita"/>
   <topicref href="../topics/ceph_ice_vm_deployment.dita"/>
   <topicref href="../topics/deploy-ceph-vm.sh_script.dita"/>
-  <!-- <topicref href="../topics/ceph_ice_vm_dep.dita"/> -->
   <topicref href="../../Common/references.dita"/>
 </map>
