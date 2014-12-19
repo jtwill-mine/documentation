@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="next_steps_ceph_deploy">
+  <title>Next Steps</title>
+  <shortdesc>After the Ceph virtual machine is installed, and the Ceph installer is executed:</shortdesc>
+  <body>
+    <ol>
+      <li>Configure the Ceph instance for the environment, following the applicable <u><i>Ceph Configuration Guide</i></u>.</li>
+    </ol>
+  </body>
+</topic>

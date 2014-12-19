@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="kickstart_file">
   <title>The Kickstart File</title>
-  <shortdesc>The following is the fickstart file used to deploy the Solution Admin Host.</shortdesc>
+  <shortdesc>The following is the kickstart file used to deploy the Solution Admin Host.</shortdesc>
   <body>
     <codeblock>#version=RHEL7
 
