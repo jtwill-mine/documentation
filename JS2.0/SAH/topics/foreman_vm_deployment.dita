@@ -31,15 +31,15 @@
     </ul>
   </body>
   
-  <!-- <topic id="setup_ceph_deploy" conref="setup_ceph_deploy.dita#setup_ceph_deploy">
+  <topic id="setup_foreman_deploy" conref="setup_foreman_deploy.dita#setup_foreman_deploy">
     <title/>
   </topic>
   
-  <topic id="configure_ceph_deploy" conref="configure_ceph_deploy.dita#configure_ceph_deploy">
+  <topic id="configure_foreman_deploy" conref="configure_foreman_deploy.dita#configure_foreman_deploy">
     <title/>
   </topic>
   
-  <topic id="installing_ceph_vm" conref="installing_ceph_vm.dita#installing_ceph_vm">
+  <!--  <topic id="installing_ceph_vm" conref="installing_ceph_vm.dita#installing_ceph_vm">
     <title/>
   </topic>
   
