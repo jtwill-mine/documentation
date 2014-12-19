@@ -9,7 +9,13 @@
       <li>Partitions the system</li>
       <li>Sets SELinux to permissive mode</li>
       <li>Configures <cmdname>iptables</cmdname> to run on the system and disables <cmdname>firewalld</cmdname></li>
-      <li>Configures networking, including:</li>
+      <li>Configures networking, including:<ul id="ul_ceph_vm_networking">
+        <li>Static IP addresses</li>
+        <li>Gateway</li>
+        <li>Name resolution</li>
+        <li>NTP time service</li>
+        </ul></li>
+      <li>Registers the system using the Red Hat Subscription Manager</li>
     </ul>
   </body>
   
