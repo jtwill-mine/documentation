@@ -22,7 +22,7 @@ eth0        10.19.139.65     255.255.248.0
 eth1        172.44.139.65    255.255.255.0</codeblock></li>
      <li>Set the following variables in the <codeph>ceph.cfg</codeph> file:<table frame="all"
        rowsep="1" colsep="1" id="table_ceph_ice_vm_config_variables">
-          <title>Ceph ICE VM Configuration Parameters</title>
+          <title>Ceph ICE VM Configuration Variables</title>
           <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -34,41 +34,41 @@ eth1        172.44.139.65    255.255.255.0</codeblock></li>
             </thead>
             <tbody>
               <row>
-                <entry><parmname>hostname</parmname></entry>
+                <entry><varname>hostname</varname></entry>
                 <entry>The FQDN of the server.</entry>
               </row>
               <row>
-                <entry><parmname>rootpassword</parmname></entry>
+                <entry><varname>rootpassword</varname></entry>
                 <entry>The root user password for the system.</entry>
               </row>
               <row>
-                <entry><parmname>timezone</parmname></entry>
+                <entry><varname>timezone</varname></entry>
                 <entry>The timezone the system is in.</entry>
               </row>
               <row>
-                <entry><parmname>smuser</parmname></entry>
+                <entry><varname>smuser</varname></entry>
                 <entry>The user credential when registering with Subscription Manager.</entry>
               </row>
               <row>
-                <entry><parmname>smpassword</parmname></entry>
+                <entry><varname>smpassword</varname></entry>
                 <entry>The user password when registering with Subscription Manager. The password
                   must be enclosed in single quotes if it contains certain special
                   characters.</entry>
               </row>
               <row>
-                <entry><parmname>smpool</parmname></entry>
+                <entry><varname>smpool</varname></entry>
                 <entry>The pool ID used when attaching the system to an entitlement.</entry>
               </row>
               <row>
-                <entry><parmname>gateway</parmname></entry>
+                <entry><varname>gateway</varname></entry>
                 <entry>The default gateway for the system.</entry>
               </row>
               <row>
-                <entry><parmname>nameserver</parmname></entry>
+                <entry><varname>nameserver</varname></entry>
                 <entry>A comma-separated list of nameserver IP addresses.</entry>
               </row>
               <row>
-                <entry><parmname>ntpserver</parmname></entry>
+                <entry><varname>ntpserver</varname></entry>
                 <entry>A comma-separated list of time servers. This can consist of  IP addresses or
                   FQDNs.</entry>
               </row>
@@ -77,7 +77,7 @@ eth1        172.44.139.65    255.255.255.0</codeblock></li>
         </table></li>
      <li>Set the following variables <b>after</b> all the previous variables above are set:<table
           frame="all" rowsep="1" colsep="1" id="table_ceph_ice_vm_config_additional_variables">
-          <title>Additional Ceph ICE VM Configuration Parameters</title>
+          <title>Additional Ceph ICE VM Configuration Variables</title>
           <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -89,14 +89,14 @@ eth1        172.44.139.65    255.255.255.0</codeblock></li>
             </thead>
             <tbody>
               <row>
-                <entry><parmname>eth0</parmname></entry>
+                <entry><varname>eth0</varname></entry>
                 <entry>This line specifies the IP address and network mask for the
                     <codeph>eth0</codeph> interface. The line begins with <codeph>eth0</codeph>,
                   followed by at least one space, the IP address, another set of spaces, and then
                   the network mask.</entry>
               </row>
               <row>
-                <entry><parmname>eth1</parmname></entry>
+                <entry><varname>eth1</varname></entry>
                 <entry>This line specifies the IP address and network mask for the
                     <codeph>eth1</codeph> interface. The line begins with <codeph>eth1</codeph>,
                   followed by at least one space, the IP address, another set of spaces, and then
