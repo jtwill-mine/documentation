@@ -33,5 +33,9 @@
     <title/>
   </topic>
   
+  <topic id="make_kickstart_available" conref="make_kickstart_available.dita#make_kickstart_available">
+    <title/>
+  </topic>
+  
    
 </topic>
