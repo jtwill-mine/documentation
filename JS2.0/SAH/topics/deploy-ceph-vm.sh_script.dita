@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="deploy-ceph-vm.sh_script">
-  <title>The <cmdname>deploy-ceph-vm.sh</cmdname> Script</title>
+  <title>The deploy-ceph-vm.sh Script</title>
   <shortdesc>The following is the <cmdname>deploy-ceph-vm.sh</cmdname> script used to deploy the Ceph ICE VM:</shortdesc>
   <body>
     <codeblock>! /bin/bash
