@@ -12,6 +12,7 @@
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../../Common/overview.dita"/>
-  <topicref href="../topics/ceph_ice_vm_dep.dita"/>
+  <topicref href="../topics/ceph_ice_vm_deployment.dita"/>
+  <!-- <topicref href="../topics/ceph_ice_vm_dep.dita"/> -->
   <topicref href="../../Common/references.dita"/>
 </map>

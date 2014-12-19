@@ -2,9 +2,9 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="configure_os_updates">
   <title>Configure the Operating System for Updates</title>
-  <shortdesc>Configure the operating system definition with the parameters for registering the provisioned host for updates.</shortdesc>
+  <shortdesc>You must configure the operating system definition with the parameters for registering the provisioned host for updates.</shortdesc>
   <body>
-    <p>The <cmdname>hammer os set-parameter</cmdname> command is used to set the parameters. The following parameters are set.</p>
+    <p>The <cmdname>hammer os set-parameter</cmdname> command is used to set the parameters. The following parameters are set:</p>
     <table frame="all" rowsep="1" colsep="1" id="table_oj1_nhq_3q">
       <title>Operating System Update Parameters</title>
       <tgroup cols="2">
