@@ -3,6 +3,12 @@
 "map.dtd">
 <map>
   <title>Dell Red Hat Cloud Solutions Pilot Checklist - Version 2.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014-2015"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
+  
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../../Common/overview.dita"/>
