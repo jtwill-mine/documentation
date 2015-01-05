@@ -8,7 +8,7 @@
           provisioning.<ol id="ol_odh_3ww_kq">
           <li>Replace <b>HOST_ID</b> with the host ID and <b>FOREMAN_SERVER</b> with the IP address of the Foreman
             server on the provisioning network.<codeblock># hammer host set-parameter --host-id HOST_ID --name yum_versionlock_file \
---value 'https://FOREMAN_SERVER/vlock_files/versionlock.list_cntl'</codeblock></li>
+--value 'http://FOREMAN_SERVER/vlock_files/versionlock.list_cntl'</codeblock></li>
         </ol></li>
     </ol>
   </body>

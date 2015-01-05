@@ -5,7 +5,7 @@
   <body>
     <ol>
       <li>Execute the following command to make the version locking files available during node
-        provisioning:<codeblock># cp -r /root/poc/vlock_files /usr/share/foreman/public</codeblock></li>
+        provisioning:<codeblock># cp -r /root/pilot/vlock_files /usr/share/foreman/public</codeblock></li>
     </ol>
   </body>
 </topic>
