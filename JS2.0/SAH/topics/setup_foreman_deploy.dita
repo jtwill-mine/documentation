@@ -5,7 +5,7 @@
   <shortdesc>To set up the Foreman VM deployment:</shortdesc>
   <body>
     <ol>
-      <li>Ensure that a copy of the <b>Red Hat Enterprise Server 6 Installation DVD</b> ISO is in the <codeph>/store/data/iso</codeph> directory</li>
+      <li>Ensure that a copy of the <b>Red Hat Enterprise Server 6 Installation DVD</b> ISO is in the <codeph>/store/data/iso</codeph> directory.</li>
       <li>Copy the <cmdname>deploy-foreman-vm.sh</cmdname> script into the <codeph>/root</codeph> directory.</li>
     </ol>
   </body>
