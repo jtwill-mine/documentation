@@ -19,7 +19,8 @@
           <i>bond0.301</i>:</p><codeblock>'( [bond0]="onboot none" [bond0.301]="onboot static vlan 172.30.139.62/255.255.255.0" )'</codeblock><note>See
           the <codeph>bonding_snippet</codeph> documentation for more information.</note></li>
       <li>Use the <b>bond</b>_ifaces parameter to specify the interfaces for each bond. For example, to bond interfaces <i>em1</i> and <i>em2</i> into <i>bond0</i>:<codeblock>'( [bond0]="em1 em2" )'</codeblock></li>
-      <li>Use the <b>bond_opts</b> parameter to specify the bonding options to use for each bond. For example:<codeblock>'( "[bond0]="mode=active-passive" )'</codeblock></li>
+      <li>Use the <b>bond_opts</b> parameter to specify the bonding options to use for each bond.
+        For example:<codeblock>'( "[bond0]="mode=balance-tlb" )'</codeblock></li>
       <li>Create the three (3) needed parameters using the <cmdname>hammer host
           set-parameter</cmdname> command.<ol id="ol_ujc_hfr_3q">
           <li>Replace the <b>HOST_ID</b>, <b>VLAN</b>, and <b>IP/MASK</b> information as appropriate
