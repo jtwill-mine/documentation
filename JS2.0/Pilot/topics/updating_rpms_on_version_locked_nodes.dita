@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="updating_rpms_on_version_locked_nodes">
+  <title>Updating RPMs on Version Locked Nodes</title>
+  <shortdesc>At a high level, updating RPMs on a version locked node (Foreman VM, Ceph ICE VM, OpenStack Controller nodes, OpenStack Compute nodes, or Ceph Storage nodes) is to:</shortdesc>
+  <body>
+    <ol>
+      <li>Identify the RPMs that need to be updated.</li>
+      <li>Remove them from the version lock list on that node.</li>
+      <li>Update the RPMs.</li>
+      <li>Add the updated RPMs back into the version lock list.</li>
+    </ol>
+    <p>This topic provides detailed information to perform those steps.</p>
+    <note>All of the following commands should be run as the <b>root</b> user.</note>
+    <ol>
+      <li>Produce a list of RPMs that are version locked on a node:<ol id="ol_produce_rpm_list">
+          <li>Login to a node.</li>
+          <li>Execute the following command to produce a list of RPMs that are version locked:<codeblock># yum versionlock list</codeblock></li>
+        
+        </ol></li>
+      <li>Identify the RPMs to be updated from the output of the above command.</li>
+      <li>Remove the selected RPMs from the version lock list:<ol id="ol_remove_rpms">
+          <li>Execute the following command, substituting <i>RPMName</i> with an RPM name from the
+            output of the <cmdname>versionlock list</cmdname> command
+            above:<codeblock># yum versionlock delete <i>RPMName</i></codeblock><note>The <i>RPMName</i> must <b>exactly</b> match an RPM name in the output of the
+              <cmdname>yum versionlock list</cmdname> command.</note></li>
+        <li>Repeat for each RPM.</li>
+        </ol></li>
+      <li>Update each of the selected RPMs:<ol id="ol_update_rpms">
+          <li>Execute the following command for an RPM, substituting <i>RPMNameWithoutVersion</i>
+            with the name of the RPM <b>without</b> the version
+            number:<codeblock># yum update RPMNameWithoutVersion</codeblock></li>
+        <li>Repeat for each subsequent RPM</li>
+        </ol></li>
+      <li>Add each of the selected RPMs back into the version lock list:<ol id="ol_z5h_zfs_qq">
+          <li>Execute the following command, again substituting <i>RPMNameWithoutVersion</i> with
+            the name of the RPM <b>without</b> the version number:<codeblock># yum versionlock add RPMNameWithoutVersion</codeblock></li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>
