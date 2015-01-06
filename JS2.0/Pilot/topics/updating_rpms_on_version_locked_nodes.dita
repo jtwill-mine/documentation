@@ -20,10 +20,11 @@
         </ol></li>
       <li>Identify the RPMs to be updated from the output of the above command.</li>
       <li>Remove the selected RPMs from the version lock list:<ol id="ol_remove_rpms">
-          <li>Execute the following command, substituting <i>RPMName</i> with an RPM name from the
-            output of the <cmdname>versionlock list</cmdname> command
-            above:<codeblock># yum versionlock delete <i>RPMName</i></codeblock><note>The <i>RPMName</i> must <b>exactly</b> match an RPM name in the output of the
-              <cmdname>yum versionlock list</cmdname> command.</note></li>
+          <li>Execute the following command, substituting <i>VLockListEntry</i> with an RPM name
+            from the output of the <cmdname>versionlock list</cmdname> command
+              above:<codeblock># yum versionlock delete <i>VLockListEntry</i></codeblock><note>The
+                <i>VLockListEntry</i> must <b>exactly</b> match an RPM name in the output of the
+                <cmdname>yum versionlock list</cmdname> command.</note></li>
         <li>Repeat for each RPM.</li>
         </ol></li>
       <li>Update each of the selected RPMs:<ol id="ol_update_rpms">
