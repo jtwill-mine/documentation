@@ -14,6 +14,7 @@
   <topicref href="../../Common/overview.dita"/>
   <topicref href="../topics/configure_foreman_server.dita"/>
   <topicref href="../topics/provisioning_nodes.dita"/>
+  <topicref href="../topics/updating_rpms_on_version_locked_nodes.dita"/>
   <topicref href="../topics/example_hammer_commands.dita">
     <mapref href="hammer_commands.ditamap" format="ditamap"/>
   </topicref>

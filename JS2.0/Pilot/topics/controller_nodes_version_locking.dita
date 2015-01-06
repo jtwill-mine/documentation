@@ -2,10 +2,14 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="controller_nodes_version_locking">
   <title>Version Locking</title>
+  <shortdesc>All RPMs on the Foreman VM, Ceph ICE VM, OpenStack Controller nodes,
+    OpenStack Compute nodes, and Ceph Storage nodes are locked to specific versions.</shortdesc>
   <body>
+    <p>This is to ensure that the software on these nodes is the same software that has been tested
+      and validated by Dell. To allow updating RPMs on these nodes, see <xref href="updating_rpms_on_version_locked_nodes.dita#updating_rpms_on_version_locked_nodes" type="topic"></xref>.</p>
     <ol>
       <li>Execute the following command to make the RPM version locking file available during
-          provisioning.<ol id="ol_odh_3ww_kq">
+          provisioning.<ol id="ol_version_locking">
           <li>Replace <b>HOST_ID</b> with the host ID and <b>FOREMAN_SERVER</b> with the IP address of the Foreman
             server on the provisioning network.<codeblock># hammer host set-parameter --host-id HOST_ID --name yum_versionlock_file \
 --value 'http://FOREMAN_SERVER/vlock_files/versionlock.list_cntl'</codeblock></li>
