@@ -30,12 +30,13 @@
       <li>Update each of the selected RPMs:<ol id="ol_update_rpms">
           <li>Execute the following command for an RPM, substituting <i>RPMNameWithoutVersion</i>
             with the name of the RPM <b>without</b> the version
-            number:<codeblock># yum update RPMNameWithoutVersion</codeblock></li>
+            number:<codeblock># yum update <i>RPMNameWithoutVersion</i></codeblock></li>
         <li>Repeat for each subsequent RPM</li>
         </ol></li>
       <li>Add each of the selected RPMs back into the version lock list:<ol id="ol_z5h_zfs_qq">
           <li>Execute the following command, again substituting <i>RPMNameWithoutVersion</i> with
-            the name of the RPM <b>without</b> the version number:<codeblock># yum versionlock add RPMNameWithoutVersion</codeblock></li>
+            the name of the RPM <b>without</b> the version
+            number:<codeblock># yum versionlock add <i>RPMNameWithoutVersion</i></codeblock></li>
         </ol></li>
     </ol>
   </body>
