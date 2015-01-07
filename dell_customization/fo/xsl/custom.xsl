@@ -80,6 +80,7 @@
         <xsl:call-template name="createNotices"/>
     </xsl:template>
 
+<!--
     <xsl:template name="insertBodyOddHeader">
 
         <fo:static-content flow-name="odd-body-header">
@@ -131,14 +132,114 @@
 
     </xsl:template>
     
-  <!-- <xsl:template name="insertBodyOddHeader"/>
+    <xsl:template name="insertBodyOddHeader"/>
         
     <xsl:template name="insertBodyEvenHeader"/>
-            
-    <xsl:template name="insertBodyOddFooter"/>
+-->            
+    <xsl:template name="insertBodyOddFooter">
+        <fo:static-content flow-name="odd-body-footer">
+            <fo:block xsl:use-attribute-sets="__body__odd__footer">
+                        <xsl:choose>
+                            <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
+                                <xsl:apply-templates
+                                    select="$map/*[contains(@class,' topic/title ')][1]"/>
+                            </xsl:when>
+                            <xsl:when test="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]">
+                                <xsl:apply-templates
+                                    select="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]"
+                                />
+                            </xsl:when>
+                            <xsl:when test="//*[contains(@class, ' map/map ')]/@title">
+                                <xsl:value-of select="//*[contains(@class, ' map/map ')]/@title"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                    select="/descendant::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/title ')]"
+                                />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </fo:block>
+        </fo:static-content>
+    </xsl:template>
                 
-    <xsl:template name="insertBodyEvenFooter"/>
+    <xsl:template name="insertTocOddFooter">
+        <fo:static-content flow-name="odd-toc-footer">
+            <fo:block xsl:use-attribute-sets="__toc__odd__footer">
+                        <xsl:choose>
+                            <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
+                                <xsl:apply-templates
+                                    select="$map/*[contains(@class,' topic/title ')][1]"/>
+                            </xsl:when>
+                            <xsl:when test="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]">
+                                <xsl:apply-templates
+                                    select="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]"
+                                />
+                            </xsl:when>
+                            <xsl:when test="//*[contains(@class, ' map/map ')]/@title">
+                                <xsl:value-of select="//*[contains(@class, ' map/map ')]/@title"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                    select="/descendant::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/title ')]"
+                                />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </fo:block>
+        </fo:static-content>
+    </xsl:template>
+    
+    <xsl:template name="insertTocEvenFooter">
+        <fo:static-content flow-name="even-toc-footer">
+            <fo:block xsl:use-attribute-sets="__toc__even__footer">
+                        <xsl:choose>
+                            <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
+                                <xsl:apply-templates
+                                    select="$map/*[contains(@class,' topic/title ')][1]"/>
+                            </xsl:when>
+                            <xsl:when test="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]">
+                                <xsl:apply-templates
+                                    select="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]"
+                                />
+                            </xsl:when>
+                            <xsl:when test="//*[contains(@class, ' map/map ')]/@title">
+                                <xsl:value-of select="//*[contains(@class, ' map/map ')]/@title"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                    select="/descendant::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/title ')]"
+                                />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </fo:block>
+        </fo:static-content>
+    </xsl:template>
+    
+    <xsl:template name="insertBodyEvenFooter">
+        <fo:static-content flow-name="even-body-footer">
+            <fo:block xsl:use-attribute-sets="__body__even__footer">
+                        <xsl:choose>
+                            <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
+                                <xsl:apply-templates
+                                    select="$map/*[contains(@class,' topic/title ')][1]"/>
+                            </xsl:when>
+                            <xsl:when test="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]">
+                                <xsl:apply-templates
+                                    select="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]"
+                                />
+                            </xsl:when>
+                            <xsl:when test="//*[contains(@class, ' map/map ')]/@title">
+                                <xsl:value-of select="//*[contains(@class, ' map/map ')]/@title"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                    select="/descendant::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/title ')]"
+                                />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </fo:block>
+        </fo:static-content>
+    </xsl:template>
      
-  <xsl:variable name="mirror-page-margins" select="true()"/> -->
+<!--  <xsl:variable name="mirror-page-margins" select="true()"/> -->
 
 </xsl:stylesheet>
