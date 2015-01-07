@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_facts_updates">
+  <title>Configure Facts Updates</title>
+  <shortdesc>Foreman updates the host information using the Puppet facts. Foreman updates the provisioning information with the first interface returned from the Puppet facts.</shortdesc>
+  <body>
+    <p>To prevent this:</p>
+    <ol>
+      <li>Log into the Foreman UI.</li>
+      <li>Select the <b>Administer</b> drop down on the top right of the window.</li>
+      <li>Select <b>Settings</b>, and then select the <b>Provisioning</b> tab. </li>
+      <li>Edit the <cmdname>ignore_puppet_facts_for_provisioning</cmdname> setting, and set it to
+          <b>true</b>.</li>
+    </ol>
+  </body>
+</topic>

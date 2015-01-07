@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="installing_foreman_vm">
+  <title>Installing the Foreman Virtual Machine</title>
+  <shortdesc>To install the Foreman virtual machine:</shortdesc>
+  <body>
+    <ol>
+      <li>Log into the Foreman virtual machine.</li>
+      <li>Navigate to the <codeph>/usr/share/openstack-foreman-installer/bin</codeph> directory.</li>
+      <li>Execute the <cmdname>foreman_server.sh</cmdname> script, setting the following
+          variables:<table frame="all" rowsep="1" colsep="1" id="table_foreman_install_variables">
+          <title>Foreman VM Installation Variables</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Variable</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><varname>FOREMAN_PROVISIONING</varname></entry>
+                <entry>Provisioning is enabled if set to <i>true</i>.</entry>
+              </row>
+              <row>
+                <entry><varname>FOREMAN_GATEWAY</varname></entry>
+                <entry>This defines the gateway of the provisioned hosts. Set it to the <i>IP
+                    address of the Foreman server's provisioning interface</i> if the Foreman server
+                  will act as a gateway.</entry>
+              </row>
+              <row>
+                <entry><varname>PROVISIONING_INTERFACE</varname></entry>
+                <entry>The interface used for provisioning.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+          </table><p><codeblock># cd /usr/share/openstack-foreman-installer/bin
+# FOREMAN_PROVISIONING=true FOREMAN_GATEWAY=172.44.139.65
+PROVISIONING_INTERFACE=eth1 ./foreman_server.sh 2>&amp;1 | tee /root/foreman_server.out</codeblock><note>The Foreman installation can take a while.</note></p></li>
+      <li>After Foreman is installed, you can access the Foreman interface using a web browser.<p>The information within the Foreman interface may not be complete until the puppet agent on the Foreman server runs.</p></li>
+      <li>The puppet agent can take up to 30 minutesto run. The agent can be manually run to speed up the process:<codeblock># puppet agent -t</codeblock></li>
+    </ol>
+  </body>
+</topic>

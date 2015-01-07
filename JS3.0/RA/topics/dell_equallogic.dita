@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dell_equallogic">
+  <title>Dell EqualLogic Storage Arrays</title>
+  <body>
+    <p>Dell EqualLogic storage arrays are designed to provide simplified deployment and administration of consolidated storage environments. Dell EqualLogic storage systems are self-optimized, utilizing embedded load-balancing technologies that react to workload demands.</p>
+    <p>The core capabilities of Dell EqualLogic storage products include comprehensive software components and host integration, which simplify administrative tasks and assist with storage management. Application-layer integration with OpenStack enables Cinder to:</p>
+    <ul>
+      <li>Provision and manage volumes on Dell EqualLogic storage</li>
+      <li>Utilize SAN-based snapshots for protection capability</li>
+    </ul>
+  </body>
+</topic>

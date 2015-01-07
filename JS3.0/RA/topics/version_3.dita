@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="version_3">
+  <title>Version 3</title>
+  <shortdesc>Updated with:</shortdesc>
+  <body>
+    <ul>
+      <li>New network diagrams</li>
+      <li>Support for HA-only clusters</li>
+      <li>Support for up to three (3) racks of equipment</li>
+      <li>Renamed <i>Admin Node</i> to <i>Solution Admin Host</i></li>
+      <li>Added Virtual Servers to support Provisioning nodes</li>
+      <li>Added optional Gateways for Provisioning/Storage/Management networks</li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_os_updates">
+  <title>Configure the Operating System for Updates</title>
+  <shortdesc>You must configure the operating system definition with the parameters for registering the provisioned host for updates.</shortdesc>
+  <body>
+    <p>The <cmdname>hammer os set-parameter</cmdname> command is used to set the parameters. The following parameters are set:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_oj1_nhq_3q">
+      <title>Operating System Update Parameters</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Parameter</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><codeph>subscription_manager</codeph></entry>
+            <entry>Specifies that the hosts will register with Subscription Manager. (true or false)
+            </entry>
+          </row>
+          <row>
+            <entry><codeph>subscription_manager_username</codeph></entry>
+            <entry>The username of the Subscription Manager account to register to.</entry>
+          </row>
+          <row>
+            <entry><codeph>subscription_manager_password </codeph></entry>
+            <entry>The password for the Subscription Manager account.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <ol>
+      <li>Define the <codeph>OS_ID variable</codeph> to the ID of the operating system then execute
+        the remaining commands.<ol id="ol_yqv_vnq_3q">
+          <li>Make sure to specify the appropriate <b>username</b>, <b>password</b>, and <b>pool
+              ID</b> by replacing the <b>CHANGEME</b>s and <b>POOL_ID</b>.</li>
+        </ol></li>
+    </ol>
+    <codeblock># OS_ID=2
+
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+  --name subscription_manager --value true
+
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+  --name subscription_manager_username --value CHANGEME
+
+# hammer os set-parameter --operatingsystem-id ${OS_ID} \
+  --name subscription_manager_password --value 'CHANGEME'</codeblock>
+  </body>
+  
+  <topic id="optional_proxy_settings" conref="optional_proxy_settings.dita#optional_proxy_settings">
+    <title/>
+  </topic>
+  
+</topic>

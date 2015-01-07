@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bonds_parameter_usage_example">
+  <title><codeph>bonds</codeph> Parameter Usage Example</title>
+  <shortdesc>The following entry defines three bonds:</shortdesc>
+  <body>
+    <ul>
+      <li>bond0 - Configured for DCHP</li>
+      <li>bond1 - Configured with no network configuration</li>
+      <li>bond1.200 - Configured as a vLAN with static network configuration</li>
+    </ul>
+    <p>All three bonds are enabled because the <cmdname>onboot</cmdname> option is specified in each definition.</p>
+    <codeblock>( [bond0]="onboot dhcp" [bond1]="onboot none" [bond1.200]="onboot static vlan 192.168.100.10/255.255.255.0" )</codeblock>
+    <p>This entry can also be entered into the Foreman interface as:</p>
+    <codeblock>( [bond0]="onboot dhcp"
+[bond1]="onboot none"
+[bond1.200]="onboot static vlan 192.168.100.10/255.255.255.0" )</codeblock>
+  </body>
+</topic>

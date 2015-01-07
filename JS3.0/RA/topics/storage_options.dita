@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="storage_options">
+  <title>Storage Options</title>
+  <body>
+    <p>Cinder has introduced several backend options that can be used with the OpenStack solution. Dell’s solutions include four options to enable the cluster to fit many needs:</p>
+    <ul>
+      <li>Ceph</li>
+      <li>Dell EqualLogic Storage Arrays</li>
+      <li>Logical Volume Manager (LVM)</li>
+      <li>Cinder Multi-Backend Support</li>
+    </ul>
+  </body>
+  
+  <topic id="ceph" conref="ceph.dita#ceph">
+    <title/>
+  </topic>
+  
+  <topic id="dell_equallogic" conref="dell_equallogic.dita#dell_equallogic">
+    <title/>
+  </topic>
+  
+  <topic id="lvm" conref="lvm.dita#lvm">
+    <title/>
+  </topic>
+  
+  <topic id="multi_backend_support" conref="multi_backend_support.dita#multi_backend_support">
+    <title/>
+  </topic>
+  
+</topic>

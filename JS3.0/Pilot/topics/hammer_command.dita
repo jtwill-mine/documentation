@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hammer_command">
+  <title>The Hammer Command</title>
+  <shortdesc>This procedure installs the following packages, which contain the <cmdname>hammer</cmdname> command:</shortdesc>
+  <body>
+    <ul>
+      <li>rubygem-hammer_cli-doc-0.1.1-12.el6sat.noarch</li>
+      <li>rubygem-hammer_cli-0.1.1-12.el6sat.noarch</li>
+      <li>rubygem-hammer_cli_foreman-0.1.1-16.el6sat.noarch</li>
+      <li>rubygem-hammer_cli_foreman-doc-0.1.1-16.el6sat.noarch</li>
+    </ul> 
+    <ol>
+      <li>Install the packages:<codeblock># yum -y install "*hammer*"</codeblock></li>
+      <li>Configure the <cmdname>hammer</cmdname> command to display 200 items per page. This just
+        makes it easier to read everything. <ol id="ol_vmp_pwf_hq">
+          <li>Replace the value for the <b>:per_page:</b> option in the
+              <i>/etc/hammer/cli_config.yml </i>file. </li>
+        </ol></li>
+      <li>Configure the <cmdname>hammer</cmdname> command to not prompt for a username or password
+        when connecting.<ol id="ol_dbj_zwf_hq">
+          <li>Add the following to the beginning of the<i> /etc/hammer/cli_config.yml </i>file
+            (replace the name and password appropriately):</li>
+        </ol></li>
+    </ol>
+    <codeblock>:foreman:
+:username: 'admin'
+:password: 'changeme'</codeblock>
+  </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bonding_config_steps">
+  <title>Bonding Configuration Steps</title>
+  <body>
+    <ol>
+      <li>Create a parameter with a <i>Name</i> of <b>bonds</b>.</li>
+      <li>Enter the following for its <i>Value</i>:<codeblock>( [bond0]="onboot none"
+[bond1]="onboot none"
+[bond0.141]="onboot static vlan 192.168.141.2/255.255.255.0"
+[bond0.151]="onboot static vlan 192.168.151.2/255.255.255.0"
+[bond0.170]="onboot static vlan 192.168.170.2/255.255.255.0"
+[bond1.140]="onboot static vlan 192.168.140.2/255.255.255.0"
+[bond1.150]="onboot static vlan 192.168.150.2/255.255.255.0" )</codeblock></li>
+      <li>Create a parameter with a <i>Name</i> of <b>bond_ifaces</b>.</li>
+      <li>Enter the following for its <i>Value</i>:<codeblock>( [bond0]="eth1 eth4 eth5"
+[bond1]="eth0 eth3" )</codeblock></li>
+      <li>Create a parameter with a <i>Name</i> of <b>bond_opts</b>.</li>
+      <li>Enter the following for its <i>Value</i>:<codeblock>( [bond0]="mode=803.3ad"
+[bond1]="mode=802.3ad" )</codeblock></li>
+    </ol>
+    <fig>
+      <title>Bonding Configuration Screenshot</title>
+      <image href="../../Customization/OpenTopic/common/artwork/bond_config_screenshot.png" align="left"></image>
+    </fig>
+  </body>
+</topic>

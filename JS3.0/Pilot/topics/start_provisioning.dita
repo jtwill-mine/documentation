@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="start_provisioning">
+  <title>Start Provisioning</title>
+  <body>
+    <ol>
+      <li>PXE boot each of the nodes.</li>
+      <li> After they are booted, make sure the networks are configured appropriately.</li>
+    </ol>
+  </body>
+</topic>

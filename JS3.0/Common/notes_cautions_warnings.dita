@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="topic_lqx_k1y_zp">
+  <title>Notes, Cautions, and Warnings</title>
+
+  <body>
+    <p><table frame="none">
+        <tgroup cols="2" colsep="0">
+          <colspec colname="COLSPEC0" colwidth="20"/>
+
+          <colspec colname="COLSPEC1" colwidth="76*"/>
+
+          <tbody>
+            <row>
+              <entry><image
+              href="../Customization/OpenTopic/common/artwork/note.png"
+              id="image_b3l_pcy_zp"/></entry>
+
+              <entry>A <b>Note</b> indicates important information that helps
+              you make better use of your system.</entry>
+            </row>
+
+            <row>
+              <entry><image
+              href="../Customization/OpenTopic/common/artwork/caution.png"
+              id="image_wm2_xcy_zp" width="13"/></entry>
+
+              <entry>A <b>Caution</b> indicates potential damage to hardware
+              or loss of data if instructions are not followed.</entry>
+            </row>
+
+            <row>
+              <entry><image
+              href="../Customization/OpenTopic/common/artwork/warning.png"
+              id="image_mcx_1dy_zp"/></entry>
+
+              <entry>A <b>Warning</b> indicates a potential for property
+              damage, personal injury, or death.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+
+    <p>This document is for informational purposes only and may contain
+    typographical errors and technical inaccuracies. The content is provided
+    as is, without express or implied warranties of any kind.</p>
+  </body>
+</topic>

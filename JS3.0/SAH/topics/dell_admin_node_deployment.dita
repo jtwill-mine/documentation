@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dell_admin_node_deployment">
+  <title>Dell Admin Node Deployment</title>
+  <shortdesc>The deployment of the Dell Solution Admin Host is performed using a kickstart file. This kickstart file performs the following steps when properly configured:</shortdesc>
+  <body>
+    <ul>
+      <li>Partitions the system</li>
+      <li>Sets SELinux to <i>permissive</i> mode</li>
+      <li>Disables <codeph>firewalld</codeph>, and uses <codeph>iptables</codeph></li>
+      <li>Disables NetworkManager</li>
+      <li>Configures networking, including:<ul id="ul_dell_sah_networking">
+          <li>Bonding</li>
+        <li>Bridges</li>
+        <li>Static IP addresses</li>
+        <li>Gateway</li>
+        <li>Name resolution</li>
+        <li>NTP service</li>
+        </ul></li>
+      <li>Registers the system using the Red Hat Subscription Manager </li>
+    </ul>
+  </body>
+  
+  <topic id="determine_pool_id_sah" conref="determine_pool_id_sah.dita#determine_pool_id_sah">
+    <title/>
+  </topic>
+  
+  <topic id="optional_proxy_settings" conref="../../Pilot/topics/optional_proxy_settings.dita#optional_proxy_settings">
+    <title/>
+  </topic>
+  
+  <topic id="customize_kickstart_file" conref="customize_kickstart_file.dita#customize_kickstart_file">
+    <title/>
+  </topic>
+  
+  <topic id="make_kickstart_available" conref="make_kickstart_available.dita#make_kickstart_available">
+    <title/>
+  </topic>
+  
+  <topic id="next_steps_sah_deploy" conref="next_steps_sah_deploy.dita#next_steps_sah_deploy">
+    <title/>
+  </topic>
+  
+   
+</topic>

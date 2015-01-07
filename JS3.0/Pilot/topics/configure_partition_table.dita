@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_partition_table">
+  <title>Configure the Partition Table</title>
+  <shortdesc>You must configure the partition table that the provisioned hosts will use. The partition table is provided in the <codeph>dell-pilot.partition</codeph> file.</shortdesc>
+  <body>
+    <ol>
+      <li>Use the <cmdname>hammer partition-table create</cmdname> command to install the partition
+          table.<ol id="ol_ezq_bfp_3q">
+            <li>Specify an appropriate NAME for each partition table, and specify the file that
+            contains the
+            data.<codeblock># hammer partition-table create --name dell-pilot --os-family Redhat \
+  --file /root/pilot/dell-pilot.partition</codeblock></li>
+        </ol></li>
+      <li>After the partition table is created, execute the <cmdname>hammer partition-table list</cmdname> command.</li>
+      <li>Take note of the newly-created partition table's ID.</li>
+    </ol>
+  </body>
+</topic>

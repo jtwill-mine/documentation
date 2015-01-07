@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="setup_ceph_deploy">
+  <title>Setup</title>
+  <shortdesc>To set up the Ceph ICE VM deployment:</shortdesc>
+  <body>
+    <ol>
+      <li>Ensure that a copy of the <b>Red Hat Enterprise Server 7 Installation DVD</b> ISO is in the <codeph>/store/data/iso</codeph> directory</li>
+      <li>Copy the <cmdname>deploy-ceph-vm.sh</cmdname> script into the <codeph>/root</codeph> directory.</li>
+    </ol>
+  </body>
+</topic>

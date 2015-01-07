@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_bonding_parameter">
+  <title>Add a Bonding Parameter</title>
+  <shortdesc>To add a bonding parameter:</shortdesc>
+  <body>
+    <ol>
+      <li>Edit the host in the Foreman interface.</li>
+      <li>Select the <b>Parameters</b> tab.</li>
+      <li>Click the <b>+ Add Parameter</b> button to create new parameters.</li>
+    </ol>
+  </body>
+</topic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ifcfg-eth3">
+  <title><codeph>ifcfg-eth3</codeph></title>
+  <body><codeblock>DEVICE=eth3
+BOOTPROTO=none
+ONBOOT=yes
+MASTER=bond1
+SLAVE=yes
+NM_CONTROLLED=no</codeblock></body>
+</topic>

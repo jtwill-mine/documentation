@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="dell_pilot_deploy">
+  <title>Dell Pilot Hostgroups Deployment</title>
+
+  <body>
+    <p/>
+
+    <section><title>Configure hostgroup parameters </title><p>IMost hostgroup
+    parameters are configured using an<b> ERB </b>file. This makes
+    configuration quicker and easier than using the Foreman interface.
+    </p><p>Edit the <b>dell-pilot.yaml.erb</b> file and change the variables
+    between the lines marked <b>Variables to Change</b> and<b> End of Variable
+    to Change</b>. </p><p>The most common variables needing changed have
+    values of <b>CHANGEME_*</b> </p><p>The <b>rubygen-foreman_api</b> package
+    must be installed to apply the changes in the <b>dell-pilot.yaml.erb
+    </b>file. </p><msgblock># yum install -y rubygem-foreman_api</msgblock><p>Change
+    to the <b>/usr/share/openstack-foreman-installer</b> directory and execute
+    the <b>bin/quickstack_defaults.rb</b> command as shown
+    below.</p><msgblock># cd /usr/share/openstack-foreman-installer
+# bin/quickstack_defaults.rb -g config/hostgroups.yaml -d ~/dell-pilot.yaml.erb -v parameters</msgblock><p>The
+    network_overrides parameter cannot easily be set using the
+    <b>dell-pilot.yaml.erb</b> file. It is set using the <b>hammer sc-param
+    update</b> command. </p><p>First, the parameter<b> ID </b>must be
+    determined, then the settings applied. Replace <b>VLAN</b> with the
+    starting VLAN number to be used in the environment. Make sure the syntax
+    of the line does not change.</p><msgblock># ParamId=$( hammer sc-param list --per-page 1000 --search network_overrides \
+ | awk '/network_overrides/ {print $1}')
+# hammer sc-param update --id ${ParamId} \
+ --default-value "{'vlan_start': VLAN, 'force_dhcp_release': 'false'}" --override yes</msgblock><p>Neutron
+    is not needed for this environment. Disabling Neutron should be done using
+    the Foreman user interface.</p><ol>
+        <li>Log into the Foreman UI. </li>
+
+        <li>Select the <b>Configure</b> drop down on the top of the window.
+        </li>
+
+        <li>Select <b>Hostgroups</b>. </li>
+
+        <li>Select the <b>HA All In One Controller</b>. </li>
+
+        <li>Select the <b>Parameters</b> tab. Locate the
+        <b>quickstack::pacemaker::neutron::enabled</b> parameter and select
+        the <b>override </b>button to the right of them. </li>
+
+        <li>Scroll down to the bottom of the window and enter false as the
+        value for the overridden parameter. </li>
+
+        <li>Select the <b>Submit</b> button.</li>
+      </ol><p/></section>
+
+    <section><title>Ceph Configuration </title><p>Edit the
+    <b>/usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</b>
+    file and comment out the<b> file { "etc-ceph"</b> section. This prevents
+    Foreman and Puppet from over-writing the ceph configuration on the
+    controller nodes. </p><p>This can be easily done using the following
+    command:</p><codeblock># cp -v /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp{,.bak}
+# sed -i '/file { "etc-ceph":/,${s/^/#/;};$s/^#//' \
+ /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</codeblock><p>To
+    ensure ceph installs packages from its repository, comment out the
+    priority line in the ceph repository.</p><codeblock># sed -i 's/^\(priority.*\)/# \1/' /etc/yum.repos.d/ceph.repo</codeblock><p/></section>
+
+    <section><title>Configure Nodes</title><p>After the nodes are installed,
+    the must have a hostgroup assigned to them. </p><p>The IDs of the
+    hostgroups must be determined. Execute the <b>hammer hostgroup list</b>
+    command. Take note of the IDs for the HA All In One Controller and Compute
+    (Nova Network) hostgroups. </p><codeblock># hammer hostgroup list</codeblock></section>
+
+    <section/>
+
+    <section><title>Add Controller hostgroup</title><p>Apply the <b>HA All In
+    One Controller</b> hostgroup to the controller node using the <b>hammer
+    host update</b> command. </p><codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock></section>
+
+    <section><title>Configure parameters specific to the controller
+    node</title><p>A few items should be set using the Foreman user interface.
+    These are: </p><ul>
+        <li>quickstack::pacemaker::common:: fence_ipmilan_address </li>
+
+        <li>quickstack::pacemaker::common:: fence_ipmilan_username </li>
+
+        <li>quickstack::pacemaker::common:: fence_ipmilan_password </li>
+
+        <li>quickstack::pacemaker::params::private_ip:: IP address of the
+        controllers nic on the Private API network. </li>
+      </ul><p>Set the<b> fence_ipmilan_*</b> parameters to the IP address and
+    authentication credentials for the nodes iDRAC. </p><ol>
+        <li>Log into the Foreman UI. </li>
+
+        <li>Select the <b>Hosts</b> drop down on the top of the window. </li>
+
+        <li>Select <b>All Hosts</b>. </li>
+
+        <li>Select the first controller. Select <b>Edit</b> on the next
+        screen. </li>
+
+        <li>Select the <b>Parameters</b> tab. Locate each of the parameters
+        that need changed and select the <b>override</b> button to the right
+        of them. </li>
+
+        <li>Scroll down to the bottom of the window and enter the appropriate
+        value for each of the overridden parameters. </li>
+
+        <li>Select the <b>Submit</b> button. </li>
+      </ol><p>Repeat the above steps for each of the controller nodes.
+    </p><p>Once the hostgroup is applied to all the controllers, log into each
+    of the controller nodes and execute the following command to pull the
+    hostgroup configuration. </p><p>This command must be executed on each
+    controller within minutes of each other. </p><codeblock># puppet agent -t -dv |&amp; tee /root/puppet.out</codeblock><p>This
+    command pipes a copy of the output to the /root/puppet.out file for later
+    review. Watch the output or review the <b>/root/puppet.out </b>file for
+    errors. </p><p/></section>
+
+    <section><title>Enable Services </title><p>Execute the <b>pcs status</b>
+    command on each node. The end of the output contains a <b>Daemon
+    Status</b> section. </p><p>Ensure all the daemons listed have an
+    active/enabled status. This ensure the daemons will start upon a reboot of
+    the node. </p><p>If the status is <b>active/disabled</b>, execute the
+    <b>systemctl enable DAEMON_NAME</b> command to enable it. </p><msgblock># pcs status
+[OUTPUT ABBREVIATED]
+Daemon Status:
+ corosync: active/enabled
+ pacemaker: active/disabled
+ pcsd: active/enabled
+# systemctl enable pacemaker
+ln -s '/usr/lib/systemd/system/pacemaker.service' '/etc/systemd/system/multi-user.target.wants/pacemaker.service'
+# pcs status
+[OUTPUT ABBREVIATED]
+Daemon Status:
+ corosync: active/enabled
+ pacemaker: active/enabled
+ pcsd: active/enabled</msgblock><p/></section>
+
+    <section><title>Add Compute hostgroup </title><p>Add the hostgroups to the
+    compute node hosts one at a time. Make sure to run <b>puppet agent -t -dv
+    |&amp; tee /root/puppet.out</b> between each. </p><p><b>Do not</b> add the
+    next host in the list until the previous one is completely finished.
+    Failure to do so can lead to a race condition that prevents proper
+    installation and configuration of the compute nodes. </p><codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock><p>Wait
+    for each compute node to finish its configuration before starting the next
+    one.</p></section>
+
+    <section><title>Excluding IPs for Nova Use</title><p>IPs can be excluded
+    for Nova use. </p><p>The <b>nova fixed-ip-reserve</b> command prevents a
+    fixed ip from being used. </p><codeblock>nova fixed-ip-reserve FIXED_IP</codeblock><p>The
+    <b>nova-manage floating delete</b> command prevents a floating ip from
+    being used.</p><codeblock>nova-manage floating delete FLOAT_IP</codeblock></section>
+  </body>
+</topic>

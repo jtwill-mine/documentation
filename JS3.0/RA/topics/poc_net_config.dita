@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poc_net_config">
+  <title>PoC Bundle Network Configuration</title>
+  <shortdesc>The PoC bundle configuration logical networking will look like Figure 3: PoC Networking Layout with no network connections requiring 802.1q vLAN tagging.</shortdesc>
+  <body>
+    <p>The bundle includes a Dell Force10 S55 switch to which all nodes will be connected. This bundle is configured with <b>no</b> network redundancy. The rack layout is similar to Figure 4: PoC Bundle.</p>
+    <note>Please note that all nodes are stacked together, with a single switch above them.</note>
+    <fig>
+      <title>PoC Networking Layout</title>
+      <image href="../../Customization/OpenTopic/common/artwork/poc_networking_layout.png"  align="left"></image>
+    </fig>
+  </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openstack_maturity">
+  <title>OpenStack Maturity</title>
+  <shortdesc>The code base for Red Hat Enterprise Linux OpenStack Platform is evolving at a very
+    rapid pace.</shortdesc>
+  <body>
+    <p>Please see <xref
+      href="https://access.redhat.com/site/support/policy/updates/OpenStack/platform" format="html"
+      scope="external"
+      >https://access.redhat.com/site/support/policy/updates/OpenStack/platform</xref> for more
+      information.</p>
+    <p>At publication the current release of OpenStack is codenamed <i>Icehouse</i>. It builds upon
+      previous releases with 350 new features to support software development, and managing data and
+      application infrastructure, at scale. It is developed by over 1200 individuals employed by
+      more than 120 organizations. Please see <xref
+        href="http://www.OpenStack.org/software/icehouse" format="html" scope="external"
+        >http://www.OpenStack.org/software/icehouse</xref>.</p>
+    <p>Dell and Red Hat designed this Reference Architecture to make it easy for Dell – Red Hat customers to build their own operational readiness cluster and design their initial offerings, using the current releases. Dell and Red Hat will provide the enterprise support and services customers need to stand up production-ready, enterprise-grade OpenStack clusters.</p>
+  </body>
+</topic>

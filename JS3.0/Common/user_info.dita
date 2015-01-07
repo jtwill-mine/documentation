@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="user_info">
+  <title>Configuring Server User Information</title>
+  <body>
+     <ol>
+        <li>Set credentials for the root user including changing the password to a new one based on good
+          password standards.</li>
+        <li>Set privileges for the user to Admin level privileges including over LAN.</li>
+        <li>Enable the user, if disabled.</li>
+      </ol>
+  </body>
+</topic>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_subnets">
+  <title>Configure Subnets</title>
+  <shortdesc>A subnet called <i>OpenStack</i> was created automatically during installation.</shortdesc>
+  <body>
+    <ol>
+      <li>Execute the <cmdname>hammer subnet list</cmdname> command, and note the ID of this subnet.<codeblock># hammer subnet list</codeblock><p>IP addresses can be automatically assigned to newly provisioned hosts from this subnet. To do this, you must define a range of IP addresses.</p></li>
+      <li>Use the <cmdname>hammer subnet update</cmdname> command to assign the range of IP
+        addresses, and also to set the default gateway for the provisioned
+        hosts.<codeblock># hammer subnet update --id SN_ID --from START_IP_RANGE --to END_IP_RANGE \
+  --gateway GATEWAY_IP</codeblock></li>
+    </ol>
+    <note>If the Foreman server is acting as the gateway, the gateway address is the IP address of
+      the Foreman servers provisioning interface.</note>
+  </body>
+</topic>

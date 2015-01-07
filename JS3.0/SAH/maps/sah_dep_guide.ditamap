@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Dell Solution Admin Host Deployment Guide - Version 2.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014-2015"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
+
+  <topicref href="../../Common/trademarks.dita"/>
+
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+
+  <topicref href="../../Common/overview.dita"/>
+  
+  <topicref href="../topics/dell_admin_node_deployment.dita"/>
+  
+  <topicref href="../topics/kickstart_file.dita"/>
+
+  <!-- <topicref href="../topics/admin_node_dep.dita"/> -->
+
+  <topicref href="../../Common/references.dita"/>
+</map>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vdh_2gw_yp">
+  <title>References</title>
+  <body>
+    <p>Additional information can be obtained at <xref href="http://www.dell.com/openstack"
+        format="html" scope="external"/> or by e-mailing <xref href="mailto:openstack@dell.com"
+        format="html" scope="external">openstack@dell.com</xref>.</p>
+    <p>If you need additional services or implementation help, please contact your Dell sales representative.</p>
+  </body>
+  <topic id="to_learn_more"
+    conref="../Common/to_learn_more.dita#to_learn_more">
+    <title></title>
+  </topic>
+</topic>
