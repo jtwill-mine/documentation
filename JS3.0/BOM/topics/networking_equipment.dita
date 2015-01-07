@@ -2,12 +2,13 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="networking_equipment">
   <title>Networking Equipment</title>
-  <shortdesc>Table 3 includes switches that have specific air flow options.</shortdesc>
+  <shortdesc>Table 3 above includes switches that have specific air flow options.</shortdesc>
   <body>
     <p>There are both I/O to PSU SKU numbers and PSU to I/O side options available for reverse air flow. Redundant FANs (other than the minimum supplied with chassis) should also be same direction as the base switch. The airflow cannot be reversed in the field at this time</p>
     <note>The networking SKUs lists show the AC power supplies only. All switch models are available in DC as well.</note>
-    <p>Table 3 includes the necessary cables for the connections between the switches for uplinks
-      and interconnects.</p>
+    <p>Table 4, <xref href="#networking_equipment/table_glp_1pm_jq" format="dita"/> below, includes
+      the necessary cables for the connections between the switches for uplinks and
+      interconnects.</p>
     <p>The BOMs include the cables required for connecting the individual servers into the cluster,
       since the exact cables required depend on the final chosen rack layout, and choice of cable is
       often based on customer preference. The following tables summarize the cable counts required,
