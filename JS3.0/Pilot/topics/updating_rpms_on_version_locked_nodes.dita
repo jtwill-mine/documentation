@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="updating_rpms_on_version_locked_nodes">
-  <title>Updating RPMs on Version Locked Nodes</title>
+  <title>Appendix A: Updating RPMs on Version Locked Nodes</title>
   <shortdesc>At a high level, updating RPMs on a version locked node (Foreman VM, Ceph ICE VM, OpenStack Controller nodes, OpenStack Compute nodes, or Ceph Storage nodes) is to:</shortdesc>
   <body>
     <ol>
