@@ -132,25 +132,6 @@
               integration with the Telemetry service, the Orchestration engine can also perform
               auto-scaling of certain infrastructure elements.</entry>
           </row>
-          <row>
-            <entry>Database</entry>
-            <entry>Trove</entry>
-            <entry><xref href="http://www.openstack.org/software/openstack-shared-services"
-                format="html" scope="external">OpenStack Database</xref>, designed to run entirely
-              on OpenStack, has the goal of enabling users to quickly and easily utilize the
-              features of a relational database without the burden of handling complex
-              administrative tasks. Cloud users and database administrators can provision and manage
-              multiple database instances as needed. Initially, the service will focus on providing
-              resource isolation at high performance while automating complex administrative tasks
-              including deployment, configuration, patching, backups, restores, and
-              monitoring.</entry>
-          </row>
-           <row>
-                      <entry>Data Processing</entry>
-                      <entry>Sahara</entry>
-                      <entry><xref href="https://wiki.openstack.org/wiki/Sahara" format="html" scope="external">Data Processing</xref>, the new data processing capability automates provisioning and management of big data clusters using Hadoop and Spark. Big data analytics are a priority for many organizations and a popular use case for OpenStack, and this service lets OpenStack users provision needed resources more quickly.
-</entry>
-          </row>
         </tbody>
       </tgroup>
     </table>
