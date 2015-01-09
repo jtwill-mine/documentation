@@ -148,7 +148,7 @@
            <row>
                       <entry>Data Processing</entry>
                       <entry>Sahara</entry>
-                      <entry><xref href="https://wiki.openstack.org/wiki/Sahara" format="html" scope="external">Data Processing</xref>, The new data processing capability automates provisioning and management of big data clusters using Hadoop and Spark. Big data analytics are a priority for many organizations and a popular use case for OpenStack, and this service lets OpenStack users provision needed resources more quickly.
+                      <entry><xref href="https://wiki.openstack.org/wiki/Sahara" format="html" scope="external">Data Processing</xref>, the new data processing capability automates provisioning and management of big data clusters using Hadoop and Spark. Big data analytics are a priority for many organizations and a popular use case for OpenStack, and this service lets OpenStack users provision needed resources more quickly.
 </entry>
           </row>
         </tbody>
