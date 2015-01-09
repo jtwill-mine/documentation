@@ -12,7 +12,7 @@
       <li><b>Private API Network Cluster Management vLAN</b> - Used for communication between OS controllers and nodes for RESTFUL API and Cluster Heartbeat.</li>
       <li><b>Public API Network Access vLAN</b> - Sets up access to the RESTful API, and the Horizon
         GUI.</li>
-      <li><b>Storage Network vLAN</b> - Used by all the nodes for data plane writes/reads to communicate to OS storage (not in POC).</li>
+      <li><b>Storage Network vLAN</b> - Used by all the nodes for data plane writes/reads to communicate to OS storage.</li>
       <li><b>Storage Clustering Network vLAN</b> - Used by all the storage nodes for replication and data checks (for Ceph Clustering).</li>
     </ul>
   </body>

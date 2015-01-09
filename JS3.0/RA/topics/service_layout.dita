@@ -108,12 +108,7 @@
               <entry>Swift Object Store (optional)</entry>
               <entry>Three or more Storage Servers</entry>
             </row>
-            <row>
-              <entry>Storage</entry>
-              <entry>LVM Block Storage (optional)</entry>
-              <entry>For PoC only OpenStack Controller</entry>
-            </row>
-            <row>
+              <row>
               <entry>Storage</entry>
               <entry>Ceph Enterprise (optional)</entry>
               <entry>Three or more Storage Servers</entry>
