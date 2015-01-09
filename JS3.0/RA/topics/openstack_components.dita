@@ -132,27 +132,14 @@
               integration with the Telemetry service, the Orchestration engine can also perform
               auto-scaling of certain infrastructure elements.</entry>
           </row>
-          <row>
-            <entry>Database</entry>
-            <entry>Trove</entry>
-            <entry><xref href="http://www.openstack.org/software/openstack-shared-services"
-                format="html" scope="external">OpenStack Database</xref>, designed to run entirely
-              on OpenStack, has the goal of enabling users to quickly and easily utilize the
-              features of a relational database without the burden of handling complex
-              administrative tasks. Cloud users and database administrators can provision and manage
-              multiple database instances as needed. <p>Initially, the service will focus on providing
-              resource isolation at high performance while automating complex administrative tasks
-              including deployment, configuration, patching, backups, restores, and
-              monitoring.</p></entry>
-          </row>
         </tbody>
       </tgroup>
     </table>
-    
+
   </body>
-  
+
   <topic id="rhel_osp_platform" conref="rhel_osp_platform.dita#rhel_osp_platform">
     <title/>
   </topic>
-  
+
 </topic>

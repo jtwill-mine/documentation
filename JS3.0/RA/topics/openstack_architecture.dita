@@ -10,11 +10,10 @@
         href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/"
         format="html" scope="external">Red Hat OpenStack Enterprise Platform</xref> and the <xref
         href="http://www.openstack.org" format="html" scope="external">OpenStack Project</xref>.</note>
-    <p></p>
-  </body>
-  
+      </body>
+
   <topic id="openstack_components" conref="openstack_components.dita#openstack_components">
     <title/>
   </topic>
-  
+
 </topic>
