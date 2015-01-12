@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="solution_bundles">
   <title>Solution Bundles</title>
-  <shortdesc>In setting up deployments, Dell has found that there are two distinct user types. The first user type is the person or team that wants to use OpenStack in an environment that starts to duplicate production, with only enough hardware to prove the concepts that have been proposed.</shortdesc>
+  <shortdesc>In setting up deployments, Dell has created the solution for the person or team that wants to use OpenStack in an environment that starts to duplicate production.</shortdesc>
   <body>
     <p>Our aim is to:</p>
     <ul>
@@ -10,24 +10,17 @@
       <li>Develop applications that require actual hardware as the base</li>
       <li>Determine and investigate what networking issues will be seen in a production system</li>
     </ul>
-    <p>Dell recommends for this user type a PoC Bundle of five (5) Servers and networking.</p>
-    <p>The second user type is the team that has already identified OpenStack as the platform of choice, has begun building tools to support OpenStack, and has applications ready for deployment. They are usually ready to design the first production implementation, with networking, Operating System and management. Dell recommends for the second user type a Pilot Bundle.</p>
   </body>
-  
-  <topic id="poc_bundle" conref="poc_bundle.dita#poc_bundle">
+   <topic id="pilot_bundle" conref="pilot_bundle.dita#pilot_bundle">
     <title/>
   </topic>
-  
-  <topic id="pilot_bundle" conref="pilot_bundle.dita#pilot_bundle">
-    <title/>
-  </topic>
-  
+
   <topic id="pilot_bundles_expansion" conref="pilot_bundles_expansion.dita#pilot_bundles_expansion">
     <title/>
   </topic>
-  
+
   <topic id="production_bundle" conref="production_bundle.dita#production_bundle">
     <title/>
   </topic>
-  
+
 </topic>

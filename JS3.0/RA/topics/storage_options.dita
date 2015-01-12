@@ -7,25 +7,20 @@
     <ul>
       <li>Ceph</li>
       <li>Dell EqualLogic Storage Arrays</li>
-      <li>Logical Volume Manager (LVM)</li>
-      <li>Cinder Multi-Backend Support</li>
+       <li>Cinder Multi-Backend Support</li>
     </ul>
   </body>
-  
+
   <topic id="ceph" conref="ceph.dita#ceph">
     <title/>
   </topic>
-  
+
   <topic id="dell_equallogic" conref="dell_equallogic.dita#dell_equallogic">
     <title/>
   </topic>
-  
-  <topic id="lvm" conref="lvm.dita#lvm">
+
+ <topic id="multi_backend_support" conref="multi_backend_support.dita#multi_backend_support">
     <title/>
   </topic>
-  
-  <topic id="multi_backend_support" conref="multi_backend_support.dita#multi_backend_support">
-    <title/>
-  </topic>
-  
+
 </topic>

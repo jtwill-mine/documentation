@@ -5,7 +5,7 @@
   <shortdesc>This solution contains the core components of a typical Red Hat Enterprise Linux OpenStack Platform solution:</shortdesc>
   <body>
     <ul>
-      <li>Block Storage (Cinder with LVM, Ceph, EqualLogic)</li>
+      <li>Block Storage (Cinder with  Ceph and EqualLogic)</li>
       <li>Compute (Nova)</li>
       <li>Dashboard (Horizon)</li>
       <li>Database (Trove, available but not part of the solution)<fn>Trove, Sahara, and  Swift are available via custom Services engagements, for customer evaluation only.
@@ -13,7 +13,7 @@
       <li>Identity (Keystone)</li>
       <li>Image Service (Glance)</li>
       <li>Networking (Neutron )</li>
-        
+
       <li>Object Store (Swift, available but not part of the solution)<sup>1</sup></li>
       <li>Orchestration (Heat)</li>
       <li>Data Process (Sahara, available but not part of the soluiton)<sup>1</sup></li>

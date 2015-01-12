@@ -15,7 +15,7 @@
           <thead>
             <row>
               <entry>Machine Function</entry>
-              <entry>PoC Bundle Nodes</entry>
+
               <entry>Pilot Bundle Infrastructure and Compute Nodes</entry>
               <entry>Pilot Bundle Optional Compute Node</entry>
             </row>
@@ -23,49 +23,47 @@
           <tbody>
             <row>
               <entry>Platform</entry>
-              <entry>PowerEdge R620</entry>
-              <entry>PowerEdge R620</entry>
+                            <entry>PowerEdge R620</entry>
               <entry>PowerEdge R720</entry>
             </row>
             <row>
               <entry>CPU</entry>
-              <entry>2 x E5-2650v2 (8-core)</entry>
-              <entry>2 x E5-2670v2 (10-core)</entry>
+                        <entry>2 x E5-2670v2 (10-core)</entry>
               <entry>2 x E5-2670v2 (10-core)</entry>
             </row>
             <row>
               <entry>RAM (Minimum)</entry>
-              <entry>128 GB</entry>
+
               <entry>128 GB</entry>
               <entry>128 GB</entry>
             </row>
             <row>
               <entry>LOM</entry>
-              <entry>4 x 1GbE</entry>
+
               <entry>4 x 1GbE</entry>
               <entry>4 x 1GbE</entry>
             </row>
             <row>
               <entry>Add-in Network</entry>
-              <entry>N/A</entry>
+
               <entry>2 x Intel X520 DP 10Gb DA/SFP+</entry>
               <entry>2 x Intel X520 DP 10Gb DA/SFP+</entry>
             </row>
             <row>
               <entry>Disk</entry>
-              <entry>6 x 600GB 7.2K SATA 2.5 inch</entry>
+
               <entry>6 x 1TB 7.2K SAS 2.5-inch</entry>
               <entry>8 x 1TB 7.2K SAS 3.5-inch</entry>
             </row>
             <row>
               <entry>Storage Controller</entry>
-              <entry>PERC H710</entry>
+
               <entry>PERC H710</entry>
               <entry>PERC H710</entry>
             </row>
             <row>
               <entry>RAID</entry>
-              <entry>RAID 10</entry>
+
               <entry>RAID 10</entry>
               <entry>RAID 10</entry>
             </row>
