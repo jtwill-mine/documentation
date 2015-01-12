@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bom_r720xd">
+  <title>Pilot Bundle Bill of Materials PowerEdge - R730xd Storage Node</title>
+  <body>
+    <p>
+      <table frame="all" rowsep="1" colsep="1" id="table_r720xd">
+        <title>Bill of Materials - PowerEdge R730xd Storage Nodes</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+          <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Quantity</entry>
+              <entry>SKU</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>1</entry>
+              <entry>210-ADBC</entry>
+              <entry>PowerEdge R730xd Server</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>591-BBCH</entry>
+              <entry>PowerEdge R730/R730xd Motherboard</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>338-BFFF</entry>
+              <entry>Intel Xeon E5-2650 v3 2.3GHz,25M Cache,9.60GT/s QPI,Turbo,HT,10C/20T (105W) Max
+                Mem 2133MHz</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>350-BBEX</entry>
+              <entry>Chassis with up to 12 + 4 Internal, 3.5" Hard Drives and 2, 2.5" Flex Bay Hard
+                Drives</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>340-AKPM</entry>
+              <entry>PowerEdge R730xd Shipping</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>374-BBGM</entry>
+              <entry>Upgrade to Two Intel Xeon E5-2650 v3 2.3GHz,25M Cache,9.60GT/s
+                QPI,Turbo,HT,10C/20T (105W)</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-ABUF</entry>
+              <entry>2133MT/s RDIMMs</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-AAIP</entry>
+              <entry>Performance Optimized</entry>
+            </row>
+            <row>
+              <entry>24</entry>
+              <entry>370-ABUI</entry>
+              <entry>4GB RDIMM, 2133MT/s, Single Rank, x8 Data Width</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>619-ABVR</entry>
+              <entry>No Operating System</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>421-5736</entry>
+              <entry>No Media Required</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>780-BBLR</entry>
+              <entry>RAID 1+Unconfigured RAID forH330/H730/H730P (2 + 1-20 HDDs or SSDs)</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>405-AAEG</entry>
+              <entry>PERC H730 Integrated RAID Controller, 1GB Cache</entry>
+            </row>
+            <row>
+              <entry>2</entry>
+              <entry>400-AEOC</entry>
+              <entry>300GB 10K RPM SAS 6Gbps 2.5in Flex Bay Hard Drive,13G</entry>
+            </row>
+            <row>
+              <entry>9</entry>
+              <entry>400-AEGH</entry>
+              <entry>4TB 7.2K RPM NLSAS 6Gbps 3.5in Hot-plug Hard Drive,13G</entry>
+            </row>
+            <row>
+              <entry>3</entry>
+              <entry>400-AFNH</entry>
+              <entry>200GB Solid State Drive SATAMix Use MLC 6Gbps 2.5in Hot-plug Drive,3.5in HYB
+                CARR,13G</entry>
+            </row>
+            <row>
+              <entry>4</entry>
+              <entry>400-AENM</entry>
+              <entry>4TB 7.2K RPM NLSAS 6Gbps 3.5in Internal Bay Hard Drive,13G</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>540-BBBB</entry>
+              <entry>Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet, Network Daughter
+                Card</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>330-BBCR</entry>
+              <entry>R730/xd PCIe Riser 1, Right</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>330-BBCO</entry>
+              <entry>R730/xd PCIe Riser 2, Center</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>540-BBHY</entry>
+              <entry>Intel X520 DP 10Gb DA/SFP+ Server Adapter, Low Profile</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>450-ADWM</entry>
+              <entry>Dual, Hot-plug, Redundant Power Supply (1+1), 1100W</entry>
+            </row>
+            <row>
+              <entry>2</entry>
+              <entry>492-BBDH</entry>
+              <entry>C13 to C14, PDU Style, 12 AMP, 2 Feet (.6m) Power Cord, North America</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>384-BBBL</entry>
+              <entry>Performance BIOS Settings</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>770-BBBQ</entry>
+              <entry>ReadyRails Sliding Rails Without Cable Management Arm</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>350-BBER</entry>
+              <entry>Quick Sync Bezel</entry>
+            </row>
+            <row>
+              <entry>3</entry>
+              <entry>631-AAIG</entry>
+              <entry>Edocs and OpenManage DVD, R730/xd</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>800-BBDM</entry>
+              <entry>UEFI BIOS</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-ABWE</entry>
+              <entry>DIMM Blanks for System with 2 Processors</entry>
+            </row>
+            <row>
+              <entry>2</entry>
+              <entry>374-BBHR</entry>
+              <entry>Heatsink for 12 + 4 Chassis PowerEdge R730xd</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>634-BBWU</entry>
+              <entry>OpenManage Essentials, Server Configuration Management</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>385-BBHO</entry>
+              <entry>iDRAC8 Enterprise, integrated Dell Remote Access Controller, Enterprise</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>332-1286</entry>
+              <entry>US Order</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-9007</entry>
+              <entry>Dell Hardware Limited Warranty Plus On Site Service</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-9030</entry>
+              <entry>ProSupport Plus: 7x24 HW/SW Tech Support and Assistance,3 Year</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-9029</entry>
+              <entry>ProSupport Plus: 7x24 Next Business Day Onsite Service, 3 Year</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>951-2015</entry>
+              <entry>Thank you for choosing Dell ProSupport Plus. For tech support, visit <xref
+                  href="http://www.dell.com/contactdell" format="html" scope="external"
+                  >http://www.dell.com/contactdell</xref></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+  </body>
+</topic>
