@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bom_r620">
+  <title>Pilot Bundle Bill of Materials - PowerEdge R630</title>
+  <body>
+    <p>
+      <table frame="all" rowsep="1" colsep="1" id="table_r620">
+        <title>Bill of Materials - PowerEdge R630 Nodes</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+          <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+          <colspec colname="c3" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Quantity</entry>
+              <entry>SKU</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>1</entry>
+              <entry>210-ACXS</entry>
+              <entry>PowerEdge R630 Server</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>329-BCIY</entry>
+              <entry>PowerEdge R630 Motherboard</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>321-BBKL</entry>
+              <entry>Chassis with up to 8, 2.5" Hard Drives, 3 PCIe Slots</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>340-AKPS</entry>
+              <entry>PowerEdge R630 Shipping- 8 Drive Chassis</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>338-BFFU</entry>
+              <entry>Intel Xeon E5-2630 v3 2.4GHz,20M Cache,8.00GT/s QPI,Turbo,HT,8C/16T (85W) Max
+                Mem 1866MHz</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>374-BBHD</entry>
+              <entry>Upgrade to Two Intel Xeon E5-2630 v3 2.4GHz,20M Cache,8.00GT/s
+                QPI,Turbo,HT,8C/16T (85W)</entry>
+            </row>
+            <row>
+              <entry>2</entry>
+              <entry>412-AAEE</entry>
+              <entry>120W Heatsink for PowerEdge R630</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-ABWE</entry>
+              <entry>DIMM Blanks for System with 2 Processors</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-ABUF</entry>
+              <entry>2133MT/s RDIMMs</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>370-AAIP</entry>
+              <entry>Performance Optimized</entry>
+            </row>
+            <row>
+              <entry>8</entry>
+              <entry>370-ABUG</entry>
+              <entry>16GB RDIMM, 2133 MT/s, Dual Rank, x4 Data Width</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>780-BBJC</entry>
+              <entry>No RAID for H330/H730/H730P (1-24 HDDs or SSDs)</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>405-AAEG</entry>
+              <entry>PERC H730 Integrated RAID Controller, 1GB Cache</entry>
+            </row>
+            <row>
+              <entry>4</entry>
+              <entry>400-AEFO</entry>
+              <entry>1.2TB 10K RPM SAS 6Gbps 2.5in Hot-plug Hard Drive,13G</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>540-BBBB</entry>
+              <entry>Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet, Network Daughter
+                Card</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>540-BBHY</entry>
+              <entry>Intel X520 DP 10Gb DA/SFP+ Server Adapter, Low Profile</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>385-BBHO</entry>
+              <entry>iDRAC8 Enterprise, integrated Dell Remote Access Controller, Enterprise</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>429-AAQL</entry>
+              <entry>DVD+/-RW SATA Internal for 8HD Chassis</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>350-BBBW</entry>
+              <entry>No Bezel</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>770-BBBC</entry>
+              <entry>ReadyRails Sliding Rails Without Cable Management Arm</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>384-BBBL</entry>
+              <entry>Performance BIOS Settings</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>450-ADWM</entry>
+              <entry>Dual, Hot-plug, Redundant Power Supply (1+1), 1100W</entry>
+            </row>
+            <row>
+              <entry>2</entry>
+              <entry>492-BBDH</entry>
+              <entry>C13 to C14, PDU Style, 12 AMP, 2 Feet (.6m) Power Cord, North America</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>343-BBDK</entry>
+              <entry>Electronic System Documentation and OpenManage DVD Kit, PowerEdge R630</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>619-ABVR</entry>
+              <entry>No Operating System</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>421-5736</entry>
+              <entry>No Media Required</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-7761</entry>
+              <entry>ProSupport Plus: 7x24 Next Business Day Onsite Service, 3 Year</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-7728</entry>
+              <entry>Dell Hardware Limited Warranty Plus On Site Service</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>976-7768</entry>
+              <entry>ProSupport Plus: 7x24 HW/SW Tech Support and Assistance,3 Year</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>951-2015</entry>
+              <entry>Thank you for choosing Dell ProSupport Plus. For tech support, visit <xref
+                  href="http://www.dell.com/contactdell" format="html" scope="external"
+                  >http://www.dell.com/contactdell</xref></entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>900-9997</entry>
+              <entry>On-Site Installation Declined</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>332-1286</entry>
+              <entry>US Order</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+  </body>
+</topic>
