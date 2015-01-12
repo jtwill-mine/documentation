@@ -6,7 +6,8 @@
     hardware to deploy the Dell Red Hat Cloud Solutions with <tm
       trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm> OpenStack.</shortdesc>
   <body>
-    <p>This hardware includes Dell R620, R720, and R720xd servers with Dell PowerEdge H710 disk controllers; and Dell Force10 S4810 and S55 network switches.</p>
+    <p>This hardware includes Dell R630, R730, and R730xd servers with Dell PowerEdge H730 disk
+      controllers; and Dell Force10 S4810, and S55 network switches.</p>
     <p>Please consult with your Dell sales representative to ensure proper preparation and submission of your hardware and software orders.</p>
   </body>
 </topic>
