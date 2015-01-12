@@ -4,22 +4,8 @@ CWD=`pwd`
 
 DITA_HOME=/opt/DITA-OT1.8.5
 cd $DITA_HOME
+export DITA_DIR="$DITA_HOME/"
 set +x 
-
-realpath() {
-  case $1 in
-    /*) echo "$1" ;;
-    *) echo "$PWD/${1#./}" ;;
-  esac
-}
-
-
-if [ "${DITA_HOME:+1}" = "1" ] && [ -e "$DITA_HOME" ]; then
-  export DITA_DIR="$(realpath "$DITA_HOME")"
-else #elif [ "${DITA_HOME:+1}" != "1" ]; then
-  export DITA_DIR="$(dirname "$(realpath "$0")")"
-fi
-
 
 if [ -f "$DITA_DIR"/tools/ant/bin/ant ] && [ ! -x "$DITA_DIR"/tools/ant/bin/ant ]; then
   chmod +x "$DITA_DIR"/tools/ant/bin/ant
@@ -58,6 +44,17 @@ echo "WORKSPACE: ${WORKSPACE}"
 cd "${WORKSPACE}"
 
 filelist=$(find . -name *.ditamap | grep -FzZ 'maps')
+ 
+if [[ -n $1  && $1 == "build_all" ]]; then
+  echo "Building All documents" 
+  shopt -s globstar
+  for filename in **/*.ditamap; do
+        echo "Starting build of ${filename}"
+        cd $DITA_HOME
+        /opt/DITA-OT1.8.5/tools/ant/bin/ant -Dtranstype=pdf2 -Dargs.input="$WORKSPACE/$filename" -Ddita.temp.dir="$WORKSPACE/temp" -Doutput.dir="$WORKSPACE" -Dcustomization.dir="$WORKSPACE/../dell_customization" -Douter.control=quiet
+  done
+  exit
+fi
 
 select filename in ${filelist}; do
     if [ -n "$filename" ]; then
