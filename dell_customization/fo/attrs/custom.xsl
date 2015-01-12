@@ -1,13 +1,15 @@
 <?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
+                xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
     
     <xsl:attribute-set name="common.title">
         <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="base-font">
-        <xsl:attribute name="font-size"><xsl:value-of select="$default-font-size"/></xsl:attribute>
+        <xsl:attribute name="font-size">
+            <xsl:value-of select="$default-font-size"/>
+        </xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="__frontmatter__title" use-attribute-sets="common.title">
@@ -35,25 +37,25 @@
     
     <xsl:attribute-set name="odd__header">
         <xsl:attribute name="font-size">10pt</xsl:attribute>
-<!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
+        <!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
         <xsl:attribute name="text-align">end</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="even__header">
         <xsl:attribute name="font-size">10pt</xsl:attribute>
-<!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
+        <!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
         <xsl:attribute name="text-align">end</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="odd__footer">
         <xsl:attribute name="font-size">10pt</xsl:attribute>
-<!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
+        <!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
         <xsl:attribute name="text-align">center</xsl:attribute>
     </xsl:attribute-set>
     
     <xsl:attribute-set name="even__footer">
         <xsl:attribute name="font-size">10pt</xsl:attribute>
-<!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
+        <!--        <xsl:attribute name="font-style">italic</xsl:attribute>-->
         <xsl:attribute name="text-align">center</xsl:attribute>
     </xsl:attribute-set>
 
@@ -111,6 +113,12 @@
             </xsl:choose>
         </xsl:attribute>
     </xsl:attribute-set>
+    
+    <!-- Ensure that table rows do not break across pages -->
+    <xsl:attribute-set name="tbody.row">
+        <!--Table body row-->
+        <xsl:attribute name="keep-together.within-page">always</xsl:attribute>
+    </xsl:attribute-set>    
 
     
 </xsl:stylesheet>
