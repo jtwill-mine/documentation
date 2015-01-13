@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_730xd">
+  <title>PowerEdge R7300xd Servers</title>
+  <body>
+    <p>The PowerEdge R730xd is an exceptionally flexible and scalable, two-socket 2U rack server
+      that delivers highperformance processing and a broad range of workload-optimized local storage
+      possibilities, including hybrid tiering.</p>
+    <p>Designed with an incredible range of configurability, the PowerEdge R730xd meets the needs of
+      many different workloads with the latest Intel® Xeon® processor E5-2600 v3 product family, 24
+      DIMMs of high-performance DDR4 memory and a broad range of local storage options.</p>
+  </body>
+</topic>
