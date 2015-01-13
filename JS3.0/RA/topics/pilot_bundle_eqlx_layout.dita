@@ -7,7 +7,7 @@
     <p>The controller nodes will use the network to access the Storage Pools created on the Storage Group for creation, deletion, and snapshots. The compute nodes must have access to the storage nodes through the Storage Network vLAN in order for the iSCSI driver on that node to interact with the volumes associated to Virtual Machines hosted by that node. EqualLogic Arrays are connected to the Storage Networking vLAN untagged only and all other nodes use the same layout as in Table 7, Node Type to Network 802.1q Tagging</p>
     <fig>
       <title>Logical Network with EqualLogic Storage</title>
-      <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.svg" align="left"></image>
+      <image href="../../Customization/OpenTopic/common/artwork/pilot_eqlx_logical_network.png" align="left"></image>
     </fig>
   </body>
 </topic>
