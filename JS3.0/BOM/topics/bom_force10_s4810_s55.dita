@@ -5,182 +5,222 @@
   <body>
     <p>
       <table frame="all" rowsep="1" colsep="1" id="table_force10_s4810-s55">
-        <title>Bill of Materials - Networking Force10 S4810 and S55</title>
+        <title>Bill of Materials - Networking Force10 S4810</title>
         <tgroup cols="2">
-          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="2*"/>
           <thead>
             <row>
+              <entry>Quantity</entry>
               <entry>SKU</entry>
               <entry>Description</entry>
             </row>
           </thead>
           <tbody>
             <row>
-              <entry><b><i>Force10 S4810</i></b></entry>
-              <entry/>
-            </row>
-            <row>
+              <entry>1</entry>
               <entry>225-2479</entry>
               <entry>Force10, S4810P, 1RU, 48 x 10GbE SFP+, 4 x 40GbE QSFP+, 1 x AC PSU, 2 x FM, PSU
-                to IO Panels (Reverse) (Qty 2)</entry>
+                to IO Panels (Reverse)</entry>
             </row>
             <row>
+              <entry>1</entry>
               <entry>331-9233</entry>
-              <entry>No Returns Allowed on Dell Networking Switches (Qty 2)</entry>
+              <entry>No Returns Allowed on Dell Networking Switches</entry>
             </row>
             <row>
+              <entry>1</entry>
               <entry>331-6279</entry>
-              <entry>Force10, User Documentation for S4810, DAO/BCC (Qty 2)</entry>
+              <entry>Force10, User Documentation for S4810, DAO/BCC</entry>
             </row>
             <row>
-              <entry>935-0143</entry>
-              <entry>ProSupport: 7x24 HW / SW Tech Support and Assistance, 3 Years (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>989-3439</entry>
-              <entry>Dell ProSupport. For tech support, visit <xref
-                href="http://www.dell.com/learn/us/en/19/services/support-services-prosupport-for-enterprise" format="html" scope="external"
-                >http://www.dell.com/learn/us/en/19/services/support-services-prosupport-for-enterprise</xref> or call 1-800-945-3355 (Qty 2)</entry>
-            </row>
-            <row>
+              <entry>1</entry>
               <entry>996-2670</entry>
-              <entry>Dell Hardware Limited Warranty Initial Year (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>996-2760</entry>
-              <entry>Dell Hardware Limited Warranty Extended Year(s) (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>936-9034</entry>
-              <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, 2 Year
-                Extended</entry>
-            </row>
-            <row>
-              <entry>935-0103</entry>
-              <entry>SW Support,Force10 Software ,3 Years (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>936-9014</entry>
-              <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, Initial
-                Year (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>900-9997</entry>
-              <entry>On-Site Installation Declined (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>973-2426</entry>
-              <entry>Declined Remote Consulting Service (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>331-5105</entry>
-              <entry>Force10, S4810P, AC Power Supply, PSU to IO Panels (Reverse) (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>470-AAFE</entry>
-              <entry>Dell Networking, Cable, QSFP+ to QSFP+, 40GbE Passive Copper Direct Attach
-                Cable, 1 Meter (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>470-AAGP</entry>
-              <entry>Dell Networking, Cable, SFP+to SFP+, 10GbE, Copper TwinaxDirect Attach Cable, 3
-                Meter (Qty 48)</entry>
-            </row>
-            <row>
-              <entry>450-AASX</entry>
-              <entry>Power Cord, 250V, 12A, 2 Meters, C13/C14 (Qty 4)</entry>
-            </row>
-            <row>
-              <entry>332-0139</entry>
-              <entry>Force10 Customer not deploying this switch in iSCSI or FCOE environment. (Qty
-                2)</entry>
-            </row>
-            <row>
-              <entry>331-5393</entry>
-              <entry>Force10, Rear Rack Mounting Bracket, 4 Post, S4810 (Qty 2)</entry>
-            </row>
-            <row>
-              <entry><b><i>Force10 S55</i></b></entry>
-              <entry/>
-            </row>
-            <row>
-              <entry>225-2504</entry>
-              <entry>Force10, S55, 1RU, 44 x 10/100/1000 BASE-T, 4 x 1GbE SFP, 1 x AC PSU, 2 x FM,
-                PSU to IO Panels (Reverse)</entry>
-            </row>
-            <row>
-              <entry>331-5392</entry>
-              <entry>Force10, Adapter, Card, 10 GbE, 2 Port, SFP+, S55</entry>
-            </row>
-            <row>
-              <entry>331-5244</entry>
-              <entry>Force10, S55, AC Power Supply, PSU to IO Panels (Reverse)</entry>
-            </row>
-            <row>
-              <entry>450-AASX</entry>
-              <entry>Power Cord, 250V, 12A, 2 Meters, C13/C14 (Qty 2)</entry>
-            </row>
-            <row>
-              <entry>331-5252</entry>
-              <entry>Force10, Rear Rack Mounting Bracket, 4 Post, S55</entry>
-            </row>
-            <row>
-              <entry>331-6271</entry>
-              <entry>Force10, User Documentation for S55/S60, DAO/BCC</entry>
-            </row>
-            <row>
-              <entry>995-0622</entry>
-              <entry>ProSupport: 7x24 HW / SW Tech Support and Assistance, 3 Years</entry>
-            </row>
-            <row>
-              <entry>936-8714</entry>
-              <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, Initial
-                Year</entry>
-            </row>
-            <row>
-              <entry>936-8734</entry>
-              <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, 2 Year
-                Extended</entry>
-            </row>
-            <row>
-              <entry>995-9649</entry>
-              <entry>SW Support,Force10 Software ,5 Years</entry>
-            </row>
-            <row>
-              <entry>989-3439</entry>
-              <entry>Dell ProSupport. For tech support, visit <xref
-                href="http://www.dell.com/learn/us/en/19/services/support-services-prosupport-for-enterprise" format="html" scope="external"
-                >http://www.dell.com/learn/us/en/19/services/support-services-prosupport-for-enterprise</xref> or call 1-800-945-3355</entry>
-            </row>
-            <row>
-              <entry>935-1367</entry>
               <entry>Dell Hardware Limited Warranty Initial Year</entry>
             </row>
             <row>
-              <entry>938-7578</entry>
-              <entry>Dell Hardware Limited Warranty Extended Year(s)</entry>
+              <entry>1</entry>
+              <entry>989-3439</entry>
+              <entry>Dell ProSupport. For tech support, visit <xref
+                href="http://www.dell.com/contactdell" format="html" scope="external"
+                >http://www.dell.com/contactdell</xref> or call 1-800-945-3355</entry>
             </row>
             <row>
-              <entry>996-0540</entry>
-              <entry>Force10, 5 Year Return To Depot Service, Base Warranty</entry>
+              <entry>1</entry>
+              <entry>935-0093</entry>
+              <entry>ProSupport: Next Business Day Parts Delivery, 2 Year Extended</entry>
             </row>
             <row>
-              <entry>923-2669</entry>
-              <entry>Remote Implementation of a Layer 2 Ethernet Switch</entry>
+              <entry>1</entry>
+              <entry>996-2670</entry>
+              <entry>Dell Hardware Limited Warranty Initial Year</entry>
             </row>
             <row>
+              <entry>1</entry>
+              <entry>931-3806</entry>
+              <entry>ProSupport: Next Business Day Parts Delivery, Initial Year</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>935-0103</entry>
+              <entry>SW Support, Force10 Software, 3 Years</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>935-0143</entry>
+              <entry>ProSupport: 7x24 HW / SW Tech Support and Assistance, 3 Years</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>900-9997</entry>
+              <entry>On-Site Installation Declined</entry>
+            </row>
+            <row>
+              <entry>1</entry>
               <entry>973-2426</entry>
               <entry>Declined Remote Consulting Service</entry>
             </row>
             <row>
-              <entry>331-9233</entry>
-              <entry>No Returns Allowed on Dell Networking Switches</entry>
+              <entry>8</entry>
+              <entry>470-AAGP</entry>
+              <entry>Dell Networking, Cable, SFP+to SFP+, 10GbE, Copper TwinaxDirect Attach Cable, 3
+                Meter</entry>
+            </row>
+            <row>
+              <entry>20</entry>
+              <entry>470-AAGN</entry>
+              <entry>Dell Networking, Cable, SFP+to SFP+, 10GbE, Copper TwinaxDirect Attach Cable, 1
+                Meter</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>450-AASX</entry>
+              <entry>Dell Networking, Jumper Cord, 250V, 12A, 2 Meters, C13/C14, US</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>332-0139</entry>
+              <entry>Force10 Customer not deploying this switch in iSCSI or FCOE environment</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>331-5393</entry>
+              <entry>Force10, Rear Rack Mounting Bracket, 4 Post, S4810</entry>
             </row>
           </tbody>
         </tgroup>
       </table>
+      
     </p>
+    <table frame="all" rowsep="1" colsep="1" id="table_zsk_3cs_sq">
+      <title>Bill of Materials - Networking Force10 S55</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+        <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Quantity</entry>
+            <entry>SKU</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>1</entry>
+            <entry>225-2504</entry>
+            <entry>Force10, S55, 1RU, 44 x 10/100/1000 BASE-T, 4 x 1GbE SFP, 1 x AC PSU, 2 x FM, PSU
+              to IO Panels (Reverse)</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>331-5392</entry>
+            <entry>Force10, Adapter, Card, 10 GbE, 2 Port, SFP+, S55</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>450-AASX</entry>
+            <entry>Dell Networking, Jumper Cord, 250V, 12A, 2 Meters, C13/C14, US</entry>
+          </row>
+          <row>
+            <entry>2</entry>
+            <entry>470-AAGP</entry>
+            <entry>Dell Networking, Cable, SFP+to SFP+, 10GbE, Copper TwinaxDirect Attach Cable, 3
+              Meter</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>331-5252</entry>
+            <entry>Force10, Rear Rack Mounting Bracket, 4 Post, S55</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>331-6271</entry>
+            <entry>Force10, User Documentation for S55/S60, DAO/BCC</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>989-3439</entry>
+            <entry>Dell ProSupport. For tech support, visit <xref
+              href="http://www.dell.com/contactdell" format="html" scope="external"
+              >http://www.dell.com/contactdell</xref> or call 1-800-945-3355</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>935-1367</entry>
+            <entry>Dell Hardware Limited Warranty Initial Year</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>995-9649</entry>
+            <entry>SW Support,Force10 Software, 5 Years</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>996-0540</entry>
+            <entry>Force10, 5 Year Return To Depot Service, Base Warranty</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>938-7578</entry>
+            <entry>Dell Hardware Limited Warranty Extended Year(s)</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>936-8734</entry>
+            <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, 2 Year
+              Extended</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>936-8714</entry>
+            <entry>ProSupport: Next Business Day Onsite Service After ProblemDiagnosis, Initial
+              Year</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>995-0622</entry>
+            <entry>ProSupport: 7x24 HW / SW Tech Support and Assistance, 3 Years</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>900-9997</entry>
+            <entry>On-Site Installation Declined</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>973-2426</entry>
+            <entry>Declined Remote Consulting Service</entry>
+          </row>
+          <row>
+            <entry>1</entry>
+            <entry>331-9233</entry>
+            <entry>No Returns Allowed on Dell Networking Switches</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
   </body>
   
   <topic id="server_racks_power" conref="server_racks_power.dita#server_racks_power">
