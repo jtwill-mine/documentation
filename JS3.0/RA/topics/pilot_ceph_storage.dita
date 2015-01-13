@@ -27,7 +27,7 @@
     <p>The storage nodes must have access to the Storage Network as previously stated and to the Storage Cluster Network vLAN.</p>
     <fig>
       <title>Pilot Bundle with Ceph Storage</title>
-      <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="left" ></image>
+      <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="left" scalefit="yes" ></image>
     </fig>
   </body>
 </topic>
