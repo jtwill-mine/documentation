@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_solution_guides">
+  <title>Pilot Solution</title>
+  <shortdesc>Table 1 contains the locations of all documents and scripts needed to deploy the Pilot solution. Choose the script package based upon your preference.</shortdesc>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_ebz_gh1_tq">
+      <title>Pilot Solution - Documents in Order of Usage</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Document</entry>
+            <entry>Location</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Reference Architecture</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/Dell%20Red%20Hat%20Cloud%20Solutions%20Reference%20Architecture%20Guide.pdf?api=v2"
+                format="pdf" scope="external"
+                >https://wiki.opencrowbar.org/download/attachments/6326050/Dell%20Red%20Hat%20Cloud%20Solutions%20Reference%20Architecture%20Guide.pdf?api=v2</xref></entry>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
