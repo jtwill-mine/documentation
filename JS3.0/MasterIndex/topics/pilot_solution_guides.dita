@@ -24,52 +24,76 @@
                 >https://wiki.opencrowbar.org/download/attachments/6326050/Dell%20Red%20Hat%20Cloud%20Solutions%20Reference%20Architecture%20Guide.pdf?api=v2</xref></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>OSP Pilot templates and scripts used (tgz compressed)</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.tgz?api=v2"
+                format="html" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>OSP Pilot templates and scripts used (zip compressed)</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.zip?api=v2"
+                format="zip" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Dell Red Hat Pilot Checklist</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-checklist.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Hardware Deployment Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/Dell_RHOS_Powered_Cloud_Solution_Deployment_Guide.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Pilot Workbook for network and hardware config</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/Pilot-Bundle-ceph.xlsx?api=v2"
+                format="html" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Solution Admin Host (SAH) Deployment Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-deploy.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Foreman Virtual Machine Deployment Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-foreman-deploy.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Ceph Virtual Machine Deployment Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-ceph-deploy.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>OpenStack Foreman Installation Pilot Deployment Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Dell Pilot Hostgroups Deploy Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-hostgroups-deploy.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>Ceph Deployment Guide with Foreman</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/RHOSP%20to%20Ceph%20Integration-Foreman.pdf?version=1&amp;modificationDate=1413400004987&amp;api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
+            <entry>OpenStack Foreman Network Bond Provisioning Guide</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/bonding-snippet.pdf?api=v2"
+                format="pdf" scope="external"/></entry>
           </row>
         </tbody>
       </tgroup>
