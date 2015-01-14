@@ -8,9 +8,9 @@
     <table frame="all" rowsep="1" colsep="1" id="table_defects">
       <title>Defects</title>
       <tgroup cols="4">
-        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c1" colnum="1" colwidth="1.5*"/>
+        <colspec colname="c2" colnum="2" colwidth="0.75*"/>
+        <colspec colname="c3" colnum="3" colwidth="0.75*"/>
         <colspec colname="c4" colnum="4" colwidth="1.0*"/>
         <thead>
           <row>
@@ -37,22 +37,26 @@
               set.</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry><p><codeph>Error: Could not retrieve catalog from remote server: Error 400 on SERVER: has_key(): expects the first argument to be a hash, got "{'vlan_start': 301, 'force_dhcp_release': 'false'}" which is of type String at /usr/share/openstack-puppet/modules/nova/manifests/network.pp:87 on node stor1.rhosp5.org</codeph></p><p><codeph>Warning: Not using cache on failed catalog</codeph></p><p><codeph>Error: Could not retrieve catalog; skipping run</codeph></p></entry>
+            <entry>Pilot</entry>
+            <entry>N/A</entry>
+            <entry>If you see this error:<ol id="ol_catalog_failure">
+                <li>Check the puppet classes.</li>
+                <li>Ensure the variable in question is set to what it expects. In this case
+                    <i>HASH</i> and not <i>String</i>.</li>
+              </ol></entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
           </row>
           <row>
-            <entry/>
-            <entry/>
-            <entry/>
-            <entry/>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
+            <entry>TBD</entry>
           </row>
         </tbody>
       </tgroup>
