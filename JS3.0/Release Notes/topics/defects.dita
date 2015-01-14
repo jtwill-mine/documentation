@@ -9,14 +9,14 @@
       <title>Defects</title>
       <tgroup cols="4">
         <colspec colname="c1" colnum="1" colwidth="1.5*"/>
-        <colspec colname="c2" colnum="2" colwidth="0.75*"/>
-        <colspec colname="c3" colnum="3" colwidth="0.75*"/>
-        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="0.55*"/>
+        <colspec colname="c3" colnum="3" colwidth="0.7*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.25*"/>
         <thead>
           <row>
             <entry>Issue</entry>
             <entry>Component</entry>
-            <entry>Red Hat Bugzilla Ref. No.</entry>
+            <entry>Red Hat Bugzilla No.</entry>
             <entry>Workaround</entry>
           </row>
         </thead>
