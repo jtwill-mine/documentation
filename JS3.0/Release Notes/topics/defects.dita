@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="defects">
+  <title>Defects</title>
+  <shortdesc>This section describes currently-known defects for the Dell Red Hat Cloud Solutions,
+    version 3.0. Workarounds are provided whenever possible.</shortdesc>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_defects">
+      <title>Defects</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Issue</entry>
+            <entry>Component</entry>
+            <entry>Red Hat Bugzilla Ref. No.</entry>
+            <entry>Workaround</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>RHEL 6.6 with <codeph>openstack-foreman-installer</codeph> installed fails to install, and
+              produces Augeas library errors.</entry>
+            <entry>N/A</entry>
+            <entry>N/A</entry>
+            <entry>To exclude the Augeas libraries:<codeblock>yum update --exclude augeas-libs</codeblock></entry>
+          </row>
+          <row>
+            <entry>The <codeph>http_proxy</codeph> is not set on all systems by the kickstart
+              files.</entry>
+            <entry>All kickstart files</entry>
+            <entry>N/A</entry>
+            <entry>Set <codeph>http_proxy</codeph> on systems where it is not automatically
+              set.</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
