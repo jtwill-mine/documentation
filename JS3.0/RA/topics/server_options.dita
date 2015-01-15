@@ -3,14 +3,14 @@
 <topic id="server_options">
   <title>Server Infrastructure Options</title>
   <body>
-    <p>The Solution includes using the PowerEdge R620, R720 and R720xd Server lines. The following sections describe the supported server models and configurations required. Detailed part lists and rack layouts are included in a Build of Materials Guide.</p>
+    <p>The Solution includes using the PowerEdge R630 and R730xd Server lines. The following sections describe the supported server models and configurations required. Detailed part lists and rack layouts are included in a Build of Materials Guide.</p>
   </body>
   
-  <topic id="poweredge_r620" conref="poweredge_r620.dita#poweredge_r620">
+  <topic id="poweredge_r630" conref="poweredge_r630.dita#poweredge_r630">
     <title/>
   </topic>
   
-  <topic id="poweredge_720_r720xd" conref="poweredge_720_r720xd.dita#poweredge_720_r720xd">
+  <topic id="poweredger730xd" conref="poweredge_730xd.dita#poweredge_730xd">
     <title/>
   </topic>
   

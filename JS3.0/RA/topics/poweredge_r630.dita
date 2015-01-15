@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r630">
+  <title>PowerEdge R630 Server</title>
+  <shortdesc>The PowerEdge R630 server is a hyper-dense, two-socket, 1U rack server.</shortdesc>
+  <body>
+    <p>With computing capability previously only seen in 2U servers, the ultra-dense PowerEdge R630
+      two-socket 1U rack server delivers an impressive solution for virtualization environments,
+      large business applications or transactional databases.</p>
+    <p>The PowerEdge R630 server is versatile and highly
+      configurable for a variety of solutions, delivering the
+      latest Intel® Xeon® processor E5-2600 v3 product
+      family, 24 DIMMs of high-performance DDR4
+      memory and a broad range of local storage options.</p>
+  </body>
+
+</topic>
