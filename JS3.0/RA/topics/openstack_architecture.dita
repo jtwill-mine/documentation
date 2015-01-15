@@ -5,7 +5,7 @@
   <body>
     <p>While OpenStack has many configurations and capabilities, we focus on the primary components
       for Red Hat <tm tmtype="reg">Enterprise Linux</tm> OpenStack Platform 5.0 (Icehouse), as Dell
-      has defined in <xref href="taxonomy.dita#taxonomy"></xref>.</p>
+      has defined in <xref href="taxonomy.dita#taxonomy"/> above.</p>
     <note>For a complete overview of OpenStack software, visit <xref
         href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/"
         format="html" scope="external">Red Hat OpenStack Enterprise Platform</xref> and the <xref
