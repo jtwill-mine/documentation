@@ -14,7 +14,9 @@
 
  <topicref href="../topics/glossary.dita"/>
 
- <topicref href="../topics/overview.dita"/>
+ <topicref href="../topics/overview.dita">
+  <topicref href="../topics/taxonomy.dita"/>
+ </topicref>
 
  <topicref href="../topics/openstack_architecture.dita">
 
