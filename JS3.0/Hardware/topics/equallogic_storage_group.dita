@@ -15,84 +15,90 @@
         href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/5/html/Configuration_Reference_Guide/section_volume-drivers.html#dell-equallogic-driver"
         format="html" scope="external"
         >https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/5/html/Configuration_Reference_Guide/section_volume-drivers.html#dell-equallogic-driver</xref>
-      for the current list.</p>
-    <table><title>EqualLogic Information Needed from Configuration</title>
-      <tgroup cols="4" colsep="1" rowsep="1">
-        <tbody>
-          <row>
-            <entry><b>[DEFAULT]</b></entry>
-            <entry><b>Description</b></entry>
-          </row>
-          <row>
-            <entry><codeph>volume_driver = cinder.volume.drivers.eqlx</codeph></entry>
-            <entry>Dell EqualLogic volume driver</entry>
-          </row>
-          <row>
-            <entry><codeph>san_ip = &lt;IP_address_of_EQLX&gt;</codeph></entry>
-            <entry>IP address used to reach the EqualLogic Group through SSH</entry>
-          </row>
-          <row>
-            <entry><codeph>san_login = &lt;user_name&gt;</codeph></entry>
-            <entry>User name to login to the Group manager via SSH at the <codeph>san_ip</codeph></entry>
-          </row>
-          <row>
-            <entry><codeph>san_password = &lt;password&gt;</codeph></entry>
-            <entry>Password to login to the Group manager via SSH at the <codeph>san_ip</codeph> (not used when san_private_key is set)</entry>
-          </row>
-          <row>
-            <entry><codeph>san_thin_provision = &lt;true|false&gt;</codeph></entry>
-            <entry>Enable/disable creation of thin-provisioned volumes</entry>
-          </row>
-          <row>
-            <entry><codeph>san_ssh_port = 22</codeph></entry>
-            <entry>Port used for SSH</entry>
-          </row>
-          <row>
-            <entry><codeph>ssh_conn_timeout = 30</codeph></entry>
-            <entry>Timeout value, in seconds, used by CLI commands over SSH</entry>
-          </row>
-          <row>
-            <entry><codeph>san_private_key = &lt;filename&gt;</codeph></entry>
-            <entry>Filename of the private key used for SSH authentication</entry>
-          </row>
-          <row>
-            <entry><codeph>ssh_min_pool_conn = 1</codeph></entry>
-            <entry>Minimum number of SSH connections in the pool</entry>
-          </row>
-          <row>
-            <entry><codeph>ssh_max_pool_conn = 5</codeph></entry>
-            <entry>Maximum number of SSH connections in the pool</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_chap_login = admin</codeph></entry>
-            <entry>Existing CHAP account name</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_chap_password = password</codeph></entry>
-            <entry>Password for specified CHAP account name</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_cli_max_retries = 5</codeph></entry>
-            <entry>Maximum retry count for reconnection</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_cli_timeout = 30</codeph></entry>
-            <entry>Timeout for the Group Manager CLI command execution</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_group_name = group-0</codeph></entry>
-            <entry>Group name to use for creating volumes</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_pool = default</codeph></entry>
-            <entry>Pool in which volumes will be created</entry>
-          </row>
-          <row>
-            <entry><codeph>eqlx_use_chap = False</codeph></entry>
-            <entry>Use CHAP authentication for targets?</entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
+      for the current list.<table frame="all" rowsep="1" colsep="1" id="table_mcp_xsf_tq">
+        <title>EqualLogic Information Needed from Configuration</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry><b>[DEFAULT]</b></entry>
+              <entry><b>Description</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry><codeph>volume_driver = cinder.volume.drivers.eqlx</codeph></entry>
+              <entry>Dell EqualLogic volume driver</entry>
+            </row>
+            <row>
+              <entry><codeph>san_ip = &lt;IP_address_of_EQLX&gt;</codeph></entry>
+              <entry>IP address used to reach the EqualLogic Group through SSH</entry>
+            </row>
+            <row>
+              <entry><codeph>san_login = &lt;user_name&gt;</codeph></entry>
+              <entry>User name to login to the Group manager via SSH at the
+                <codeph>san_ip</codeph></entry>
+            </row>
+            <row>
+              <entry><codeph>san_password = &lt;password&gt;</codeph></entry>
+              <entry>Password to login to the Group manager via SSH at the <codeph>san_ip</codeph>
+                (not used when san_private_key is set)</entry>
+            </row>
+            <row>
+              <entry><codeph>san_thin_provision = &lt;true|false&gt;</codeph></entry>
+              <entry>Enable/disable creation of thin-provisioned volumes</entry>
+            </row>
+            <row>
+              <entry><codeph>san_ssh_port = 22</codeph></entry>
+              <entry>Port used for SSH</entry>
+            </row>
+            <row>
+              <entry><codeph>ssh_conn_timeout = 30</codeph></entry>
+              <entry>Timeout value, in seconds, used by CLI commands over SSH</entry>
+            </row>
+            <row>
+              <entry><codeph>san_private_key = &lt;filename&gt;</codeph></entry>
+              <entry>Filename of the private key used for SSH authentication</entry>
+            </row>
+            <row>
+              <entry><codeph>ssh_min_pool_conn = 1</codeph></entry>
+              <entry>Minimum number of SSH connections in the pool</entry>
+            </row>
+            <row>
+              <entry><codeph>ssh_max_pool_conn = 5</codeph></entry>
+              <entry>Maximum number of SSH connections in the pool</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_chap_login = admin</codeph></entry>
+              <entry>Existing CHAP account name</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_chap_password = password</codeph></entry>
+              <entry>Password for specified CHAP account name</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_cli_max_retries = 5</codeph></entry>
+              <entry>Maximum retry count for reconnection</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_cli_timeout = 30</codeph></entry>
+              <entry>Timeout for the Group Manager CLI command execution</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_group_name = group-0</codeph></entry>
+              <entry>Group name to use for creating volumes</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_pool = default</codeph></entry>
+              <entry>Pool in which volumes will be created</entry>
+            </row>
+            <row>
+              <entry><codeph>eqlx_use_chap = False</codeph></entry>
+              <entry>Use CHAP authentication for targets?</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
   </body>
 </topic>
