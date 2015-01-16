@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="solution_bundles">
-  <title>Solution Bundles</title>
+  <title>Solution Bundle</title>
   <shortdesc>In setting up deployments, Dell has created the solution for the person or team that wants to use OpenStack in an environment that starts to duplicate production.</shortdesc>
   <body>
     <p>Our aim is to:</p>
     <ul>
       <li>Develop tools to use with OpenStack for day-to-day usage and management</li>
+      <li>Have Administrators learn how to manage OpenStack.</li>
       <li>Develop applications that require actual hardware as the base</li>
       <li>Determine and investigate what networking issues will be seen in a production system</li>
     </ul>
