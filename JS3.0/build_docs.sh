@@ -2,8 +2,9 @@
 
 CWD=`pwd`
 
-DITA_HOME=/opt/DITA-OT1.8.5
-cd $DITA_HOME
+DITA_HOME="$CWD/../DITA-OT1.8.5"
+
+cd "$DITA_HOME"
 export DITA_DIR="$DITA_HOME/"
 set +x 
 
@@ -50,7 +51,7 @@ if [[ -n $1  && $1 == "build_all" ]]; then
   shopt -s globstar
   for filename in **/*.ditamap; do
         echo "Starting build of ${filename}"
-        cd $DITA_HOME
+        cd "$DITA_HOME"
         /opt/DITA-OT1.8.5/tools/ant/bin/ant -Dtranstype=pdf2 -Dargs.input="$WORKSPACE/$filename" -Ddita.temp.dir="$WORKSPACE/temp" -Doutput.dir="$WORKSPACE" -Dcustomization.dir="$WORKSPACE/../dell_customization" -Douter.control=quiet
   done
   exit
@@ -59,7 +60,7 @@ fi
 select filename in ${filelist}; do
     if [ -n "$filename" ]; then
         echo "Starting build of ${filename}"
-        cd $DITA_HOME
+        cd "$DITA_HOME"
         /opt/DITA-OT1.8.5/tools/ant/bin/ant -Dtranstype=pdf2 -Dargs.input="$WORKSPACE/$filename" -Ddita.temp.dir="$WORKSPACE/temp" -Doutput.dir="$WORKSPACE" -Dcustomization.dir="$WORKSPACE/../dell_customization" -Douter.control=quiet
     fi
     break
