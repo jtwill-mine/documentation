@@ -16,9 +16,7 @@
 
  <topicref href="../topics/overview.dita"/>
 
- <topicref href="../topics/openstack_architecture.dita">
-
- </topicref>
+ <topicref href="../topics/openstack_architecture.dita" />
 
  <topicref href="../topics/storage_options.dita"/>
 
