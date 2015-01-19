@@ -2,7 +2,8 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_solution_guides">
   <title>Pilot Solution</title>
-  <shortdesc>Table 1 contains the locations of all documents and scripts needed to deploy the Pilot solution. Choose the script package based upon your preference.</shortdesc>
+  <shortdesc>Table 1 contains the locations of all documents and scripts needed to deploy the Pilot
+    solution. Choose the script package based upon your preference.</shortdesc>
   <body>
     <table frame="all" rowsep="1" colsep="1" id="table_ebz_gh1_tq">
       <title>Pilot Solution - Documents in Order of Usage</title>
@@ -19,9 +20,9 @@
           <row>
             <entry>Reference Architecture</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/Dell%20Red%20Hat%20Cloud%20Solutions%20Reference%20Architecture%20Guide.pdf?api=v2"
+                href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/RA/maps/ra.pdf"
                 format="pdf" scope="external"
-                >https://wiki.opencrowbar.org/download/attachments/6326050/Dell%20Red%20Hat%20Cloud%20Solutions%20Reference%20Architecture%20Guide.pdf?api=v2</xref></entry>
+                >http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/RA/maps/ra.pdf</xref></entry>
           </row>
           <row>
             <entry>OSP Pilot templates and scripts used (tgz compressed)</entry>
@@ -38,13 +39,13 @@
           <row>
             <entry>Dell Red Hat Pilot Checklist</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-checklist.pdf?api=v2"
+                href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_checklist.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>Hardware Deployment Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/Dell_RHOS_Powered_Cloud_Solution_Deployment_Guide.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Hardware/maps/hw_dep_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
@@ -56,31 +57,31 @@
           <row>
             <entry>Solution Admin Host (SAH) Deployment Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-deploy.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_dep_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>Foreman Virtual Machine Deployment Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-foreman-deploy.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_foreman_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>Ceph Virtual Machine Deployment Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-sah-ceph-deploy.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_ceph_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>OpenStack Foreman Installation Pilot Deployment Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_dep_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>Dell Pilot Hostgroups Deploy Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-hostgroups-deploy.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_hostgroups_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
@@ -92,7 +93,7 @@
           <row>
             <entry>OpenStack Foreman Network Bond Provisioning Guide</entry>
             <entry><xref
-                href="https://wiki.opencrowbar.org/download/attachments/6326050/bonding-snippet.pdf?api=v2"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/bonding_snippets.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
         </tbody>
