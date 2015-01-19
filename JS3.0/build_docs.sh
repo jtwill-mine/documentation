@@ -37,9 +37,12 @@ fi
 
 if [[ -z $WORKSPACE ]]; then
   export WORKSPACE="${CWD}"
+  export OVERLAY_TOOL_DIR="${CWD}/../dell_customization/overlay_tools"
+  export OUTDIR="${WORKSPACE}"/artifacts
+  export DOC_VERSION=JS3.0
 fi
-  
-export DOC_VERSION=JS3.0
+
+mkdir -p "${OUTDIR}"
 
 echo "WORKSPACE: ${WORKSPACE}"
 cd "${WORKSPACE}"
@@ -51,8 +54,16 @@ if [[ -n $1  && $1 == "build_all" ]]; then
   shopt -s globstar
   for filename in **/*.ditamap; do
         echo "Starting build of ${filename}"
+        oname=`basename ${filename}`
         cd "$DITA_HOME"
         /opt/DITA-OT1.8.5/tools/ant/bin/ant -Dtranstype=pdf2 -Dargs.input="$WORKSPACE/$filename" -Ddita.temp.dir="$WORKSPACE/temp" -Doutput.dir="$WORKSPACE" -Dcustomization.dir="$WORKSPACE/../dell_customization" -Douter.control=quiet
+        if [[ -n $2  && $1 == "release" ]]; then
+           echo "*** Build Release Documents ***"
+           echo mv "${WORKSPACE}"/"${filename%.*}.pdf" "${OUTDIR}"
+        else 
+           java -jar "${OVERLAY_TOOL_DIR}"/pdfbox-app-1.8.8.jar OverlayPDF "$WORKSPACE"/"${filename%.*}.pdf" "${OVERLAY_TOOL_DIR}"/watermark_draft_lightred_filled.pdf "${OUTDIR}"/"${oname%.*}.pdf"
+           echo rm -f "${WORKSPACE}"/"${filename%.*}.pdf" 
+        fi
   done
   exit
 fi
@@ -60,9 +71,11 @@ fi
 select filename in ${filelist}; do
     if [ -n "$filename" ]; then
         echo "Starting build of ${filename}"
+        oname=`basename ${filename}`
         cd "$DITA_HOME"
         /opt/DITA-OT1.8.5/tools/ant/bin/ant -Dtranstype=pdf2 -Dargs.input="$WORKSPACE/$filename" -Ddita.temp.dir="$WORKSPACE/temp" -Doutput.dir="$WORKSPACE" -Dcustomization.dir="$WORKSPACE/../dell_customization" -Douter.control=quiet
+        java -jar "${OVERLAY_TOOL_DIR}"/pdfbox-app-1.8.8.jar OverlayPDF "$WORKSPACE"/"${filename%.*}.pdf" "${OVERLAY_TOOL_DIR}"/watermark_draft_lightred_filled.pdf "${OUTDIR}"/"${oname%.*}.pdf"
+        echo rm -f "${WORKSPACE}"/"${filename%.*}.pdf" 
     fi
     break
 done
-
