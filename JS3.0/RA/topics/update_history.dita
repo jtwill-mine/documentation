@@ -5,7 +5,7 @@
   <shortdesc>The following changes have been made to this guide:</shortdesc>
   <body></body>
   
-  <topic id="version_1" conref="version_1.dita#version_1">
+  <topic id="version_1" conref="version_1.dita#version_1" >
       <title/>
     </topic>
   
@@ -14,6 +14,9 @@
   </topic>
   
   <topic id="version_3" conref="version_3.dita#version_3">
+    <title/>
+  </topic>
+  <topic id="version_4" conref="version_4.dita#version_4">
     <title/>
   </topic>
   

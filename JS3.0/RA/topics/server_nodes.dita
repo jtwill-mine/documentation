@@ -11,6 +11,11 @@
       <li>Single port</li>
     </ol>
     <p>In the first case the connectivity on the switch side must be in a LAG (or port-channel). In cases 2 and 3, Dell recommends that you do the configuration as a LAG but the ports should still be part of the same layer-2 domain. In some cases all members of the LAG connect to a single ToR switch. In others the LAG splits into two ToR switches. This is an optional setup as OpenStack has redundancy built into the application.</p>
-    <p>The teaming configuration that Dell recommends is <codeph>transmit-tlb</codeph> (mode = 5). This configuration setting is explained in greater deal in the <i>Dell Red Hat Cloud Solutions Deployment Guide</i>. Please contact your sales representative for a copy of that document.</p>
+    <p>The teaming configuration that Dell recommends is <codeph>balance-tlb</codeph> (mode = 5).
+      Other Modes such as <codeph>balance-rr</codeph>(mode=0) or
+      <codeph>balance-alb</codeph>(mode=6) are not supported by OpenStack, and thus only
+        <codeph>balance-tlb</codeph> is supported. This configuration setting is explained in
+      greater deal in the <i>Dell Red Hat Cloud Solutions Deployment Guide</i>. Please contact your
+      sales representative for a copy of that document.</p>
   </body>
 </topic>
