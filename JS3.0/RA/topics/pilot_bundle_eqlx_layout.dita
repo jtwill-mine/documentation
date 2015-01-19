@@ -4,11 +4,6 @@
   <title>Pilot Bundle with EqualLogic Storage Network Layout</title>
   <shortdesc>The OpenStack controllers hosting Cinder and/or Glance servers and compute nodes must have access to the Dell EqualLogic Storage Group through the Storage network vLAN.</shortdesc>
   <body>
-    <p>The controller nodes will use the Storage Network vLAN to access the Storage Pools created on
-      the Storage Group for creation, deletion, and snapshots. The compute nodes must have access to
-      the storage nodes through the Storage Network vLAN in order for the iSCSI driver on that node
-      to interact with the volumes associated to Virtual Machines hosted by that node. EqualLogic
-      Arrays are connected to the Storage Networking vLAN untagged only and all other nodes use the
-      same layout as in Table 7, Node Type to Network 802.1q Tagging</p>
+
   </body>
 </topic>

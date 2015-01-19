@@ -2,21 +2,21 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="rack_1">
   <title>Rack 1</title>
-  <shortdesc>Base Pilot with Ceph or EqualLogic:</shortdesc>
+  <shortdesc>Base Pilot with Ceph, optionally EqualLogic:</shortdesc>
   <body>
     <ul>
       <li>Solution Admin Host</li>
       <li>3 Controller Nodes</li>
       <li>3 Nova Compute Nodes</li>
       <li>3 Storage Nodes </li>
-      <li>Optionally EqualLogic Storage Arrays can be added</li>
+      <li>Optional Dell EqualLogic Storage Arrays can be added</li>
     </ul>
     <p>This configuration consists of a total of 15 U’s, and a total of 12 servers (allowing up to 8
       more servers in Rack 1). In rack 1 you could add up to either:</p>
     <ul>
       <li>8 R630 Nova Compute Nodes, or</li>
       <li>7 R730xd Storage Nodes or</li>
-      <li>EqualLogic Arrays</li>
+      <li>Dell EqualLogic Arrays</li>
     </ul>
     <note>You can use a combination of the two options that does not exceed a total of 20 servers or
       30 rack units.</note>

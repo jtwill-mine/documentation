@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bundles_expansion">
-  <title>Pilot Bundles Expansion</title>
-  <shortdesc>The Pilot bundles can be expanded using the compute bundle or the storage bundle. Using this one could expand up to twenty (20) servers per rack and/or 30 Us (infrastructure, compute and storage combined).</shortdesc>
+  <title>Pilot Bundle Expansion</title>
+  <shortdesc>The Pilot bundle can be expanded using the compute bundle, the storage bundle or
+    EqualLogic Array. Using this, one could expand up to twenty (20) servers per rack and/or 30 Us
+    (infrastructure, compute and storage combined).</shortdesc>
   <body>
-    <p>Expanding beyond the first rack will require the addition of aggregation network switches as described in the networking section, additional TOR and management switches in each rack, and the appropriate power and cooling. Expansion beyond a total of three (3) racks will need to be designed and configured based on your requirements. Please work with your Sales Representative to properly architect these large cluster deployments.</p>
+    <p>Expanding beyond the first rack will require the addition of aggregation network switches as
+      described in the networking section, additional TOR and management switches in each rack, and
+      the appropriate power and cooling.  Expansion beyond a total of three (3) racks will need to
+      be designed and configured based on your requirements. Please work with your Sales
+      Representative to properly architect these large cluster deployments.</p>
   </body>
   
   <topic id="rack_1" conref="rack_1.dita#rack_1">
@@ -18,21 +24,5 @@
   <topic id="rack_3" conref="rack_3.dita#rack_3">
     <title/>
   </topic>
-  
-  <topic id="pilot_ceph_storage" conref="pilot_ceph_storage.dita#pilot_ceph_storage">
-    <title/>
-  </topic>
-  
-  <topic id="pilot_bundle_ceph_netconfig" conref="pilot_bundle_ceph_netconfig.dita#pilot_bundle_ceph_netconfig">
-    <title/>
-  </topic>
-  
-  <topic id="pilot_bundle_equallogic" conref="pilot_bundle_equallogic.dita#pilot_bundle_equallogic">
-    <title/>
-  </topic>
-  
-  <topic id="pilot_bundle_eqlx_layout" conref="pilot_bundle_eqlx_layout.dita#pilot_bundle_eqlx_layout">
-    <title/>
-  </topic>
-  
+   
 </topic>
