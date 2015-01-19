@@ -20,9 +20,9 @@
           <row>
             <entry>Reference Architecture</entry>
             <entry><xref
-                href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/RA/maps/ra.pdf"
+              href="/10.209.159.52/Solution/JS30-Documentation/ra.pdf"
                 format="pdf" scope="external"
-                >http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/RA/maps/ra.pdf</xref></entry>
+              >/10.209.159.52/Solution/JS30-Documentation/ra.pdf</xref></entry>
           </row>
           <row>
             <entry>OSP Pilot templates and scripts used (tgz compressed)</entry>
