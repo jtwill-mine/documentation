@@ -8,13 +8,14 @@
     <ul>
       <li>Node 1: R620 Solution Admin Host with the Red Hat OpenStack Manager Installed</li>
       <li>Nodes 2 - 4: R620 OpenStack Controllers</li>
-      <li>Nodes 5-10 R620 (pictured, or optionally R720) Nova Compute Nodes</li>
+      <li>Nodes 5-7 R620 (pictured, or optionally R720) Nova Compute Nodes</li>
       <li>Nodes 11 – 13: R720xd Storage Nodes; adds three (3)  Storage Nodes to the bundle</li>
+      <li>EqlLogic Storage Array is an optional for additonal storage</li>
       <li>Network Switches: Two (2) Force10 S4810, and one (1) Force10 S55</li>
     </ul>
-    <fig>
-      <title>Pilot Bundle with Ceph Storage</title>
-      <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle_ceph.png"></image>
+    <fig >
+      <title >Pilot Bundle with Ceph Storage</title>
+      <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle.png" align="center" ></image>
     </fig>
     <p>The Ceph cluster provides data protection through replication, block device cloning, and snapshots. By default, the data is striped across the cluster. The number of storage nodes in a single cluster can scale to hundreds of nodes and many petabytes in size. Ceph considers the physical placement of storage nodes when deciding how data is replicated. By defining fault domains, like a rack, row, and data center, and defining the Ceph position of the nodes and disks, Ceph using the position in the decision for data replication, thereby reducing the probability that a given failure results is the loss of more than one data replica.</p>
     <p>There are two services in the Ceph storage cluster, the OSD and the MON (monitor). The OSD services data to the Ceph clients from disks on the storage nodes. Generally, there is one OSD process per disk drive. All OSDs run on the storage nodes. The MON process is used by the Ceph clients and other Ceph processes to determine the composition of the cluster and where data is located. There should be a minimum of three of these MON processes for the Ceph cluster. The MON processes are installed on all OpenStack controller nodes.</p>

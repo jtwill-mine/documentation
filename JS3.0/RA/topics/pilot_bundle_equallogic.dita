@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bundle_equallogic">
-  <title>Pilot Bundle with Dell EqualLogic Storage</title>
-  <shortdesc>The Pilot Bundle with Dell EqualLogic Storage has the same characteristics as the Pilot Bundle with Ceph Storage; the only change is the Storage backend software, hardware and networking. The storage node servers are replaced with one or more Dell EqualLogic arrays and the networks are configured to support the Dell EqualLogic array(s).</shortdesc>
+  <title>Pilot Bundle with Dell EqualLogic Storage added</title>
+  <shortdesc>The Pilot Bundle with Dell EqualLogic Storage has the same characteristics as the Pilot
+    Bundle with Ceph Storage; the only change is the Storage backend software , hardware and
+    networking. The storage node servers are supplemented with one or more Dell EqualLogic
+    arrays.</shortdesc>
   <body>
-    <p>The Pilot bundle shown here has a single Dell EqualLogic Storage Array; this can be one or more depending on your Application and Storage needs. Prior to ordering your Sales Representative will work to find the proper configuration for your needs.</p>
-    <p>See Table 4 and Table 5 for Hardware Configurations. The Pilot Bundle with EqualLogic Storage includes:</p>
-    <ul>
-      <li>Node 1: R620 Solution Admin Host with the Red Hat OpenStack Manager Installed</li>
-      <li>Nodes 2 - 4: R620 OpenStack Controllers</li>
-      <li>Nodes 5-10: R620 (pictured, optionally R720) Nova Compute Nodes</li>
-      <li>EqualLogic Storage Array(s): See your sales representative to find the proper array for your applications.</li>
-      <li>Network Switches: Two (2) Force10 S4810 and one (1) Force10 S55</li>
-    </ul>
-    <fig>
-      <title>Pilot Bundle with Dell EqualLogic Storage</title>
-      <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle_eqlx.png"></image>
-    </fig>
-  </body>
+    <p>The Pilot bundle shown  has a single Dell EqualLogic Storage Array; this can be one or more
+      depending on your Application and Storage needs. Prior to ordering your Sales Representative
+      will work to find the proper configuration for your needs.</p>
+    </body>
+ 
 </topic>

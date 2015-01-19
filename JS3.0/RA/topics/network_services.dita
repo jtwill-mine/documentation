@@ -3,10 +3,10 @@
 <topic id="network_services">
   <title>Networking and Network Services</title>
   <shortdesc>This Reference Architecture uses a starter configuration for networking, which provides
-    access to OpenStack capabilities while reducing the initial complexity during evaluation. With
-    the maturity of Neutron netwoking, the solution is using it. There are several choices in type
-    networking that Neutron is based on, Dell has determined that "vlan" is the best method over
-    "vxlan" and "GRE".</shortdesc>
+    access to OpenStack capabilities while reducing the initial complexity during evaluation. This
+    reference configuration is based on the Neutron networking services, with that there are several
+    choices in type backend networks that Neutron is based on, this solution is based on using the
+      <codeph>"vlan"</codeph> option. </shortdesc>
   <body>
     <p>For a production system, additional networking and redundancy configurations are required. This 
       Reference Architecture supports adding these components as the system grows. This includes:</p>
