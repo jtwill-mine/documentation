@@ -60,8 +60,8 @@
             </row>
             <row>
               <entry>Infrastructure</entry>
-              <entry>Neutron-server(optional)</entry>
-              <entry>Neutron Controllers (Optional)</entry>
+              <entry>Neutron-server</entry>
+              <entry>OpenStack Controllers</entry>
             </row>
             <row>
               <entry>Infrastructure</entry>
@@ -105,18 +105,18 @@
             </row>
             <row>
               <entry>Storage</entry>
-              <entry>Swift Object Store (optional)</entry>
-              <entry>Three or more Storage Servers</entry>
-            </row>
-              <row>
-              <entry>Storage</entry>
-              <entry>Ceph Enterprise (optional)</entry>
-              <entry>Three or more Storage Servers</entry>
+              <entry>Ceph Rados Gateway</entry>
+              <entry>OpenStack Controllers</entry>
             </row>
             <row>
               <entry>Storage</entry>
-              <entry>Ceph Monitor (optional)</entry>
-              <entry>Three or more across the Storage Nodes in the Pilot</entry>
+              <entry>Ceph Monitor</entry>
+              <entry>OpenStack Controllers</entry>
+            </row>
+              <row>
+              <entry>Storage</entry>
+              <entry>Ceph Enterprise Storage</entry>
+              <entry>Three or more Storage Servers</entry>
             </row>
             <row>
               <entry>Storage</entry>
