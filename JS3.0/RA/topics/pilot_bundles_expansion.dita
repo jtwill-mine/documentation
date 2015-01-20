@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bundles_expansion">
-  <title>Pilot Bundle Expansion</title>
-  <shortdesc>The Pilot bundle can be expanded using the compute bundle, the storage bundle or
+  <title>Solution Bundle Expansion</title>
+  <shortdesc>The Solution bundle can be expanded using the compute bundle, the storage bundle or
     EqualLogic Array. Using this, one could expand up to twenty (20) servers per rack and/or 30 Us
     (infrastructure, compute and storage combined).</shortdesc>
   <body>

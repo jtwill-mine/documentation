@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bundle">
-  <title>Pilot Bundle</title>
-  <shortdesc>The Pilot Bundle is designed for pilot environments with storage.</shortdesc>
-  <body>
-    <p>This bundle is for customers who want entry-level testing of an application, and the beginning of a production environment. This does not preclude the need to become familiar with OpenStack administration and day to day management. These bundles consist of the components described in Figure 5: Pilot Bundle.</p>
+  <title>Solution Bundle</title>
+   <body>
+    <p>This bundle is for customers who want entry-level testing of an application, and the
+      beginning of a production environment. This does not preclude the need to become familiar with
+      OpenStack administration and day to day management. These bundles consist of the components
+      described in Figure 5: Solution Bundle.</p>
     <p>Given a virtual machine with the same characteristics as above, you can expect to run around
       90 virtual machines with a 1.5 oversubscription of CPU cores. At 120 virtual machines, you
       will have two-to-one CPU core oversubscription, still have ephemeral storage under subscribed,
       and memory just starting to be oversubscribed.</p>
-    <p>As the Pilot Bundle is designed for the beginning of a production environment, key OpenStack
-      services are made highly available (HA) by clustering the OpenStack Controller nodes, the
-      networking is based on 10Gbe Bonds for data networks and the network switches are setup for
-      HA. The Out of Band Management network is not HA and is 1GbE. Please review and discuss with
-      your Sales Team the specifics.</p>
+    <p>As the Solution Bundle is designed for the beginning of a production environment, key
+      OpenStack services are made highly available (HA) by clustering the OpenStack Controller
+      nodes, the networking is based on 10Gbe Bonds for data networks and the network switches are
+      setup for HA. The Out of Band Management network is not HA and is 1GbE. Please review and
+      discuss with your Sales Team the specifics.</p>
   </body>
 </topic>

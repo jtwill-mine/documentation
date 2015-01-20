@@ -3,6 +3,9 @@
 <topic id="ceph">
   <title>Ceph</title>
   <body>
-    <p>Ceph is a scale-out, shared-nothing, distributed, software-defined, object storage system. The Pilot bundle includes Ceph storage. Ceph is used as the storage backend for Cinder and Glance. Ceph can be used as the storage backend for Block storage. Storage nodes run the Ceph software. Compute and controller nodes run the Ceph block client.</p>
+    <p>Ceph is a scale-out, shared-nothing, distributed, software-defined, object storage system.
+      The Solution bundle includes Ceph storage. Ceph is used as the storage backend for Cinder and
+      Glance. Ceph can be used as the storage backend for Block storage. Storage nodes run the Ceph
+      software. Compute and controller nodes run the Ceph block client.</p>
   </body>
 </topic>
