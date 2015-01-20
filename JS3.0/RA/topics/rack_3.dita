@@ -12,7 +12,7 @@
     <ul>
       <li>19 R630 Nova Compute Nodes, or</li>
       <li>14 R730xd Storage Nodes, or</li>
-      <li> EqualLogic Arrays</li>
+      <li>Dell EqualLogic Arrays</li>
     </ul>
     <note>You can use a combination of the two options that does not exceed a total of 20 servers or 30 rack units.</note>
   </body>

@@ -12,12 +12,13 @@
       plugged into this network without using tagging.<table frame="all" rowsep="1" colsep="1"
         id="table_node_type_to_network_tagging">
         <title>Node Type to Network 802.1q Tagging</title>
-        <tgroup cols="5">
+        <tgroup cols="6">
           <colspec colname="c1" colnum="1" colwidth="1.0*"/>
           <colspec colname="c2" colnum="2" colwidth="1.0*"/>
           <colspec colname="c3" colnum="3" colwidth="1.0*"/>
           <colspec colname="c4" colnum="4" colwidth="1.0*"/>
           <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+          <colspec colname="newCol6" colnum="6" colwidth="1*"/>
           <thead>
             <row>
               <entry>Network</entry>
@@ -25,6 +26,7 @@
               <entry>OpenStack Controller</entry>
               <entry>OpenStack Compute</entry>
               <entry>Ceph Storage</entry>
+              <entry>EqualLogic Array</entry>
             </row>
           </thead>
           <tbody>
@@ -34,6 +36,7 @@
               <entry>Not Tagged</entry>
               <entry>Not Tagged</entry>
               <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
             </row>
             <row>
               <entry>Nova-Network Public</entry>
@@ -41,11 +44,13 @@
               <entry>Not Connected</entry>
               <entry>Not Tagged</entry>
               <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
             </row>
             <row>
               <entry>Public API Access</entry>
               <entry>No Tagging</entry>
               <entry>No Tagging</entry>
+              <entry>Not Connected</entry>
               <entry>Not Connected</entry>
               <entry>Not Connected</entry>
             </row>
@@ -55,12 +60,14 @@
               <entry>Tagged</entry>
               <entry>Tagged</entry>
               <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
             </row>
             <row>
               <entry>Nova-Network Private</entry>
               <entry>Not Connected</entry>
               <entry>Not Connected</entry>
               <entry>Tagged</entry>
+              <entry>Not Connected</entry>
               <entry>Not Connected</entry>
             </row>
             <row>
@@ -69,6 +76,7 @@
               <entry>Tagged</entry>
               <entry>Tagged</entry>
               <entry>Not Tagged</entry>
+              <entry>Not Tagged</entry>
             </row>
             <row>
               <entry>Storage Clustering</entry>
@@ -76,11 +84,13 @@
               <entry>Not Connected</entry>
               <entry>Not Connected</entry>
               <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
             </row>
             <row>
               <entry>Management/OOB</entry>
               <entry>Not Connected</entry>
               <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
               <entry>Not Connected</entry>
               <entry>Not Connected</entry>
             </row>

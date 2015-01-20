@@ -15,13 +15,23 @@
    <topic id="pilot_bundle" conref="pilot_bundle.dita#pilot_bundle">
     <title/>
   </topic>
-
-  <topic id="pilot_bundles_expansion" conref="pilot_bundles_expansion.dita#pilot_bundles_expansion">
-    <title/>
-  </topic>
-
   <topic id="production_bundle" conref="production_bundle.dita#production_bundle">
     <title/>
   </topic>
 
-</topic>
+    <topic id="pilot_ceph_storage" conref="pilot_ceph_storage.dita#pilot_ceph_storage">
+      <title/>
+    </topic>
+    
+    <topic id="pilot_bundle_ceph_netconfig" conref="pilot_bundle_ceph_netconfig.dita#pilot_bundle_ceph_netconfig">
+      <title/>
+    </topic>
+    
+    <topic id="pilot_bundle_equallogic" conref="pilot_bundle_equallogic.dita#pilot_bundle_equallogic">
+      <title/>
+    </topic>
+  <topic id="pilot_bundles_expansion" conref="pilot_bundles_expansion.dita#pilot_bundles_expansion">
+    <title/>
+  </topic>
+  </topic>
+
