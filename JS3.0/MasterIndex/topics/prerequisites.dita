@@ -2,7 +2,8 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="prerequisites">
   <title>Prerequisites</title>
-  <shortdesc>All Pilot and Ceph documents must be completed. In addition, you must have:</shortdesc>
+  <shortdesc>All Solution and Ceph documents must be completed. In addition, you must
+    have:</shortdesc>
   <body>
     <ul>
       <li>A machine that can be used to generate the Kickstart file for the SAH</li>
