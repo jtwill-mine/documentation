@@ -45,14 +45,14 @@
             <entry>3</entry>
             <entry>Solution Checklist</entry>
             <entry><xref
-                href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_checklist.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_checklist.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>4</entry>
             <entry>Hardware Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Hardware/maps/hw_dep_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/hw_dep_guide.pd"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
@@ -66,35 +66,35 @@
             <entry>6</entry>
             <entry>Admin Host (SAH) Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_dep_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_dep_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>7</entry>
             <entry>Foreman Virtual Machine Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_foreman_deploy_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_foreman_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>8</entry>
             <entry>Ceph Virtual Machine Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/SAH/maps/sah_ceph_deploy_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_ceph_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>9</entry>
             <entry>OpenStack Foreman Installation Pilot Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_dep_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_dep_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
             <entry>10</entry>
             <entry>Solution Hostgroups Deployment Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/pilot_hostgroups_deploy_guide.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_hostgroups_deploy_guide.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
@@ -108,7 +108,7 @@
             <entry>12</entry>
             <entry>OpenStack Foreman Network Bond Provisioning Guide</entry>
             <entry><xref
-              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/Pilot/maps/bonding_snippets.pdf"
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/bonding_snippets.pdf"
                 format="pdf" scope="external"/></entry>
           </row>
         </tbody>
