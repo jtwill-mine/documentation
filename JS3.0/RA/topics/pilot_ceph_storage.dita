@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_ceph_storage">
-  <title>Pilot Bundle and Ceph Storage</title>
-  <shortdesc>The Pilot bundle includes three (3) storage nodes. You can set up a Ceph cluster on these nodes, which can be tied into Cinder, Glance, and Nova. With Ceph you will need to plan out the different services.</shortdesc>
+  <title>Solution Bundle and Ceph Storage</title>
+  <shortdesc>The Solution bundle includes three (3) storage nodes. These are setup in a Ceph cluster
+    , which is tied into Cinder, Glance, and Nova. </shortdesc>
   <body>
-    <p>See Table 4 and Table 5 for Hardware Configurations. The Pilot Bundle and Ceph Storage nodes include:</p>
+    <p>See Table 4 and Table 5 for Hardware Configurations. The Solution Bundle and Ceph Storage
+      nodes include:</p>
     <ul>
       <li>Node 1: R630 Solution Admin Host with the Red Hat OpenStack Manager Installed</li>
       <li>Nodes 2 - 4: R630 OpenStack Controllers</li>
@@ -14,7 +16,7 @@
       <li>Network Switches: Two (2) Force10 S4810, and one (1) Force10 S55</li>
     </ul>
     <fig >
-      <title >Pilot Bundle and Ceph Cluster</title>
+      <title>Solution Bundle and Ceph Cluster</title>
       <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle.png" align="center" ></image>
     </fig>
     <p>The Ceph cluster provides data protection through replication, block device cloning, and snapshots. By default, the data is striped across the cluster. The number of storage nodes in a single cluster can scale to hundreds of nodes and many petabytes in size. Ceph considers the physical placement of storage nodes when deciding how data is replicated. By defining fault domains, like a rack, row, and data center, and defining the Ceph position of the nodes and disks, Ceph using the position in the decision for data replication, thereby reducing the probability that a given failure results is the loss of more than one data replica.</p>
@@ -26,5 +28,5 @@
     <p>The controller nodes must have access to the storage nodes through the Storage Network vLAN in order for the Ceph clients on the controller nodes to be able to query the Ceph MON processes for the state and configuration of the cluster.</p>
     <p>The compute nodes must have access to the storage nodes through the Storage Network vLAN in order for the Ceph client on that node to interact with the storage nodes and the OSDs and the Ceph MON processes.</p>
     <p>The storage nodes must have access to the Storage Network as previously stated and to the Storage Cluster Network vLAN.</p>
-  </body>
+     </body>
 </topic>
