@@ -3,7 +3,7 @@
 <topic id="production_bundle">
   <title>Larger Configurations</title>
   <shortdesc>Clusters larger than the three (3) racks of a Solution bundle and/or Production cluster
-    must be designed, sized and configured based on your requirements. Please work with your sales
+    must be designed, sized, and configured based on your requirements. Please work with your sales
     representative to properly architect Production cluster deployments.</shortdesc>
   <body></body>
 </topic>

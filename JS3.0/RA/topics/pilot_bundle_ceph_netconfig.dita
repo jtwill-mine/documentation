@@ -4,7 +4,12 @@
   <title>Solution Bundle with Ceph Network Configuration</title>
   <shortdesc>The networks for this Solutuion and Larger bundles have been designed to support production-ready servers with a highly available network configuration.</shortdesc>
   <body>
-    <p>The rack layout consists of two Dell Force10 S4810 switches as the ToR, and one Dell Force10 S55 as management (a second Force10 S55 should be considered for the Heartbeat to be truly redundant). The switches take advantage of Virtual Link Trunking (VLT). Using additional Dell Force10 features, the ports can be configured to support one or many virtual LANs; enabling the nodes to communicate between themselves, and allowing network segregation of tenants utilizing vLANs.</p>
+    <p>The rack layout consists of two Dell Force10 S4810 switches as the ToR, and one Dell Force10
+      S55 as management (a second Force10 S55 should be considered for the Heartbeat to be truly
+      redundant). The switches take advantage of Virtual Link Trunking (VLT). Using  Dell Force10
+      features, the ports can be configured to support one or many virtual LANs; enabling the nodes
+      to communicate between themselves, while allowing network segregation of tenants utilizing
+      vLANs.</p>
     <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="center"></image>
     <p>The Server function will determine how the switches are configured in delivering the
       different networks. Table 5, Node Type to Network 802.1q Tagging, outlines the networks to the
