@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="production_bundle">
-  <title>Production Bundle</title>
+  <title>Larger Configurations</title>
   <shortdesc>Clusters larger than the three (3) racks of a Solution bundle and/or Production cluster
     must be designed, sized and configured based on your requirements. Please work with your sales
     representative to properly architect Production cluster deployments.</shortdesc>

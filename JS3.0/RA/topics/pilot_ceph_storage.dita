@@ -29,6 +29,5 @@
     <p>The controller nodes must have access to the storage nodes through the Storage Network vLAN in order for the Ceph clients on the controller nodes to be able to query the Ceph MON processes for the state and configuration of the cluster.</p>
     <p>The compute nodes must have access to the storage nodes through the Storage Network vLAN in order for the Ceph client on that node to interact with the storage nodes and the OSDs and the Ceph MON processes.</p>
     <p>The storage nodes must have access to the Storage Network as previously stated and to the Storage Cluster Network vLAN.</p>
-    <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="center"></image>
-  </body>
+     </body>
 </topic>
