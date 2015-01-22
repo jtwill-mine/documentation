@@ -4,6 +4,13 @@
   <title>Out of Band Management Network</title>
   <shortdesc>The management network of all the servers and switches is aggregated into a Dell Force10 S55 switch that is located in each rack of up to 3 Racks or a pod. It uplinks on a 10G link to the S4810 switches.</shortdesc>
   <body>
-    <p></p>
+    <p>The Out of Band (OOB) Management network is used for several functions:<ul id="ul_gst_j42_vq">
+        <li>The highly available servers, the controllers, use it for a heartbeat to ensure the
+          servers are all up and functions</li>
+        <li>The highly available software uses it to reboot and partition servers</li>
+        <li>When an uplink to a router is added and the iDrac's configured to use it as a gateway,
+          there are tools for monitoring the servers and gather metrics on them.(These are out of
+          scope to this solution.)</li>
+      </ul></p>
   </body>
 </topic>
