@@ -6,7 +6,7 @@
     <p>This is for customers who want entry-level testing of an application, and the beginning of a
       production environment. This does not preclude the need to become familiar with OpenStack
       administration and day to day management. These bundles consist of the components described in
-      <xref href="pilot_ceph_storage.dita#pilot_ceph_storage/pilot_bundle" type="fig"/>.</p>
+      <xref href="pilot_ceph_storage.dita#pilot_ceph_storage/solution_bundle" type="fig"/>.</p>
     <p>Given a virtual machine with the same characteristics as above, you can expect to run around
       90 virtual machines with a 1.5 oversubscription of CPU cores. At 120 virtual machines, you
       will have two-to-one CPU core oversubscription, still have ephemeral storage under subscribed,

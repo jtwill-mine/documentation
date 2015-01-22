@@ -15,7 +15,7 @@
       <li>EqlLogic Storage Array is an optional for additonal storage</li>
       <li>Network Switches: Two (2) Force10 S4810, and one (1) Force10 S55</li>
     </ul>
-    <fig id="pilot_bundle">
+    <fig id="solution_bundle">
       <title>Solution Bundle and Ceph Cluster</title>
       <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle.png" align="center"
         placement="break"/>
