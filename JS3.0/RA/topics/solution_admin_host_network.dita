@@ -25,9 +25,10 @@
       configured on the SAH and corresponding Switch ports.   This Reference Architecture does not
       cover any Security aspects, thus the appropriate Network and Security teams should be involved
       before connecting any machine to the externally accessible networks.</p>
-    <fig><title>Solution Admin Host Internal Network Fabric</title>
-    <image href="../../Customization/OpenTopic/common/artwork/solution_admin_host_network.png"></image>
-    </fig>
+      <fig >
+        <title>Solution Admin Host Internal Network Fabric</title>
+        <image href="../../Customization/OpenTopic/common/artwork/solution_admin_host_network.png" align="center" placement="break"></image>
+      </fig>
     </body>
  
 </topic>

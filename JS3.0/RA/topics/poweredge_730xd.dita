@@ -12,9 +12,9 @@
     <fig>
       <title>PowerEdge R730xd Servers - 2.5" and 3.5" Chassis Options</title>
     <image href="../../Customization/OpenTopic/common/artwork/R730xd_16.png" align="center"
-      scalefit="yes" width="5.36in"/><p></p>
+      scalefit="yes" width="5.36in" placement="break"/><p></p>
     <image href="../../Customization/OpenTopic/common/artwork/R730xd_24.png" align="center"
-      scalefit="yes" placement="inline" width="5.36in"/>
+      scalefit="yes" placement="break" width="5.36in" />
     </fig>
   </body>
 </topic>

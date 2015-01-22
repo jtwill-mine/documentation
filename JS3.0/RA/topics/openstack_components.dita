@@ -117,9 +117,4 @@
     </table>
 
   </body>
-
-  <topic id="rhel_osp_platform" conref="rhel_osp_platform.dita#rhel_osp_platform">
-    <title/>
-  </topic>
-
 </topic>

@@ -14,11 +14,12 @@
 
  <topicref href="../topics/glossary.dita"/>
 
- <topicref href="../topics/overview.dita"/>
-
- <topicref href="../topics/openstack_architecture.dita">
-  <topicref href="../topics/taxonomy.dita"/>
+ <topicref href="../topics/overview.dita">
+ <topicref href="../topics/taxonomy.dita"/>
+ <topicref href="../topics/rhel_osp_platform.dita"/>
  </topicref>
+ <topicref href="../topics/openstack_architecture.dita"/>
+
 
  <topicref href="../topics/storage_options.dita"/>
 
