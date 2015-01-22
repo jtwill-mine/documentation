@@ -4,6 +4,10 @@ for /d %%i in ("\Program Files\Java\jdk*") do set JAVA_HOME=%%i
 
 echo JAVA_HOME is %JAVA_HOME%
 
+echo.
+echo Select the number of the document you want to build
+echo ===================================================
+
 set DOCUMENT_BASE_DIR=%~dp0
 
 REM Get the absolute path of DITAOT's home directory
@@ -22,7 +26,7 @@ set index=1
 SETLOCAL ENABLEDELAYEDEXPANSION
 FOR /R %%f IN (*.ditamap) DO (
    SET file!index!=%%f
-   ECHO !index! - %%f
+   ECHO !index! - %%~nxf
    SET /A index=!index!+1
 )
 
