@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="vlans">
   <title>vLANs</title>
-  <shortdesc>This Reference Architecture implements at a minimum eight (8) separate
+  <shortdesc>This Reference Architecture implements at a minimum eight (8) separate Layer 2
     vLANs:</shortdesc>
   <body>
     <ul>

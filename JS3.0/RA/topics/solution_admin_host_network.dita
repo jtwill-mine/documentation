@@ -20,12 +20,14 @@
         <li>Storage Network - Used by the Ceph Deployer VM to provision, monitor and manage the Ceph
           Cluster.</li>
       </ol></p>
-    <p>The diagram lays out how the networks are brigded inside the Solution Admin Host.  As both
+    <p>The figure lays out how the networks are brigded inside the Solution Admin Host.  As both
       the Provision and Storage networks come in on the same physical interface 802.1q tagging is
       configured on the SAH and corresponding Switch ports.   This Reference Architecture does not
       cover any Security aspects, thus the appropriate Network and Security teams should be involved
       before connecting any machine to the externally accessible networks.</p>
+    <fig><title>Solution Admin Host Internal Network Fabric</title>
     <image href="../../Customization/OpenTopic/common/artwork/solution_admin_host_network.png"></image>
+    </fig>
     </body>
  
 </topic>
