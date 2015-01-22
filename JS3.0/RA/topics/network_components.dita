@@ -33,7 +33,9 @@
   <topic id="layer2_layer3_switching" conref="layer2_layer3_switching.dita#layer2_layer3_switching">
     <title/>
   </topic>
-  
+  <topic id="vlans" conref="vlans.dita#vlans">
+    <title/>
+  </topic> 
   <topic id="management_network" conref="management_network.dita#management_network">
     <title/>
   </topic>
