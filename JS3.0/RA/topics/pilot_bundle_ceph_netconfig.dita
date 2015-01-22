@@ -11,7 +11,7 @@
       to communicate between themselves, while allowing network segregation of tenants utilizing
       vLANs.</p>
     <fig><title>Cluster Network Fabric Architecture</title>
-    <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="center"></image>
+    <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="center" placement="break"></image>
     </fig>
     <p>The Server function will determine how the switches are configured in delivering the
       different networks. Table 5, Node Type to Network 802.1q Tagging, outlines the networks to the
