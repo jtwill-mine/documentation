@@ -11,7 +11,7 @@
     </ul>
   </body>
   
-  <topic id="backup_recovery" conref="backup_recovery.dita#backup_recovery">
+  <!-- <topic id="backup_recovery" conref="backup_recovery.dita#backup_recovery">
     <title/>
   </topic>
   
@@ -21,6 +21,6 @@
   
   <topic id="deployment" conref="deployment.dita#deployment">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>
