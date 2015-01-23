@@ -62,7 +62,7 @@
               <entry>Performance Optimized</entry>
             </row>
             <row>
-              <entry>24</entry>
+              <entry>12</entry>
               <entry>370-ABUI</entry>
               <entry>4GB RDIMM, 2133MT/s, Single Rank, x8 Data Width</entry>
             </row>
@@ -98,9 +98,9 @@
             </row>
             <row>
               <entry>3</entry>
-              <entry>400-AFNH</entry>
-              <entry>200GB Solid State Drive SATAMix Use MLC 6Gbps 2.5in Hot-plug Drive,3.5in HYB
-                CARR,13G</entry>
+              <entry>400-AEIL</entry>
+              <entry>200GB Solid State Drive SAS Write Intensive 12Gbps 2.5in Hot-plug Drive,3.5in 
+                HYB CARR,13G</entry>
             </row>
             <row>
               <entry>4</entry>

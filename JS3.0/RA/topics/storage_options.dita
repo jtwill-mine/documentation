@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="storage_options">
-  <title>Storage Options</title>
-  <body>
-    <p>Cinder has introduced several backend options that can be used with the OpenStack solution. Dell’s solutions include four options to enable the cluster to fit many needs:</p>
-    <ul>
-      <li>Ceph</li>
-      <li>Dell EqualLogic Storage Arrays</li>
-       <li>Cinder Multi-Backend Support</li>
-    </ul>
-  </body>
+    <title>Storage Options</title>
+    <body>
+        <p>OpenStack has several storage services, including Nova, Cinder, Glance, and Swift. 
+    Together these services provide guests with block, image, and object storage. In turn, the services
+    employ block and object storage subsystems.</p>
+        <p>Cinder virtualizes storage enabling guests to use block storage through Nova. OpenStack 
+    consumers should write data that must exist beyond the lifecycle of the guest to Cinder volumes.
+    The volume can be accessed afterwards by a different guest.</p>
+        <p>Glance provides images to guests. Generally, the the images are block devices containing DVDs
+    or virtual machines. Guests be booted from these images or have the images attached to them. </p>
+        <p>Swift provides an object storage interface to guests and other OpenStack consumers. Unlike 
+    block storage where the guest is provided a block device of a given format and is accessible
+    within the cluster, object storage is not provided through the guest. 
+    Object storage is generally implemented as a HTTP/HTTPs based
+    service. As such, client implementations within the guest or external OpenStack clients would
+    interact with Swift without any configuration required of the guest other than providing the
+    requisite network access. For example, guests within OpenStack can put data into Swift and
+    later external clients could pull that data for additional processing. </p>
+        <p>As with other OpenStack services, there is a client and server components for each of these. 
+    The server component can be modified to use a particular type of storage rather than the default. 
+    For example, Cinder uses local disks as the storage back-end by default. This solution modifies 
+    the default configuration for these services. </p>
+        <p>This solution include three Cinder back-end options to enable the cluster to fit many needs:</p>
+        <ul>
+            <li>Ceph</li>
+            <li>Dell EqualLogic Storage Arrays</li>
+            <li>Cinder Multi-Backend Support</li>
+        </ul>
+        <p>This solution provides Ceph as the back-end for both Glance and Swift.</p>
+    </body>
 
-  <topic id="ceph" conref="ceph.dita#ceph">
-    <title/>
-  </topic>
+    <topic id="ceph" conref="ceph.dita#ceph">
+        <title/>
+    </topic>
 
-  <topic id="dell_equallogic" conref="dell_equallogic.dita#dell_equallogic">
-    <title/>
-  </topic>
+    <topic id="dell_equallogic" conref="dell_equallogic.dita#dell_equallogic">
+        <title/>
+    </topic>
 
- <topic id="multi_backend_support" conref="multi_backend_support.dita#multi_backend_support">
-    <title/>
-  </topic>
+    <topic id="multi_backend_support" conref="multi_backend_support.dita#multi_backend_support">
+        <title/>
+    </topic>
 
 </topic>
