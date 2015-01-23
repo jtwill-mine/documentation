@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="pilot_bom_r720xd">
-  <title>Pilot Bundle Bill of Materials PowerEdge - R730xd Storage Node</title>
+<topic id="pilot_bom_r730xd">
+  <title>Solution Bundle Bill of Materials PowerEdge - R730xd Storage Node</title>
   <body>
     <p>
-      <table frame="all" rowsep="1" colsep="1" id="table_r720xd">
+      <table frame="all" rowsep="1" colsep="1" id="table_r730xd">
         <title>Bill of Materials - PowerEdge R730xd Storage Nodes</title>
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="0.5*"/>
