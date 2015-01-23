@@ -29,7 +29,9 @@
 
  <topicref href="../topics/network_architecture.dita"/>
 
- <topicref href="../topics/solution_bundles.dita"/>
+ <topicref href="../topics/solution_bundles.dita">
+  <mapref href="solution_bundle.ditamap" format="ditamap"/>
+ </topicref>
 
  <topicref href="../topics/update_history.dita"/>
 
