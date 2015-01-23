@@ -9,13 +9,14 @@
         href="https://eqlsupport.dell.com/secure/login.aspx" format="html" scope="external"/>) for
       the latest guides, whitepapers and best practices on how to setup your Storage Group for your
       application.</p>
-    <p>Once the Storage Group(s) are setup, the information contained in Table 4 must be collected
-      to configure your software. The san_thin_provision variable should be left at the default if
+    <p>Once the Storage Group(s) are setup, the information contained in <xref
+        href="#equallogic_storage_group/table_eqlx_info" format="dita"/> must be collected to
+      configure your software. The san_thin_provision variable should be left at the default if
       available; if not, then it must be set to False. Refer to <xref
         href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/5/html/Configuration_Reference_Guide/section_volume-drivers.html#dell-equallogic-driver"
         format="html" scope="external"
         >https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/5/html/Configuration_Reference_Guide/section_volume-drivers.html#dell-equallogic-driver</xref>
-      for the current list.<table frame="all" rowsep="1" colsep="1" id="table_mcp_xsf_tq">
+      for the current list. <table frame="all" rowsep="1" colsep="1" id="table_eqlx_info">
         <title>EqualLogic Information Needed from Configuration</title>
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="1.0*"/>
