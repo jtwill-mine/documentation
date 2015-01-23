@@ -74,7 +74,7 @@
           </row>
           <row>
             <entry>RAM (Minimum)</entry>
-            <entry>96 GB</entry>
+            <entry>48 GB</entry>
           </row>
           <row>
             <entry>LOM</entry>
@@ -86,7 +86,7 @@
           </row>
           <row>
             <entry>Disk</entry>
-            <entry><p>Flex Bay: 2 X 300GB 10K 2.5-inch (OS)</p> <p>Front Drives: 2 X 200GB SSD</p> <p>10 x 2TB or 4TB
+            <entry><p>Flex Bay: 2 X 300GB 10K 2.5-inch (OS)</p> <p>Front Drives: 3 X 200GB SSD</p> <p>13 x 2TB or 4TB
               NL SAS 7.2K 3.5-inch</p></entry>
           </row>
           <row>
@@ -95,7 +95,7 @@
           </row>
           <row>
             <entry>RAID</entry>
-            <entry><p>RAID 1 (OS)</p> <p>RAID 0 SSD</p> <p>RAID 0 per data disk</p></entry>
+            <entry><p>RAID 1 (OS)</p> <p>pass through SSD</p> <p>pass through each data disk</p></entry>
           </row>
         </tbody>
       </tgroup>
