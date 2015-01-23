@@ -105,7 +105,7 @@
             </row>
             <row>
               <entry>Storage</entry>
-              <entry>Ceph Rados Gateway</entry>
+              <entry>Ceph Object Gateway</entry>
               <entry>OpenStack Controllers</entry>
             </row>
             <row>
