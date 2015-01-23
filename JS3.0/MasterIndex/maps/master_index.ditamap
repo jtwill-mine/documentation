@@ -15,7 +15,9 @@
  
  <topicref href="../topics/overview.dita"/>
  
- <topicref href="../topics/guides.dita"/>
+ <topicref href="../topics/guides.dita">
+  <topicref href="../topics/pilot_solution_guides.dita"/>
+ </topicref>
  
  <topicref href="../topics/references.dita"/>
  
