@@ -2,14 +2,15 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_solution_guides">
   <title>Solution Guides and Scripts</title>
-  <shortdesc>Table 1 contains the locations of all documents and scripts needed to deploy the
-    solution. Choose the script package based upon your preference.</shortdesc>
   <body>
+    <p><xref href="#pilot_solution_guides/table_documents" format="dita"/> contains the locations of
+      all documents and scripts needed to deploy the solution. Choose the script package based upon
+      your preference.</p>
     <draft-comment author="dale_mcdonald">Update links for Jetstream 3.0.</draft-comment>
     <table frame="all" rowsep="1" colsep="1" id="table_documents">
       <title>Documents in Order of Usage</title>
       <tgroup cols="3">
-        <colspec colname="c1" colnum="1" colwidth="0.25*"/>
+        <colspec colname="c1" colnum="1" colwidth="0.55*"/>
         <colspec colname="c2" colnum="2" colwidth="0.5*"/>
         <colspec colname="c3" colnum="3" colwidth="1.0*"/>
         <thead>
@@ -28,15 +29,15 @@
                 format="pdf" scope="external"/></entry>
           </row>
           <row>
-            <entry>2 (Linux)</entry>
-            <entry>Solution templates and scripts (tgz compressed)</entry>
+            <entry>2 (tgz compressed)</entry>
+            <entry>Solution templates and scripts</entry>
             <entry><xref
                 href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.tgz?api=v2"
                 format="html" scope="external"/></entry>
           </row>
           <row>
-            <entry>2 (Windows)</entry>
-            <entry>Solution templates and scripts (zip compressed)</entry>
+            <entry>2  (zip compressed)</entry>
+            <entry>Solution templates and scripts</entry>
             <entry><xref
                 href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.zip?api=v2"
                 format="zip" scope="external"/></entry>

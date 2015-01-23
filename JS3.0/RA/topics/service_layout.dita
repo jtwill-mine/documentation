@@ -10,11 +10,13 @@
       <li>Storage</li>
     </ul>
     <p>Red Hat OpenStack Manager is designed for flexibility, enabling you to try different
-      configurations in order to find the optimal service placement for your workload. The table
-      below presents the recommended layout of each service.</p>
+      configurations in order to find the optimal service placement for your workload. <xref
+        href="#service_layout/table_node_type_to_services" format="dita"/> presents the recommended
+      layout of each service.</p>
     <p>The Red Hat OpenStack Manager and the Inktank Ceph Enterprise Admin are deployed to the
       Solution Admin Host as manually-configured VMs. This enables each tool to control its
-      respective resources.<table frame="all" rowsep="1" colsep="1" id="table_pnv_hkq_gq">
+      respective resources.
+      <table frame="all" rowsep="1" colsep="1" id="table_node_type_to_services">
         <title>Node Type to Services</title>
         <tgroup cols="3">
           <colspec colname="c1" colnum="1" colwidth="0.5*"/>

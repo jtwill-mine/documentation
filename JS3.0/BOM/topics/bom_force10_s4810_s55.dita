@@ -4,7 +4,7 @@
   <title>Bill of Materials - Networking Force10 S4810 and S55</title>
   <body>
     <p>
-      <table frame="all" rowsep="1" colsep="1" id="table_force10_s4810-s55">
+      <table frame="all" rowsep="1" colsep="1" id="table_force10_s4810">
         <title>Bill of Materials - Networking Force10 S4810</title>
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="1*"/>
@@ -113,7 +113,7 @@
       </table>
       
     </p>
-    <table frame="all" rowsep="1" colsep="1" id="table_zsk_3cs_sq">
+    <table frame="all" rowsep="1" colsep="1" id="table_s55">
       <title>Bill of Materials - Networking Force10 S55</title>
       <tgroup cols="3">
         <colspec colname="c1" colnum="1" colwidth="0.5*"/>
@@ -223,12 +223,12 @@
     </table>
   </body>
   
-  <topic id="server_racks_power" conref="server_racks_power.dita#server_racks_power">
+  <!-- <topic id="server_racks_power" conref="server_racks_power.dita#server_racks_power">
     <title/>
   </topic>
   
   <topic id="networking_equipment" conref="networking_equipment.dita#networking_equipment">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>

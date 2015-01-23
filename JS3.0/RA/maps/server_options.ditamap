@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Operational Notes Map</title>
+ 
+ <topicref href="../topics/poweredge_r630.dita"/>
+ <topicref href="../topics/poweredge_730xd.dita"/>
+ <topicref href="../topics/hw_configs.dita"/>
+ <topicref href="../topics/config_notes.dita"/>
+  
+</map>

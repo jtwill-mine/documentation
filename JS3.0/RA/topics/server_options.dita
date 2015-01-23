@@ -6,7 +6,7 @@
     <p>The Solution includes using the PowerEdge R630 and R730xd Server lines. The following sections describe the supported server models and configurations required. Detailed part lists and rack layouts are included in a Build of Materials Guide.</p>
   </body>
   
-  <topic id="poweredge_r630" conref="poweredge_r630.dita#poweredge_r630">
+  <!-- <topic id="poweredge_r630" conref="poweredge_r630.dita#poweredge_r630">
     <title/>
   </topic>
   
@@ -20,6 +20,6 @@
   
   <topic id="config_notes" conref="config_notes.dita#config_notes">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>

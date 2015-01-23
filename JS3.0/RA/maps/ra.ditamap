@@ -23,9 +23,13 @@
 
  <topicref href="../topics/storage_options.dita"/>
 
- <topicref href="../topics/server_options.dita"/>
+ <topicref href="../topics/server_options.dita">
+  <mapref href="server_options.ditamap" format="ditamap"/>
+ </topicref>
 
- <topicref href="../topics/op_notes.dita"/>
+ <topicref href="../topics/op_notes.dita">
+  <mapref href="op_notes.ditamap" format="ditamap"/>
+ </topicref>
 
  <topicref href="../topics/network_architecture.dita"/>
 
