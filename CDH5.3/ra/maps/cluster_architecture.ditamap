@@ -15,6 +15,13 @@
   <topicref href="../topics/rack.dita"/>
   <topicref href="../topics/pod.dita"/>
   <topicref href="../topics/cluster.dita"/>
+  <topicref href="../topics/sizing_constraints.dita"/>
+ </topicref>
+ 
+ <topicref href="../topics/high_availability.dita">
+  <topicref href="../topics/hadoop_redundancy.dita"/>
+  <topicref href="../topics/network_redundancy.dita"/>
+  <topicref href="../topics/hdfs_highly_available_name_nodes.dita"/>
  </topicref>
  
 </map>
