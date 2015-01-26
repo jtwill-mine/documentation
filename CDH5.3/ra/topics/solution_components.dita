@@ -3,13 +3,10 @@
 <topic id="solution_components">
   <title>Solution Components</title>
   <body>
-    <p><xref href="solution_components.dita#solution_components" type="fig"/> illustrates the primary components in the Dell | Cloudera Solution.</p>
-    <fig>
-      <image href="../../Customization/OpenTopic/common/artwork/solution_components.png"
-        id="components"/>
-    </fig>
-    <p><image></image></p>
-    <p>The PowerEdge servers, Force10 networking, the operating system and the Java Virtual Machine make up the foundation on which the Hadoop software stack runs.</p>
+    <p><xref  href="solution_components.dita#solution_components/components" type="fig"></xref> illustrates the primary components in the Dell | Cloudera Solution.</p>
+    <fig id="components"> <title>Dell | Cloudera Solution Components</title><image href="../../Customization/OpenTopic/common/artwork/solution_components.png" align="left"></image></fig>
+     <p>The PowerEdge servers, Force10 networking, the operating system and
+      the Java Virtual Machine make up the foundation on which the Hadoop software stack runs.</p>
     <p>The left side of the diagram shows the integration components that can be used to move data in and out of the Hadoop system. Apache Sqoop provides data transfer to and from relational databases while Apache Flume is optimized for processing event and log data. The HDFS API and tools can be used to move data files to and from the Hadoop system.</p>
     <p>The right side of the diagram shows the capabilities that are integrated across the entire system. Hadoop administration and management is provided by Cloudera Manager while enterprise grade security (via Apache Sentry) is integrated through the entire stack.</p>
     <p>The Hadoop components provide multiple layers of functionality on top of this foundation. Apache Zookeeper provides a coordination layer for the distributed processing in the Hadoop system. The Hadoop Distributed File System (HDFS) provides the core storage for data files in the system. HDFS is a distributed, scalable, reliable and portable file system. Apache HBase is a layer that provides record-oriented storage on top of HDFS. HBase can be used as an alternative to direct data file access, optimized for real time data serving environments, and co-exists with direct data file access.</p>
