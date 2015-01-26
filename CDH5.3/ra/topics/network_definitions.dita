@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_definitions">
+  <title>Network Definitions</title>
+  <body>
+    <ul>
+      <li><b>Cluster Data Network</b> — the data network carries the bulk of the traffic within the cluster.  This network is aggregated within each rack, and racks are aggregated into the cluster switch. Dual connections with active load balancing are used from each node. This provides increased bandwidth and redundancy when a cable or switch fails.</li>
+      <li><b>Management Network</b> — the management network is used to provide cluster management and provisioning capabilities.</li>
+      <li><b>BMC/IPMI Network</b> — the BMC network connects the BMC or iDRAC ports and the out-of-band management ports of the switches. It is aggregated into a dedicated switch in each rack, and optionally connected to the top of rack or cluster switches with dedicated vLAN.</li>
+      <li><b>Edge Network</b> — the Edge network provides connectivity from edge nodes to the existing core network via the top of rack or cluster switch.</li>
+    </ul>
+    <p>Connectivity between the cluster and existing network infrastructure can be adapted to specific installations. Normally, the cluster data nodes are isolated from any existing network but they can be exposed, and optionally routed through an application gateway or firewall.</p>
+  </body>
+</topic>
