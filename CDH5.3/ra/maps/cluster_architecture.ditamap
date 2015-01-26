@@ -22,6 +22,7 @@
   <topicref href="../topics/hadoop_redundancy.dita"/>
   <topicref href="../topics/network_redundancy.dita"/>
   <topicref href="../topics/hdfs_highly_available_name_nodes.dita"/>
+  <topicref href="../topics/resource_manager_high_availability.dita"/>
  </topicref>
  
 </map>
