@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="sizing_constraints">
+  <title>Sizing Constraints</title>
+  <shortdesc>The minimum configuration supported is six nodes:</shortdesc>
+  <body>
+    <ul>
+      <li>Master name node</li>
+      <li>Secondary name node</li>
+      <li>High availability (HA) node</li>
+      <li>Three (3) data nodes</li>
+    </ul>
+    <p>The hardware configurations for the infrastructure nodes support clusters in the petabyte storage range. Beyond the infrastructure nodes, cluster size is primarily a function of the server platform and disk drives chosen, and the number of data nodes.</p>
+    <p><xref href="#sizing_constraints/table_cluster_sizes_by_server" format="dita"/> shows the
+      approximate number of data nodes per rack, pod and cluster for the various server models. In
+      practice the actual density per rack will be influenced by physical constraints like power and
+      cooling as well as available network ports.</p>
+    <p>A minimum of one edge node is recommended per cluster. Larger clusters and clusters with high ingest volumes or rates may benefit from additional edge nodes.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_cluster_sizes_by_server">
+      <title>Cluster Sizes by Server Model</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Server Model</entry>
+            <entry>Max Per Rack</entry>
+            <entry>Max Per Pod</entry>
+            <entry>Max Per Cluster</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>R730xd Data Node</entry>
+            <entry>15</entry>
+            <entry>45</entry>
+            <entry>To be determined based on sizing criteria</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
