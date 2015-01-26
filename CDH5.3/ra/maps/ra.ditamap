@@ -11,6 +11,8 @@
  <topicref href="../../Common/trademarks.dita"/>
 
  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+ 
+ <topicref href="../topics/glossary.dita"/>
 
  <topicref href="../topics/overview.dita">
   <mapref href="hadoop_solution_overview.ditamap" format="ditamap"/>
