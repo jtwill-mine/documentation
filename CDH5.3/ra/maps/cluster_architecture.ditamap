@@ -11,4 +11,10 @@
   <topicref href="../topics/network_definitions.dita"/>
  </topicref>
  
+ <topicref href="../topics/cluster_sizing.dita">
+  <topicref href="../topics/rack.dita"/>
+  <topicref href="../topics/pod.dita"/>
+  <topicref href="../topics/cluster.dita"/>
+ </topicref>
+ 
 </map>
