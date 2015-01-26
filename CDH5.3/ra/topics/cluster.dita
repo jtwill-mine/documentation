@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cluster">
+  <title>Cluster</title>
+  <body>
+    <p>A cluster is a single Hadoop environment attached to a pair of distribution switches providing an aggregation layer for the entire cluster. A cluster can range in size from a single rack to a set of pods. A cluster shares the infrastructure nodes and management tools for operating the Hadoop environment. The size of the cluster can vary depending on the capacity of the aggregation network. For example, a <tm trademark="Dell" tmtype="tm">Dell</tm> <tm
+      trademark="Force10" tmtype="tm">Force10</tm> Z9000 aggregation switch can run a larger cluster than the Dell Force10 S4810 switches.</p>
+  </body>
+</topic>

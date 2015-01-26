@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cluster_sizing">
+  <title>Cluster Sizing</title>
+  <body>
+    <p>The architecture is organized into three units for sizing as the Hadoop environment grows. From smallest to largest, they are:</p>
+      <ul>
+        <li><xref href="rack.dita#rack">Rack</xref></li>
+        <li><xref href="pod.dita#pod">Pod</xref></li>
+        <li>Cluster</li>
+      </ul>
+    <p>Each has specific characteristics and sizing considerations documented in this reference architecture. The design goal for the Hadoop environment is to enable you to scale the environment by adding the additional capacity as needed, without the need to replace any existing components.</p>
+  </body>
+</topic>

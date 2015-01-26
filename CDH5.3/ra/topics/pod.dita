@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pod">
+  <title>Pod</title>
+  <body>
+    <p>A pod is an installation composed of three racks, based on server and network sizing. A pod is capable of supporting enough Hadoop server nodes and network switches for a minimum commercial scale installation. Typically, a pod ranges from 30 to 45 nodes, depending on rack density.</p>
+  </body>
+</topic>
