@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Dell | Cloudera Apache Hadoop Solutions Reference Architecture Guide - Version
+  5.3</title>
+ <topicmeta><copyright>
+  <copyryear year="&#169; 2014-2015"/>
+  <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+ </copyright></topicmeta>
+
+ <topicref href="../../Common/trademarks.dita"/>
+
+ <topicref href="../../Common/notes_cautions_warnings.dita"/>
+
+ <topicref href="../topics/overview.dita">
+  <mapref href="hadoop_solution_overview.ditamap" format="ditamap"/>
+ </topicref>
+ 
+ <topicref href="../topics/cluster_architecture.dita">
+  <mapref href="cluster_architecture.ditamap" format="ditamap"/>
+ </topicref>
+
+ <topicref href="../../Common/references.dita"/>
+
+</map>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Hadoop Solution Overview Map</title>
+ 
+ <topicref href="../topics/solution_use_case_summary.dita"/>
+ <topicref href="../topics/solution_components.dita">
+  <topicref href="../topics/support_matrix.dita"/>
+ </topicref>
+ <topicref href="../topics/cloudera_enterprise_sw_overview.dita">
+  <topicref href="../topics/hadoop_for_the_enterprise.dita"/>
+  <topicref href="../topics/rethink_data_management.dita"/>
+  <topicref href="../topics/whats_inside.dita"/>
+  <topicref href="../topics/cloudera_enterprise_data_hub.dita"/>
+ </topicref>
+  
+</map>

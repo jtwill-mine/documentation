@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="support_matrix">
+  <title>Support Matrix</title>
+  <body>
+    <p>The supported components and operating environments for the Dell | Cloudera Apache Hadoop
+      Solution are shown in <xref href="#support_matrix/table_support_matrix" format="dita"/>.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_support_matrix">
+      <title>Solution Support Matrix</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Category</entry>
+            <entry>Component</entry>
+            <entry>Version</entry>
+            <entry>Available Support</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Operating System</entry>
+            <entry>Red Hat Enterprise Linux</entry>
+            <entry>6.5</entry>
+            <entry>Red Hat Linux support</entry>
+          </row>
+          <row>
+            <entry>Operating System</entry>
+            <entry>CentOS</entry>
+            <entry>6.5</entry>
+            <entry>Dell Hardware support</entry>
+          </row>
+          <row>
+            <entry>Java Virtual Machine</entry>
+            <entry>Sun Oracle JVM</entry>
+            <entry>
+              <p>Java 7 (1.7.0_67)</p>
+              <p>Java 8 (1.8.0_11)</p>
+            </entry>
+            <entry>N/A</entry>
+          </row>
+          <row>
+            <entry>Hadoop</entry>
+            <entry>Cloudera Distribution for Apache Hadoop (CDH)</entry>
+            <entry>5.3</entry>
+            <entry>Cloudera support</entry>
+          </row>
+          <row>
+            <entry>Hadoop</entry>
+            <entry>Cloudera Manager</entry>
+            <entry>5.3</entry>
+            <entry>Cloudera support</entry>
+          </row>
+          <row>
+            <entry>Hadoop</entry>
+            <entry>Cloudera Navigator</entry>
+            <entry>2.2</entry>
+            <entry>Cloudera support</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>

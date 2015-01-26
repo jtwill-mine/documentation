@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="high_level_node_architecture">
+  <title>High-Level Node Architecture</title>
+  <shortdesc>Figure 2 displays the roles for the nodes ina  basic cluster.</shortdesc>
+  <body>
+    <p>INSERT FIGURE 2 HERE</p>
+    <p>The cluster environment consists of multiple software services running on multiple physical server nodes. The implementation divides the server nodes into several roles, and each node has a configuration optimized for its role in the cluster. The physical server configurations are divided into two broad classes—data nodes, which handle the bulk of the Hadoop processing, and infrastructure nodes, which support services needed for the cluster operation. A high performance network fabric connects the cluster nodes together, and separates the core data network from management functions.</p>
+    <p>The minimum configuration supported is six nodes, although at least seven are recommended.   The nodes have the following roles:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_cluster_node_roles">
+      <title>Cluster Node Roles</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Node Role</entry>
+            <entry>Required?</entry>
+            <entry>Hardware Configuration</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Administration Node</entry>
+            <entry>Optional</entry>
+            <entry>Infrastructure</entry>
+          </row>
+          <row>
+            <entry>Active Name Node</entry>
+            <entry>Required</entry>
+            <entry>Infrastructure</entry>
+          </row>
+          <row>
+            <entry>Standby Name Node</entry>
+            <entry>Required</entry>
+            <entry>Infrastructure</entry>
+          </row>
+          <row>
+            <entry>High Availability (HA) Node</entry>
+            <entry>Required</entry>
+            <entry>Infrastructure</entry>
+          </row>
+          <row>
+            <entry>Edge (or Gateway) Node</entry>
+            <entry>Recommended</entry>
+            <entry>Infrastructure</entry>
+          </row>
+          <row>
+            <entry>Data Node 1</entry>
+            <entry>Required</entry>
+            <entry>Data</entry>
+          </row>
+          <row>
+            <entry>Data Node 2</entry>
+            <entry>Required</entry>
+            <entry>Data</entry>
+          </row>
+          <row>
+            <entry>Data Node 3</entry>
+            <entry>Required</entry>
+            <entry>Data</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>

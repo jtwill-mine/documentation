@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="rethink_data_management">
+  <title>Rethink Data Management</title>
+  <body>
+    <ul>
+      <li>One massively scalable platform to store any amount or type of data, in its original form, for as long as desired or required</li>
+      <li>Integrated with your existing infrastructure and tools</li>
+      <li>Flexible to run a variety of enterprise workloads - including batch processing,
+        interactive SQL, enterprise search and advanced analytics</li>
+      <li>Robust security, governance, data protection, and management that enterprises require</li>
+    </ul>
+    <p>With Cloudera Enterprise, today’s leading organizations put their data at the center of their operations, to increase business visibility and reduce costs, while successfully managing risk and compliance requirements.</p>
+  </body>
+</topic>

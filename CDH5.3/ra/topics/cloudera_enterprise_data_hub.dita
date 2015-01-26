@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_enterprise_data_hub">
+  <title>Cloudera Enterprise Data Hub</title>
+  <body>
+    <p>Cloudera Enterprise also offers support for several advanced components that extend and
+      complement the value of Apache Hadoop:<table frame="all" rowsep="1" colsep="1"
+        id="table_advanced_components">
+        <title>Advanced Components</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Component</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Online NoSQL – HBase</entry>
+              <entry>Base is a distributed key-value store that helps you build real-time
+                  applications on massive tables (billions of rows, millions of columns) with fast,
+                  random access.</entry>
+            </row>
+            <row>
+              <entry>Analytic SQL – Impala</entry>
+              <entry>Impala is the industry’s leading massively-parallel (MPP) SQL engine built for
+                  Hadoop.</entry>
+            </row>
+            <row>
+              <entry>Search – Cloudera Search</entry>
+              <entry>Cloudera Search, based on SOLR, lets your users query and browse data in Hadoop
+                just they would search Google or your favorite e-commerce site.</entry>
+            </row>
+            <row>
+              <entry>In-Memory Machine Learning and Stream Processing – Apache Spark</entry>
+              <entry>Spark delivers fast, in-memory analytics and real-time stream processing for
+                Hadoop.</entry>
+            </row>
+            <row>
+              <entry>Data Management – Cloudera Navigator</entry>
+              <entry>Cloudera Navigator provides critical enterprise data audit, lineage, and data
+                discovery capabilities that enterprises require.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+</topic>

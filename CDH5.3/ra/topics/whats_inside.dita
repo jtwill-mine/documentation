@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="whats_inside">
+  <title>What's Inside?</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_tjg_2mn_vq">
+      <title>Included Products</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Product</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>CDH</entry>
+            <entry>At the core of Cloudera Enterprise is CDH, which combines Apache Hadoop with a
+              number of other open source projects to create a single, massively scalable system
+              where you can unite storage with an array of powerful processing and analytic
+              frameworks. </entry>
+          </row>
+          <row>
+            <entry>Automated Cluster Management - Cloudera Manager</entry>
+            <entry>Cloudera Enterprise includes Cloudera Manager to help you easily deploy, manage,
+              monitor, and diagnose issues with your cluster. Cloudera is critical for operating
+              clusters at scale.</entry>
+          </row>
+          <row>
+            <entry>Cloudera Support</entry>
+            <entry>Get the industry’s best technical support for Hadoop. With Cloudera Support,
+              you’ll experience more uptime, faster issue resolution, better performance to support
+              your mission critical applications, and faster delivery of the platform features you
+              care about. </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

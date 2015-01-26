@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="solution_components">
+  <title>Solution Components</title>
+  <shortdesc>Figure 1 illustrates the primary components in the Dell | Cloudera Solution.</shortdesc>
+  <body>
+    <draft-comment author="dale_mcdonald">Image to be linked when Cloudera Hadoop docs repo
+      structure is figured out.</draft-comment>
+    <p>--- PUT GRAPHIC HERE ---</p>
+    <p><image></image></p>
+    <p>The PowerEdge servers, Force10 networking, the operating system and the Java Virtual Machine make up the foundation on which the Hadoop software stack runs.</p>
+    <p>The left side of the diagram shows the integration components that can be used to move data in and out of the Hadoop system. Apache Sqoop provides data transfer to and from relational databases while Apache Flume is optimized for processing event and log data. The HDFS API and tools can be used to move data files to and from the Hadoop system.</p>
+    <p>The right side of the diagram shows the capabilities that are integrated across the entire system. Hadoop administration and management is provided by Cloudera Manager while enterprise grade security (via Apache Sentry) is integrated through the entire stack.</p>
+    <p>The Hadoop components provide multiple layers of functionality on top of this foundation. Apache Zookeeper provides a coordination layer for the distributed processing in the Hadoop system. The Hadoop Distributed File System (HDFS) provides the core storage for data files in the system. HDFS is a distributed, scalable, reliable and portable file system. Apache HBase is a layer that provides record-oriented storage on top of HDFS. HBase can be used as an alternative to direct data file access, optimized for real time data serving environments, and co-exists with direct data file access.</p>
+    <p>YARN provides a resource management framework for running distributed applications under Hadoop, without being tied to MapReduce. The most popular distributed application is Hadoop’s MapReduce, but other applications also run under YARN, such as Apache Spark, Apache Hive, Apache Pig, etc.</p>
+    <p>Sitting atop these storage layers are four complementary access layers providing:</p>
+      <table
+        frame="all" rowsep="1" colsep="1" id="table_access_layers">
+        <title>Access Layers</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Acces Layer</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Data processing</entry>
+              <entry>MapReduce is the core processing framework in the Hadoop system, and provides a
+                massively parallel data processing framework inspired by Google’s MapReduce
+                papers.</entry>
+            </row>
+            <row>
+              <entry>In-memory processing</entry>
+              <entry>Another processing framework is the real-time, in-memory processing framework
+                called Spark.</entry>
+            </row>
+            <row>
+              <entry>Data query</entry>
+              <entry>The Data Query layer provides real-time query access to data using Cloudera
+                Impala.</entry>
+            </row>
+            <row>
+              <entry>Data search</entry>
+              <entry>The Data Search layer provides real-time search of indexed data using Apache
+                SOLR Cloud technology.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+     <p>All four of these layers can be used simultaneously or independently, depending on
+      the workload and problems being solved.</p>
+    <p>Above these layers are a number of Hadoop end-user tools, providing a higher level of abstraction for data access and processing:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_abstraction_tools">
+      <title>Data Abstraction Tools</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Tool</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Apache Pig</entry>
+            <entry>Data access and processing language</entry>
+          </row>
+          <row>
+            <entry>Apache Hive</entry>
+            <entry>Data access and processing language</entry>
+          </row>
+          <row>
+            <entry>Apache Mahout</entry>
+            <entry>Provides machine learning capabilities</entry>
+          </row>
+          <row>
+            <entry>Apache Oozie</entry>
+            <entry>Provides a general workflow capability for coordinating complex sequences of
+              production jobs</entry>
+          </row>
+          <row>
+            <entry>Apache HUE </entry>
+            <entry>Provides a web interface for analyzing data</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>
