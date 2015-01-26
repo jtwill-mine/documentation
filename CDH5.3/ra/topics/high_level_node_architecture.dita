@@ -2,11 +2,22 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="high_level_node_architecture">
   <title>High-Level Node Architecture</title>
-  <shortdesc>Figure 2 displays the roles for the nodes ina  basic cluster.</shortdesc>
   <body>
-    <p>INSERT FIGURE 2 HERE</p>
-    <p>The cluster environment consists of multiple software services running on multiple physical server nodes. The implementation divides the server nodes into several roles, and each node has a configuration optimized for its role in the cluster. The physical server configurations are divided into two broad classes—data nodes, which handle the bulk of the Hadoop processing, and infrastructure nodes, which support services needed for the cluster operation. A high performance network fabric connects the cluster nodes together, and separates the core data network from management functions.</p>
-    <p>The minimum configuration supported is six nodes, although at least seven are recommended.   The nodes have the following roles:</p>
+    <p><xref href="high_level_node_architecture.dita#high_level_node_architecture/cluster_archtecture" type="fig"/> displays the roles for the nodes in a basic cluster.</p>
+    <fig id="cluster_archtecture">
+      <title>Cluster Architecture</title>
+      <image href="../../Customization/OpenTopic/common/artwork/cluster_architecture.png"
+        align="left" scalefit="yes"/>
+    </fig>
+    <p>The cluster environment consists of multiple software services running on multiple physical
+      server nodes. The implementation divides the server nodes into several roles, and each node
+      has a configuration optimized for its role in the cluster. The physical server configurations
+      are divided into two broad classes—data nodes, which handle the bulk of the Hadoop processing,
+      and infrastructure nodes, which support services needed for the cluster operation. A high
+      performance network fabric connects the cluster nodes together, and separates the core data
+      network from management functions.</p>
+    <p>The minimum configuration supported is six nodes, although at least seven are recommended.
+      The nodes have the following roles:</p>
     <table frame="all" rowsep="1" colsep="1" id="table_cluster_node_roles">
       <title>Cluster Node Roles</title>
       <tgroup cols="3">
@@ -64,6 +75,5 @@
         </tbody>
       </tgroup>
     </table>
-    
   </body>
 </topic>

@@ -20,10 +20,74 @@
       <li><b>Data Node</b> — runs all the services required to store blocks of data on the local
         hard drives and execute processing tasks against that data. A minimum of three data nodes
         are required, and larger clusters are scaled primarily by adding additional data nodes There
-        are two types of services running on the data nodes:<ul id="ul_wtk_4ph_wq">
+        are two types of services running on the data nodes:<ul id="ul_datanode">
           <li>NodeManager Daemon (to support YARN job execution)</li>
           <li>DataNode Daemon (to support HDFS data storage)</li>
         </ul></li>
     </ul>
+    <p><xref href="node_definitions.dita#node_definitions/table_service_locations" format="dita"/> describes
+      the node locations and functions of the cluster services.</p>
+    <table frame="all" rowsep="1" colsep="1"
+      id="table_service_locations">
+      <title>Service Locations</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Physical Node</entry>
+            <entry>Software Function</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Administration Node</entry>
+            <entry>
+              <p>Operating System Provisioning</p>
+              <p>Yum Repositories</p>
+              <p>Monitoring Functions</p>
+            </entry>
+          </row>
+          <row>
+            <entry>Edge Node</entry>
+            <entry>Cloudera Manager</entry>
+          </row>
+          <row>
+            <entry>Active Name Node</entry>
+            <entry>
+              <p>NameNode</p>
+              <p>Resource Manager</p>
+              <p>Zookeeper</p>
+              <p>Quorum Journal Node</p>
+              <p>HMaster</p>
+            </entry>
+          </row>
+          <row>
+            <entry>Standby Name Node</entry>
+            <entry>
+              <p>Standby NameNode</p>
+              <p>Standby Resource Manager</p>
+              <p>Zookeeper</p>
+              <p>Quorum Journal Node</p>
+            </entry>
+          </row>
+          <row>
+            <entry>HA Node</entry>
+            <entry>
+              <p>Zookeeper</p>
+              <p>Quorum Journal Node</p>
+            </entry>
+          </row>
+          <row>
+            <entry>Data Node(x)</entry>
+            <entry>
+              <p>DataNode</p>
+              <p>NodeManager</p>
+              <p>RegionServer</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
   </body>
 </topic>
