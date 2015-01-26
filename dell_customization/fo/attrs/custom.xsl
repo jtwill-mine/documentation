@@ -120,5 +120,19 @@
         <xsl:attribute name="keep-together.within-page">always</xsl:attribute>
     </xsl:attribute-set>    
 
+    <xsl:attribute-set name="image">
+        <xsl:attribute name="content-width">scale-down-to-fit</xsl:attribute>
+        <xsl:attribute name="content-height">100%</xsl:attribute>
+        <xsl:attribute name="width">100%</xsl:attribute>
+        <xsl:attribute name="scaling">uniform</xsl:attribute>
+        <xsl:attribute name="border">
+            <xsl:choose>
+                <xsl:when test="@outputclass='border'">
+                    solid 1pt
+                </xsl:when>
+                <xsl:otherwise>0pt</xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>    
+    </xsl:attribute-set>
     
 </xsl:stylesheet>
