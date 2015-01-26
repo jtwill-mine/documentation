@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r730_r730xd_server">
+  <title>PowerEdge R730/R730xd Server</title>
+  <body>
+    <p>The Dell PowerEdge R730 and R730xd are Dell’s latest 13th Generation 2-socket, 2U rack servers that are designed to run complex workloads using highly scalable memory, I/O capacity, and flexible network options. Both systems feature the <tm trademark="Intel" tmtype="reg">Intel</tm> <tm trademark="Xeon" tmtype="reg">Xeon</tm> processor E5- 2600 v3 product family (Haswell-EP), up to 24 DIMMS, <tm trademark="PCI Express" tmtype="reg">PCI Express</tm> (PCIe) 3.0 enabled expansion slots, and a choice of network interface technologies.</p>
+    <p>The PowerEdge R730 is a general- purpose platform with highly expandable memory (up to 768GB) and impressive I/O capabilities to match. The R730 can readily handle very demanding workloads, such as data warehouses, e- commerce, virtual desktop infrastructure (VDI), databases, and high-performance computing (HPC).</p>
+    <p>In addition to the R730’s capabilities, the R730xd offers extraordinary storage capacity, making it well suited for data—intensive applications that require storage and I/O performance, like medical imaging and email servers.</p>
+  </body>
+</topic>
