@@ -7,5 +7,8 @@
   <topicref href="../topics/node_definitions.dita"/>
  </topicref>
  
+ <topicref href="../topics/network_fabric_architecture.dita">
+  <topicref href="../topics/network_definitions.dita"/>
+ </topicref>
  
 </map>
