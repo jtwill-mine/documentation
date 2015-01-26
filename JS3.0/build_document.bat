@@ -32,7 +32,9 @@ FOR /R %%f IN (*.ditamap) DO (
 
 SETLOCAL DISABLEDELAYEDEXPANSION
 
-SET /P selection="Choose document to build: "
+SET /P selection="Choose document to build (or ENTER for all): "
+
+IF [%selection%] == [] GOTO :BUILDALL
 
 SET file%selection% >nul 2>&1
 
@@ -47,6 +49,16 @@ ECHO selected file name: %file_name%
 ECHO Document base directory - %DOCUMENT_BASE_DIR%
 
 %DITA_DIR%\tools\ant\bin\ant -f "%DITA_DIR%\build.xml" -Dtranstype=pdf2 -Dargs.input="%file_name%"  -Douter.control=quiet -Dtempdir="%DOCUMENT_BASE_DIR%/temp" -Doutput.dir="%DOCUMENT_BASE_DIR%\out" -Dcustomization.dir="%DOCUMENT_BASE_DIR%/../dell_customization"
+GOTO :EOF
+
+:BUILDALL
+SETLOCAL ENABLEDELAYEDEXPANSION
+FOR /R %%f IN (*.ditamap) DO (
+   ECHO ************************
+   ECHO Building %%f...
+   ECHO ************************
+   %DITA_DIR%\tools\ant\bin\ant -f "%DITA_DIR%\build.xml" -Dtranstype=pdf2 -Dargs.input="%%f"  -Douter.control=quiet -Dtempdir="%DOCUMENT_BASE_DIR%/temp" -Doutput.dir="%DOCUMENT_BASE_DIR%\out" -Dcustomization.dir="%DOCUMENT_BASE_DIR%/../dell_customization"
+)
 GOTO :EOF
 
 :RESOLVE
