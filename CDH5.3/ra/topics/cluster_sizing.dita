@@ -7,7 +7,7 @@
       <ul>
         <li><xref href="rack.dita#rack">Rack</xref></li>
         <li><xref href="pod.dita#pod">Pod</xref></li>
-        <li>Cluster</li>
+        <li><xref href="cluster.dita#cluster">Cluster</xref></li>
       </ul>
     <p>Each has specific characteristics and sizing considerations documented in this reference architecture. The design goal for the Hadoop environment is to enable you to scale the environment by adding the additional capacity as needed, without the need to replace any existing components.</p>
   </body>
