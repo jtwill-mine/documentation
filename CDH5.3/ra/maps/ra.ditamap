@@ -21,6 +21,10 @@
  <topicref href="../topics/cluster_architecture.dita">
   <mapref href="cluster_architecture.ditamap" format="ditamap"/>
  </topicref>
+ 
+ <topicref href="../topics/hardware_architecture.dita">
+  <mapref href="hardware_architecture.ditamap" format="ditamap"/>
+ </topicref>
 
  <topicref href="../../Common/references.dita"/>
 
