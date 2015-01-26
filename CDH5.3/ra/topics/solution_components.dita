@@ -2,11 +2,12 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="solution_components">
   <title>Solution Components</title>
-  <shortdesc>Figure 1 illustrates the primary components in the Dell | Cloudera Solution.</shortdesc>
   <body>
-    <draft-comment author="dale_mcdonald">Image to be linked when Cloudera Hadoop docs repo
-      structure is figured out.</draft-comment>
-    <p>--- PUT GRAPHIC HERE ---</p>
+    <p><xref href="solution_components.dita#solution_components" type="fig"/> illustrates the primary components in the Dell | Cloudera Solution.</p>
+    <fig>
+      <image href="../../Customization/OpenTopic/common/artwork/solution_components.png"
+        id="components"/>
+    </fig>
     <p><image></image></p>
     <p>The PowerEdge servers, Force10 networking, the operating system and the Java Virtual Machine make up the foundation on which the Hadoop software stack runs.</p>
     <p>The left side of the diagram shows the integration components that can be used to move data in and out of the Hadoop system. Apache Sqoop provides data transfer to and from relational databases while Apache Flume is optimized for processing event and log data. The HDFS API and tools can be used to move data files to and from the Hadoop system.</p>
