@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Hardware Architecture Map</title>
+ 
+ <topicref href="../topics/server_infrastructure_options.dita">
+  <topicref href="../topics/poweredge_r730_r730xd_server.dita"/>
+ </topicref>
+ 
+ 
+ 
+</map>
