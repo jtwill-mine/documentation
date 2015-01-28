@@ -25,9 +25,17 @@
  <topicref href="../topics/hardware_architecture.dita">
   <mapref href="hardware_architecture.ditamap" format="ditamap"/>
  </topicref>
+ 
  <topicref href="../topics/network_architecture.dita">
   <mapref href="network_architecture.ditamap" format="ditamap"/>
  </topicref>
+ 
+ <topicref href="../topics/cloudera_enterprise_software.dita">
+  <mapref href="cloudera_enterprise_software.ditamap" format="ditamap"/>
+ </topicref>
+ 
+ <topicref href="../topics/deployment_methodology.dita"/>
+ 
  <mapref href="appendices.ditamap" format="ditamap"/>
 
  <topicref href="../../Common/references.dita"/>
