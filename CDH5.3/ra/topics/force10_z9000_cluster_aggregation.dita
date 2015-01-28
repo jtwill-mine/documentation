@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="force10_z9000_cluster_aggregation">
+  <title>Force10 Z9000 Cluster Aggregation</title>
+  <shortdesc>For larger initial deployments, deployments where scale up is planned, or instances where the cluster needs to be co-located with other applications in different racks, the recommended option is the Force10 Z9000 core switch. </shortdesc>
+  <body>
+    <p>The Force10 Z9000 is a 32-port, 40G high-capacity switch. It can aggregate up to 15 racks of high-density PowerEdge C8000 servers. The rack-to-rack bandwidth needed in Hadoop is best addressed by a 40G-capable, non-blocking switch and the Force10 Z9000 can provide a cumulative bandwidth of 1.5TB of throughput at line-rate traffic from every port. In many cases, The Force10 Z9000 does not need to connect into any other higher-tier core switches because the capacity is enough for a data center with hundreds of servers.</p>
+    <p><xref href="#force10_z9000_cluster_aggregation/z9000_multi_rack_equipment" format="dita"/>
+      illustrates the configuration for a multiple rack cluster using the Z9000 as a cluster
+      aggregation switch. This is an example of a Clos fabric that grows horizontally. This
+      technique of network fabric deployment has been used in the data centers of some of the
+      largest web companies, whose businesses range from social media to public cloud. Some of the
+      largest recent Hadoop deployments also use this new approach to networking.</p>
+    <p>Each switch in <xref href="#force10_z9000_cluster_aggregation/z9000_multi_rack_equipment"
+        format="dita"/> forms a layer-2 LAG, This assumes that the Force10 Z9000 pair in the
+      aggregation forms a VLT pair for HA. Now we have two tiers of VLT, one forming at the ToR for
+      servers and another at the aggregation for the ToR switches.</p>
+    <fig id="z9000_multi_rack_equipment">      
+      <title>Multi-Rack View Using Force10 Z9000 Switches (Based on Layer-2)</title>
+      <image href="../../Customization/OpenTopic/common/artwork/z9000_multi_rack_equipment.png" align="left"/></fig>
+  </body>
+</topic>

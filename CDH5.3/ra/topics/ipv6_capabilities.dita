@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ipv6_capabilities">
+  <title>IPv6 Capabilities</title>
+  <body>
+    <p>At this time, the architecture does not support or allow for the use of IPv6 for network connectivity.</p>
+  </body>
+</topic>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_equipment_summary">
+  <title>Network Equipment Summary</title>
+  <body>
+    <p><xref href="#network_equipment_summary/table_per_rack" format="dita"/> and <xref
+        href="#network_equipment_summary/table_3_racks" format="dita"/> summarize the required
+      cluster networking equipment. <xref href="#network_equipment_summary/table_required_cables"
+        format="dita"/> summarizes the number of cables needed for a cluster.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_per_rack">
+      <title>Per Rack Network Equipment</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Component</entry>
+            <entry>Quantity</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Total Racks</entry>
+            <entry>1 (6-20 Nodes)</entry>
+          </row>
+          <row>
+            <entry>Management Switch</entry>
+            <entry>1 x Force10 S55</entry>
+          </row>
+          <row>
+            <entry>Top-of-rack Switches</entry>
+            <entry>2 x Force10 S4810</entry>
+          </row>
+          <row>
+            <entry>Aggregation Switch</entry>
+            <entry>Not needed for a single rack</entry>
+          </row>
+          <row>
+            <entry>Switch Interconnect Cables</entry>
+            <entry>2 x 40Gb QSFP+ Cables</entry>
+          </row>
+          <row>
+            <entry>Modules in each ToR</entry>
+            <entry>1x 12-2port Stacking, 1x 10G -2 port uplink</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <table frame="all" rowsep="1" colsep="1" id="table_3_racks">
+      <title>Aggregation Network Switches for 3 or More Racks</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Component</entry>
+            <entry>Quantity</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Total Racks</entry>
+            <entry>3 to 15 Racks (1 – 5 pods)</entry>
+          </row>
+          <row>
+            <entry>Aggregation Layer Switches</entry>
+            <entry>2 x Force10 Z9000</entry>
+          </row>
+          <row>
+            <entry>Pod Interconnect Cables</entry>
+            <entry>4 x 40Gb QSFP+ Cables per Rack</entry>
+          </row>
+          <row>
+            <entry>Switch Interconnect Cables</entry>
+            <entry>4 x 40GB QSFP+ cables 1 M</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <table frame="all" rowsep="1" colsep="1" id="table_required_cables">
+      <title>Network Cables Required – 10GbE Configurations</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Description</entry>
+            <entry>1GbE Cables Required</entry>
+            <entry>10GbE Cables with SFP+ Required</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Name and HA Nodes</entry>
+            <entry>2 x Number of Nodes</entry>
+            <entry>2 x Number of Nodes</entry>
+          </row>
+          <row>
+            <entry>Edge Nodes</entry>
+            <entry>2 x Number of Nodes</entry>
+            <entry>4 x Number of Nodes</entry>
+          </row>
+          <row>
+            <entry>Data nodes</entry>
+            <entry>2 x Number of Nodes</entry>
+            <entry>2 x Number of Nodes</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tor_switches">
+  <title>Top of Rack (ToR) Switches</title>
+  <body>
+    <p>Each rack uses a pair of Force10 S4810’s as top of rack switches. These switches are configured for high availability using the Virtual Link Trunking (VLT) feature. VLT allows the servers to terminate their LAG interfaces into two different switches instead of one. This provides redundancy within the rack if a switch fails or needs maintenance, while providing active-active bandwidth utilization.</p>
+    <p><xref href="#tor_switches/single_rack_networking_equipment" type="fig"/> shows the single
+      rack network configuration, with a pair of Force10 S4810 switches aggregating the rack
+      traffic.</p>
+    <fig id="single_rack_networking_equipment">      
+      <title>Single Rack Networking Equipment</title>
+      <image href="../../Customization/OpenTopic/common/artwork/single_rack_networking_equipment.png" align="left"/></fig>
+    <p>For a single rack, the top of rack switches can act as the cluster aggregation layer.  For larger clusters, a cluster aggregation layer is required.</p>
+    <p>In this architecture, each rack is managed as a separate entity from a switching perspective, and ToR switches connect only to the aggregation switches.</p>
+  </body>
+</topic>
