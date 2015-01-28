@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_support">
+  <title>Cloudera Support</title>
+  <body>
+    <p>As the use of Hadoop grows and an increasing number of groups and applications move into
+      production, your Hadoop users will expect greater levels of performance and consistency.
+      Cloudera’s proactive production-level support gives your administrators the expertise and
+      responsiveness they need.</p>
+    <p>Cloudera Support includes:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_ayx_mtx_wq">
+      <title>Cloudera Support Features</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Feature</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Flexible Support Windows</entry>
+            <entry>Choose 8×5 or 24×7 to meet SLA requirements.</entry>
+          </row>
+          <row>
+            <entry>Configuration Checks</entry>
+            <entry>Verify that your Hadoop cluster is fine-tuned for your environment.</entry>
+          </row>
+          <row>
+            <entry>Escalation and Issue Resolution</entry>
+            <entry>Resolve support cases with maximum efficiency.</entry>
+          </row>
+          <row>
+            <entry>Comprehensive Knowledge Base</entry>
+            <entry>Expand your Hadoop knowledge with hundreds of articles and tech notes.</entry>
+          </row>
+          <row>
+            <entry>Support for Certified Integration</entry>
+            <entry>Connect your Hadoop cluster to your existing data analysis tools.</entry>
+          </row>
+          <row>
+            <entry>Proactive Notification</entry>
+            <entry>Stay up-to-speed on new developments and events.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>With Cloudera Enterprise, you can leverage your existing team’s experience and Cloudera’s
+      expertise to put your Hadoop system into effective operation. Built-in predictive capabilities
+      anticipate shifts in the Hadoop infrastructure to support reliable function.</p>
+    <p>Cloudera Enterprise makes it easy to run open source Hadoop in production, by:</p>
+    <ul>
+      <li>Simplifying and accelerating Hadoop deployment</li>
+      <li>Reducing the costs and risks of adopting Hadoop in production</li>
+      <li>Reliably operating Hadoop in production with repeatable success</li>
+      <li>Applying SLAs to Hadoop</li>
+      <li>Increasing control over Hadoop cluster provisioning and management</li>
+    </ul>
+  </body>
+</topic>

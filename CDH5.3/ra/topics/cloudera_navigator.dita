@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_navigator">
+  <title>Cloudera Navigator</title>
+  <body>
+    <p>Navigator is an add-on subscription to Cloudera Enterprise that provides the first fully integrated data management tool for Cloudera Enterprise. It's designed to provide all of the capabilities required for administrators, data managers and analysts to secure, govern, and explore the large amounts of diverse data that land in CDH.</p>
+    <p>The first release of Cloudera Navigator (v1.0) was developed specifically to address data security concerns most typically associated with highly regulated industries, such as financial services, healthcare and government. It includes a full suite of auditing capabilities across all CDH components that store data.</p>
+    <p>The Navigator subscription gives you access to all of the capabilities of the Cloudera Navigator application. With Navigator, you can:</p>
+    <ul>
+      <li>Store sensitive data in CDH while maintaining compliance with regulations and internal audit policies</li>
+      <li>Verify access permissions to files and directories</li>
+      <li>Maintain a full audit history of HDFS, Hive and HBase data access</li>
+      <li>Report on data access by user and type</li>
+      <li>Integrate with third-party SIEM tools</li>
+    </ul>
+    <p>Navigator includes:</p>
+    <ul>
+      <li>Centralized audit management and reporting for HDFS, Hive and HBase</li>
+      <li>8x5 or 24x7 Cloudera Support</li>
+    </ul>
+    <p>Key features of Cloudera Navigator: </p>
+    <ul>
+      <li>Configuration of audit information for HDFS, HBase and Hive</li>
+      <li>Centralized view of data access and permissions</li>
+      <li>Simple, queryable interface with filters for type of data or access patterns</li>
+      <li>Export of full or filtered audit history for integration with third-party SIEM tools</li>
+    </ul>
+  </body>
+</topic>

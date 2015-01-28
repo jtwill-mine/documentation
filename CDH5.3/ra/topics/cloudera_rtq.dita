@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_rtq">
+  <title>Cloudera RTQ (Impala)</title>
+  <body>
+    <p>Cloudera Impala is an open source Massively Parallel Processing (MPP) query engine that runs natively in Apache Hadoop. The Apache-licensed Impala project brings scalable parallel database technology to Hadoop, enabling users to issue low-latency SQL queries to data stored in HDFS and Apache HBase without requiring data movement or transformation.</p>
+    <p>Impala is integrated from the ground up as part of the Hadoop ecosystem and leverages the same flexible file and data formats, metadata, security and resource management frameworks used by MapReduce, Apache <tm trademark="Hive" tmtype="tm">Hive</tm>, Apache <tm trademark="Pig" tmtype="tm">Pig</tm>, and other components of the Hadoop stack.</p>
+    <p>Designed to complement MapReduce, which specializes in large-scale batch processing, Impala is an independent processing framework optimized for interactive queries. With Impala, analysts and data scientists now have the ability to perform real-time, “speed of thought” analytics on data stored in Hadoop via SQL or through business intelligence (BI) tools.</p>
+    <p>The result is that large-scale data processing and interactive queries can be done on the same system using the same data and metadata — removing the need to migrate data sets into specialized systems and/or proprietary formats simply to perform analysis.</p>
+  </body>
+</topic>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_bdr">
+  <title>Cloudera BDR</title>
+  <body>
+    <p>BDR is an add-on subscription to Cloudera Enterprise that provides end-to-end business continuity. When you add BDR to your Cloudera Enterprise subscription, you’ll get the management capabilities and support you need to get maximum value from the powerful disaster recovery features available in CDH.</p>
+    <p>Cloudera BDR makes it easy to configure and manage disaster recovery policies for data stored in CDH. With BDR you can:</p>
+    <ul>
+      <li>Centrally configure and manage disaster recovery workflows for files (HDFS) and metadata (Hive) through an easy-to-use graphical interface</li>
+      <li>Consistently meet or exceed service level agreements (SLAs) and recovery time objectives (RTOs) through simplified management and process automation</li>
+    </ul>
+    <p>BDR includes:</p>
+    <ul>
+      <li>Centralized management for HDFS replication through Cloudera Manager</li>
+      <li>Centralized management for Hive replication through Cloudera Manager</li>
+      <li>8x5 or 24x7 Cloudera Support</li>
+    </ul>
+    <p>Key features of BDR:</p>
+    <ul>
+      <li>Define file and directory-level replication policies</li>
+      <li>Schedule replication jobs</li>
+      <li>Monitor progress through a centralized console</li>
+      <li>Identify discrepancies between primary and secondary system(s)</li>
+    </ul>
+  </body>
+</topic>

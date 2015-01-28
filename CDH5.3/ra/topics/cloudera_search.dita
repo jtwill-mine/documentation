@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_search">
+  <title>Cloudera Search</title>
+  <body>
+    <p>Cloudera Search delivers full-text, interactive search to CDH, Cloudera’s 100% open source distribution including Apache Hadoop. Powered by Apache Solr, Cloudera Search enriches the Hadoop platform and enables a new generation of search – Big Data search – through scalable indexing of data within HDFS and Apache <tm trademark="HBase" tmtype="tm">HBase</tm>.</p>
+    <p>Cloudera Search gains the same fault tolerance, scale, visibility, and flexibility provided to other Hadoop workloads, due to its integration with CDH.</p>
+    <p>Apache Solr has been the enterprise standard for open source search since its release in 2006. Its active and mature community drives wide adoption across verticals and industries, and its APIs are feature-rich and extensible. Cloudera Search extends the value of Apache Solr by tightly integrating and optimizing it to run on CDH and Cloudera Manager.</p>
+  </body>
+</topic>
