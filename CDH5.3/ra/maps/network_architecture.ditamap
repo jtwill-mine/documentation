@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Network Architecture Map</title>
+ 
+ <topicref href="../topics/physical_network_components.dita">
+  <topicref href="../topics/server_node_connections.dita"/>
+  <topicref href="../topics/tor_switches.dita"/>
+  <topicref href="../topics/aggregation_switches.dita">
+   <topicref href="../topics/s4810_cluster_aggregation.dita"/>
+   <topicref href="../topics/force10_z9000_cluster_aggregation.dita"/>
+  </topicref>
+  <topicref href="../topics/core_network.dita"/>
+  <topicref href="../topics/l2_l3.dita"/>
+  <topicref href="../topics/management_network.dita"/>
+  <topicref href="../topics/network_equipment_summary.dita"/>
+ </topicref>
+ <topicref href="../topics/network_connectivity_summary.dita">
+  <topicref href="../topics/ipv6_capabilities.dita"/>
+ </topicref>
+ 
+ 
+</map>
