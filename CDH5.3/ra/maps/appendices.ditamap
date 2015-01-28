@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Appendices Map</title>
+ 
+ <topicref href="../topics/poweredge_r730xd_physical_config.dita"/>
+ <topicref href="../topics/bom_poweredge_r730_nodes.dita"/>
+ <topicref href="../topics/bom_poweredge_r730xd_35_data_nodes.dita"/>
+ 
+</map>
