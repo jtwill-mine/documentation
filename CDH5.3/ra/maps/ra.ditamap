@@ -25,6 +25,7 @@
  <topicref href="../topics/hardware_architecture.dita">
   <mapref href="hardware_architecture.ditamap" format="ditamap"/>
  </topicref>
+ <mapref href="appendices.ditamap" format="ditamap"/>
 
  <topicref href="../../Common/references.dita"/>
 
