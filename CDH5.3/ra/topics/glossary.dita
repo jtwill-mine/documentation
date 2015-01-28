@@ -47,6 +47,10 @@
     <glossterm>OS</glossterm>
     <glossdef>Operating system</glossdef>
   </glossentry>
+  <glossentry id="siem">
+    <glossterm>Security Information and Event Management</glossterm>
+    <glossdef>Operating system</glossdef>
+  </glossentry>
   <glossentry id="tor">
     <glossterm>ToR</glossterm>
     <glossdef>Top-of-rack switch/router</glossdef>
