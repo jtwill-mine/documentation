@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="storage_sizing_notes">
+  <title>Storage Sizing Notes</title>
+  <body>
+    <p>For drive capacities greater than 3TB or node storage density over 36TB, special consideration is required for HDFS setup. Configurations of this size are close to the limit of Hadoop per-node storage capacity. At a minimum, the HDFS block size should be increased to 128MB or more.Since number of files, blocks per file, compression, and reserved space all factor into the calculations, the configuration will require an analysis of the intended cluster usage and data.</p>
+    <p>Large per-node density also has an impact on cluster performance in the event of node failure. The bonded 10GbE configuration is recommended for large node densities to minimize performance impacts in this case.</p>
+    <note>Your Dell representative can assist with these estimates and calculations.</note>
+  </body>
+</topic>

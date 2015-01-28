@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r730xd_config_notes">
+  <title>PowerEdge R730xd Configuration Notes</title>
+  <body>
+    <p><xref href="poweredge_r730xd_physical_config.dita"/> illustrates the recommended rack layout
+      for R730 clusters.</p>
+    <p><xref href="bom_poweredge_r730_nodes.dita#bom_poweredge_r730_nodes"/> and <xref
+        href="bom_poweredge_r730xd_35_data_nodes.dita#bom_poweredge_r730xd_35_data_nodes"/> contain
+      the full bills of material (BOM) listing for the PowerEdge R730 and R730xd server
+      configurations.</p>
+  </body>
+</topic>
