@@ -7,11 +7,11 @@
     <ul>
       <li><xref href="server_node_connections.dita#server_node_connections"/></li>
       <li><xref href="tor_switches.dita#tor_switches"/></li>
-      <li/>
-      <li/>
-      <li/>
-      <li/>
-      <li></li>
+      <li><xref href="aggregation_switches.dita#aggregation_switches"/></li>
+      <li><xref href="core_network.dita#core_network"/></li>
+      <li><xref href="l2_l3.dita#l2_l3"/></li>
+      <li><xref href="management_network.dita#management_network"/></li>
+      <li><xref href="network_equipment_summary.dita#network_equipment_summary"/></li>
     </ul>
   </body>
 </topic>
