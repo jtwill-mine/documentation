@@ -10,6 +10,11 @@
     <glossterm>CDH</glossterm>
     <glossdef>Cloudera Distribution for Hadoop</glossdef>
   </glossentry>
+  <glossentry id="clos">
+    <glossterm>Clos</glossterm>
+    <glossdef>A multi-stage, non-blocking network switch architecture. It reduces the number of
+      required ports within a network switch fabric.</glossdef>
+  </glossentry>
   <glossentry id="dbms">
     <glossterm>DBMS</glossterm>
     <glossdef>Database management system</glossdef>
