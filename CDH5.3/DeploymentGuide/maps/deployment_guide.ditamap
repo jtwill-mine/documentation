@@ -17,6 +17,8 @@
  
  <topicref href="../topics/overview.dita">
   <topicref href="../topics/summary.dita"/>
+  <topicref href="../topics/deployment_workflow.dita"/>
+  <topicref href="../topics/lifecycle_controller_overview.dita"/>
  </topicref>
  
  <topicref href="../../Common/references.dita">
