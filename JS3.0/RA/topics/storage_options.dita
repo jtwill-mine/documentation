@@ -29,7 +29,7 @@
             <li>Dell EqualLogic Storage Arrays</li>
             <li>Cinder Multi-Backend Support</li>
         </ul>
-        <p>This solution provides Ceph as the back-end for both Glance and Swift.</p>
+        <p>This solution provides Ceph as the back-end for both Glance, Block and Object stores.</p>
     </body>
 
     <topic id="ceph" conref="ceph.dita#ceph">
