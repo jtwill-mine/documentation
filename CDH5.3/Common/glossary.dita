@@ -48,8 +48,8 @@
     <glossdef>Operating system</glossdef>
   </glossentry>
   <glossentry id="siem">
-    <glossterm>Security Information and Event Management</glossterm>
-    <glossdef>Operating system</glossdef>
+    <glossterm>SIEM</glossterm>
+    <glossdef>Security Information and Event Management</glossdef>
   </glossentry>
   <glossentry id="tor">
     <glossterm>ToR</glossterm>
