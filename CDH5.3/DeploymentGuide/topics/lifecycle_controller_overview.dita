@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="lifecycle_controller_overview">
+  <title>Dell R730 and R730xd Lifecycle Controller Overview</title>
+  <body>
+    <p>You can use the <xref
+        href="ftp://ftp.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/esuprt_rmte_ent_sys_lifecycle_cntrllr/"
+        format="html" scope="external">Dell Lifecycle Controller</xref> to configure all the BOIS
+      and RAID function specified in this guide. This is a brief overview of the steps.</p>
+    <ol>
+      <li>Boot up each machine.</li>
+      <li>At the boot screen press <codeph>[F10]</codeph>, then select <b>Enter Lifecycle
+          Controller</b>.</li>
+      <li>Select <b>System Setup</b>.</li>
+      <li>Select <b>Advanced Hardware Configuration</b>.</li>
+      <li>Select <b>System Bios</b>.</li>
+      <li>Make the changes per the charts above.</li>
+      <li>Press <codeph>[Esc]</codeph> to exit back.</li>
+      <li><b>Save</b> your changes when prompted.</li>
+      <li>Select<b> iDRAC</b>.</li>
+      <li><b>Configure</b> iDRAC Network settings.</li>
+      <li>Press <codeph>[Esc]</codeph> to exit back.</li>
+      <li><b>Save</b> your changes when prompted.</li>
+      <li>Select <b>Configure Devices</b>.</li>
+      <li>Select <b>RAID Controller</b>.</li>
+      <li><b>Configure</b> your Virtual Disks.</li>
+      <li>Press <codeph>[Esc]</codeph>.</li>
+      <li><b>Save</b> your changes when prompted.<note>You may see a message two or three times that
+          asks you to <i>press Ctrl-Alt-Del</i> in order to reboot.</note></li>
+      <li>Reboot.</li>
+    </ol>
+  </body>
+</topic>
