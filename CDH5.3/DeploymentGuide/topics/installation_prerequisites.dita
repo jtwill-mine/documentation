@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="installation_prerequisites">
+  <title>Installation Prerequisites</title>
+  <shortdesc>In order to install the components that comprise the Dell | Cloudera Solution, several prerequisites must be satisfied, including:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="cloudera_software_requirements.dita#cloudera_software_requirements"/></li>
+      <li><xref href="red_hat_software_requirements.dita#red_hat_software_requirements"/></li>
+      <li><xref href="reference_architecture.dita#reference_architecture"/></li>
+    </ul>
+  </body>
+</topic>

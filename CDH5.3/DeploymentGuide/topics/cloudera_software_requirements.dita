@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_software_requirements">
+  <title>Cloudera Software Requirements</title>
+  <shortdesc>Cloudera software must be obtained via one of the following means prior to installation:</shortdesc>
+  <body>
+    <ul>
+      <li>Directly from Cloudera’s repository; requires outbound public internet access from the admin  node</li>
+      <li>A local staging repository which is copied or mirrored from Cloudera’s master repository</li>
+    </ul>
+  </body>
+</topic>
