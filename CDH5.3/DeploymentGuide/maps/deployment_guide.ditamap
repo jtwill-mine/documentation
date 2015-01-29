@@ -16,11 +16,12 @@
  <topicref href="../../Common/glossary.dita"/>
  
  <topicref href="../topics/overview.dita">
-  <topicref href="../topics/summary.dita"/>
-  <topicref href="../topics/deployment_workflow.dita"/>
-  <topicref href="../topics/lifecycle_controller_overview.dita"/>
+  <mapref href="overview.ditamap" format="ditamap"/>
  </topicref>
- 
+ <topicref href="../topics/installation_prerequisites.dita">
+  <mapref href="installation_prerequisites.ditamap" format="ditamap"/>
+ </topicref>
+  
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
