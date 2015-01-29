@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="bom_poweredge_r730_nodes">
-  <title>Bill of Materials – PowerEdge R730 Nodes</title>
+  <title>Appendix B: Bill of Materials – PowerEdge R730 Nodes</title>
   <body>
     <table frame="all" rowsep="1" colsep="1" id="table_poweredge_r730_bom">
       <title>Active and Standby Name, Admin, Edge and HA Nodes – PowerEdge R730</title>
