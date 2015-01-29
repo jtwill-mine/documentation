@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="summary">
+  <title>Summary</title>
+  <shortdesc>This guide assumes that you are familiar with:</shortdesc>
+  <body>
+    <ul>
+      <li>Cloudera Enterprise 5</li>
+      <li>RAID and BIOS configuration of the following Dell PowerEdge servers:<ul id="ul_i5f_m52_xq">
+          <li>R730</li>
+          <li>R730xd</li>
+        </ul></li>
+      <li>Red Hat Enterprise <tm trademark="Linux" tmtype="reg">Linux</tm> (RHEL) 6.5</li>
+    </ul>
+  </body>
+</topic>

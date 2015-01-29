@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="overview">
+  <title>Overview</title>
+  <shortdesc>This guide describes the prerequisites to install the <tm trademark="Dell" tmtype="tm">Dell</tm> | <tm trademark="Cloudera" tmtype="tm">Cloudera</tm> Apache Hadoop Solutions on a predefined hardware and network configuration, as specified in the current <i>Dell | Cloudera Apache Hadoop Solutions Reference Architecture</i> document. It also covers requirements for preparing the hardware platform and provisioning the Operating System for Cloudera Enterprise 5 deployment.</shortdesc>
+  <body>
+    <p></p>
+  </body>
+</topic>
