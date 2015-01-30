@@ -63,7 +63,7 @@
     </ol>
   </body>
   
-  <topic id="get_host_info" conref="get_host_info.dita#get_host_info">
+  <!-- <topic id="get_host_info" conref="get_host_info.dita#get_host_info">
     <title/>
   </topic>
   
@@ -93,7 +93,7 @@
   
   <topic id="next_steps" conref="next_steps.dita#next_steps">
     <title/>
-  </topic>
+  </topic> -->
   
     
 </topic>

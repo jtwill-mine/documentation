@@ -38,16 +38,5 @@
       </table></p>
   </body>
   
-  <topic id="determine_pool_id" conref="determine_pool_id.dita#determine_pool_id">
-    <title/>
-  </topic>
-  
-  <topic id="configure_pool_id" conref="configure_pool_id.dita#configure_pool_id">
-    <title/>
-  </topic>
-  
-  <topic id="configure_repositories" conref="configure_repositories.dita#configure_repositories">
-    <title/>
-  </topic>
-  
+    
 </topic>

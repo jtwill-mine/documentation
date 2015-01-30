@@ -8,16 +8,6 @@
     <p>The Private API and Storage networks are vLAN tagged networks on a bonded interface. The Provisioning and Management interfaces are on individual, non-bonded interfaces.</p>
   </body>
   
-  <topic id="non_bonded_nic_config" conref="non_bonded_nic_config.dita#non_bonded_nic_config">
-    <title/>
-  </topic> 
   
-  <topic id="bonded_nic_config" conref="bonded_nic_config.dita#bonded_nic_config">
-    <title/>
-  </topic>
-  
-  <topic id="controller_nodes_version_locking" conref="controller_nodes_version_locking.dita#controller_nodes_version_locking">
-    <title/>
-  </topic>
   
 </topic>
