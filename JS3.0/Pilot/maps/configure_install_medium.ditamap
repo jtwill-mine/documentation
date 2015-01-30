@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Configure Installation Medium Map</title>
+ <topicref href="../topics/satellite_server.dita"/>
+ <topicref href="../topics/local_iso_foreman_node.dita"/>
+ <topicref href="../topics/local_iso_sah.dita"/>
+</map>
