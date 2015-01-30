@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Hardware Configuration Map</title>
+ <topicref href="../../Common/ipmi_configuration.dita"/>
+ <topicref href="../../Common/user_info.dita"/>
+ <topicref href="../../Common/network_info.dita"/>
+ <topicref href="../../Common/ipmi_validation.dita"/>
+ <topicref href="../../Common/infrastructure_virtualization_settings.dita"/>
+</map>

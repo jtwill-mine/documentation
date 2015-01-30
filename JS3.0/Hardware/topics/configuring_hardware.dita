@@ -12,7 +12,7 @@
         <li>RAID Configuration</li>
       </ul></p>
   </body>
-  <topic id="ipmi_config" conref="../../Common/ipmi_configuration.dita#ipmi_config">
+  <!-- <topic id="ipmi_config" conref="../../Common/ipmi_configuration.dita#ipmi_config">
     <title/>
   </topic>
   <topic id="user_info" conref="../../Common/user_info.dita#user_info">
@@ -27,5 +27,5 @@
   <topic id="infrastructure_virtualization_settings"
     conref="../../Common/infrastructure_virtualization_settings.dita#infrastructure_virtualization_settings">
     <title/>
-  </topic>
+  </topic> -->
 </topic>

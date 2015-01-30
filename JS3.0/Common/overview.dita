@@ -6,7 +6,5 @@
     with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm>
     OpenStack Platform 5, on Dell R620, R720, and R720xd servers with Dell PowerEdge H710 disk
     controller; and the network with Dell Force10 S4810 and S55 Switches.</shortdesc>
-  <topic id="intended_audience" conref="../Common/intended_audience.dita#intended_audience">
-    <title/>
-  </topic>
+  
 </topic>

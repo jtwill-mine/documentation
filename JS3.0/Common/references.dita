@@ -8,8 +8,5 @@
         format="html" scope="external">openstack@dell.com</xref>.</p>
     <p>If you need additional services or implementation help, please contact your Dell sales representative.</p>
   </body>
-  <topic id="to_learn_more"
-    conref="../Common/to_learn_more.dita#to_learn_more">
-    <title></title>
-  </topic>
+  
 </topic>
