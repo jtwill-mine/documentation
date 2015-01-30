@@ -15,9 +15,13 @@
 
   <topicref href="../../Common/overview.dita"/>
 
-  <topicref href="../topics/foreman_vm_deployment.dita"/>
+  <topicref href="../topics/foreman_vm_deployment.dita">
+    <mapref href="foreman_vm_deployment.ditamap" format="ditamap"/>
+  </topicref>
   
   <topicref href="../topics/deploy-foreman-vm.sh_script.dita"/>
 
-  <topicref href="../../Common/references.dita"/>
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
 </map>
