@@ -15,7 +15,7 @@
     </ol>
   </body>
   
-  <topic id="satellite_server" conref="satellite_server.dita#satellite_server">
+  <!-- <topic id="satellite_server" conref="satellite_server.dita#satellite_server">
     <title/>
   </topic>
   
@@ -25,6 +25,6 @@
   
   <topic id="local_iso_sah" conref="local_iso_sah.dita#local_iso_sah">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>

@@ -52,8 +52,4 @@
   --name subscription_manager_password --value 'CHANGEME'</codeblock>
   </body>
   
-  <topic id="optional_proxy_settings" conref="optional_proxy_settings.dita#optional_proxy_settings">
-    <title/>
-  </topic>
-  
 </topic>
