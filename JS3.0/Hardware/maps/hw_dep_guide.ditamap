@@ -14,13 +14,21 @@
 
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
 
-  <topicref href="../../Common/overview.dita"/>
+  <topicref href="../../Common/overview.dita">
+    <topicref href="../../Common/intended_audience.dita"/>
+  </topicref>
 
-  <topicref href="../topics/configuring_hardware.dita"/>
+  <topicref href="../topics/configuring_hardware.dita">
+    <mapref href="hw_configuration.ditamap" format="ditamap"/>
+  </topicref>
 
   <topicref href="../topics/equallogic_storage_group.dita"/>
 
-  <topicref href="../topics/network_configuration.dita"/>
+  <topicref href="../topics/network_configuration.dita">
+    <topicref href="../../Common/configuring_dell_force10_switches.dita"/>
+  </topicref>
 
-  <topicref href="../../Common/references.dita"/>
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
 </map>
