@@ -10,7 +10,7 @@
     </ol>
   </body>
   
-  <topic id="add_controller_hostgroup" conref="add_controller_hostgroup.dita#add_controller_hostgroup">
+  <!-- <topic id="add_controller_hostgroup" conref="add_controller_hostgroup.dita#add_controller_hostgroup">
     <title/>
   </topic>
   
@@ -20,6 +20,6 @@
   
   <topic id="add_compute_hostgroup" conref="add_compute_hostgroup.dita#add_compute_hostgroup">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>
