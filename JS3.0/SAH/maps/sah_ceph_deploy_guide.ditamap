@@ -12,7 +12,11 @@
   <topicref href="../../Common/trademarks.dita"/>
   <topicref href="../../Common/notes_cautions_warnings.dita"/>
   <topicref href="../../Common/overview.dita"/>
-  <topicref href="../topics/ceph_ice_vm_deployment.dita"/>
+  <topicref href="../topics/ceph_ice_vm_deployment.dita">
+    <mapref href="ceph_ice_vm_deployment.ditamap" format="ditamap"/>
+  </topicref>
   <topicref href="../topics/deploy-ceph-vm.sh_script.dita"/>
-  <topicref href="../../Common/references.dita"/>
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
 </map>
