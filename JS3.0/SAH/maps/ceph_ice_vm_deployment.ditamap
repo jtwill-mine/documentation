@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Ceph ICE VM Deployment Map</title>
+ <topicref href="../topics/setup_ceph_deploy.dita"/>
+ <topicref href="../topics/configure_ceph_deploy.dita"/>
+ <topicref href="../topics/installing_ceph_vm.dita"/>
+ <topicref href="../topics/next_steps_ceph_deploy.dita"/>
+</map>
