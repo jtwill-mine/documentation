@@ -15,6 +15,7 @@
       <li>14 R730xd Storage Nodes or EqualLogic Arrays, or</li>
       <li>Dell EqualLogic Arrays</li>
     </ul>
-    <note>You can use a combination of the two options that does not exceed a total of 20 servers or 30 rack units.</note>
+    <note>You can use a combination of the three options that does not exceed a total of 20 servers
+      or 30 rack units.</note>
   </body>
 </topic>
