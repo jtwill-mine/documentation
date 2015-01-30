@@ -12,12 +12,5 @@
     
   </body>
   
-  <topic id="add_bonding_parameter" conref="add_bonding_parameter.dita#add_bonding_parameter">
-    <title/>
-  </topic>
-  
-  <topic id="bonding_parameters" conref="bonding_parameters.dita#bonding_parameters">
-    <title/>
-  </topic>
   
 </topic>

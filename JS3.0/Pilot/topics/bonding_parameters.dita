@@ -7,7 +7,7 @@
     <p>When the parameters are accessed by the snippet, carriage returns are are stripped from the input. This means that carriage returns can be used for readability when setting the parameter values.</p>
       <note>Use carriage returns <b>only</b> between array elements, and not within the array elements themselves.</note>
   </body>
-  
+  <!--
   <topic id="bonds_parameter" conref="bonds_parameter.dita#bonds_parameter">
     <title/>
   </topic>
@@ -18,6 +18,6 @@
   
   <topic id="bond_opts_parameter" conref="bond_opts_parameter.dita#bond_opts_parameter">
     <title/>
-  </topic>
+  </topic> -->
   
 </topic>
