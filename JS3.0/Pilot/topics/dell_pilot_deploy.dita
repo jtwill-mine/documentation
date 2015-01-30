@@ -607,7 +607,7 @@ Parameters:</msgblock>
 
     <p>For example:</p>
 
-    <msgblock>'( "[bond0]="mode=active-passive" )'</msgblock>
+    <msgblock>'( "[bond0]="mode=balance-tlb" )'</msgblock>
 
     <p>Create the three needed parameters using the <b>hammer host
     set-parameter </b>command. Replace the <b>HOST_ID</b>,<b> VLAN</b>, and<b>
