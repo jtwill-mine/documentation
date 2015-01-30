@@ -18,5 +18,7 @@
   <topicref href="../topics/foreman_hammer_config_info.dita">
     <mapref href="foreman_hammer_config_info.ditamap" format="ditamap"/>
   </topicref>
-  <topicref href="../../Common/references.dita"/>
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
 </map>
