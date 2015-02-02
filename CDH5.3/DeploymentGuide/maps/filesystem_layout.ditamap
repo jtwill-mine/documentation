@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Filesystem Layout Map</title>
+ <topicref href="../topics/fs_layout_infra_nodes.dita"/>
+ <topicref href="../topics/fs_layout_data_nodes.dita"/>
+ <topicref href="../topics/swap_settings.dita"/>
+ <topicref href="../topics/filesystems_and_parameters.dita"/>
+</map>
