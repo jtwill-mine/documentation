@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fs_layout_infra_nodes">
+  <title>Infrastructure Nodes</title>
+  <shortdesc>The Infrastructure nodes (Active, Standby, HA, and Edge) are configured with a RAID 10 set using all available drives. This provides a level of redundancy in case of a drive failure, but still provides high performance.</shortdesc>
+  <body>
+    <p>Dell recommends the following partition layout for this set of machines.</p>
+    <note>This should already have been completed.</note>
+    <table frame="all" rowsep="1" colsep="1" id="table_infra_nodes_parttions">
+      <title>Infrastructure Nodes Partitions</title>
+      <tgroup cols="5">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Partition</entry>
+            <entry>Name</entry>
+            <entry>Size</entry>
+            <entry>File System Type</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>/dev/sda1</entry>
+            <entry>/boot/efi</entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>EFI boot partition</entry>
+          </row>
+          <row>
+            <entry>/dev/sda2</entry>
+            <entry>/boot</entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>Contains BIOS boot files that must be within first 2GB of disk</entry>
+          </row>
+          <row>
+            <entry>/dev/sda3</entry>
+            <entry>pv.01</entry>
+            <entry>Auto</entry>
+            <entry>N/A</entry>
+            <entry>Physical volume for remaining space</entry>
+          </row>
+          <row>
+            <entry>VG</entry>
+            <entry>pv.01</entry>
+            <entry>Auto</entry>
+            <entry>N/A</entry>
+            <entry>Logical volume for filesystems</entry>
+          </row>
+          <row>
+            <entry>LV_ROOT</entry>
+            <entry>/</entry>
+            <entry>100 GB</entry>
+            <entry>ext4</entry>
+            <entry>Root filesystem</entry>
+          </row>
+          <row>
+            <entry>LV_SWAP</entry>
+            <entry>&lt;swap></entry>
+            <entry>3072 MB</entry>
+            <entry>ext4</entry>
+            <entry>Operating system swap space partition</entry>
+          </row>
+          <row>
+            <entry>LV_HOME</entry>
+            <entry>/home</entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>User home directories</entry>
+          </row>
+          <row>
+            <entry>LV_VAR</entry>
+            <entry>/var</entry>
+            <entry>Remaining space</entry>
+            <entry>ext4</entry>
+            <entry>Contains variable data like system logging files, databases, mail and printer
+              spool directories, transient and temporary files</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note>Dell does not recommend that a large swap space be configured. Swapping in a Hadoop
+      cluster should be avoided, due to the larger and random performance degradation that can
+      result. See <xref href="swap_settings.dita#swap_settings"/>.</note>
+  </body>
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="filesystems_and_parameters">
+  <title>File Systems and Parameters</title>
+  <shortdesc>Note the following:</shortdesc>
+  <body>
+    <ul>
+      <li>All file systems should be formatted using a Cloudera recommended file system type (i.e.,
+          <i>ext4</i>).</li>
+      <li>For administration purposes, Cloudera recommends that you mount all HDFS disks on the data
+        nodes with a naming pattern (e.g., /<i>data/1</i>, <i>/data/2</i>, <i>/data/3</i>,
+        etc.).</li>
+      <li>All file systems should be mounted by UUID numbers. This ensures that physical drives
+        always use the same file system mount point in case a drive is removed.</li>
+      <li>All file systems should have <cmdname>noatime</cmdname> and <cmdname>nodiratime</cmdname>
+        set. This results in a significant performance increase because file and directory access
+        times are not forced to be updated on read operations.</li>
+    </ul>
+  </body>
+</topic>
