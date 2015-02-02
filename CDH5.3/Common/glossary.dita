@@ -8,7 +8,7 @@
   </glossentry>
   <glossentry id="cdh">
     <glossterm>CDH</glossterm>
-    <glossdef>Cloudera Distribution for Hadoop</glossdef>
+    <glossdef>Cloudera Distribution for Apache Hadoop</glossdef>
   </glossentry>
   <glossentry id="clos">
     <glossterm>Clos</glossterm>

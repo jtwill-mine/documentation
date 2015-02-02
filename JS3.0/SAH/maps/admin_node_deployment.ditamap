@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Admin Node Deployment Map</title>
+ <topicref href="../topics/determine_pool_id_sah.dita"/>
+ <topicref href="../../Pilot/topics/optional_proxy_settings.dita"/>
+ <topicref href="../topics/customize_kickstart_file.dita"/>
+ <topicref href="../topics/make_kickstart_available.dita"/>
+ <topicref href="../topics/next_steps_sah_deploy.dita"/>
+</map>
