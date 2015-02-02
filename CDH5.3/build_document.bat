@@ -25,9 +25,13 @@ set CLASSPATH=%DITA_DIR%\lib\saxon\saxon9.jar;%DITA_DIR%\lib\saxon\saxon9-dom.ja
 set index=1
 SETLOCAL ENABLEDELAYEDEXPANSION
 FOR /R %%f IN (*.ditamap) DO (
-   SET file!index!=%%f
-   ECHO !index! - %%~nxf
-   SET /A index=!index!+1
+REM   FINDSTR /I /C:"topicmeta" "%%f"
+   
+   IF NOT ERRORLEVEL 1 (
+      SET file!index!=%%f
+      ECHO !index! - %%~nxf
+      SET /A index=!index!+1
+   )
 )
 
 SETLOCAL DISABLEDELAYEDEXPANSION
