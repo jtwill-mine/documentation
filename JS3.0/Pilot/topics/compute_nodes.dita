@@ -7,7 +7,7 @@
     <p>One bond connects to the Nova Public network, while the other bond connects to the Nova Private, Private_API, and Storage networks. Each network on the second bond are vLAN tagged.</p>
     <ol>
       <li>Set the <b>bonds</b>, <b>bond_ifaces</b>, and <b>bond_opts</b> parameters for each compute node.</li>
-      <li>Make sure that the <b>bond_opts</b> sets the <b>MODE</b> to <i>balance-tlb</i> and <b>PROMISC</b> to <i>yes</i>.<p>For example:</p>
+      <li>Make sure that the <b>bond_opts</b> sets the <b>MODE</b> to <i>balance-tlb miimon=100</i> and <b>PROMISC</b> to <i>yes</i>.<p>For example:</p>
         <codeblock># hammer host set-parameter --host-id HOST_ID --name bonds \
   --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
   [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
@@ -18,7 +18,7 @@
   --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
 
 # hammer host set-parameter --host-id HOST_ID --name bond_opts \
---value '( [bond0]="mode=balance-tlb PROMISC=yes" [bond1]="mode=balancetlb
+--value '( [bond0]="mode=balance-tlb miimon=100 PROMISC=yes" [bond1]="mode=balancetlb
 PROMISC=yes")'</codeblock></li>
       <li>Execute the following command to make the RPM version locking file available during
           provisioning.<ol id="ol_qkd_mxw_kq">
