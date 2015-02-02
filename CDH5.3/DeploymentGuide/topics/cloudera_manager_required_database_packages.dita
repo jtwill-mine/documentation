@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_manager_required_database_packages">
+  <title>Cloudera Manager Required Database Packages</title>
+  <shortdesc>You must select one of the following database packages for the Cloudera Manager data store:</shortdesc>
+  <body>
+    <ul>
+      <li>MySQL v5.5 or v5.6</li>
+      <li>PostgreSQL v8.1, v8.4, or v9.2</li>
+      <li>Oracle v11g Release 2</li>
+    </ul>
+    <p>For more information about required packages and supported databases, see:</p>
+    <p><xref
+        href="http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/cdh_ig_req_supported_versions.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>

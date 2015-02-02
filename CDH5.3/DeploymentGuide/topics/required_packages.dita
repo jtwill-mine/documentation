@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="required_packages">
+  <title>Required Packages</title>
+  <body>
+    <p>This topic discusses:</p>
+    <ul>
+      <li><xref
+          href="cloudera_manager_required_database_packages.dita#cloudera_manager_required_database_packages"
+        /></li>
+      <li><xref href="checking_and_installing_packages.dita#checking_and_installing_packages"/></li>
+    </ul>
+  </body>
+</topic>
