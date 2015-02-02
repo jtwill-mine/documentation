@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="perc_h730_data_raid_settings">
+  <title>PERC-H730-Specific Data Nodes RAID Settings</title>
+  <body>
+    <p>Note that:</p>
+    <ul>
+      <li>Rear flex-bay drives are a single RAID 1 set.</li>
+      <li>Front drives are one RAID 0 set per device.</li>
+    </ul>
+    <table frame="all" rowsep="1" colsep="1" id="table_ugb_lmh_yq">
+      <title>PERC-H730 BIOS Settings for Data Nodes</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Screen</entry>
+            <entry>Setting</entry>
+            <entry>Parameter</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Controller Management</entry>
+            <entry>Personality Mode</entry>
+            <entry>RAID Mode</entry>
+          </row>
+          <row>
+            <entry>Controller Management</entry>
+            <entry>Enable Controller BIOS</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Virtual Disk Management</entry>
+            <entry>Virtual Disk 0</entry>
+            <entry>Include the Two Flex Bay Drives, RAID 1</entry>
+          </row>
+          <row>
+            <entry>Virtual Disk Management</entry>
+            <entry>Virtual Disk 0 Read Policy</entry>
+            <entry>Adaptive Read Ahead Virtual</entry>
+          </row>
+          <row>
+            <entry>Virtual Disk Management</entry>
+            <entry>Virtual Disk 0 Write Policy</entry>
+            <entry>Write Back</entry>
+          </row>
+          <row>
+            <entry>Configuration Management</entry>
+            <entry>Remaining Drives</entry>
+            <entry>Convert to Non-RAID Disk</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

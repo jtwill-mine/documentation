@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="raid_config">
+  <title>RAID Configuration</title>
+  <body>
+    <p>You must perform RAID configuration manually, using the option ROM for the RAID controller.
+      For more information on configuring your controller please see the <xref
+        href="http://www.dell.com/support/home/us/en/04/product-support/product/poweredge-rc-h730/manuals"
+        format="html" scope="external">Dell PowerEdge RAID Controller (PERC) 9 User’s
+      Guide</xref>.</p>
+    <ul>
+      <li>Infrastructure nodes should be set as RAID 10, spanning all drives on the system.</li>
+      <li>Data nodes should be set as Raid 1 for the two Flex Bay Drives of the system and HBA pass through (JBOD) for the data drives.</li>
+    </ul>
+  </body>
+</topic>
