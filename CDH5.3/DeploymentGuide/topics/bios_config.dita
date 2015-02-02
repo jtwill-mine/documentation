@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bios_config">
+  <title>BIOS Configuration</title>
+  <shortdesc>This section describes manually configuring Dell R730 and R730xd server hardware for
+    the Dell | Cloudera Apache Hadoop Solution with Red Hat Enterprise Linux:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="ipmi_config.dita#ipmi_config"/></li>
+      <li><xref href="primary_bios_settings.dita#primary_bios_settings"/></li>
+      <li><xref href="infrastructure_node_settings.dita#infrastructure_node_settings"/></li>
+      <li><xref href="data_node_settings.dita#data_node_settings"/></li>
+    </ul>
+  </body>
+</topic>

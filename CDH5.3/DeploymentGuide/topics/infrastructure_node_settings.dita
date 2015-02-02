@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="infrastructure_node_settings">
+  <title>Infrastructure Node Settings</title>
+  <shortdesc>This section describes required settings for R730 Infrastructure nodes (Cloudera Manager node, optional administration node, HDFS active and standby nodes, etc.).</shortdesc>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_p3p_vsg_yq">
+      <title>R730 Infrastructure Settings</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Type</entry>
+            <entry>Setting</entry>
+            <entry>State</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Boot Settings</entry>
+            <entry>BootMode</entry>
+            <entry>UEFI</entry>
+          </row>
+          <row>
+            <entry>Boot Option Settings</entry>
+            <entry>UEFI Boot Sequence</entry>
+            <entry>Integrated RAID first</entry>
+          </row>
+          <row>
+            <entry>Memory Settings</entry>
+            <entry>System Memory Testing</entry>
+            <entry>Disabled</entry>
+          </row>
+          <row>
+            <entry>Memory Settings</entry>
+            <entry>Memory Operating Mode</entry>
+            <entry>Optimzer Mode</entry>
+          </row>
+          <row>
+            <entry>Memory Settings</entry>
+            <entry>Node Interleaving</entry>
+            <entry>Disabled</entry>
+          </row>
+          <row>
+            <entry>Memory Settings</entry>
+            <entry>Snoop Mode</entry>
+            <entry>Early Snoop</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Logical Processor</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>QPI Speed</entry>
+            <entry>Maximum Data Rate</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Alternate RTID Setting</entry>
+            <entry>Disabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Adjacent Cache Line Prefetch</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Hardware Prefetcher</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>DCU Streamer Prefetcher</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>DCU IP Prefetcher</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Execute Disable</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Logical Processor Idling</entry>
+            <entry>Disabled</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Number of cores per Processor</entry>
+            <entry>All</entry>
+          </row>
+          <row>
+            <entry>Processor Settings</entry>
+            <entry>Processor 64-bit Support</entry>
+            <entry>Yes</entry>
+          </row>
+          <row>
+            <entry>Integrated Devices</entry>
+            <entry>Integrated RAID Controller</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Integrated Devices</entry>
+            <entry>I/OAT DMA Engine</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Integrated Devices</entry>
+            <entry>SR-IOV Global Enable</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>Integrated Devices</entry>
+            <entry>OS Watchdog Timer</entry>
+            <entry>Disabled</entry>
+          </row>
+          <row>
+            <entry>Integrated Devices</entry>
+            <entry>Memory Mapped I/O above 4GB</entry>
+            <entry>Enabled</entry>
+          </row>
+          <row>
+            <entry>System Profile Settings</entry>
+            <entry>System Profile</entry>
+            <entry>Performance</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
