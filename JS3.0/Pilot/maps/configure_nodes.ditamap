@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Configure Nodes Map</title>
+ <topicref href="../topics/add_controller_hostgroup.dita"/>
+ <topicref href="../topics/configure_controller_node_parameters.dita">
+  <topicref href="../topics/enable_services.dita"/>
+ </topicref>
+ <topicref href="../topics/add_compute_hostgroup.dita"/>
+</map>

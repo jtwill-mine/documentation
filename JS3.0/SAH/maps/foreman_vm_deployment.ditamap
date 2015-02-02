@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Foreman VM Deployment Map</title>
+ <topicref href="../topics/setup_foreman_deploy.dita"/>
+ <topicref href="../topics/configure_foreman_deploy.dita"/>
+ <topicref href="../topics/installing_foreman_vm.dita"/>
+ <topicref href="../topics/foreman_password.dita"/>
+ <topicref href="../topics/next_steps_foreman_deploy.dita"/>
+</map>

@@ -21,7 +21,7 @@
     </ul>
   </body>
   
-  <topic id="determine_pool_id_sah" conref="determine_pool_id_sah.dita#determine_pool_id_sah">
+  <!-- <topic id="determine_pool_id_sah" conref="determine_pool_id_sah.dita#determine_pool_id_sah">
     <title/>
   </topic>
   
@@ -39,7 +39,7 @@
   
   <topic id="next_steps_sah_deploy" conref="next_steps_sah_deploy.dita#next_steps_sah_deploy">
     <title/>
-  </topic>
+  </topic> -->
   
    
 </topic>
