@@ -607,7 +607,7 @@ Parameters:</msgblock>
 
     <p>For example:</p>
 
-    <msgblock>'( "[bond0]="mode=balance-tlb" )'</msgblock>
+    <msgblock>'( "[bond0]="mode=balance-tlb miimon=100" )'</msgblock>
 
     <p>Create the three needed parameters using the <b>hammer host
     set-parameter </b>command. Replace the <b>HOST_ID</b>,<b> VLAN</b>, and<b>
@@ -633,7 +633,7 @@ Parameters:</msgblock>
     networks. Each network on the second bond are VLAN tagged. </p><p>Set the
     <b>bonds, bond_ifaces,</b> and<b> bond_opts</b> parameters for each
     compute node. </p><p>Make sure the <b>bond_opts</b> sets the<b>
-    </b><b>MODE</b> to balance-tlb and <b>PROMISC</b> to yes. </p><p>An
+    </b><b>MODE</b> to balance-tlb miimon=100 and <b>PROMISC</b> to yes. </p><p>An
     example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
  [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
@@ -642,7 +642,7 @@ Parameters:</msgblock>
 # hammer host set-parameter --host-id HOST_ID --name bond_ifaces \
  --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
 # hammer host set-parameter --host-id HOST_ID --name bond_opts \
- --value '( [bond0]="mode=balance-tlb PROMISC=yes" [bond1]="mode=balance-tlb PROMISC=yes")</msgblock></section>
+ --value '( [bond0]="mode=balance-tlb  miimon=100 PROMISC=yes" [bond1]="mode=balance-tlb  miimon=100 PROMISC=yes")</msgblock></section>
 
     <section><p/><title>Set Host Update Parameters</title></section>
 
