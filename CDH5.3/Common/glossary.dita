@@ -27,6 +27,10 @@
     <glossterm>EoR</glossterm>
     <glossdef>End-of-row switch/router</glossdef>
   </glossentry>
+  <glossentry id="hba">
+    <glossterm>HBA</glossterm>
+    <glossdef>Host Bus Adapter</glossdef>
+  </glossentry>
   <glossentry id="hdfs">
     <glossterm>HDFS</glossterm>
     <glossdef>Hadoop File System</glossdef>
@@ -34,6 +38,10 @@
   <glossentry id="ipmi">
     <glossterm>IPMI</glossterm>
     <glossdef>Intelligent Platform Management Interface</glossdef>
+  </glossentry>
+  <glossentry id="jbod">
+    <glossterm>JBOD</glossterm>
+    <glossdef>Just a Bunch of Disks</glossdef>
   </glossentry>
   <glossentry id="lom">
     <glossterm>LOM</glossterm>
