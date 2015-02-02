@@ -21,7 +21,7 @@
  <topicref href="../topics/installation_prerequisites.dita">
   <mapref href="installation_prerequisites.ditamap" format="ditamap"/>
  </topicref>
- <topicref href="../topics/node_definitions.dita"/>
+ <topicref href="../../Common/node_definitions.dita"/>
  <topicref href="../topics/bios_config.dita">
   <mapref href="bios_config.ditamap" format="ditamap"/>
  </topicref>
