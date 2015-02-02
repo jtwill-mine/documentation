@@ -18,8 +18,8 @@
   --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
 
 # hammer host set-parameter --host-id HOST_ID --name bond_opts \
---value '( [bond0]="mode=balance-tlb miimon=100 PROMISC=yes" [bond1]="mode=balancetlb
-PROMISC=yes")'</codeblock></li>
+--value '( [bond0]="mode=balance-tlb miimon=100 PROMISC=yes" \
+[bond1]="mode=balance-tlb miimon=100 PROMISC=yes" )'</codeblock></li>
       <li>Execute the following command to make the RPM version locking file available during
           provisioning.<ol id="ol_qkd_mxw_kq">
           <li>Replace <b>HOST_ID</b> with the host ID and <b>FOREMAN_SERVER</b> with the IP address
