@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Required Packages Map</title>
+ <topicref href="../topics/cloudera_manager_required_database_packages.dita"/>
+ <topicref href="../topics/checking_and_installing_packages.dita"/>
+</map>
