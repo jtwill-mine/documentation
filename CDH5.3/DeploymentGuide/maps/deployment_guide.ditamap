@@ -25,6 +25,9 @@
  <topicref href="../topics/bios_config.dita">
   <mapref href="bios_config.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/raid_config.dita">
+  <mapref href="raid_config.ditamap" format="ditamap"/>
+ </topicref>
   
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
