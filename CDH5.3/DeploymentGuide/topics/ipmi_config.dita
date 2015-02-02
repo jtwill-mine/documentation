@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ipmi_config">
+  <title>IPMI Configuration</title>
+  <shortdesc>You must perform configuration of the iDRAC on supported systems. Dell recommends that you configure these settings from the iDRAC web interface, or directly on the node console:</shortdesc>
+  <body>
+    <ul>
+      <li>User Information</li>
+      <li>Network Configuration</li>
+      <li>IPMI Validation</li>
+    </ul>
+  </body>
+</topic>

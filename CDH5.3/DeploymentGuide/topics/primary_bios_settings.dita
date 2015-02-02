@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="primary_bios_settings">
+  <title>Primary BIOS Settings</title>
+  <body>
+    <p>The primary BIOS configurations for the Dell Red Hat Cloudera solutions are for Infrastructure nodes and data nodes.</p>
+    <ul>
+      <li>For more information about Dell PowerEdge R730xd BIOS settings, please see the <xref
+          href="http://www.dell.com/support/home/us/en/04/product-support/product/poweredge-r730/manuals"
+          format="html" scope="external">Dell PowerEdge R730 and R730xd Owner's Manual</xref>.</li>
+    </ul>
+    <note>Dell recommends that you perform BIOS updates on a regular basis. It is particularly important that your operating system firmware be up to date prior to installing Cloudera Manager.</note>
+  </body>
+</topic>
