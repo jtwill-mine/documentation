@@ -31,6 +31,9 @@
  <topicref href="../topics/file_system_layout.dita">
   <mapref href="filesystem_layout.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/required_packages.dita">
+  <mapref href="required_packages.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
