@@ -5,11 +5,6 @@
   <body>
     <p>The bundle workbooks are designed to help configure the cluster.  Follow the steps outlined to setup your network.</p>
       <ol>
-        <li>Fill each workbook page with all information marked required:<ol id="ol_fdv_lkw_yp">
-          <li>On the switch config page fill in each device name, NIC connected to port.</li>
-          <li>Using your planning sheet and vLAN information, mark which vlan is either untagged or
-            tagged for each port connected. Not all vLAN will be used on each port.</li>
-        </ol></li>
         <li>Using the workbook you can now create your configuration:<ol id="ol_ljw_nkw_yp">
           <li>Individual Port Config Example for
             S55<codeblock>no ip address
@@ -37,11 +32,16 @@ int vlan 300
 tagged TenGigabitEthernet 0/0-47
 int vlan 300
 untagged TenGigabitEther 0/1-10
-!</codeblock></li><li>General switch options for the S55 and S4810:<codeblock>!
+!</codeblock></li><li>General switch options for the S55 and
+            S4810:<codeblock>!
 hostname YOUR_HOSTNAME
 !
-username Tome password 7 MYpassword 1 privilege 15 
+username Myname password 7 MYpassword 1 privilege 15 
 ! 
+interface managment 0/0
+ip address 192.168.100.1/24
+no shutdown
+!
 protocol spanning-tree rstp 
 no disable 
 hello-time 1 
@@ -65,19 +65,36 @@ advertise med
 no disable 
 !
 reload-type normal-reload
-!</codeblock></li><li>How to create a VLT Domain on the S4810:<codeblock>! 
-vlt domain 899 
-peer-link port-channel 100 
-primary-priority 4096 
-unit-id 0 
+!</codeblock></li><li>How to create a VLT Domain on the
+            S4810:<codeblock>! 
 !
-! 
+intfrace fortygigE 0/48
+no switchport
+no ip address
+no shutdown
+!
+interface fortygigE 0/56
+no switchport
+no ip address
+no shutdown
+!
 interface Port-channel 100
 description Connection to VLT peer
 no ip address
-channel-member fortyGigE 0/48
+channel-member fortyGigE 0/48,56
 no shutdown
-!</codeblock></li>
+!
+vlt domain 899 
+peer-link port-channel 100
+backup-destination  192.168.100.2
+    #IP address of the interface on the remote VLT peer to be used as the endpoint of the VLT
+    #backup link for sending out-of-band hello messages
+primary-priority 4096 
+    #set this primary-priority to a higher number like 8192 on the other switch
+unit-id 0
+    #set this to 1 on the other machine
+!
+</codeblock></li>
         </ol></li>
       </ol>
       <note class="- topic/note ">You do not need to add the port-channel or the vlt to a vLAN. All vLANs will be passed on it.</note>

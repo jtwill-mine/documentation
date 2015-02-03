@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="workbook_review">
+    <title>How to use the workbook</title>
+
+<body><p>The Solution Workbook is setup to allow the installers to use the same information to program the switches and build the configuration for each node</p> <ol>
+    <li>Fill each workbook page with all information marked required:<ol id="ol_fdv_lkw_yp">
+        <li>On the switch config page fill in each device name, NIC connected to port.</li>
+        <li>Using your planning sheet and vLAN information, mark which vlan is either untagged or
+            tagged for each port connected. Not all vLAN will be used on each port.</li>
+        <li>The workbook gives the information you need to program the switches.  Below is an
+            example from an installation.<table id="table_smg_tll_xq">
+                <tgroup cols="8">
+                    <colspec colnum="1" colname="col1"/>
+                    <colspec colnum="2" colname="col2"/>
+                    <colspec colnum="3" colname="col3"/>
+                    <colspec colnum="4" colname="col4"/>
+                    <colspec colnum="5" colname="col5"/>
+                    <colspec colnum="6" colname="col6"/>
+                    <colspec colnum="7" colname="col7"/>
+                    <colspec colnum="8" colname="col8"/>
+                    <tbody>
+                        <row>
+                            <entry namest="col1" nameend="col2">Interface</entry>
+                            <entry namest="col2" nameend="col3">Destination</entry>
+                            <entry namest="col3" nameend="col4">VLANs</entry>
+                            <entry namest="col4" nameend="col5">LAG</entry>
+                        </row>
+                        <row>
+                            <entry>Name</entry>
+                            <entry>Connector</entry>
+                            <entry>Device Name</entry>
+                            <entry>Port</entry>
+                            <entry>Untagged</entry>
+                            <entry>Tagged</entry>
+                            <entry>#</entry>
+                            <entry>Mode</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/0</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 1 (R720)</entry>
+                            <entry>p5p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300,500</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/1</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 2 (R720)</entry>
+                            <entry>p5p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300,500</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/2</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 3 (R720)</entry>
+                            <entry>p5p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300,500</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/3</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 4 (R720)</entry>
+                            <entry>p5p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300,500</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/4</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 5 (R720)</entry>
+                            <entry>p5p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300,500</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/5</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 6 (R720xd)</entry>
+                            <entry>p4p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/6</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 7 (R720xd)</entry>
+                            <entry>p4p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>Te 0/7</entry>
+                            <entry>- Empty -</entry>
+                            <entry>Node 8 (R720xd)</entry>
+                            <entry>p4p1</entry>
+                            <entry>150</entry>
+                            <entry>200,300</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></li>
+    </ol></li>
+    <li>This tells us the following:
+        <ol> 
+            <li>Switch ports TenGigabitEthernet 0/0 throught 0/4 will be connected to the servers at p5p1
+                nic interface, each port will need to be configured to accespt untagged traffic from
+                vlan 150 and tagged traffic from only vlan's 200, 300, and 500.</li>
+            <li>Switch ports TenGigabitEthernet 0/5 through 0/7 witll be connected to the servers at
+                p4p1 nic interface, each port will need to be configured to accespt untagged traffic
+                from vlan 150 and tagged traffic from only vlan's 200 and 300.</li>
+            <li>No Special configuration on the ports themselves.  This means they will not be part of
+                port-channel, use the below outline defaults and no ip associated with them.</li>
+        </ol></li></ol></body>
+</topic>
