@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ntp">
+  <title>Network Time Protocol</title>
+  <shortdesc>Over time, a computer's clock is prone to drift. This is problematic as Hadoop requires the computers on a network to share the same accurate time. Accurate time is also needed to ensure that file timestamps stay consistent.</shortdesc>
+  <body>
+    <p>The Network Time Protocol (NTP) is one way to provide clock accuracy in a network. NTP should be used to avoid time skew across the cluster. The NTP master time source can be either a local cluster node (i.e., user-supplied administration node) or a publicly-authoritative time source, such as <i>north-america.pool.ntp.org</i>.</p>
+    <note>See <xref href="http://www.pool.ntp.org/zone/north-america" format="html" scope="external"
+        >http://www.pool.ntp.org/zone/north-america</xref> for more information.</note>
+    <p>To check the NTP server settings, run the following
+      command:<codeblock>grep server /etc/ntp.conf
+ntpq -p</codeblock></p>
+  </body>
+</topic>
