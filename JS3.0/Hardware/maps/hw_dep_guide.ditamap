@@ -25,7 +25,11 @@
   <topicref href="../topics/equallogic_storage_group.dita"/>
 
   <topicref href="../topics/network_configuration.dita">
+    <topicref href="../../Common/howtousetheworkbook.xml" />
+      <topicref href="../../Common/force10_defaults.dita" />
     <topicref href="../../Common/configuring_dell_force10_switches.dita"/>
+  
+    
   </topicref>
 
   <topicref href="../../Common/references.dita">

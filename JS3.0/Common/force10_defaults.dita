@@ -4,7 +4,7 @@
     <title>Force 10 Switches Default Values for Solution</title>
     <body>
 <table frame="all" rowsep="1" colsep="1" id="table_mst_hnl_xq">
-    <title>Switch Port Defaults</title>
+    <title>Switch Port Defaults (The VLT ports are differnt and defined in the example.)</title>
     <tgroup cols="3">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>

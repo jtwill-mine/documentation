@@ -3,7 +3,7 @@
 <topic id="workbook_review">
     <title>How to use the workbook</title>
 
-<body> <ol>
+<body><p>The Solution Workbook is setup to allow the installers to use the same information to program the switches and build the configuration for each node</p> <ol>
     <li>Fill each workbook page with all information marked required:<ol id="ol_fdv_lkw_yp">
         <li>On the switch config page fill in each device name, NIC connected to port.</li>
         <li>Using your planning sheet and vLAN information, mark which vlan is either untagged or
