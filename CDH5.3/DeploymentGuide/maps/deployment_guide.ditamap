@@ -35,6 +35,9 @@
  <topicref href="../topics/required_packages.dita">
   <mapref href="required_packages.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/network_configuration.dita">
+  <mapref href="network_architecture.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
