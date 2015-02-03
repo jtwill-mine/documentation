@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="vlt_on_s4810">
+  <title>VLT on S4810</title>
+  <body>
+    <p>The second part of configuration involves the pod-interconnect switches that run VLT with each other.</p>
+    <fig id="s4810_vlt_interconnect">      
+      <title>S4810 VLT Interconnect</title>
+      <image href="../../Customization/OpenTopic/common/artwork/s4810_vlt_interconnect.png" align="left"/>
+    </fig>
+    <p>With the following steps we will configure VLT on the pair of S4810 switches that interconnect the racks. To configure virtual link trunking, you must create a VLT domain, configure a backup link and interconnect trunk, and connect the peer switches in a VLT domain to an attached access device (switch or server). But first RSTP should be configured, as a best practice, on the S4810 as well as the S60 switches.</p>
+    <codeblock>Force10_VLTpeer1(conf)#protocol spanning-tree rstp
+Force10_VLTpeer1(conf-rstp)#no disable
+Force10_VLTpeer1(conf-rstp)#bridge-priority 4096
+#Repeat the same on VLTPeer2 with a different bridge priority to make it the root.
+Force10_VLTpeer2(conf-rstp)#bridge-priority 0</codeblock>
+    <fig id="peer_1_vlt_configuration">      
+      <title>Peer 1 VLT Configuration</title>
+      <image href="../../Customization/OpenTopic/common/artwork/peer_1_vlt_configuration.png" align="left"/>
+    </fig>
+  </body>
+</topic>
