@@ -3,5 +3,7 @@
 <map>
  <title>Network Architecture Map</title>
  <topicref href="../topics/high_level_network_architecture.dita"/>
- <topicref href="../topics/ip_addressing.dita"/>
+ <topicref href="../topics/ip_addressing.dita">
+  <topicref href="../topics/sample_naming_and_addressing.dita"/>
+ </topicref>
 </map>
