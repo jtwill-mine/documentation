@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="active_standby_name_nodes">
+  <title>Active/Standby Name Nodes</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_cx1_vwn_yq">
+      <title>Active/Standby Name Nodes Network Connections</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Interface</entry>
+            <entry>Network Type</entry>
+            <entry>Teaming Type</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>BMC</entry>
+            <entry>BMC LAN</entry>
+            <entry>BMC port, no bond</entry>
+          </row>
+          <row>
+            <entry>LOM 1</entry>
+            <entry>Management LAN</entry>
+            <entry>Single NIC</entry>
+          </row>
+          <row>
+            <entry>TenGig 1</entry>
+            <entry>Cluster LAN</entry>
+            <entry>bond0</entry>
+          </row>
+          <row>
+            <entry>TenGig 2</entry>
+            <entry>Not Used</entry>
+            <entry>N/A</entry>
+          </row>
+          <row>
+            <entry>TenGig 3</entry>
+            <entry>Cluster LAN</entry>
+            <entry>bond0</entry>
+          </row>
+          <row>
+            <entry>TenGig 4</entry>
+            <entry>Not Used</entry>
+            <entry>N/A</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
