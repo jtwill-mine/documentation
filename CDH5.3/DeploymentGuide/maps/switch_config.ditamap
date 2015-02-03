@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Switch Configuration Map</title>
+ <topicref href="../topics/dell_force10_s55_s60_s4810_configs.dita"/>
+ <topicref href="../topics/dell_force10_rack_config.dita">
+  <topicref href="../topics/multi_rack_config.dita"/>
+ </topicref>
+</map>
