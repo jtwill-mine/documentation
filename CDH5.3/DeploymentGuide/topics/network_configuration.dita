@@ -10,7 +10,7 @@
       <li><xref href="cluster_networks_and_vlans.dita#cluster_networks_and_vlans"/></li>
       <li><xref href="node_interface_bonds.dita#node_interface_bonds"/></li>
       <li><xref href="dns.dita#dns"/></li>
-      <li></li>
+      <li><xref href="ntp.dita#ntp"/></li>
     </ul>
   </body>
 </topic>
