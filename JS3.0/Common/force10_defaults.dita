@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="force_10_default_values">
+    <title>Force 10 Switches Default Values for Solution</title>
+    <body>
+<table frame="all" rowsep="1" colsep="1" id="table_mst_hnl_xq">
+    <title>Switch Port Defaults</title>
+    <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+            <row>
+                <entry>CLI Command</entry>
+                <entry>Reccomended Default</entry>
+                <entry>Example</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>ip address</entry>
+                <entry>no ip address assigned</entry>
+                <entry>no ip address</entry>
+            </row>
+            <row>
+                <entry>portmode</entry>
+                <entry>set to Hybrid</entry>
+                <entry>portmode hybrid</entry>
+            </row>
+            <row>
+                <entry>switchport</entry>
+                <entry>enabled - after portmode hybrid executed</entry>
+                <entry>switchport</entry>
+            </row>
+            <row>
+                <entry>mtu</entry>
+                <entry>9252 on S55 and 12000 on S4810</entry>
+                <entry>mtu 9252 or mtu 12000</entry>
+            </row>
+            <row>
+                <entry>flowcontrol</entry>
+                <entry>flowcontrol receive on transmit off</entry>
+                <entry>flowcontrol rx on tx off</entry>
+            </row>
+            <row>
+                <entry>spanning-tree</entry>
+                <entry>Rapid Spanning Tree set to Edge-Port going to servers. </entry>
+                <entry>spanning-tree rstp edge-port</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+    </body>
+</topic>
