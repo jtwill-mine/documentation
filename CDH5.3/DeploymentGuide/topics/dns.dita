@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dns">
+  <title>Domain Name System</title>
+  <shortdesc>The cluster requires DNS resolution for operation. Many operations in the cluster are configured using a DNS name instead of an IP.</shortdesc>
+  <body>
+    <p>Slow DNS service can have an adverse effect on network operations. For this reason it is important that the cluster have fast authoritative DNS service to all hosts.</p>
+    <p>Dell recommends that the optional administration node attached to the cluster management network be setup with an authoritative DNS server. This server needs to have authoritative forward and reverse DNS records for each and every host that is a member of the cluster.</p>
+    <p>If you are using Cloudera BDR or DISTCP then external access and DNS resolution are required for all nodes in both clusters.</p>
+    <p>Information on how to setup DNS can be obtained at:</p>
+    <p><xref
+        href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-DNS_Servers.html"
+        format="html" scope="external"/></p>
+    <note>External DNS resolution is optional.</note>
+  </body>
+</topic>
