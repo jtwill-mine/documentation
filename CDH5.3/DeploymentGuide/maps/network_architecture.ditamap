@@ -4,6 +4,9 @@
  <title>Network Architecture Map</title>
  <topicref href="../topics/high_level_network_architecture.dita"/>
  <topicref href="../topics/ip_addressing.dita">
-  <topicref href="../topics/sample_naming_and_addressing.dita"/>
+  <topicref href="../topics/sample_naming_and_addressing.dita">
+   <topicref href="../topics/hadoop_rack_awareness.dita"/>
+  </topicref>
  </topicref>
+ <topicref href="../topics/cluster_networks_and_vlans.dita"/>
 </map>
