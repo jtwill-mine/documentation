@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_tempest_deploy">
+  <title>Configuration</title>
+  <shortdesc>To configure the Tempest VM deployment:</shortdesc>
+  <body>
+   <ol>
+     <li>Create a configuration file, named <codeph>tempest.cfg</codeph>, in the <codeph>/root</codeph> directory.<p>The file should look similar to this:</p><codeblock>
+rootpassword cr0wBar! 
+timezone America/Chicago
+smuser dellcloudsol 
+smpassword cr0wBar!
+smpool 8a85f987445e223801447c1e85555866
+
+# smproxy proxy_hostname:proxy_port
+smproxy ""
+smproxyuser ""
+smproxypassword ""
+
+hostname tempest.example.org
+
+
+gateway 192.168.18.1 
+#example: gateway 10.19.143.254
+nameserver 192.168.18.1 
+#example nameserver 10.19.143.247,10.19.143.248
+ntpserver ntp.us.dell.com
+
+
+# usually eth1 is the provisioning interface and eth0 is the public interface
+
+# Iface     IP               NETMASK
+ens3        192.168.18.14    255.255.255.0
+ens4        192.168.164.14   255.255.255.0</codeblock></li>
+     <li>Set the following variables in the <codeph>tempest.cfg</codeph> file:<table frame="all"
+       rowsep="1" colsep="1" id="table_tempest_vm_config_variables">
+          <title>Tempest VM Configuration Variables</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Parameter</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><varname>hostname</varname></entry>
+                <entry>The FQDN of the server.</entry>
+              </row>
+              <row>
+                <entry><varname>rootpassword</varname></entry>
+                <entry>The root user password for the system.</entry>
+              </row>
+              <row>
+                <entry><varname>timezone</varname></entry>
+                <entry>The timezone the system is in.</entry>
+              </row>
+              <row>
+                <entry><varname>smuser</varname></entry>
+                <entry>The user credential when registering with Subscription Manager.</entry>
+              </row>
+              <row>
+                <entry><varname>smpassword</varname></entry>
+                <entry>The user password when registering with Subscription Manager. The password
+                  must be enclosed in single quotes if it contains certain special
+                  characters.</entry>
+              </row>
+              <row>
+                <entry><varname>smpool</varname></entry>
+                <entry>The pool ID used when attaching the system to an entitlement.</entry>
+              </row>
+              <row>
+                <entry><varname>gateway</varname></entry>
+                <entry>The default gateway for the system.</entry>
+              </row>
+              <row>
+                <entry><varname>nameserver</varname></entry>
+                <entry>A comma-separated list of nameserver IP addresses.</entry>
+              </row>
+              <row>
+                <entry><varname>ntpserver</varname></entry>
+                <entry>A comma-separated list of time servers. This can consist of  IP addresses or
+                  FQDNs.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></li>
+     <li>Set the following variables <b>after</b> all the previous variables above are set:<table
+          frame="all" rowsep="1" colsep="1" id="table_tempest_vm_config_additional_variables">
+          <title>Additional Tempest VM Configuration Variables</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Parameter</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><varname>ens3</varname></entry>
+                <entry>This line specifies the IP address and network mask for the
+                    <codeph>ens3</codeph> interface. The line begins with <codeph>ens3</codeph>,
+                  followed by at least one space, the IP address, another set of spaces, and then
+                  the network mask.</entry>
+              </row>
+              <row>
+                <entry><varname>ens4</varname></entry>
+                <entry>This line specifies the IP address and network mask for the
+                    <codeph>ens4</codeph> interface. The line begins with <codeph>ens4</codeph>,
+                  followed by at least one space, the IP address, another set of spaces, and then
+                  the network mask.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></li>
+   </ol>
+  </body>
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="next_steps_tempest_deploy">
+  <title>Next Steps</title>
+  <shortdesc>After the Tempest virtual machine is installed, and the Tempest installer is executed:</shortdesc>
+  <body>
+    <ol>
+      <li>Configure Tempest instance for the environment. Once configured you will be able to run Tempest.</li>
+	  <li>
+	     The following tempest configuration script (/root/tempest/tools/config_tempest.py) can be used to generate the required tempest.conf.
+		 <codeblock>tools/config_tempest.py --create identity.uri [keyston_endpoint] identity.admin_username [os_admin_username] identity.admin_password [os_admin_password] identity.admin_tenant_name [admin_tenant_name]</codeblock>
+		 <p>Example:</p>
+		 <codeblock>tools/config_tempest.py --create identity.uri http://10.148.44.200:5000/v2.0 identity.admin_username admin identity.admin_password mypassword identity.admin_tenant_name admin</codeblock>		 
+	  </li>
+	  <li><p>For an overview of how to run Tempest see: <xref format="html"
+      href="https://github.com/redhat-openstack/tempest">https://github.com/redhat-openstack/tempest</xref></p>
+	  </li>
+    </ol>
+  </body>
+</topic>
