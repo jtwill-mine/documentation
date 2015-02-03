@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hadoop_rack_awareness">
+  <title>Hadoop Rack Awareness</title>
+  <shortdesc>Hadoop rack awareness takes a node's physical location into account when scheduling tasks and allocating storage. Cloudera Manager includes internal rack awareness scripts, but you must specify the racks in which the hosts in your cluster are located using Cloudera Manager.</shortdesc>
+  <body>
+    <p>If your cluster contains more than one rack, you should specify the rack for each host. HDFS and MapReduce will automatically use the racks that you specify. For more information, please see:</p>
+    <p><xref
+        href="http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/cm_mc_specify_rack.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>
