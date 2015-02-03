@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ip_addressing">
+  <title>IP Addressing</title>
+  <shortdesc>The IP addressing uses large subnets to support many machines on the cluster network. The cluster, management, and BMC/IPMI networks are Class B networks, with 65,536 IP addresses.</shortdesc>
+  <body>
+    <p>In these networks, the first 10 IP addresses are reserved for switches, routers, and firewalls. The Edge network is a Class C network, with 256 IP address. The first 10 IP addresses are reserved for switches, routers, and firewalls.</p>
+    <note>Each network's ".1" address is reserved for the network gateway.</note>
+    <table frame="all" rowsep="1" colsep="1" id="table_hhm_14n_yq">
+      <title>IP Addressing Scheme</title>
+      <tgroup cols="6">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+        <colspec colname="c6" colnum="6" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>LAN</entry>
+            <entry>Class</entry>
+            <entry>Network</entry>
+            <entry>Subnet Mask</entry>
+            <entry>Gateway</entry>
+            <entry>Broadcast</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Cluster</entry>
+            <entry>B</entry>
+            <entry>172.16.0.0</entry>
+            <entry>255.255.0.0</entry>
+            <entry>172.16.0.1</entry>
+            <entry>172.16.255.255</entry>
+          </row>
+          <row>
+            <entry>Management</entry>
+            <entry>B</entry>
+            <entry>172.17.0.0</entry>
+            <entry>255.255.0.0</entry>
+            <entry>172.17.0.1</entry>
+            <entry>172.17.255.255</entry>
+          </row>
+          <row>
+            <entry>BMC/IPMI</entry>
+            <entry>B</entry>
+            <entry>172.18.0.0</entry>
+            <entry>255.255.0.0</entry>
+            <entry>172.18.0.1</entry>
+            <entry>172.18.255.255</entry>
+          </row>
+          <row>
+            <entry>Edge</entry>
+            <entry>C</entry>
+            <entry>90.80.70.0</entry>
+            <entry>255.255.255.0</entry>
+            <entry>90.80.70.1</entry>
+            <entry>90.80.70.255</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>
