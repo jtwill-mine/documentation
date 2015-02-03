@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_config_goal">
+  <title>Ceph Configuration Goal</title>
+  <body>
+    <p>Multiple networks as defined in <xref href="#ceph_config_goal/table_network_config"
+        format="dita"/> are used in this example configuration. IP addresses are assigned
+      consistently on hosts that require access to multiple networks. An <codeph>/etc/hosts</codeph>
+      file is used for hostname resolution on the storage network.</p>
+    <note>This solution does not scale, and a larger name resolution system is recommended for
+      larger or production deployments.<table frame="all" rowsep="1" colsep="1"
+        id="table_network_config">
+        <title>Network Configuration</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Name</entry>
+              <entry>Range</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Provisioning</entry>
+              <entry>10.19.0.0/16</entry>
+              <entry>
+                <p>Server installation, updates and configuration</p>
+                <p><cmdname>Ceph-deploy</cmdname> connectivity</p>
+                <p>Calamari monitoring</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Storage</entry>
+              <entry>172.31.0.0/16</entry>
+              <entry>
+                <p>Ceph Client to Ceph communication</p>
+                <p>Ceph monitor to OSD communication</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Storage Cluster</entry>
+              <entry>172.30.0.0/16</entry>
+              <entry>Ceph OSD to OSD communication</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></note>
+  </body>
+</topic>

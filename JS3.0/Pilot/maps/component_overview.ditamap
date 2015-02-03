@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Component Overview Map</title>
+ <topicref href="../topics/what_is_openstack.dita"/>
+ <topicref href="../topics/what_is_redhat_openstack.dita"/>
+ <topicref href="../topics/nova.dita"/>
+ <topicref href="../topics/glance.dita"/>
+ <topicref href="../topics/cinder.dita"/>
+ <topicref href="../topics/ceph.dita"/>
+ <topicref href="../topics/ceph_storage_cluster.dita"/>
+ <topicref href="../topics/ceph_block_device.dita"/>
+ <topicref href="../topics/ice.dita"/>
+</map>

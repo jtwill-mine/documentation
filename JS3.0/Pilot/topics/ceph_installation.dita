@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_installation">
+  <title>Ceph Installation</title>
+  <shortdesc>This section discusses Ceph installation. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="ceph_requirements.dita#ceph_requirements"/></li>
+      <li><xref href="ceph_config_goal.dita#ceph_config_goal"/></li>
+      <li>TBD</li>
+    </ul>
+  </body>
+</topic>

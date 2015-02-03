@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Implementation Map</title>
+ <topicref href="../topics/ceph_preinstall_config_requirements.dita">
+  <topicref href="../topics/time_synch.dita"/>
+  <topicref href="../topics/nonroot_administrative_user.dita"/>
+  <topicref href="../topics/sudo_access.dita"/>
+  <topicref href="../topics/limiting_ssh_access.dita"/>
+  <topicref href="../topics/ssh_key_authentication.dita"/>
+  <topicref href="../topics/firewall_config_changes.dita"/>
+ </topicref>
+ <topicref href="../topics/ceph_installation.dita">
+  <topicref href="../topics/ceph_requirements.dita"/>
+  <topicref href="../topics/ceph_config_goal.dita"/>
+ </topicref>
+</map>

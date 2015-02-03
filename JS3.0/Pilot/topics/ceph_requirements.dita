@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_requirements">
+  <title>Ceph Requirements</title>
+  <shortdesc>Ceph requirements include:</shortdesc>
+  <body>
+    <ul>
+      <li>Access to ICE 1.2.2 release and updated <codeph>ceph-deploy</codeph> package</li>
+      <li>Ceph nodes installed with RHEL7 (document developed with 7.0)</li>
+      <li>SSH access allowed between the ICE Administration host and all Ceph hosts</li>
+      <li>SSH key access allowed from ICE Administration host to all Ceph Storage nodes</li>
+      <li>All host clocks are in alignment </li>
+      <li>All Ceph hosts are subscribed to the server <cmdname>yum</cmdname> repository groups
+          (<codeph>rhel-x86_64-server-7</codeph>)</li>
+      <li>All host packages are up to date</li>
+      <li>Selinux is in permissive mode on all Ceph hosts</li>
+    </ul>
+    <note>BZ 1127910 and BZ 1144559 are opened to track these issues.</note>
+  </body>
+</topic>
