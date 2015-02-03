@@ -59,6 +59,10 @@
     <glossterm>OS</glossterm>
     <glossdef>Operating system</glossdef>
   </glossentry>
+  <glossentry id="rstp">
+    <glossterm>RSTP</glossterm>
+    <glossdef>Rapid Spanning Tree Protocol</glossdef>
+  </glossentry>
   <glossentry id="siem">
     <glossterm>SIEM</glossterm>
     <glossdef>Security Information and Event Management</glossdef>
@@ -66,6 +70,14 @@
   <glossentry id="tor">
     <glossterm>ToR</glossterm>
     <glossdef>Top-of-rack switch/router</glossdef>
+  </glossentry>
+  <glossentry id="vlt">
+    <glossterm>VLT</glossterm>
+    <glossdef>Virtual Link Trunking</glossdef>
+  </glossentry>
+  <glossentry id="vrrp">
+    <glossterm>VRRP</glossterm>
+    <glossdef>Virtual Router Redundancy Protocol</glossdef>
   </glossentry>
   <glossentry id="yarn">
     <glossterm>YARN</glossterm>
