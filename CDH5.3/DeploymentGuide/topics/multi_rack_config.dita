@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="multi_rack_config">
+  <title>Multi-Rack Configuration</title>
+  <shortdesc>Once the single rack is deployed from the server and network perspective we can take a look at the multi-rack view, and then move on to configure the aggregation switches that connect the racks together.</shortdesc>
+  <body>
+    <p>This section shows the S4810 switch aggregating the clusters together to enable inter-rack traffic as well as the management network. As we saw there are two separate vLANs for data and management; all port-channels on the S4810 and ToR are tagged in these two vLANs.</p>
+    <p><xref href="#multi_rack_config/table_60_node_config" format="dita"/> and <xref
+        href="#multi_rack_config/multi-rack_view" format="dita"/> describe the network inventory
+      details in a full cluster of three racks.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_60_node_config">
+      <title>60-Node Network</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Total Racks</entry>
+            <entry>3 (15-20 nodes per rack)</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Top of Rack Switch</entry>
+            <entry>6x S60 (2 per rack)</entry>
+          </row>
+          <row>
+            <entry>Pod-interconnect Switch</entry>
+            <entry>2x S4810</entry>
+          </row>
+          <row>
+            <entry>Server</entry>
+            <entry>2RU R730/R730xd</entry>
+          </row>
+          <row>
+            <entry>Over-subscription at ToR</entry>
+            <entry>1:1</entry>
+          </row>
+          <row>
+            <entry>Modules in Each ToR</entry>
+            <entry>
+              <p>1x 12-2port Stacking</p>
+              <p>1x 10G -2 port u\Uplink</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <fig id="multi-rack_view">      
+      <title>Multi-Rack View</title>
+      <image href="../../Customization/OpenTopic/common/artwork/s4810_multi_rack_equipment.png" align="left"/>
+    </fig>
+  </body>
+</topic>
