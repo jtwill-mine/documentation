@@ -5,7 +5,7 @@
   <body>
     <codeblock>HOST_ID='15'
 
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 
 hammer host set-parameter --host-id  $HOST_ID --name nics \
   --value '([em2]="onboot static 192.168.110.127/255.255.255.0")'

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="hammer-deploy-ceph1">
   <title><cmdname>hammer-deploy-ceph1</cmdname></title>
+
   <body>
     <codeblock>NAME=rh7ss1
 
@@ -11,7 +13,7 @@ MAC=B8:CA:3A:67:17:4C
 
 IP=192.168.119.140
 
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
