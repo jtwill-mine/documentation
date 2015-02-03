@@ -43,6 +43,10 @@
     <glossterm>JBOD</glossterm>
     <glossdef>Just a Bunch of Disks</glossdef>
   </glossentry>
+  <glossentry id="lag">
+    <glossterm>LAG</glossterm>
+    <glossdef>Link Aggregation Group</glossdef>
+  </glossentry>
   <glossentry id="lom">
     <glossterm>LOM</glossterm>
     <glossdef>Local area network on motherboard</glossdef>
