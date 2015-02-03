@@ -11,5 +11,7 @@
  <topicref href="../topics/cluster_networks_and_vlans.dita"/>
  <topicref href="../topics/node_interface_bonds.dita">
   <topicref href="../topics/active_standby_name_nodes.dita"/>
+  <topicref href="../topics/edge_node_bonds.dita"/>
+  <topicref href="../topics/data_nodes_bonds.dita"/>
  </topicref>
 </map>
