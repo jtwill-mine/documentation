@@ -4,8 +4,7 @@
   <title>Networking and Network Services</title>
   <shortdesc>This Reference Architecture uses a starter configuration for networking, which provides
     access to OpenStack capabilities while reducing the initial complexity during evaluation. This
-    reference configuration is based on the Neutron networking services, with that there are several
-    choices in type backend networks that Neutron is based on, this solution is based on using the
+    reference configuration is based on the Neutron networking services using the <codeph>OpenVswitch</codeph> with the
       <codeph>"vlan"</codeph> option. </shortdesc>
   <body>
     <p>For a production system, additional networking and redundancy configurations are required. This 
