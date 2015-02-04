@@ -15,7 +15,7 @@ spanning-tree rstp edge-port</codeblock></li>
             S4810<codeblock>no ip address
 portmode hybrid
 switchport
-flowcontrol rx on tx off 
+flowcontrol rx on tx off
 spanning-tree rstp edge-port</codeblock></li><li>Configuring vLANs. With option portmode hybrid on each port, you can program one vLAN to be untagged and other vLANs as tagged. This will send all untagged traffic to the vLAN that is marked untagged. For example, DHCP Request will be placed on that vLAN, and a DHCP server listening on that vLAN will be able to respond.<p>Example vLAN config with overlapping tagged and untagged ports:</p><codeblock>nt vlan 100
 no ip address
 ! From your Spread Sheet
@@ -36,37 +36,37 @@ untagged TenGigabitEther 0/1-10
             S4810:<codeblock>!
 hostname YOUR_HOSTNAME
 !
-username Myname password 7 MYpassword 1 privilege 15 
-! 
+username Myname password 7 MYpassword 1 privilege 15
+!
 interface managment 0/0
 ip address 192.168.100.1/24
 no shutdown
 !
-protocol spanning-tree rstp 
-no disable 
-hello-time 1 
-max-age 6 
-forward-delay 4 
+protocol spanning-tree rstp
+no disable
+hello-time 1
+max-age 6
+forward-delay 4
 bridge-priority 16384
 !
 no ip telnet server enable
-!    
+!
 arp learn-enable
 !
 clock timezone EST -5
 !
 ip ssh server enable
-! 
-protocol lldp 
-advertise dot1-tlv port-protocol-vlan-id 
-advertise dot3-tlv max-frame-size 
-advertise management-tlv system-description system-name 
-advertise med 
-no disable 
+!
+protocol lldp
+advertise dot1-tlv port-protocol-vlan-id
+advertise dot3-tlv max-frame-size
+advertise management-tlv system-description system-name
+advertise med
+no disable
 !
 reload-type normal-reload
 !</codeblock></li><li>How to create a VLT Domain on the
-            S4810:<codeblock>! 
+            S4810:<codeblock>!
 !
 intfrace fortygigE 0/48
 no switchport
@@ -84,12 +84,12 @@ no ip address
 channel-member fortyGigE 0/48,56
 no shutdown
 !
-vlt domain 899 
+vlt domain 899
 peer-link port-channel 100
-backup-destination  192.168.100.2
+back-up destination  192.168.100.2
     #IP address of the interface on the remote VLT peer to be used as the endpoint of the VLT
     #backup link for sending out-of-band hello messages
-primary-priority 4096 
+primary-priority 4096
     #set this primary-priority to a higher number like 8192 on the other switch
 unit-id 0
     #set this to 1 on the other machine
