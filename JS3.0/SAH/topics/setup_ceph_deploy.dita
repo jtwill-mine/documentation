@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="setup_ceph_deploy">
   <title>Setup</title>
+
   <shortdesc>To set up the Ceph ICE VM deployment:</shortdesc>
+
   <body>
     <ol>
-      <li>Ensure that a copy of the <b>Red Hat Enterprise Server 7 Installation DVD</b> ISO is in the <codeph>/store/data/iso</codeph> directory</li>
-      <li>Copy the <cmdname>deploy-ceph-vm.sh</cmdname> script into the <codeph>/root</codeph> directory.</li>
+      <li>Ensure that a copy of the <b>Red Hat Enterprise Server 7
+      Installation DVD</b> ISO is in the <codeph>/store/data/iso</codeph>
+      directory</li>
+
+      <li><p>Several steps in this document use files to configure the
+      environment. These archive files are available from <b><xref
+      format="html"
+      href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p><p>Download
+      the dell-mgmt-node and dell-pilot-deploy archive (zip or tgz) files and
+      extract them into the /root directory as per the example
+      below.</p><codeblock># mkdir /root/pilot
+# cd /root/pilot
+# unzip /PATH/TO/FILE/dell-mgmt-node.zip or tar zxvf /PATH/TO/FILE/dell-mgmt-node.tgz
+# unzip /PATH/TO/FILE/dell-pilot-deploy.zip or tar zxvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock></li>
     </ol>
   </body>
 </topic>
