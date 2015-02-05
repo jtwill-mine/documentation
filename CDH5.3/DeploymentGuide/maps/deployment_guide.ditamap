@@ -45,6 +45,9 @@
   <mapref href="operating_sytem_settings.ditamap" format="ditamap"/>
  </topicref>
  <topicref href="../topics/operating_system_sw_updates.dita"/>
+ <topicref href="../topics/cloudera_configuration.dita">
+  <mapref href="cloudera_settings.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
