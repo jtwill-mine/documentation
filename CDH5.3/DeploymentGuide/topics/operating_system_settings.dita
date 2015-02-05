@@ -12,8 +12,8 @@
       <li><xref href="services_and_daemons.dita#services_and_daemons"/></li>
       <li><xref href="firewall_settings.dita#firewall_settings"/></li>
       <li><xref href="ports_listing.dita#ports_listing"/></li>
-      <li></li>
-      <li></li>
+      <li><xref href="disable_ipv6.dita#disable_ipv6"/></li>
+      <li><xref href="disable_network_manager.dita#disable_network_manager"/></li>
       <li></li>
       <li></li>
     </ul>

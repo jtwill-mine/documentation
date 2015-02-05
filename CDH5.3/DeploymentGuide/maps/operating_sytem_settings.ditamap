@@ -10,4 +10,6 @@
  <topicref href="../topics/services_and_daemons.dita"/>
  <topicref href="../topics/firewall_settings.dita"/>
  <topicref href="../topics/ports_listing.dita"/>
+ <topicref href="../topics/disable_ipv6.dita"/>
+ <topicref href="../topics/disable_network_manager.dita"/>
 </map>
