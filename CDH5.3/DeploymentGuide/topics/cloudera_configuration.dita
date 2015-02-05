@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_configuration">
+  <title>Cloudera Configuration</title>
+  <body>
+    <p>This section describes Cloudera-specific configuration settings that Dell recommends you set:</p>
+    <ul>
+      <li><xref href="yarn_settings.dita#yarn_settings"/></li>
+    </ul>
+  </body>
+</topic>
