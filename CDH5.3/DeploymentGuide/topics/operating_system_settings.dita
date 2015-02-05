@@ -14,8 +14,8 @@
       <li><xref href="ports_listing.dita#ports_listing"/></li>
       <li><xref href="disable_ipv6.dita#disable_ipv6"/></li>
       <li><xref href="disable_network_manager.dita#disable_network_manager"/></li>
-      <li></li>
-      <li></li>
+      <li><xref href="ssh_keys.dita#ssh_keys"/></li>
+      <li><xref href="user_accounts_and_groups.dita#user_accounts_and_groups"/></li>
     </ul>
   </body>
 </topic>
