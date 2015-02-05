@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ssh_keys">
+  <title>Secure Shell Keys</title>
+  <shortdesc>Password-less SSH access for the root user from the administration node and the Cloudera Manager node (usually the HA node) is required to access all nodes in the cluster for Cloudera Manager installation</shortdesc>
+  <body>
+    <p>To allow this access:</p>
+    <ol>
+      <li>Create the public and private keys by running the following command on all nodes as the <i>root</i> user:<codeblock>ssh-keygen</codeblock><p>The public keys for each machine will reside on those machines in the <i>~/.ssh/</i> directory, and are named according to the type of encryption that is chosen (i.e., <i>id_rsa.pub</i>).</p></li>
+      <li>Copy the pubic key from the administration node, and the Cloudera Manager node, to all nodes in the cluster.</li>
+      <li>Append the key to the <codeph>~/.ssh/authorized_keys</codeph> file on each of the nodes.</li>
+    </ol>
+    <p>Be sure to secure the authorized_keys file to ensure that the system is secure. For more information, please see:</p>
+    <p><xref
+        href="https://access.redhat.com/site/documentation/enUS/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>
