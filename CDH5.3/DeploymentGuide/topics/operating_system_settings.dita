@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operating_system_settings">
+  <title>Operating System Settings</title>
+  <body>
+    <p>This section describes how to configure the operating system for the Dell | Cloudera Apache Hadoop Solutions.
+      Topics convered include:</p>
+    <ul>
+      <li><xref href="process_limits.dita#process_limits"/></li>
+      <li><xref href="memory_management_settings.dita#memory_management_settings"/></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</topic>

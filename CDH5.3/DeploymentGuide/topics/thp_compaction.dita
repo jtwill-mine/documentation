@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="thp_compaction">
+  <title>Transparent Huge Page (THP) Compaction</title>
+  <shortdesc>Red Hat Enterprise Linux attempts to reduce the number of huge pages in use by defragmenting the used memory blocks. There is a performance cost to this operation.</shortdesc>
+  <body>
+    <p>Dell recommends that this functionality be turned off for a Hadoop cluster by executing the following command, and adding it to the <i>rc.local</i> file.</p>
+    <codeblock>echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag</codeblock>
+  </body>
+</topic>
