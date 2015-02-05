@@ -5,8 +5,7 @@
   <shortdesc>Before the Hadoop cluster has been deployed by Cloudera Manager:</shortdesc>
   <body>
     <ol>
-      <li>Verify access to <xref href="archive.cloudera.com" format="com" scope="external"
-          >archive.cloudera.com</xref> by running these
+      <li>Verify access to <i>archive.cloudera.com</i> by running these
         commands:<codeblock>curl -I archive.cloudera.com
 dig @&lt;<i>dns_server</i>&gt; archive.cloudera.com
 yum repolist
