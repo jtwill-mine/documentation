@@ -6,4 +6,8 @@
  <topicref href="../topics/memory_management_settings.dita">
   <topicref href="../topics/thp_compaction.dita"/>
  </topicref>
+ <topicref href="../topics/selinux_settings.dita"/>
+ <topicref href="../topics/services_and_daemons.dita"/>
+ <topicref href="../topics/firewall_settings.dita"/>
+ <topicref href="../topics/ports_listing.dita"/>
 </map>
