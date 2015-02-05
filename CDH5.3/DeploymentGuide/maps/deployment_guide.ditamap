@@ -54,6 +54,9 @@
  <topicref href="../topics/support.dita">
   <mapref href="support.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/related_rocumentation.dita">
+  <mapref href="related_documentation.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
