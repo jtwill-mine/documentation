@@ -51,6 +51,9 @@
  <topicref href="../topics/cluster_testing.dita">
   <mapref href="cluster_testing.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/support.dita">
+  <mapref href="support.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
