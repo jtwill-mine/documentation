@@ -51,7 +51,8 @@
     files and extract them into the /root directory as per the example
     below.</p>
 
-    <codeblock># cd /root
+    <codeblock># mkdir /root/pilot
+# cd /root/pilot
 # unzip /PATH/TO/FILE/dell-mgmt-node.zip or tar zxvf /PATH/TO/FILE/dell-mgmt-node.tgz
 # unzip /PATH/TO/FILE/dell-pilot-deploy.zip or tar zxvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock>
 
