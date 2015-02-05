@@ -67,6 +67,10 @@
     <glossterm>SIEM</glossterm>
     <glossdef>Security Information and Event Management</glossdef>
   </glossentry>
+  <glossentry id="thp">
+    <glossterm>THP</glossterm>
+    <glossdef>Transparent Huge Pages</glossdef>
+  </glossentry>
   <glossentry id="tor">
     <glossterm>ToR</glossterm>
     <glossdef>Top-of-rack switch/router</glossdef>
