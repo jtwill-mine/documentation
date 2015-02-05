@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="selinux_settings">
+  <title>Secure Linux Settings</title>
+  <shortdesc>Security Enhanced Linux (SELinux) is a kernel module and toolset to allow greater security control. The feature is not compatible with Cloudera Manager 5 and should not be installed, or should be disabled.</shortdesc>
+  <body>
+    <p>The following command will indicate if the feature is active:</p>
+    <codeblock>selinuxenabled || echo "disabled"</codeblock>
+  </body>
+</topic>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="firewall_settings">
+  <title>Firewall Settings</title>
+  <shortdesc>Cloudera suggests that all firewall software on and between nodes in the cluster be disabled.</shortdesc>
+  <body>
+    <ol>
+      <li>Check the firewall status by runing the following
+        commands:<codeblock>/sbin/chkconfig --list iptables
+/sbin/chkconfig --list ip6tables</codeblock></li>
+      <li>Disable the firewall by runing the following
+        commands:<codeblock>/sbin/chkconfig iptables off
+/sbin/chkconfig ip6tables off</codeblock></li>
+    </ol>
+  </body>
+</topic>
