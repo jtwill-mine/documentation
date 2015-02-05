@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cluster_testing">
+  <title>Cluster Testing</title>
+  <shortdesc>You should test your Hadoop cluster both before and after Cloudera Manager has deployed the cluster. The tests you perform will vary depending upon the deployment status:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="before_hadoop_cluster_deployment.dita#before_hadoop_cluster_deployment"/></li>
+      <li><xref href="after_hadoop_cluster_deployment.dita#after_hadoop_cluster_deployment"/></li>
+    </ul>
+  </body>
+</topic>

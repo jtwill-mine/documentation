@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="after_hadoop_cluster_deployment">
+  <title>After Hadoop Cluster Deployment</title>
+  <shortdesc>After The Hadoop cluster has been deployed by Cloudera Manager:</shortdesc>
+  <body>
+    <ol>
+      <li>Run the <b>Host Inspector</b> from the Cloudera Manager user interface.</li>
+      <li>Monitor Cloudera Manager health checks on a regular basis.</li>
+      <li>You may find it useful to run the <cmdname>teragen/terasort</cmdname> <cmdname>map/reduce</cmdname> jobs utilizing all cluster nodes for a period of time. For more information on <cmdname>terasort/teragen</cmdname> see the following link:</li>
+    </ol>
+    <p><xref
+        href="http://hadoop.apache.org/docs/current/api/org/apache/hadoop/examples/terasort/package-summary.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>
