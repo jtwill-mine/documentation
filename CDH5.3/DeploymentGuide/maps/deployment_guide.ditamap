@@ -41,6 +41,9 @@
  <topicref href="../topics/network_switches_config.dita">
   <mapref href="switch_config.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/operating_system_settings.dita">
+  <mapref href="operating_sytem_settings.ditamap" format="ditamap"/>
+ </topicref>
  <topicref href="../../Common/references.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
