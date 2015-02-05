@@ -18,7 +18,8 @@
       href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p><p>Download
       the dell-mgmt-node and dell-pilot-deploy archive (zip or tgz) files and
       extract them into the /root directory as per the example
-      below.</p><codeblock># cd /root
+      below.</p><codeblock># mkdir /root/pilot
+# cd /root/pilot
 # unzip /PATH/TO/FILE/dell-mgmt-node.zip or tar zxvf /PATH/TO/FILE/dell-mgmt-node.tgz
 # unzip /PATH/TO/FILE/dell-pilot-deploy.zip or tar zxvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock></li>
     </ol>
