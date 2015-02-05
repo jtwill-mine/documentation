@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="apache_hadoop_documentation">
+  <title>Apache Hadoop Documentation</title>
+  <shortdesc>For the latest Apache Hadoop documentation, please see:</shortdesc>
+  <body>
+    <p><xref href="http://hadoop.apache.org/" format="html" scope="external"/></p>
+  </body>
+</topic>
