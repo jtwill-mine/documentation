@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="before_hadoop_cluster_deployment">
+  <title>Before Hadoop Cluster Deployment</title>
+  <shortdesc>Before the Hadoop cluster has been deployed by Cloudera Manager:</shortdesc>
+  <body>
+    <ol>
+      <li>Verify access to <i>archive.cloudera.com</i> by running these
+        commands:<codeblock>curl -I archive.cloudera.com
+dig @&lt;<i>dns_server</i>&gt; archive.cloudera.com
+yum repolist
+more /etc/yum.repos.d/*</codeblock></li>
+    </ol>
+  </body>
+</topic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="user_accounts_and_groups">
+  <title>User Accounts and Groups</title>
+  <shortdesc>Cloudera Manager and CDH use several user accounts and groups to complete their tasks. These accounts and group are setup automatically by Cloudera Manager during the cluster install process.</shortdesc>
+  <body>
+    <p>The set of user accounts and groups varies according to which components you choose to install.</p>
+    <note type="caution">Do not delete these accounts or groups, and do not modify their permissions and rights.</note>
+    <p>For specific details, see <i>Permission</i> at:</p>
+    <p><xref
+        href="http://www.cloudera.com/content/cloudera/en/documentation/core/latest/topics/installation_reqts.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>

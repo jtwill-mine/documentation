@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operating_system_sw_updates">
+  <title>Operating System Software Updates</title>
+  <shortdesc>Dell recommends that you perform software updates on a regular basis, for all installed packages.</shortdesc>
+  <body>
+    <note>It is particularly important that your operating system software be up to date prior to installing Cloudera Manager.</note>
+  </body>
+</topic>
