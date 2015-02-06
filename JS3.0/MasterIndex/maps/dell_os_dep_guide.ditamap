@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Dell Openstack Deployment Guide - Version 3.0</title>
+
+  <topicmeta>
+    <copyright>
+      <copyryear year="© 2014-2015"/>
+
+      <copyrholder>Dell Revolutionary Cloud and Big Data
+      Solutions</copyrholder>
+    </copyright>
+  </topicmeta>
+
+  <topicref href="../../Common/trademarks.dita"/>
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+  <topicref href="../../Common/overview.dita"/>
+
+  <topicref href="../../SAH/topics/dell_admin_node_deployment.dita">
+    <mapref href="../../SAH/maps/admin_node_deployment.ditamap" format="ditamap" />
+  </topicref>
+
+  <topicref href="../../SAH/topics/foreman_vm_deployment.dita">
+    <mapref href="../../SAH/maps/foreman_vm_deployment.ditamap" format="ditamap" />
+  </topicref>
+
+  <topicref href="../../SAH/topics/ceph_ice_vm_deployment.dita">
+    <mapref href="../../SAH/maps/ceph_ice_vm_deployment.ditamap" format="ditamap" />
+  </topicref>
+
+  <topicref href="../../Pilot/topics/configure_foreman_server.dita">
+    <mapref href="../../Pilot/maps/foreman_server_config.ditamap" format="ditamap"/>
+  </topicref>
+
+  <topicref href="../../Pilot/topics/provisioning_nodes.dita">
+    <mapref href="../../Pilot/maps/provisioning_nodes.ditamap" format="ditamap"/>
+  </topicref>
+
+  <topicref href="../../SAH/topics/kickstart_file.dita"/>
+  <topicref href="../../SAH/topics/deploy-foreman-vm.sh_script.dita"/>
+  <topicref href="../../SAH/topics/deploy-ceph-vm.sh_script.dita"/>
+  <topicref href="../../Pilot/topics/updating_rpms_on_version_locked_nodes.dita"/>
+  
+  <topicref href="../../Pilot/topics/example_hammer_commands.dita">
+    <mapref href="../../Pilot/maps/hammer_commands.ditamap" format="ditamap"/>
+  </topicref>
+
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
+</map>
