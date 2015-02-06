@@ -10,17 +10,12 @@
       <li>HDFS: Permissions User and Administrator Guide. &#169; 2007, The Apache Software Foundation.</li>
       <li>HDFS API Javadoc &#169; 2008, The Apache Software Foundation.</li>
       <li>HDFS source code</li>
-      <li><xref href="http://developer.yahoo.com/hadoop/tutorial/pigtutorial.html" format="html"
-          scope="external">Pig tutorial </xref></li>
-      <li><xref href="http://pig.apache.org/docs/r0.6.0/setup.html" format="html" scope="external"
-          >Pig setup</xref></li>
-      <li><xref href="http://zookeeper.apache.org/doc/r3.2.2/zookeeperOver.html" format="html"
-          scope="external">Zookeeper overview</xref></li>
-      <li><xref href="https://ccp.cloudera.com/display/CDHDOC/ZooKeeper+Installation" format="html"
-          scope="external">Zookeeper installation</xref></li>
-      <li><xref
-          href="http://archive.cloudera.com/cdh/3/zookeeper/zookeeperAdmin.html%23sc_zkMulitServerSetup"
-          format="html" scope="external">Zookeeper multi-server setup</xref></li>
+      <li><xref href="http://pig.apache.org/docs/r0.14.0/start.html#tutorial" format="html" scope="external">
+          Pig tutorial </xref></li>
+      <li><xref href="http://pig.apache.org/docs/r0.14.0/start.html" format="html" scope="external">
+          Pig Getting Started guide</xref></li>
+      <li><xref href="http://zookeeper.apache.org/doc/trunk/zookeeperOver.html" format="html" scope="external">
+          Zookeeper overview</xref></li>
       <li><xref href="http://www.nagios.org/" format="html" scope="external">Nagios</xref></li>
       <li><xref href="http://ganglia.sourceforge.net/" format="html" scope="external"
         >Ganglia</xref></li>
