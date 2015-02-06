@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="disable_network_manager">
+  <title>Disable Network Manager</title>
+  <shortdesc>The Red Hat Network Manager should be disabled, or not installed. Interfaces should be configured to use the normal Red Hat network service.</shortdesc>
+  <body>
+    <p>Disable the Network Manager by following the instructions at:</p>
+    <p><xref
+        href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux_OpenStack_Platform/3/html/Installation_and_Configuration_Guide/Disabling_Network_Manager.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>

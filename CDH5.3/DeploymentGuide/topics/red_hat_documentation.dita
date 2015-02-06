@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="red_hat_documentation">
+  <title>Red Hat Documentation</title>
+  <shortdesc>For Red Hat Enterprise Linux installation and deployment information, please see:</shortdesc>
+  <body>
+    <p><xref
+        href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/index.html"
+        format="html" scope="external"/></p>
+  </body>
+</topic>

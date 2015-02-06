@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="process_limits">
+  <title>Process Limits</title>
+  <shortdesc>The Linux operating system needs to be configured with several processes and files limit settings. The lines below should be added to the <i>/etc/security/limits.conf</i> file.</shortdesc>
+  <body><codeblock>hdfs - nofile 32768
+mapred - nofile 32768
+hbase - nofile 32768
+hdfs - nproc 32768
+mapred - nproc 32768
+hbase – nproc 32768</codeblock></body>
+</topic>

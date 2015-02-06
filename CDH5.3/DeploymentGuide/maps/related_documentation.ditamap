@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Related Documentation Map</title>
+ <topicref href="../topics/cm_and_cdh_documentation.dita"/>
+ <topicref href="../topics/apache_hadoop_documentation.dita"/>
+ <topicref href="../topics/red_hat_documentation.dita"/>
+</map>

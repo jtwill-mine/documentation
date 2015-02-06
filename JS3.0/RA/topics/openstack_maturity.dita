@@ -15,6 +15,9 @@
       application infrastructure, at scale. It is developed by over 1400 individuals employed by
       more than 133 organizations. Please see <xref href="http://www.OpenStack.org/software/Juno"
         format="html" scope="external">http://www.OpenStack.org/software/juno</xref>.</p>
-    <p>Dell and Red Hat designed this Reference Architecture to make it easy for Dell – Red Hat customers to build their own operational readiness cluster and design their initial offerings, using the current releases. Dell and Red Hat will provide the enterprise support and services customers need to stand up production-ready, enterprise-grade OpenStack clusters.</p>
+    <p>Dell and Red Hat designed this Reference Architecture to make it easy for Dell – Red Hat
+      customers to build their own operational readiness cluster and design their initial offerings,
+      using the current releases. Dell and Red Hat provide the support and services customers need
+      to stand up production-ready OpenStack clusters.</p>
   </body>
 </topic>

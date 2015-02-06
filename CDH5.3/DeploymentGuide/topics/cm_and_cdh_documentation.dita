@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cm_and_cdh_documentation">
+  <title>Cloudera Manager 5.3 and CDH 5.3 Documentation</title>
+  <shortdesc>For the latest Cloudera Manager documentation, please see:</shortdesc>
+  <body>
+    <p><xref
+      href="http://www.cloudera.com/content/cloudera/en/documentation.html%23ClouderaDocumentation"
+      format="html" scope="external"/></p>
+    <note>In particular, see the <i>Cloudera Manager Installation Guide</i>.</note>
+  </body>
+</topic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="memory_management_settings">
+  <title>Memory Management Settings</title>
+  <body>
+    <p>The following memory management settings must be configured:</p>
+    <ul>
+      <li><xref href="thp_compaction.dita#thp_compaction"/></li>
+    </ul>
+  </body>
+</topic>

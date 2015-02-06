@@ -41,7 +41,23 @@
  <topicref href="../topics/network_switches_config.dita">
   <mapref href="switch_config.ditamap" format="ditamap"/>
  </topicref>
- <topicref href="../../Common/references.dita">
+ <topicref href="../topics/operating_system_settings.dita">
+  <mapref href="operating_sytem_settings.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/operating_system_sw_updates.dita"/>
+ <topicref href="../topics/cloudera_configuration.dita">
+  <mapref href="cloudera_settings.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/cluster_testing.dita">
+  <mapref href="cluster_testing.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/support.dita">
+  <mapref href="support.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/related_rocumentation.dita">
+  <mapref href="related_documentation.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/references_dg.dita">
   <topicref href="../../Common/to_learn_more.dita"/>
  </topicref>
  

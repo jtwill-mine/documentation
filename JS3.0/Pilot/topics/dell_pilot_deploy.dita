@@ -44,16 +44,17 @@
     reference as needed.</p>
 
     <p>Several steps in this document use files to configure the environment.
-    These files are available in a TAR file called dell-pilot-deploy.tgz. This
-    TAR file is available from <b><xref format="html"
+    These archive files are available from <b><xref format="html"
     href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p>
 
-    <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
+    <p>Download the dell-mgmt-node and dell-pilot-deploy archive (zip or tgz)
+    files and extract them into the /root directory as per the example
+    below.</p>
 
     <codeblock># mkdir /root/pilot
 # cd /root/pilot
-# tar xzvf /PATH/TO/FILE/dell-pilot-deploy.tgz
-</codeblock>
+# unzip /PATH/TO/FILE/dell-mgmt-node.zip or tar zxvf /PATH/TO/FILE/dell-mgmt-node.tgz
+# unzip /PATH/TO/FILE/dell-pilot-deploy.zip or tar zxvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock>
 
     <section><lines/><title>The hammer command</title><ol>
         <li>Install the packages that contain the <b>hammer</b>
@@ -633,8 +634,8 @@ Parameters:</msgblock>
     networks. Each network on the second bond are VLAN tagged. </p><p>Set the
     <b>bonds, bond_ifaces,</b> and<b> bond_opts</b> parameters for each
     compute node. </p><p>Make sure the <b>bond_opts</b> sets the<b>
-    </b><b>MODE</b> to balance-tlb miimon=100 and <b>PROMISC</b> to yes. </p><p>An
-    example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
+    </b><b>MODE</b> to balance-tlb miimon=100 and <b>PROMISC</b> to yes.
+    </p><p>An example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
  [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
  [bond0.302]="onboot static vlan 172.40.139.110/255.255.255.0"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="services_and_daemons">
+  <title>Services</title>
+  <shortdesc>All unnecessary daemons and services, such as the CUPS printing service, should be disabled on all cluster nodes. This reduces maintenance requirements and resource usage.</shortdesc>
+  <body>
+    <p>Use the <cmdname>chkconfig</cmdname> command to disable any unwanted services. For example:</p>
+    <codeblock>chkconfig cups off</codeblock>
+  </body>
+</topic>

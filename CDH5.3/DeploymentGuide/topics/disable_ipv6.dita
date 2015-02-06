@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="disable_ipv6">
+  <title>Disable IPv6</title>
+  <shortdesc>Cloudera recommends that IPv6 be disabled.</shortdesc>
+  <body>
+    <ol>
+      <li>Determine whether or not IPv6 is currently enabled or disabled by running the following command:<codeblock>lsmod | grep ipv6</codeblock></li>
+      <li>Disable IPv6 by following the instructions at:</li>
+    </ol>
+    <p><xref href="https://access.redhat.com/site/solutions/8709" format="html" scope="external"
+      /></p>
+    <note>Registration is required to view this solution content.</note>
+  </body>
+</topic>
