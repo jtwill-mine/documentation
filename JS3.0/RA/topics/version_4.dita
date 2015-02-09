@@ -12,6 +12,7 @@
       <li>Removed the POC from the Solution</li>
       <li>Updated to Juno</li>
       <li>Updated to Red Hat OSP 6.0</li>
+      <li>Ceph Object Store support with RADOS Gateway</li>
     </ul>
   </body>
 </topic>
