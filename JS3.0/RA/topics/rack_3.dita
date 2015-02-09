@@ -15,8 +15,8 @@
       <li>14 R730xd Storage Nodes, or</li>
       <li>Dell EqualLogic Arrays</li>
     </ul>
-    <note>You can use a combination of the three options that does not exceed a total of 20 servers or
-      30 rack units.<p>The moving of the controllers are note documented as part of the solution and
-        will need to be tested before doing so.</p></note>
+    <note>You can use a combination of the three options that does not exceed a total of 20 servers
+      or 30 rack units.<p>The moving of the controllers are note documented as part of the
+        solution.</p></note>
   </body>
 </topic>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_ceph_storage">
-  <title>Solution Bundle and Ceph Storage</title>
+  <title>Solution Bundle Rack Layout</title>
   <shortdesc>The Solution bundle includes three (3) storage nodes. These are setup in a Ceph cluster, which is tied into Cinder, Glance, and Nova. </shortdesc>
   <body>
     <p>See <xref href="hw_configs.dita#hw_configs/table_r630_configs"/> and <xref
         href="hw_configs.dita#hw_configs/table_r730xd_configs"/> for Hardware Configurations. The
-      Solution Bundle and Ceph Storage nodes include:</p>
+      Solution Bundle sincludes:</p>
     <ul>
       <li>Node 1: R630 Solution Admin Host with the Red Hat OpenStack Manager Installed</li>
       <li>Nodes 2 - 4: R630 OpenStack Controllers</li>
       <li>Nodes 5-7 R630 Nova Compute Nodes</li>
-      <li>Nodes 11 – 13: R730xd Storage Nodes; adds three (3)  Storage Nodes to the bundle</li>
-      <li>EqualLogic Storage Array is an optional for additonal storage</li>
+      <li>Nodes 11 – 13: R730xd Storage Nodes</li>
+      <li>EqualLogic Storage Array is  optional for additonal storages</li>
       <li>Network Switches: Two (2) Force10 S4810, and one (1) Force10 S55</li>
     </ul>
     <fig id="solution_bundle">
@@ -20,8 +20,20 @@
       <image href="../../Customization/OpenTopic/common/artwork/pilot_bundle.png" align="center"
         placement="break"/>
     </fig>
-    <p>The Ceph cluster provides data protection through replication, block device cloning, and snapshots. By default, the data is striped across the cluster. The number of storage nodes in a single cluster can scale to hundreds of nodes and many petabytes in size. Ceph considers the physical placement of storage nodes when deciding how data is replicated. By defining fault domains, like a rack, row, and data center, and defining the Ceph position of the nodes and disks, Ceph using the position in the decision for data replication, thereby reducing the probability that a given failure results is the loss of more than one data replica.</p>
-    <p>There are two services in the Ceph storage cluster, the object storage daemon (OSD) and the monitor (MON). The OSD serves data to the Ceph clients from disks on the storage nodes. Generally, there is one OSD process per disk drive. All OSDs run on the storage nodes. The MON process is used by the Ceph clients and other Ceph processes to determine the composition of the cluster and where data is located. There should be a minimum of three of these MON processes for the Ceph cluster. The MON processes are installed on all OpenStack controller nodes.</p>
+    <p>The Ceph cluster provides data protection through replication, block device cloning, and
+      snapshots. By default, the data is striped across the cluster. The number of storage nodes in
+      a single cluster can scale to hundreds of nodes and many petabytes in size. Ceph considers the
+      physical placement of storage nodes when deciding how data is replicated. By defining fault
+      domains, like a rack, row, and data center, and defining the Ceph position of the nodes and
+      disks, Ceph uses the position in the decision for data replication, thereby reducing the
+      probability that a given failure results is the loss of more than one data replica.</p>
+    <p>There are two services in the Ceph storage cluster: the object storage daemon (OSD) and the
+      monitor (MON). The OSD serves data to the Ceph clients from disks on the storage nodes.
+      Generally, there is one OSD process per disk drive. All OSDs run on the storage nodes. The MON
+      process is used by the Ceph clients and other Ceph processes to determine the composition of
+      the cluster and where data is located. There should be a minimum of three of these MON
+      processes for the Ceph cluster. The MON processes are installed on all OpenStack controller
+      nodes.</p>
     <p>If the load of the clients querying the cluster causes the MON processes to take an inordinate amount of processing, then additional MON processes can be added to the cluster using dedicated machines, then retiring the MON processes co-located on either the Storage Node or OpenStack Controller nodes.</p>
     <p>The Storage Network vLAN is the same network described in the Ceph documentation at the public network. The Storage Cluster Network vLAN is the same network described in the Ceph documentation as the cluster network.</p>
     <p>A special distribution of Ceph is used in this solution: Ceph Enterprise v1.2. That distribution uses the Firefly release of Ceph (v 0.80). Ceph Enterprise also includes the Calamari Ceph cluster management client. Ceph Enterprise is installed on a virtual machine that runs on the Solution Admin Host. The Solution Admin Host also includes Ceph troubleshooting and servicing tools and utilities.</p>
