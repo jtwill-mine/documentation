@@ -32,7 +32,8 @@
       username or password when connecting.<ol id="ol_dbj_zwf_hq">
           <li>Add the following to the beginning of the<i>
           /etc/hammer/cli_config.yml </i>file (replace the name and password
-          appropriately):</li>
+          appropriately and ensure that they are indented with two
+          spaces):</li>
         </ol></li>
     </ol>
 

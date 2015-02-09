@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="note_medium_id">
   <title>Note the Medium ID</title>
+
   <body>
     <ol>
-      <li>After the medium is created, execute the <cmdname>hammer medium list</cmdname> command.</li>
-      <li>Take note of the ID (first column) for the newly created medium. This will be needed later.</li>
+      <li>After the medium is created, execute the <cmdname>hammer medium
+      list</cmdname> command.</li>
+
+      <li>Take note of the ID (first column) for the newly created medium.
+      This will be needed later.<codeblock># hammer medium list</codeblock></li>
     </ol>
   </body>
 </topic>

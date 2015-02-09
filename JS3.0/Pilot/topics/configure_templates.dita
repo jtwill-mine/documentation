@@ -1,78 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="configure_templates">
   <title>Configure Templates</title>
-  <shortdesc>Four template files are provided and used to provision hosts.</shortdesc>
+
+  <shortdesc>Four template files are provided and used to provision
+  hosts.</shortdesc>
+
   <body>
-    <table frame="all" rowsep="1" colsep="1" id="table_afz_s1q_3q">
+    <table colsep="1" frame="all" id="table_afz_s1q_3q" rowsep="1">
       <title>Provisioning Templates</title>
+
       <tgroup cols="2">
         <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+
         <thead>
           <row>
             <entry>Template</entry>
+
             <entry>Description</entry>
           </row>
         </thead>
+
         <tbody>
           <row>
-            <entry>
-              <p><codeph>dell-osp-ks.template</codeph></p>
-            </entry>
-            <entry>
-              <p>Provisioning template that provides the kickstart file.</p>
-            </entry>
+            <entry><p><codeph>dell-osp-ks.template</codeph></p></entry>
+
+            <entry><p>Provisioning template that provides the kickstart
+            file.</p></entry>
           </row>
+
           <row>
-            <entry>
-              <p><codeph>dell-osp-pxe.template</codeph></p>
-            </entry>
-            <entry>
-              <p>PXE template that contains the PXE configuration.</p>
-            </entry>
+            <entry><p><codeph>dell-osp-pxe.template</codeph></p></entry>
+
+            <entry><p>PXE template that contains the PXE
+            configuration.</p></entry>
           </row>
+
           <row>
-            <entry>
-              <p><codeph>interface_config.template</codeph></p>
-            </entry>
-            <entry>
-              <p>Snippet that provides a means to configure extra interfaces during installation.
-                This template is called from the kickstart template. </p>
-            </entry>
+            <entry><p><codeph>interface_config.template</codeph></p></entry>
+
+            <entry><p>Snippet that provides a means to configure extra
+            interfaces during installation. This template is called from the
+            kickstart template. </p></entry>
           </row>
+
           <row>
-            <entry>
-              <p><codeph>bonding_snippet.template</codeph></p>
-            </entry>
-            <entry>
-              <p>Snippet that provides a means to bond interfaces during installation. This template
-                is called from the kickstart template. </p>
-            </entry>
+            <entry><p><codeph>bonding_snippet.template</codeph></p></entry>
+
+            <entry><p>Snippet that provides a means to bond interfaces during
+            installation. This template is called from the kickstart template.
+            </p></entry>
           </row>
         </tbody>
       </tgroup>
     </table>
-<ol>
-  <li>Create the templates using the <cmdname>hammer template create</cmdname>
-        command.<codeblock># hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
-  --operatingsystem-ids "OS_ID_RH7.0" --file /root/pilot/dell-osp-ks.template
 
-# hammer template create --name "Dell OpenStack PXE Template" --type PXELinux \
-  --operatingsystem-ids "OS_ID_RH7.0" --file /root/pilot/dell-osp-pxe.template
+    <ol>
+      <li>Create the templates using the <cmdname>hammer template
+      create</cmdname> command. <p>Note: Replace the "OS_ID_RH7.0" with the
+      ID# returned from running the "hammer os list" command.</p><codeblock># hammer template create --name "Dell OpenStack Kickstart Template" \
+--type provision --operatingsystem-ids "OS_ID_RH7.0" \
+--file /root/pilot/dell-osp-ks.template
+
+# hammer template create --name "Dell OpenStack PXE Template" \
+--type PXELinux --operatingsystem-ids "OS_ID_RH7.0" \
+--file /root/pilot/dell-osp-pxe.template
 
 # hammer template create --name "bond_interfaces" --type snippet \
   --file /root/pilot/bonding_snippet.template
 
 # hammer template create --name "interface_config" --type snippet \
   --file /root/pilot/interface_config.template</codeblock></li>
-  <li>After the templates are created, use the <cmdname>hammer template list</cmdname> command to determine the IDs of the templates.<p>The provisioning and PXE templates must be associated with the operating systems.</p></li>
-  <li>Execute the <cmdname>hammer os update</cmdname> command to update the template associations for the Red Hat 7.0 operating system ID.<codeblock># hammer os update --config-template-ids "KS_ID, PXE_ID" \
-  --medium-ids MEDIUM_ID --id OS_ID</codeblock><p>The templates are now associated with the operating system. They must now be set as the default templates for the operating system.</p></li>
-  <li>Execute the <cmdname>hammer os set-default template</cmdname> command for the provisioning and PXELinux templates. The command will be executed two times.<codeblock># hammer os set-default-template --config-template-id TMPLT_ID --id OS_ID</codeblock></li>
-  <li>You can execute the <cmdname>hammer os info</cmdname> command to check the configuration of the operating systems.<codeblock># hammer os info --id 1</codeblock></li>
-</ol>
+
+      <li>After the templates are created, use the <cmdname>hammer template
+      list</cmdname> command to determine the IDs of the templates.<p>The
+      provisioning and PXE templates must be associated with the operating
+      systems.</p></li>
+
+      <li>Execute the <cmdname>hammer os update</cmdname> command to update
+      the template associations for the Red Hat 7.0 operating system
+      ID.<codeblock># hammer os update --config-template-ids "KS_ID, PXE_ID" \
+  --medium-ids MEDIUM_ID --id OS_ID</codeblock><p>The templates are now
+      associated with the operating system. They must now be set as the
+      default templates for the operating system.</p></li>
+
+      <li>Execute the <cmdname>hammer os set-default template</cmdname>
+      command for the provisioning and PXELinux templates. The command will be
+      executed two times replacing the "OS_ID" with the values from the
+      "hammer template list" command.<codeblock># hammer os set-default-template --config-template-id TMPLT_ID --id OS_ID</codeblock></li>
+
+      <li>You can execute the <cmdname>hammer os info</cmdname> command to
+      check the configuration of the operating systems using the numeric value
+      returned from the "hammer os list" command as the Id below.<codeblock># hammer os info --id 1</codeblock></li>
+    </ol>
+
     <p>You will see output similar to this:</p>
+
     <codeblock>Id:                 1
 Full name:          RedHat 7.0
 Release name:
