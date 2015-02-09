@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="configure_os">
   <title>Configure the Operating System</title>
-  <shortdesc>You must create a definition for the Red Hat Enterprise Linux 7.0 operating system.</shortdesc>
+
+  <shortdesc>You must create a definition for the Red Hat Enterprise Linux 7.0
+  operating system.</shortdesc>
+
   <body>
     <ol>
-      <li>Execute the <cmdname>hammer os create</cmdname> command to create a definition for the Red Hat Enterprise Linux 7.0 operating system.<codeblock># hammer os create --name "RedHat" --major 7 --minor 0 --family Redhat</codeblock></li>
-      <li>After creating the operating system, execute the <cmdname>hammer os list</cmdname>
-          command.<ol id="ol_ydg_mkp_3q">
-          <li>Take note of the ID for the new RedHat 7.0 operating system.</li>
-        </ol></li>
-      <li>Execute the <cmdname>hammer os add-architecture</cmdname> command to associate the x86_64 architecture with the RedHat 7.0 operating system.<codeblock># hammer os add-architecture --architecture x86_64 --id OS_ID</codeblock></li>
-      <li>The appropriate partition table needs to be associated with the operating system. Execute the <cmdname>hammer os add-ptable</cmdname> command to associate the partition table to the operating system ID.<codeblock># hammer os add-ptable --ptable-id P_ID --id OS_ID</codeblock></li>
+      <li>Execute the <cmdname>hammer os </cmdname>list command.<codeblock># hammer os list</codeblock><p>Note:
+      Take note of the ID for the new RedHat 7.0 operating system.</p></li>
+
+      <li>Execute the <cmdname>hammer os add-architecture</cmdname> command to
+      associate the x86_64 architecture with the RedHat 7.0 operating system
+      as shown below replacing the OS_ID with the information returned from
+      step 1 above.<codeblock># hammer os add-architecture --architecture x86_64 --id OS_ID</codeblock></li>
+
+      <li>The appropriate partition table needs to be associated with the
+      operating system. Execute the <cmdname>hammer os add-ptable</cmdname>
+      command to associate the partition table to the operating system ID,
+      replacing the OS_ID (from step 1 above) and the P_ID (from the notes
+      taken for the "hammer partition-table create" command in the previous
+      section). <codeblock># hammer os add-ptable --ptable-id P_ID --id OS_ID</codeblock></li>
     </ol>
   </body>
 </topic>
