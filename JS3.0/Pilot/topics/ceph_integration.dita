@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
 "topic.dtd">
 <topic id="ceph_integration">
-  <title>Dell Pilot Integration with Ceph Guide</title>
+  <title>Dell Openstack Platform Integration with Ceph Guide</title>
 
   <body>
     <p/>
@@ -45,13 +45,13 @@
     like any external storage device. This service can be backed by a variety
     of enterprise storage platforms or simple NFS servers. Cinder's features
     include:</p><ul>
-        <li>Persistent block storage devices for compute instances </li>
+        <li>Persistent block storage devices for compute instances</li>
 
         <li>Self-service volume creation, attachment, and deletion</li>
 
         <li>A unified interface for numerous storage platforms</li>
 
-        <li>Volume snapshots </li>
+        <li>Volume snapshots</li>
       </ul><p/><p><b>Ceph</b> </p><p>Ceph is an open-source, massively
     scalable, software-defined storage system which uniquely delivers object,
     block and file system storage in one unified system. Ceph is highly
@@ -92,7 +92,7 @@
         placement group, and then maps each placement group to one or more
         Ceph OSD Daemons. This layer of indirection allows Ceph to rebalance
         efficiently when new Ceph OSD Daemons and the underlying OSD devices
-        come online (or crash and go offline). </li>
+        come online (or crash and go offline).</li>
       </ul><p/><p><b>Ceph Block Device</b> </p><p>A Ceph block device provides
     a block-based storage interface to the Ceph Storage Cluster. The ubiquity
     of block device interfaces makes a virtual block device an ideal candidate
@@ -167,7 +167,7 @@
     <section><title>Ceph Installation </title></section>
 
     <section><p><b>Ceph Requirements</b></p><ul>
-        <li>Access to ICE 1.2.2 release and updated ceph-deploy package </li>
+        <li>Access to ICE 1.2.2 release and updated ceph-deploy package</li>
 
         <li>Ceph nodes installed with RHEL7 (document developed with 7.0)</li>
 
@@ -203,7 +203,7 @@
         </sthead>
 
         <strow>
-          <stentry>Provisioning </stentry>
+          <stentry>Provisioning</stentry>
 
           <stentry>10.19.0.0/16</stentry>
 
@@ -213,7 +213,7 @@
         </strow>
 
         <strow>
-          <stentry>Storage </stentry>
+          <stentry>Storage</stentry>
 
           <stentry>172.31.0.0/16</stentry>
 
@@ -226,15 +226,15 @@
 
           <stentry>172.30.0.0/16</stentry>
 
-          <stentry>Ceph OSD to OSD communication </stentry>
+          <stentry>Ceph OSD to OSD communication</stentry>
         </strow>
       </simpletable><p>Table 3.2.2.2: Ceph Hosts details the name of each
     host, its purpose, IP address, and required network connectivity.
     </p><p/><simpletable>
         <sthead>
-          <stentry>Host </stentry>
+          <stentry>Host</stentry>
 
-          <stentry>Purpose </stentry>
+          <stentry>Purpose</stentry>
 
           <stentry>IP</stentry>
 
@@ -242,17 +242,17 @@
         </sthead>
 
         <strow>
-          <stentry>Ospfm </stentry>
+          <stentry>Ospfm</stentry>
 
           <stentry>Openstack Foreman</stentry>
 
           <stentry>10.19.141.60</stentry>
 
-          <stentry>Provisioning </stentry>
+          <stentry>Provisioning</stentry>
         </strow>
 
         <strow>
-          <stentry>ospctl1 </stentry>
+          <stentry>ospctl1</stentry>
 
           <stentry>Ceph Mon<p>OSP HA Controller</p></stentry>
 
@@ -262,7 +262,7 @@
         </strow>
 
         <strow>
-          <stentry>ospctl2 </stentry>
+          <stentry>ospctl2</stentry>
 
           <stentry>Ceph Mon<p>OSP HA Controller</p></stentry>
 
@@ -302,19 +302,19 @@
         </strow>
 
         <strow>
-          <stentry>ice-admin </stentry>
+          <stentry>ice-admin</stentry>
 
           <stentry>ICE Administration</stentry>
 
           <stentry>10.19.141.51</stentry>
 
-          <stentry>Provisioning </stentry>
+          <stentry>Provisioning</stentry>
         </strow>
 
         <strow>
-          <stentry>ceph-osd1 </stentry>
+          <stentry>ceph-osd1</stentry>
 
-          <stentry>Ceph OSD </stentry>
+          <stentry>Ceph OSD</stentry>
 
           <stentry>10.19.141.55<p>172.31.141.55</p><p>172.30.141.55
           </p></stentry>
@@ -325,7 +325,7 @@
         <strow>
           <stentry>ceph-osd2</stentry>
 
-          <stentry>Ceph OSD </stentry>
+          <stentry>Ceph OSD</stentry>
 
           <stentry>10.19.141.56<p>172.31.141.56</p><p>172.30.141.56
           </p></stentry>
@@ -334,9 +334,9 @@
         </strow>
 
         <strow>
-          <stentry>ceph-osd3 </stentry>
+          <stentry>ceph-osd3</stentry>
 
-          <stentry>Ceph OSD </stentry>
+          <stentry>Ceph OSD</stentry>
 
           <stentry>10.19.141.57<p>172.31.141.57</p><p>172.30.141.57
           </p></stentry>
@@ -357,13 +357,13 @@
         <sthead>
           <stentry>OSD Host</stentry>
 
-          <stentry>Journal Device </stentry>
+          <stentry>Journal Device</stentry>
 
           <stentry>Data Paths</stentry>
         </sthead>
 
         <strow>
-          <stentry>ceph­osd1 </stentry>
+          <stentry>ceph­osd1</stentry>
 
           <stentry><p><simpletable>
               <strow>
@@ -419,11 +419,11 @@
 
           <stentry><p><simpletable>
               <strow>
-                <stentry>/dev/sdl </stentry>
+                <stentry>/dev/sdl</stentry>
               </strow>
 
               <strow>
-                <stentry>/dev/sdm </stentry>
+                <stentry>/dev/sdm</stentry>
               </strow>
             </simpletable></p></stentry>
 
@@ -464,14 +464,14 @@
         ice_setup.py file. A ~/.cephdeploy.conf file is created with the same
         contents and is used by the ceph-deploy command. </p></li>
 
-        <li>Type 'yes' to continue the installation. </li>
+        <li>Type 'yes' to continue the installation.</li>
 
         <li>Press [ENTER] to accept the FQDN hostname or alter as needed. This
         hostname needs to be accessible to the Ceph nodes on the provisioning
-        network. </li>
+        network.</li>
 
         <li>Select http or https as need. http is used in this example
-        configuration. </li>
+        configuration.</li>
 
         <li>Create a ceph-deploy working directory. All ceph-deploy commands
         should be executed from this directory. <codeblock>[ceph-user@ice-admin ~]$ mkdir ~/cluster &amp;&amp; cd ~/cluster</codeblock></li>
@@ -479,7 +479,7 @@
         <li>Run calamari-ctl initialize.<codeblock>[ceph-user@ice-admin cluster]$ sudo calamari-ctl initialize</codeblock></li>
 
         <li>Enter the calamari login name. “root” is the default but it can be
-        changed to satisfy local administrative requirements. </li>
+        changed to satisfy local administrative requirements.</li>
 
         <li>Enter the email address to be associated with the admin
         account.</li>
@@ -615,9 +615,9 @@ HEALTH_OK
     <p><b>Requirements</b></p>
 
     <ul>
-      <li>All configuration requirements of Section 3.3.1 met </li>
+      <li>All configuration requirements of Section 3.3.1 met</li>
 
-      <li>Configuration items from Section 3.2 completed </li>
+      <li>Configuration items from Section 3.2 completed</li>
     </ul>
 
     <p/>
@@ -651,7 +651,7 @@ HEALTH_OK
 
     <p>By default the ceph-deploy will grant Ceph administrative rights to the
     monitor hosts. These rights can be granted to other hosts to facilitate
-    centralized management. </p>
+    centralized management.</p>
 
     <ul>
       <li>Run the following commands to grant administrative rights to one of
@@ -667,7 +667,7 @@ HEALTH_OK
 
     <p/>
 
-    <p><b>Modifying OSD Placement Groups</b> </p>
+    <p><b>Modifying OSD Placement Groups</b></p>
 
     <p>The number of placement groups (pg) and placement groups for placement
     (pgp) may require adjusting as the number of OSDs increase in the cluster,
@@ -679,15 +679,15 @@ HEALTH_OK
     information on how to calculate placement groups</p>
 
     <p>Note: If the number of placement groups needs to be increased by a
-    large amount, then the change should be made in multiple steps. </p>
+    large amount, then the change should be made in multiple steps.</p>
 
     <p>For example, for a Ceph cluster with 10 OSDs and two replicas for each
-    pool. The number of placement groups will be calculated as: </p>
+    pool. The number of placement groups will be calculated as:</p>
 
     <msgblock>    (10 * 100 ) / 2 = 500 rounded to 512.</msgblock>
 
     <p>If the number of OSDs in increased to 30 then the number of placement
-    groups will be calculated as: </p>
+    groups will be calculated as:</p>
 
     <msgblock>    (30 * 100 ) / 2 = 1500 rounded to 2048</msgblock>
 
@@ -732,14 +732,14 @@ HEALTH_OK
     <p><b>Integration Configuration Goal</b></p>
 
     <p>Three Ceph pools will be created: images, volumes and (optional)
-    backups. </p>
+    backups.</p>
 
     <p>OSP will be installed and configured to store data within the created
     pools via Foreman/puppet</p>
 
     <p/>
 
-    <p><b>Ceph Pool Creation And Keyring Configuration</b> </p>
+    <p><b>Ceph Pool Creation And Keyring Configuration</b></p>
 
     <ol>
       <li>From any host with Ceph administrative rights, create Ceph pools for
@@ -822,7 +822,7 @@ pool=volumes, allow rx pool=images </codeblock></li>
 
     <p>The following values need to be configured in the HA All In One
     Controller host group. Additional settings will need to be configured for
-    the local environment. </p>
+    the local environment.</p>
 
     <p>The UUID value is replaced with the output of uuidgen or a similar UUID
     generation program.</p>
@@ -845,7 +845,7 @@ pool=volumes, allow rx pool=images </codeblock></li>
             </strow>
 
             <strow>
-              <stentry>rbd_secret_uuid </stentry>
+              <stentry>rbd_secret_uuid</stentry>
             </strow>
           </simpletable></p></stentry>
 
@@ -855,17 +855,17 @@ pool=volumes, allow rx pool=images </codeblock></li>
             </strow>
 
             <strow>
-              <stentry>UUID </stentry>
+              <stentry>UUID</stentry>
             </strow>
           </simpletable></p></stentry>
       </strow>
 
       <strow>
-        <stentry>quickstack::pacemaker::glance </stentry>
+        <stentry>quickstack::pacemaker::glance</stentry>
 
         <stentry><p><simpletable>
             <strow>
-              <stentry>backend </stentry>
+              <stentry>backend</stentry>
             </strow>
 
             <strow>
@@ -893,7 +893,7 @@ pool=volumes, allow rx pool=images </codeblock></li>
 
     <p>The following values need to be configured in the Compute (Nova
     Network) host group. Additional settings will need to be configured for
-    the local environment. </p>
+    the local environment.</p>
 
     <p>The UUID value is replaced with the value generated in 3.4.4 Foreman
     Configuration – HA All In One Controller</p>
@@ -977,7 +977,7 @@ key | awk ‘{print $3}’| tee client.volumes.key</codeblock></li>
     <p><b>Deploy Ceph Configuration Files To Compute Hosts </b></p>
 
     <p>Since Foreman does not manage the Ceph configuration files, the
-    /etc/ceph/ceph.conf will need to be deployed to each compute host. </p>
+    /etc/ceph/ceph.conf will need to be deployed to each compute host.</p>
 
     <ol>
       <li>Deploy /etc/ceph/ceph.conf to each compute host.<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy config push ospcomp1
@@ -1034,7 +1034,7 @@ key | awk ‘{print $3}’| tee client.volumes.key</codeblock></li>
 
       <li>Create a new volume (Test the volumes pool). <codeblock>[root@ospctl1 ~]# cinder create ...</codeblock></li>
 
-      <li> List images.<codeblock>[root@ospctl1 ~]# nova volume-list</codeblock></li>
+      <li>List images.<codeblock>[root@ospctl1 ~]# nova volume-list</codeblock></li>
 
       <li>Attach to running virtual image. <codeblock>[root@ospctl1 ~]# nova volume-attach ...</codeblock></li>
 
@@ -1042,7 +1042,7 @@ key | awk ‘{print $3}’| tee client.volumes.key</codeblock></li>
 
       <li>Make a backup of the volume (Test the backups pool).<codeblock>[root@ospctl1 ~]# cinder backup-create ....</codeblock></li>
 
-      <li> List backups.<codeblock>[root@ospctl1 ~]# cinder backup-list</codeblock></li>
+      <li>List backups.<codeblock>[root@ospctl1 ~]# cinder backup-list</codeblock></li>
     </ol>
 
     <p/>
