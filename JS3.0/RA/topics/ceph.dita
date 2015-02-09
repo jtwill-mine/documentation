@@ -6,9 +6,9 @@
     <p>Ceph is a scale-out, shared-nothing, distributed, software-defined, 
     object storage system. The Solution bundle includes Ceph storage. Ceph is used as the storage backend
     for Nova, Cinder and Glance. Ceph is used as block storage. Storage nodes run the Ceph software. Compute and controller nodes run the Ceph block client.</p>
-    <p>The Ceph storage option provides object storage for OpenStack guests and for clients external to
-    OpenStack. The object storage interface is an implementation of the SWIFT and S3 protocols. The Object
-    Gateway processes run on the controller nodes. Object IO load is distributed across Object gateway
-    processes. </p>
+    <p>The Ceph storage option provides object storage for OpenStack VM and for clients external to
+      OpenStack. The object storage interface is an implementation of the SWIFT and S3 protocols.
+      The Object Gateway processes run on the controller nodes. Object IO load is distributed across
+      Object gateway processes. </p>
   </body>
 </topic>
