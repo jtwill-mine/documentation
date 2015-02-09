@@ -73,7 +73,7 @@
             <row>
               <entry>Infrastructure</entry>
               <entry>Nova-multi-compute</entry>
-              <entry>One or more Compute Nodes</entry>
+              <entry>Three or more Compute Nodes</entry>
             </row>
             <row>
               <entry>Infrastructure</entry>
@@ -89,11 +89,6 @@
               <entry>Infrastructure</entry>
               <entry>Heat</entry>
               <entry>OpenStack Controllers</entry>
-            </row>
-            <row>
-              <entry>Infrastructure</entry>
-              <entry>Nova-Network</entry>
-              <entry>Same nodes as Nova-multi-compute</entry>
             </row>
             <row>
               <entry>Infrastructure</entry>
@@ -117,7 +112,7 @@
             </row>
               <row>
               <entry>Storage</entry>
-              <entry>Ceph Enterprise Storage</entry>
+              <entry>Ceph Enterprise Storage(Block and Object)</entry>
               <entry>Three or more Storage Servers</entry>
             </row>
             <row>

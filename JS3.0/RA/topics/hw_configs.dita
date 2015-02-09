@@ -65,7 +65,7 @@
         </thead>
         <tbody>
           <row>
-            <entry>Platform</entry>
+            <entry>Platforms</entry>
             <entry>PowerEdge R730xd</entry>
           </row>
           <row>
@@ -95,7 +95,7 @@
           </row>
           <row>
             <entry>RAID</entry>
-            <entry><p>RAID 1 (OS)</p> <p>pass through SSD</p> <p>pass through each data disk</p></entry>
+            <entry><p>RAID 1 (operating system)</p> <p>pass through SSD</p> <p>pass through each data disk</p></entry>
           </row>
         </tbody>
       </tgroup>

@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="pilot_bundles_expansion">
   <title>Solution Bundle Expansion</title>
-  <shortdesc>The Solution bundle can be expanded using the compute bundle, the storage bundle or
+  <shortdesc>The Solution bundle can be expanded by adding compute nodes, storage nodes, or
     EqualLogic Array. Using this, one could expand up to twenty (20) servers per rack and/or 30 Us
     (infrastructure, compute and storage combined).</shortdesc>
   <body>
