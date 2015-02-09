@@ -15,6 +15,7 @@
       <li>NIC teaming</li>
       <li>Redundant trunking top-of-rack (ToR) switches into core routers</li>
     </ul>
-    <p>See Network Architecture for guidelines. Detailed designs are available through Dell consulting services.</p>
+    <p>See The Network Architecture Section for guidelines. Detailed designs are available through
+      Dell consulting services.</p>
   </body>
 </topic>

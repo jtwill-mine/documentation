@@ -61,7 +61,7 @@
     <glossdef>An installation comprised of three racks, based upon server and network sizing.</glossdef>
   </glossentry>
   <glossentry id="storage_admin_host">
-    <glossterm>Storage Admin Host (SAH)</glossterm>
+    <glossterm>Solution Admin Host (SAH)</glossterm>
     <glossdef>The physical host that supports the Infrastructure Roles needed for the
       cluster.</glossdef>
   </glossentry>

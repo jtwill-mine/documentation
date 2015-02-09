@@ -25,7 +25,11 @@
       <li>Standards-based API (shown in pink) interactions</li>
     </ul>
     <p>The standards-based APIs are the same between all OpenStack deployments, and let customers and vendor ecosystems operate across multiple clouds. The site-specific infrastructure combines open and proprietary software, Dell hardware, and operational processes to deliver cloud resources as a service.</p>
-    <p>The implementation choices for each cloud infrastructure are highly specific to the requirements of each site. Many of these choices can be standardized and automated using the tools in this Reference Architecture, and by following DevOps processes. Conforming to best practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red Hat and the broader OpenStack community.</p>
+    <p>The implementation choices for each cloud infrastructure are highly specific to the
+      requirements of each site. Many of these choices can be standardized and automated using the
+      tools in this Reference Architecture and by following DevOps processes. Conforming to best
+      practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red
+      Hat and the broader OpenStack community.</p>
     <fig id="taxonomy">
       <title>OpenStack Taxonomy</title>
       <image href="../../Customization/OpenTopic/common/artwork/taxonomy.png"  align="center" placement="break"></image>
