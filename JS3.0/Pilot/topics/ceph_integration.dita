@@ -14,7 +14,7 @@
     back end is configured to use Ceph storage via the RBD client library.
     Ceph pools will be created for OSP images, volumes and backups. All node
     access will be controlled via the cephx authentication
-    protocol.<p/></p></section>
+    protocol</p></section>
 
     <section><title>Component Overview</title><p><b>What is
     Openstack?</b></p><p>OpenStack is an open-source project for building a
