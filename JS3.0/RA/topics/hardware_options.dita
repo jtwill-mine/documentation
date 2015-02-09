@@ -11,6 +11,11 @@
         roles. As noted throughout this Reference Architecture, Dell constantly adds capabilities to
         expand this offering.</li>
     </ul>
-    <p>Each of the Dell PowerEdge server configurations in this Reference Architecture is designed as a getting-started setup for OpenStack compute, OpenStack storage, or both simultaneously. Dell recommends starting with OpenStack software using components from this configuration because the hardware and operations processes are a flexible foundation to expand upon. By design, you can repurpose the Reference Architecture configuration as your cloud deployment grows, so your investment is protected.</p>
+    <p>Each of the Dell PowerEdge server configurations in this Reference Architecture is designed
+      as a getting-started setup for OpenStack compute, OpenStack storage, or both simultaneously.
+      Dell recommends starting with OpenStack software using components from this configuration
+      because the hardware and operations processes are a flexible foundation to expand upon. By
+      design, you can expand the Reference Architecture configuration as your cloud deployment
+      grows, so your investment is protected.</p>
   </body>
 </topic>

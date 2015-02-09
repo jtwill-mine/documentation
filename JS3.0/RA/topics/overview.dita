@@ -3,9 +3,9 @@
 <topic id="ra_overview">
   <title>Overview</title>
   <shortdesc>This Reference Architecture focuses on helping organizations to begin evaluating <tm
-      trademark="OpenStack" tmtype="reg">OpenStack</tm> software and/or create proofs of concept.
-    Dell and Red Hat can provide guidance for more sophisticated deployments; however, they are
-    beyond the scope of this document.</shortdesc>
+      trademark="OpenStack" tmtype="reg">OpenStack</tm> software and provides a starting point. Dell
+    and Red Hat can provide guidance for more sophisticated deployments; however, they are beyond
+    the scope of this document.</shortdesc>
   <body>
     <p>The Dell Red Hat Cloud Solutions with <tm trademark="Enterprise Linux" tmtype="tm">Red Hat
         Enterprise Linux</tm> OpenStack Platform encompasses software, hardware, operations, and

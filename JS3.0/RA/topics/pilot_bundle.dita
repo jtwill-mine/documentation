@@ -13,7 +13,7 @@
       and memory just starting to be oversubscribed.</p>
     <p>As the Solution Bundle is designed for the beginning of a production environment, key
       OpenStack services are made highly available (HA) by clustering the OpenStack Controller
-      nodes, the networking is based on 10Gbe Bonds for data networks and the network switches are
+      nodes. The networking is based on 10Gbe bonds for data networks and the network switches are
       setup for HA. The Out of Band Management network is not HA and is 1GbE. Please review and
       discuss with your Sales Team the specifics.</p>
   </body>

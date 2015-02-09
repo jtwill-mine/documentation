@@ -9,7 +9,7 @@
       <li><b>10GbE Connectivity</b> - Dell Force10 S4810</li>
     </ul>
     <p>The 10GbE configuration utilizes Force10 S4810 switches as the ToR switches. Dell recommends
-      for HA this pair of switches run Virtual Link Trunking (VLT). This feature enables the servers
+      this pair of switches run Virtual Link Trunking (VLT) for HA. This feature enables the servers
       to terminate their LAG interfaces into two different switches instead of one. This enables
       active-active bandwidth utilization. This feature provides redundancy within the rack if one
       switch fails, or needs maintenance. The uplink to the aggregation pair is 80Gb, using a LAG

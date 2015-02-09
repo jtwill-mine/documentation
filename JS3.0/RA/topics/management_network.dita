@@ -6,11 +6,11 @@
   <body>
     <p>The Out of Band (OOB) Management network is used for several functions:<ul id="ul_gst_j42_vq">
         <li>The highly available servers, the controllers, use it for a heartbeat to ensure the
-          servers are all up and functions</li>
+          servers are all up and functioning</li>
         <li>The highly available software uses it to reboot and partition servers</li>
-        <li>When an uplink to a router is added and the iDrac's configured to use it as a gateway,
+        <li>When an uplink to a router is added and the iDracs configured to use it as a gateway,
           there are tools for monitoring the servers and gather metrics on them.(These are out of
-          scope to this solution.)</li>
+          scope of this solution.)</li>
       </ul></p>
   </body>
 </topic>

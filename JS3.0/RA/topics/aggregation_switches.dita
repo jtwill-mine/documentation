@@ -11,6 +11,11 @@
       <li>The scale at which the rack layouts are planned</li>
       <li>Required future scaling</li>
     </ul>
-    <p>When designing a large deployment, Dell recommends the Force10 S4810 for aggregation for smaller scale and the Force10 Z9000 for larger deployments. The Force10 Z9000 is a 32-port, 40G high-capacity switch. It can aggregate up to 15 racks of high-density PowerEdge R620, R720 and R720xd servers. The rack-to-rack bandwidth needed in OpenStack would be most suitably handled by a 40G-capable, non-blocking switch. The Force10 Z9000 can provide a cumulative bandwidth of 1.5TB of throughput at line-rate traffic from every port.</p>
+    <p>When designing a large deployment, Dell recommends the Force10 S4810 for aggregation for
+      smaller scale and the Force10 Z9000 for larger deployments. The Force10 Z9000 is a 32-port,
+      40G high-capacity switch. It can aggregate up to 15 racks of high-density PowerEdge R630 and
+      R730xd servers. The rack-to-rack bandwidth needed in OpenStack would be most suitably handled
+      by a 40G-capable, non-blocking switch. The Force10 Z9000 can provide a cumulative bandwidth of
+      1.5TB of throughput at line-rate traffic from every port.</p>
   </body>
 </topic>

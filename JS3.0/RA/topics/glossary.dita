@@ -29,8 +29,11 @@
     <glossdef>The hardware configuration that best supports the hypervisor server or Nova compute roles.</glossdef>
   </glossentry>
   <glossentry id="devops">
-    <glossterm>DevOps</glossterm>
-    <glossdef>An operational model for managing data centers using automated deployments.</glossdef>
+    <glossterm>DevOps (Development Operations)</glossterm>
+    <glossdef>An operational model for managing data centers using improved automated deployments,
+      shortened lead times between fixes, and faster mean time to recovery. See<xref href="http://en.wikipedia.org/wiki/DevOPs" format="html" scope="external">
+        http://en.wikipedia.org/wiki/DevOps</xref>
+    </glossdef>
   </glossentry>
   <glossentry id="hyperscale">
     <glossterm>Hyperscale</glossterm>
@@ -58,8 +61,9 @@
     <glossdef>An installation comprised of three racks, based upon server and network sizing.</glossdef>
   </glossentry>
   <glossentry id="storage_admin_host">
-    <glossterm>Storage Admin Host</glossterm>
-    <glossdef>The physical host that supports the Red Hat OpenStack Manager and the Inktank Ceph Enterprise Admin.</glossdef>
+    <glossterm>Solution Admin Host (SAH)</glossterm>
+    <glossdef>The physical host that supports the Infrastructure Roles needed for the
+      cluster.</glossdef>
   </glossentry>
   <glossentry id="storage_node">
     <glossterm>Storage Node</glossterm>

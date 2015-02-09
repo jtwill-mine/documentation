@@ -15,14 +15,16 @@
                 <li>HTTP/HTTPS access for Ceph and Red Hat Updates</li>
               </ol></li>
           </ol></li>
-        <li>Provision Network - Used by the OpenStack Foreman Installer VM to servie DHCP to all
-          hosts, provsioner each host, and act a proxy for the host to do updates with. </li>
+        <li>Provision Network - Used by the OpenStack Foreman Installer VM to service DHCP to all
+          hosts, provision each host, and act a proxy for the host to do updates with. </li>
         <li>Storage Network - Used by the Ceph Deployer VM to provision, monitor and manage the Ceph
           Cluster.</li>
       </ol></p>
-    <p><xref href="solution_admin_host_network.dita#solution_admin_host_network/internal_network_fabric" type="fig"/> lays out how the networks are brigded inside the Solution Admin Host.  As both
+    <p><xref
+        href="solution_admin_host_network.dita#solution_admin_host_network/internal_network_fabric"
+        type="fig"/> lays out how the networks are bridged inside the Solution Admin Host. As both
       the Provision and Storage networks come in on the same physical interface 802.1q tagging is
-      configured on the SAH and corresponding Switch ports.   This Reference Architecture does not
+      configured on the SAH and corresponding sswitch ports. This Reference Architecture does not
       cover any Security aspects, thus the appropriate Network and Security teams should be involved
       before connecting any machine to the externally accessible networks.</p>
       <fig  id="internal_network_fabric">
