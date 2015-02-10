@@ -6,7 +6,7 @@
   <body>
     <ul>
       <li><xref href="ceph_requirements.dita#ceph_requirements"/></li>
-      <li>TBD</li>
+      <li><xref href="ceph_config_goal.dita#ceph_config_goal"/></li>
       <li>TBD</li>
     </ul>
   </body>
