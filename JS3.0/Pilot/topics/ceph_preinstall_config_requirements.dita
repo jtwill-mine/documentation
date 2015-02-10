@@ -10,7 +10,7 @@
     <ul>
       <li><xref href="time_synch.dita#time_synch"/></li>
       <li><xref href="nonroot_administrative_user.dita#nonroot_administrative_user"/></li>
-      <li/>
+      <li><xref href="sudo_access.dita#sudo_access"/></li>
     </ul>
   </body>
 </topic>
