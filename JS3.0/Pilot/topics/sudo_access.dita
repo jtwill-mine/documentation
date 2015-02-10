@@ -3,7 +3,7 @@
 <topic id="sudo_access">
   <title>Sudo Access</title>
   <body>
-    <p>Sudo access needs to be granted if the non-root administrative is used to execute Ceph
+    <p>Sudo access must be granted if the non-root administrative user is used to execute Ceph
       configuration commands.</p>
     <ol>
       <li>Run the commands below, being sure to update them for local administrative and configuration requirements:</li>
