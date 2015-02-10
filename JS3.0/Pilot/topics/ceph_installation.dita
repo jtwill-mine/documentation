@@ -2,7 +2,12 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="ceph_installation">
   <title>Ceph Installation</title>
+  <shortdesc>This section discusses Ceph installation. Topics include:</shortdesc>
   <body>
-    <p>TBD</p>
+    <ul>
+      <li><xref href="ceph_requirements.dita#ceph_requirements"/></li>
+      <li>TBD</li>
+      <li>TBD</li>
+    </ul>
   </body>
 </topic>

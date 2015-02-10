@@ -10,5 +10,7 @@
   <topicref href="../topics/ssh_key_authentication.dita"/>
   <topicref href="../topics/firewall_config_changes.dita"/>
  </topicref>
- <topicref href="../topics/ceph_installation.dita"/>
+ <topicref href="../topics/ceph_installation.dita">
+  <topicref href="../topics/ceph_requirements.dita"/>
+ </topicref>
 </map>
