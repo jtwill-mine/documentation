@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="nonroot_administrative_user">
+  <title>Non-root Administrative User</title>
+  <body>
+    <p>A non-root administrative user can be used to perform the Ceph configuration commands. This
+      user name should be available across all of the hosts. The account can exist indivudally or in
+      a central account database.</p>
+    <ol>
+      <li>Create the user during the kickstart process with the following configuration options.
+        Be sure to update it for local configuration and administrative rights:</li>
+    </ol>
+    <codeblock>user --groups=admin --name=ceph-user --password=XXXXXXXX</codeblock>
+  </body>
+</topic>
