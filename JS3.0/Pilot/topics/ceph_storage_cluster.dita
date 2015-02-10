@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_storage_cluster">
+  <title>Ceph Storage Cluster</title>
+  <shortdesc>The Ceph Storage Cluster is the foundation for all Ceph deployments.</shortdesc>
+  <body>
+    <p>Based upon RADOS (Reliable Autonomic Distributed Object Store), Ceph Storage Clusters consist of two types of daemons:</p>
+    <ul>
+      <li><b>Ceph OSD Daemon (OSD)</b> - stores data as objects on a storage node</li>
+      <li><b>Ceph Monitor</b> - maintains a master copy of the cluster map</li>
+    </ul>
+    <p>A Ceph Storage Cluster may contain thousands of storage nodes. A minimal system will have at least one Ceph Monitor and at least two Ceph OSD Daemons for data replication. Ceph stores data objects within two logical groups:</p>
+    <ul>
+      <li><b>Pools</b> - Pools are logical groups for storing objects. Pools manage the number of
+        placement groups, the number of replicas, and the ruleset for the pool. To store data
+        objects in a pool, you must have an authenticated user with permissions for the pool. Ceph
+        can also snapshot pools.<p>Each pool has a number of placement groups (PGs). CRUSH
+          (Controlled Replication Under Scalable Hashing) maps PGs to OSDs dynamically. When a Ceph
+          Client stores objects, CRUSH will map each object to a placement group. Mapping objects to
+          placement groups creates a layer of indirection between the Ceph OSD and the Ceph
+          Client.</p></li>
+      <li><b>Placement Groups</b> - Ceph Storage Clusters may store countless objects (e.g., tens of millions of objects), but must be able to grow (or shrink) and rebalance dynamically. If the Ceph Client “knew” which Ceph OSD Daemon had which object via a look-up table, which would create a single point of failure. If the Ceph Client stored which Ceph OSD Daemon had which object, it would create a tight coupling between the Ceph Client and the Ceph OSD Daemon, precluding fault tolerance.<p>Instead, the CRUSH algorithm maps each object to a placement group, and then maps each placement
+        group to one or more Ceph OSD Daemons. This layer of indirection allows Ceph to rebalance efficiently when new Ceph OSD Daemons and the underlying OSD devices come online (or crash and go offline).</p></li>
+    </ul>
+  </body>
+</topic>
