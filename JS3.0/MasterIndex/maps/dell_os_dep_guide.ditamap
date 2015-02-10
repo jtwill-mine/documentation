@@ -5,11 +5,10 @@
   <title>Dell Openstack Deployment Guide - Version 3.0</title>
 
   <topicmeta>
+    <shortdesc>Configuring Cinder, Glance and Libvirt to use Ceph Block Storage</shortdesc>
     <copyright>
       <copyryear year="© 2014-2015"/>
-
-      <copyrholder>Dell Revolutionary Cloud and Big Data
-      Solutions</copyrholder>
+      <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
     </copyright>
   </topicmeta>
 
@@ -18,15 +17,15 @@
   <topicref href="../../Common/overview.dita"/>
 
   <topicref href="../../SAH/topics/dell_admin_node_deployment.dita">
-    <mapref href="../../SAH/maps/admin_node_deployment.ditamap" format="ditamap" />
+    <mapref href="../../SAH/maps/admin_node_deployment.ditamap" format="ditamap"/>
   </topicref>
 
   <topicref href="../../SAH/topics/foreman_vm_deployment.dita">
-    <mapref href="../../SAH/maps/foreman_vm_deployment.ditamap" format="ditamap" />
+    <mapref href="../../SAH/maps/foreman_vm_deployment.ditamap" format="ditamap"/>
   </topicref>
 
   <topicref href="../../SAH/topics/ceph_ice_vm_deployment.dita">
-    <mapref href="../../SAH/maps/ceph_ice_vm_deployment.ditamap" format="ditamap" />
+    <mapref href="../../SAH/maps/ceph_ice_vm_deployment.ditamap" format="ditamap"/>
   </topicref>
 
   <topicref href="../../Pilot/topics/configure_foreman_server.dita">
@@ -41,7 +40,7 @@
   <topicref href="../../SAH/topics/deploy-foreman-vm.sh_script.dita"/>
   <topicref href="../../SAH/topics/deploy-ceph-vm.sh_script.dita"/>
   <topicref href="../../Pilot/topics/updating_rpms_on_version_locked_nodes.dita"/>
-  
+
   <topicref href="../../Pilot/topics/example_hammer_commands.dita">
     <mapref href="../../Pilot/maps/hammer_commands.ditamap" format="ditamap"/>
   </topicref>
