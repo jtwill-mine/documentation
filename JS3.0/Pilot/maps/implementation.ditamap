@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Implementation Map</title>
+ <topicref href="../topics/ceph_preinstall_config_requirements.dita">
+  <topicref href="../topics/time_synch.dita"/>
+  <topicref href="../topics/nonroot_administrative_user.dita"/>
+ </topicref>
+</map>
