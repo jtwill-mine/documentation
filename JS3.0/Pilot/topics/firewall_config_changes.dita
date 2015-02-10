@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="firewall_config_changes">
+  <title>Firewall Configuration Changes</title>
+  <body>
+    <p>Network port and protocol access requirements are provided in this document. These access
+      rules need to be modified for local administrative and configuration requirements. Any
+      required remote administration, application, and monitoring access requirements should also
+      be maintained.</p>
+    <ol>
+      <li>Run the command below to add and save a firewall rule to the start of the <codeph>INPUT</codeph>
+        chain, in order to allow SSH connections:</li>
+    </ol>
+    <codeblock># iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT
+# service iptables save</codeblock>
+  </body>
+</topic>
