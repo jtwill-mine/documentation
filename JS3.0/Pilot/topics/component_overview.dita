@@ -11,6 +11,7 @@
       <li><xref href="glance.dita#glance"/></li>
       <li><xref href="cinder.dita#cinder"/></li>
       <li><xref href="ceph.dita#ceph"/></li>
+      <li><xref href="ceph_storage_cluster.dita#ceph_storage_cluster"/></li>
       <li/>
     </ul>
   </body>

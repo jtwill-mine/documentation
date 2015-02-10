@@ -8,4 +8,5 @@
  <topicref href="../topics/glance.dita"/>
  <topicref href="../topics/cinder.dita"/>
  <topicref href="../topics/ceph.dita"/>
+ <topicref href="../topics/ceph_storage_cluster.dita"/>
 </map>
