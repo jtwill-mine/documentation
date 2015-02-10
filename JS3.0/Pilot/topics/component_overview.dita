@@ -9,7 +9,8 @@
       <li><xref href="what_is_redhat_openstack.dita#what_is_redhat_openstack"/></li>
       <li><xref href="nova.dita#nova"/></li>
       <li><xref href="glance.dita#glance"/></li>
-      <li></li>
+      <li><xref href="cinder.dita#cinder"/></li>
+      <li/>
     </ul>
   </body>
 </topic>

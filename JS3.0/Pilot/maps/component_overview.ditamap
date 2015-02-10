@@ -6,4 +6,5 @@
  <topicref href="../topics/what_is_redhat_openstack.dita"/>
  <topicref href="../topics/nova.dita"/>
  <topicref href="../topics/glance.dita"/>
+ <topicref href="../topics/cinder.dita"/>
 </map>
