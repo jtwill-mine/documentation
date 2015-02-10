@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_block_device">
+  <title>Ceph Block Device</title>
+  <shortdesc>A Ceph block device provides a block-based storage interface to the Ceph Storage Cluster.</shortdesc>
+  <body>
+    <p>The ubiquity of block device interfaces makes a virtual block device an ideal candidate to
+      interact with a mass data storage system like Ceph. Ceph block devices are thin-provisioned,
+      resizable, provide copy-on-write cloning and store block device data as objects striped over multiple OSDs in a Ceph cluster.</p>
+    <p>Ceph block devices leverage RADOS capabilities, such as snapshotting, replication, and
+      consistency. OpenStack deployments that use Ceph as a back end for volumes and images use
+        <codeph>libvirt</codeph> and QEMU/KVM as an interface to Ceph's RADOS Block Devices (RBD)
+      library, <codeph>librbd</codeph>.</p>
+  </body>
+</topic>

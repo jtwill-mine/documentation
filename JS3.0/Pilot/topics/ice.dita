@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ice">
+  <title>Inktank Ceph Enterprise (ICE)</title>
+  <shortdesc>Inktank <tm trademark="Ceph Enterprise" tmtype="tm">Ceph Enterprise</tm> combines the most stable version of open-source Ceph for object and block storage with a Ceph management platform, enhanced integration tools, and a suite of support services.</shortdesc>
+  <body>
+    <p>The flagship offering of Inktank, acquired recently by Red Hat, Inktank Ceph Enterprise provides everything enterprises need to confidently run production Ceph clusters at scale, thereby radically improving the economics and management of storage and providing a foundation for managing the exponential growth in enterprise data.</p>
+    <p>Inktank Ceph Enterprise customers benefit from hardened software with long-term support, lower TCO, predictable costs, and expert services from Ceph’s core developers.</p>
+  </body>
+</topic>
