@@ -7,4 +7,5 @@
  <topicref href="../topics/nova.dita"/>
  <topicref href="../topics/glance.dita"/>
  <topicref href="../topics/cinder.dita"/>
+ <topicref href="../topics/ceph.dita"/>
 </map>

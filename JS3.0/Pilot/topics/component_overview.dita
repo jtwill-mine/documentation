@@ -10,6 +10,7 @@
       <li><xref href="nova.dita#nova"/></li>
       <li><xref href="glance.dita#glance"/></li>
       <li><xref href="cinder.dita#cinder"/></li>
+      <li><xref href="ceph.dita#ceph"/></li>
       <li/>
     </ul>
   </body>
