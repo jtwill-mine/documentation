@@ -5,7 +5,9 @@
   <body>
     <p>Secure Shell (SSH) can be updated to restrict access to a restricted list of users or groups.</p>
     <ol>
-      <li>Run the commands below to permit members of the admin group to ssh into the server. Be sure to update them to satisfy local administrative requirements, and ensure proper access to the host:</li>
+      <li>Run the commands below to permit members of the admin group to <codeph>ssh</codeph> into
+        the server. Be sure to update them to satisfy local administrative requirements, and ensure
+        proper access to the host:</li>
     </ol>
     <codeblock># echo “AllowGroups admin” >> /etc/ssh/sshd_config
 # systemctl restart sshd</codeblock>
