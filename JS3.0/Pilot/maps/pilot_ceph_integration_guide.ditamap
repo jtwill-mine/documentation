@@ -24,6 +24,9 @@
   <topicref href="../topics/component_overview.dita">
     <mapref href="component_overview.ditamap" format="ditamap"/>
   </topicref>
+  <topicref href="../topics/implementation.dita">
+    <mapref href="implementation.ditamap" format="ditamap"/>
+  </topicref>
 
   <!-- <topicref href="../topics/ceph_integration.dita"/> -->
 
