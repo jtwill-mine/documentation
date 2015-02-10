@@ -9,4 +9,6 @@
  <topicref href="../topics/cinder.dita"/>
  <topicref href="../topics/ceph.dita"/>
  <topicref href="../topics/ceph_storage_cluster.dita"/>
+ <topicref href="../topics/ceph_block_device.dita"/>
+ <topicref href="../topics/ice.dita"/>
 </map>

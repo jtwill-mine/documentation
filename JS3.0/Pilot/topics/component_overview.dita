@@ -12,7 +12,8 @@
       <li><xref href="cinder.dita#cinder"/></li>
       <li><xref href="ceph.dita#ceph"/></li>
       <li><xref href="ceph_storage_cluster.dita#ceph_storage_cluster"/></li>
-      <li/>
+      <li><xref href="ceph_block_device.dita#ceph_block_device"/></li>
+      <li><xref href="ice.dita#ice"/></li>
     </ul>
   </body>
 </topic>
