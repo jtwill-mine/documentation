@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="what_is_redhat_openstack">
+  <title>What is Red Hat OpenStack?</title>
+  <body>
+    <p>Red Hat Enterprise Linux OpenStack Platform delivers an integrated foundation to create,
+      deploy, and scale a secure and reliable public or private OpenStack cloud. It delivers a cloud
+      platform built on Red Hat Enterprise Linux, optimized for and integrated with Red Hat's
+      OpenStack technologies, providing the agility to scale and quickly meet customer demands
+      without compromising on availability, security, or performance.</p>
+  </body>
+</topic>
