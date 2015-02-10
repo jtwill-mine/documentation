@@ -6,5 +6,6 @@
   <topicref href="../topics/time_synch.dita"/>
   <topicref href="../topics/nonroot_administrative_user.dita"/>
   <topicref href="../topics/sudo_access.dita"/>
+  <topicref href="../topics/limiting_ssh_access.dita"/>
  </topicref>
 </map>
