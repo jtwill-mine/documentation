@@ -5,7 +5,6 @@
   <title>Dell Openstack Deployment Guide - Version 3.0</title>
 
   <topicmeta>
-    <shortdesc>Configuring Cinder, Glance and Libvirt to use Ceph Block Storage</shortdesc>
     <copyright>
       <copyryear year="© 2014-2015"/>
       <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
