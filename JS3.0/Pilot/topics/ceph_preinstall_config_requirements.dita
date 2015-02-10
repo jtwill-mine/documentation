@@ -12,7 +12,8 @@
       <li><xref href="nonroot_administrative_user.dita#nonroot_administrative_user"/></li>
       <li><xref href="sudo_access.dita#sudo_access"/></li>
       <li><xref href="limiting_ssh_access.dita#limiting_ssh_access"/></li>
-      <li/>
+      <li><xref href="ssh_key_authentication.dita#ssh_key_authentication"/></li>
+      <li><xref href="firewall_config_changes.dita#firewall_config_changes"/></li>
     </ul>
   </body>
 </topic>
