@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="libvirt_config">
+  <title><codeph>libvirt</codeph> Configuration</title>
+  <shortdesc>To configure <codeph>libvirt</codeph>:</shortdesc>
+  <body>
+    <ol>
+      <li>On the Ceph administration node, extract the volumes client key:<codeblock>[ceph-user@ice-admin cluster]$ cat ceph.client.volumes.keyring | grep \
+key | awk ‘{print $3}’| tee client.volumes.key</codeblock></li>
+      <li>On the Ceph administration node, create a <codeph>secret.xml</codeph> file containing the
+        following contents.<note><codeph>GENERATED_UUID</codeph> is replaced with the UUID created
+          in <xref href="foreman_config_ha_controller.dita#foreman_config_ha_controller"
+        />.</note><codeblock>&lt;secret ephemeral='no' private='no' >
+&lt;uuid&gt;GENERATED_UUID&lt;/uuid&gt;
+&lt;usage type='ceph'&gt;
+&lt;name&gt;client.volumes secret&lt;/name&gt;
+&lt;/usage&gt;
+&lt;/secret&gt;</codeblock></li>
+      <li>Copy the <codeph>secret.xml</codeph> and <codeph>client.volumes.key</codeph> files to each compute node:<codeblock>[ceph-user@ice-admin cluster]$ scp secret.xml client.volumes.key \
+ospcomp1:
+[ceph-user@ice-admin cluster]$ scp secret.xml client.volumes.key \
+ospcomp2:</codeblock></li>
+      <li>On each compute node, define the secret for <codeph>libvirt</codeph>:<codeblock>[ceph-user@ospcomp1 ~]$ sudo virsh secret-define --file secret.xml</codeblock></li>
+      <li>On each compute node, use the UUID to add the contents of the secret key.<ol
+          id="ol_bgt_tvv_1r">
+          <li>Replace the <cmdname>UUID</cmdname> command argument with the UUID from the file.</li>
+        </ol><codeblock>[ceph-user@ospcomp1 ~]$ sudo virsh secret-set-value --secret UUID \
+--base64 `cat client.volumes.key`</codeblock></li>
+      <li>On each compute node, print the <codeph>virsh</codeph> secrets, and verify the new secret is added:<codeblock>[ceph-user@ospcomp1 ~]$ sudo virsh secret-list</codeblock></li>
+      <li>You can now remove the <codeph>client.volumes.key</codeph> and <codeph>secret.xml</codeph> files from each compute node:<codeblock>[ceph-user@ospcomp1 ~]$ rm client.volumes.key secret.xml</codeblock></li>
+    </ol>
+  </body>
+</topic>
