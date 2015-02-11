@@ -9,7 +9,7 @@
         /></li>
       <li><xref href="ceph_installation.dita#ceph_installation"/></li>
       <li><xref href="add_ceph_osd_hosts.dita#add_ceph_osd_hosts"/></li>
-      <li>TBD</li>
+      <li><xref href="osp_integration_with_ceph.dita#osp_integration_with_ceph"/></li>
     </ul>
   </body>
 </topic>

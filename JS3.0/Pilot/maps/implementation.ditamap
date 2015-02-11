@@ -21,4 +21,7 @@
  <topicref href="../topics/add_ceph_osd_hosts.dita">
   <mapref href="add_ceph_osd_hosts.ditamap" format="ditamap"/>
  </topicref>
+ <topicref href="../topics/osp_integration_with_ceph.dita">
+  <mapref href="osp_integration.ditamap" format="ditamap"/>
+ </topicref>
 </map>
