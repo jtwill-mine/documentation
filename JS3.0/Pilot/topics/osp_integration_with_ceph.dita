@@ -10,7 +10,7 @@
       <li><xref href="ceph_pool_keyring_config.dita#ceph_pool_keyring_config"/></li>
       <li><xref href="foreman_config_ha_controller.dita#foreman_config_ha_controller"/></li>
       <li><xref href="foreman_config_compute.dita#foreman_config_compute"/></li>
-      <li>TBD</li>
+      <li><xref href="libvirt_config.dita#libvirt_config"/></li>
       <li>TBD</li>
       <li>TBD</li>
       <li>TBD</li>
