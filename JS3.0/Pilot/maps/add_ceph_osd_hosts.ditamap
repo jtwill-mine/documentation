@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Add Ceph OSD Hosts Map</title>
+ <topicref href="../topics/prerequisites_add_osd_hosts.dita"/>
+</map>
