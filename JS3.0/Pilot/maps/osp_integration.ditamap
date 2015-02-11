@@ -3,4 +3,6 @@
 <map>
  <title>OSP Integration with Ceph Map</title>
  <topicref href="../topics/integration_requirements.dita"/>
+ <topicref href="../topics/integration_configuration_goal.dita"/>
+ <topicref href="../topics/ceph_pool_keyring_config.dita"/>
 </map>

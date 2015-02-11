@@ -6,8 +6,8 @@
   <body>
     <ul>
       <li><xref href="integration_requirements.dita#integration_requirements"/></li>
-      <li>TBD</li>
-      <li>TBD</li>
+      <li><xref href="integration_configuration_goal.dita#integration_configuration_goal"/></li>
+      <li><xref href="ceph_pool_keyring_config.dita#ceph_pool_keyring_config"/></li>
       <li>TBD</li>
       <li>TBD</li>
       <li>TBD</li>
