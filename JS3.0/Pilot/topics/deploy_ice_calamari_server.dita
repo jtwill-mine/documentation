@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="deploy_ice_calamari_server">
+  <title>Deploy ICE and the Calamari Server</title>
+  <shortdesc>To deploy Inktank Ceph Enterprise, and the Calamari server:</shortdesc>
+  <body>
+    <ol>
+      <li>Enable web access to the ICE Admin server for downloading Ceph supplied
+          packages:<note>tcp:443 support must be added if <i>https</i> is selected for the Calamari
+          web server port
+        below.</note><codeblock>[ceph-user@ice-admin ~]$ sudo iptables -I INPUT 1 -p tcp --dport 22 -j 
+ACCEPT
+[ceph-user@ice-admin ~]$ sudo service iptables save</codeblock></li>
+      <li>Enable access to the salt master ports used by the calamari service to administer the Ceph
+        servers:<codeblock>[ceph-user@ice-admin ~]$ sudo iptables -I INPUT 1 -p tcp --dport 4505 -j
+ACCEPT
+[ceph-user@ice-admin ~]$ sudo iptables -I INPUT 1 -p tcp --dport 4506 -j
+ACCEPT
+[ceph-user@ice-admin ~]$ sudo service iptables save</codeblock></li>
+      <li>Download and extract the ICE distribution package. The ICE distribution package may be
+        copied from a local location or downloaded from the vendor website at <xref
+          href="https://download.inktank.com/enterprise/" format="html" scope="external"
+          >https://download.inktank.com/enterprise/</xref>.<note>Login credintals are required to
+          download the packaged distribution
+        file.</note><codeblock>[ceph-user@ice-admin ~]$ mkdir ~/ice-1.2
+[ceph-user@ice-admin ~]$ cd ~/ice-1.2
+[ceph-user@ice-admin ice-1.2]$ #Copy or download file
+[ceoh-user@ice-admin ice-1.2]$ tar -zxvf ICE-1.2.2-rhel7.tar.gz</codeblock></li>
+      <li>Run the ICE deploy script:<codeblock>[ceph-user@ice-admin ice-1.2]$ sudo python ice_setup.py</codeblock><note>The <codeph>cpehdeploy.conf</codeph> file is created in the same directory as the <codeph>ice_setup.py</codeph> file.
+        A <codeph>~/.cephdeploy.conf</codeph> file is created with the same contents and is used by the <cmdname>ceph-deploy</cmdname> command.</note></li>
+      <li>Type <b>yes</b> to continue the installation.</li>
+      <li>Press <codeph>[ENTER]</codeph> to accept the FQDN hostname, or alter as needed. This hostname must be accessible to the Ceph nodes on the provisioning network.</li>
+      <li>Select <b>http</b> or <b>https</b> as need. <i>http</i> is used in this example
+        configuration.</li>
+      <li>Create a <codeph>ceph-deploy</codeph> working directory. All <cmdname>ceph-deploy</cmdname> commands should be executed from this directory.<codeblock>[ceph-user@ice-admin ~]$ mkdir ~/cluster &amp;&amp; cd ~/cluster</codeblock></li>
+      <li>Run the <cmdname>calamari-ctl initialize</cmdname> command:<codeblock>[ceph-user@ice-admin cluster]$ sudo calamari-ctl initialize</codeblock></li>
+      <li>Enter the <b>Calamari login name</b>. <i>root</i> is the default, but it can be changed to satisfy
+        local administrative requirements.</li>
+      <li>Enter the <b>email address</b> to be associated with the admin account.</li>
+      <li>Enter the <b>administrator password</b>. This username and password is used to log into
+        the calamari GUI for cluster monitoring and administration.</li>
+      <li>Re-enter the <b>administrator password</b>.</li>
+    </ol>
+  </body>
+</topic>
