@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="osp_integration_with_ceph">
+  <title>OSP Integration with Ceph</title>
+  <shortdesc>This section discusses integrating OSP with Ceph. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="integration_requirements.dita#integration_requirements"/></li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+    </ul>
+  </body>
+</topic>
