@@ -7,8 +7,10 @@
     <ul>
       <li><xref href="prerequisites_add_osd_hosts.dita#prerequisites_add_osd_hosts"/></li>
       <li><xref href="new_host_ceph_installation.dita#new_host_ceph_installation"/></li>
-      <li>TBD</li>
-      <li>TBD</li>
+      <li><xref
+          href="grant_ceph_admin_rights_nonmonitor_host.dita#grant_ceph_admin_rights_nonmonitor_host"
+        /></li>
+      <li><xref href="modifying_osd_placement_groups.dita#modifying_osd_placement_groups"/></li>
     </ul>
   </body>
 </topic>

@@ -4,4 +4,6 @@
  <title>Add Ceph OSD Hosts Map</title>
  <topicref href="../topics/prerequisites_add_osd_hosts.dita"/>
  <topicref href="../topics/new_host_ceph_installation.dita"/>
+ <topicref href="../topics/grant_ceph_admin_rights_nonmonitor_host.dita"/>
+ <topicref href="../topics/modifying_osd_placement_groups.dita"/>
 </map>

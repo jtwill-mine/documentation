@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="grant_ceph_admin_rights_nonmonitor_host">
+  <title>Granting Ceph Administration Rights To A Non-monitor Host</title>
+  <shortdesc>By default the ceph-deploy will grant Ceph administrative rights to the monitor hosts. These
+    rights can be granted to other hosts to facilitate centralized management.</shortdesc>
+  <body>
+    <ol>
+      <li>Run the following commands to grant administrative rights to one of the OSD hosts:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy admin ceph-osd1</codeblock><note>The admin host needs access to the Storage Network. The ICE Admin host in this
+        document does not have access to this network.</note></li>
+      <li>Verify Admin access:<codeblock>[ceph-user@ceph-osd1 ~]$ sudo ceph status</codeblock></li>
+    </ol>
+  </body>
+</topic>
