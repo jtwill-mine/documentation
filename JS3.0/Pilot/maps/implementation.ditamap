@@ -18,4 +18,7 @@
   <topicref href="../topics/ceph_osd_config_process.dita"/>
   <topicref href="../topics/connecting_ceph_hosts_to_calamari_server.dita"/>
  </topicref>
+ <topicref href="../topics/add_ceph_osd_hosts.dita">
+  <mapref href="add_ceph_osd_hosts.ditamap" format="ditamap"/>
+ </topicref>
 </map>
