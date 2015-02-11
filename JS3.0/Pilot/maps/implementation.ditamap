@@ -13,5 +13,6 @@
  <topicref href="../topics/ceph_installation.dita">
   <topicref href="../topics/ceph_requirements.dita"/>
   <topicref href="../topics/ceph_config_goal.dita"/>
+  <topicref href="../topics/deploy_ice_calamari_server.dita"/>
  </topicref>
 </map>
