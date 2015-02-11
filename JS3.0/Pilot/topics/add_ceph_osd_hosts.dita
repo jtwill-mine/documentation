@@ -10,7 +10,7 @@
       <li><xref
           href="grant_ceph_admin_rights_nonmonitor_host.dita#grant_ceph_admin_rights_nonmonitor_host"
         /></li>
-      <li>TBD</li>
+      <li><xref href="modifying_osd_placement_groups.dita#modifying_osd_placement_groups"/></li>
     </ul>
   </body>
 </topic>
