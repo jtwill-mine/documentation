@@ -10,7 +10,9 @@
       <li><xref href="deploy_ice_calamari_server.dita#deploy_ice_calamari_server"/></li>
       <li><xref href="ceph_mon_config_process.dita#ceph_mon_config_process"/></li>
       <li><xref href="ceph_osd_config_process.dita#ceph_osd_config_process"/></li>
-      <li>TBD</li>
+      <li><xref
+          href="connecting_ceph_hosts_to_calamari_server.dita#connecting_ceph_hosts_to_calamari_server"
+        /></li>
     </ul>
   </body>
 </topic>

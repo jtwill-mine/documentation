@@ -16,5 +16,6 @@
   <topicref href="../topics/deploy_ice_calamari_server.dita"/>
   <topicref href="../topics/ceph_mon_config_process.dita"/>
   <topicref href="../topics/ceph_osd_config_process.dita"/>
+  <topicref href="../topics/connecting_ceph_hosts_to_calamari_server.dita"/>
  </topicref>
 </map>
