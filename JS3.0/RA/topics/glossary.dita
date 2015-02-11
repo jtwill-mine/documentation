@@ -67,6 +67,6 @@
   </glossentry>
   <glossentry id="storage_node">
     <glossterm>Storage Node</glossterm>
-    <glossdef>The hardware configuration that best supports storage functions such as Swift and Ceph.</glossdef>
+    <glossdef>The hardware configuration that best supports storage functions such as Ceph.</glossdef>
   </glossentry>
 </glossgroup>
