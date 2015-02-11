@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_mon_config_process">
+  <title>Ceph Monitor Configuration Process</title>
+  <shortdesc>To configure the Ceph monitor:</shortdesc>
+  <body>
+    <ol>
+      <li>Update the /etc/hosts and the generated ceph.conf files on the ICE Administration host, to
+        enable the ICE Administration host to use the storage network names of hosts to access the
+        storage network via the provisioning network.<note>By default the ICE Administration host
+          does not have access to the storage network, but the <cmdname>ceph-deploy</cmdname>
+          command assumes
+        access.</note><codeblock>[ceph-user@ice-admin ~]# tail -3 /etc/hosts
+10.19.139.71 ospctl1-storage
+10.19.139.72 ospctl2-storage
+10.19.139.73 ospctl3-storage</codeblock></li>
+      <li>Create the Ceph cluster with an initial monitor
+        list:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy new ospctl1-storage \
+ospctl2-storage ospctl3-storage</codeblock></li>
+      <li>Update or add any parameters in the ceph.conf file as needed to satisfy local
+        operational requirements.<p>In this example configuration, the <i>mon_host</i>, <i>public
+          network</i> and <i>cluster network</i> parameters are added or modified to match the local
+          configuration conditions. The <i>osd pool default size</i> parameter is set to <i>2</i> in order to
+          allow the initial cluster to be configured with two storage nodes.</p><note>Appendix C: Example
+            Configuration Files includes the ceph.conf file used for this example deployment.</note><codeblock>[ceph-user@ice-admin cluster]# diff ceph.conf.ORIG ceph.conf
+4c4
+&lt; mon_host = 10.19.139.71,10.19.139.72,10.19.139.73
+---
+&gt; mon_host = 172.31.139.71,172.31.139.72,172.31.139.73
+9c9,11
+&lt;
+---
+&gt; public network = 172.31.0.0/16
+&gt; cluster network = 172.30.0.0/16
+&gt; osd pool default size = 2</codeblock></li>
+      <li>Deploy the Ceph software to the initial monitor node:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy install ospctl1 ospctl2 \
+ospctl3</codeblock></li>
+      <li>On initial start up, the Ceph initialization script attempts to configure the keys for and
+        bind to the IP address for the hostname of the host. The hostname of each Ceph
+        monitor host must be temporarily changed to the storage network hostname.<note>The hostname can be reset once the initial quorum is reached below.</note><codeblock>[ceph-user@ice-admin cluster]$ ssh ospctl1 sudo hostname ospctl1-storage
+[ceph-user@ice-admin cluster]$ ssh ospctl2 sudo hostname ospctl2-storage
+[ceph-user@ice-admin cluster]$ ssh ospctl3 sudo hostname ospctl3-storage</codeblock></li>
+      <li>On each monitor, enable access to the Ceph monitor process:<codeblock>[ceph-user@ospctl1 ~]$ sudo iptables -I INPUT 1 -p tcp --dport 6789 -j
+ACCEPT
+[ceph-user@ospctl1 ~]$ sudo service iptables save
+[ceph-user@ospctl2 ~]$ sudo iptables -I INPUT 1 -p tcp --dport 6789 -j
+ACCEPT
+[ceph-user@ospctl2 ~]$ sudo service iptables save
+[ceph-user@ospctl3 ~]$ sudo iptables -I INPUT 1 -p tcp --dport 6789 -j
+ACCEPT
+[ceph-user@ospctl3 ~]$ sudo service iptables save</codeblock></li>
+      <li>Create the initial monitors:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy mon create-initial</codeblock></li>
+      <li>On a monitor host, verify Ceph operation from one of the monitors.<ol id="ol_z45_wxt_1r">
+          <li>See <xref href="http://ceph.com/docs/master/rados/operations/monitoring/"
+              format="html" scope="external">this webpage</xref> for information on how to monitor
+            the health of a Ceph cluster. Any issues should be resolved prior to proceeding farther
+            in this document.</li>
+        </ol><codeblock>[root@ospctl1 ~]$ sudo ceph health
+HEALTH_ERR 192 pgs stuck inactive; 192 pgs stuck unclean; no osds;
+[root@ospctl1 ~]$ ceph mon stat
+e2: 3 mons at
+{ospctl1-storage=172.31.139.71:6789/0,ospctl2-storage=172.31.139.72:6789/
+0,ospctl3-storage=172.31.139.73:6789/0}, election epoch 8, quorum 0,1,2
+ospctl1-storage,ospctl2-storage,ospctl3-storage</codeblock><note>A <codeph>HEALTH_ERR</codeph> status is expected in this case as there are no OSDs
+  configured and the placement groups have not been replicated. There should be three
+  monitors listed, and the cluster should have a quorum.</note></li>
+      <li>Once a monitor quorum is reached, reset the hostnames of the Ceph monitors to normal:<codeblock>[ceph-user@ice-admin cluster]$ ssh ospctl1 sudo hostname \
+`cat /etc/hostname`
+[ceph-user@ice-admin cluster]$ ssh ospctl2 sudo hostname \
+`cat /etc/hostname`
+[ceph-user@ice-admin cluster]$ ssh ospctl3 sudo hostname \
+`cat /etc/hostname`</codeblock></li>
+    </ol>
+  </body>
+</topic>
