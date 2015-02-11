@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="integration_configuration_goal">
+  <title>Integration Configuration Goals</title>
+  <body>
+    <ul>
+      <li>Three Ceph pools will be created:<ul id="ul_ceph_pools">
+          <li>images</li>
+          <li>volumes</li>
+          <li>optional backups</li>
+        </ul></li>
+      <li>OSP will be installed and configured to store data within the created pools via
+        Foreman/puppet</li>
+    </ul>
+  </body>
+</topic>
