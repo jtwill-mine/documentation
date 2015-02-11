@@ -3,4 +3,5 @@
 <map>
  <title>Add Ceph OSD Hosts Map</title>
  <topicref href="../topics/prerequisites_add_osd_hosts.dita"/>
+ <topicref href="../topics/new_host_ceph_installation.dita"/>
 </map>

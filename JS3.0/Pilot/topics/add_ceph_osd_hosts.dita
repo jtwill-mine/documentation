@@ -6,7 +6,7 @@
   <body>
     <ul>
       <li><xref href="prerequisites_add_osd_hosts.dita#prerequisites_add_osd_hosts"/></li>
-      <li>TBD</li>
+      <li><xref href="new_host_ceph_installation.dita#new_host_ceph_installation"/></li>
       <li>TBD</li>
       <li>TBD</li>
     </ul>

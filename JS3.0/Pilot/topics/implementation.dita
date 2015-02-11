@@ -8,7 +8,7 @@
       <li><xref href="ceph_preinstall_config_requirements.dita#ceph_preinstall_config_requirements"
         /></li>
       <li><xref href="ceph_installation.dita#ceph_installation"/></li>
-      <li>TBD</li>
+      <li><xref href="add_ceph_osd_hosts.dita#add_ceph_osd_hosts"/></li>
       <li>TBD</li>
     </ul>
   </body>
