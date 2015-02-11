@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_ceph_osd_hosts">
+  <title>Add Ceph OSD Hosts</title>
+  <shortdesc>This section discusses adding Ceph OSD hosts. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="prerequisites_add_osd_hosts.dita#prerequisites_add_osd_hosts"/></li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
+    </ul>
+  </body>
+</topic>
