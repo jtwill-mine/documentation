@@ -6,4 +6,5 @@
  <topicref href="../topics/integration_configuration_goal.dita"/>
  <topicref href="../topics/ceph_pool_keyring_config.dita"/>
  <topicref href="../topics/foreman_config_ha_controller.dita"/>
+ <topicref href="../topics/foreman_config_compute.dita"/>
 </map>
