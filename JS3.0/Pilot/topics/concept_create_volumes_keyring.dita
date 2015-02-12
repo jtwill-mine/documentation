@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_create_volumes_keyring">
+ <title>Create Volumes Keyring</title>
+ <conbody>
+  <codeblock>$ sudo ceph auth get-or-create client.volumes mon 'allow r' osd 'allow
+class-read object_prefix rbd_children, allow rwx pool=volumes, allow rx
+pool=images'
+$ sudo ceph auth get-or-create client.volumes \
+> ceph.client.volumes.keyring</codeblock>
+ </conbody>
+</concept>
