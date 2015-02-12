@@ -12,7 +12,7 @@
       <li><xref href="foreman_config_compute.dita#foreman_config_compute"/></li>
       <li><xref href="libvirt_config.dita#libvirt_config"/></li>
       <li><xref href="deploy_ceph_config_files.dita#deploy_ceph_config_files"/></li>
-      <li>TBD</li>
+      <li><xref href="configure_cinder_for_backups.dita#configure_cinder_for_backups"/></li>
       <li>TBD</li>
     </ul>
   </body>
