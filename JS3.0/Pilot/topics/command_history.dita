@@ -17,6 +17,9 @@
         /></li>
       <li><xref href="concept_copy_libvirt_secret_files.dita#concept_copy_libvirt_secret_files"
         /></li>
+      <li><xref href="concept_add_libvirt_secret_files.dita#concept_add_libvirt_secret_files"/></li>
+      <li><xref href="concept_test_integration.dita#concept_test_integration"/></li>
+      <li><xref href="concept_show_pool_usage.dita#concept_show_pool_usage"/></li>
     </ul>
   </body>
 </topic>

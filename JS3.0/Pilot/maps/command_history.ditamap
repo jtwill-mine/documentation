@@ -13,4 +13,7 @@
  <topicref href="../topics/concept_gather_deploy_ceph.conf.dita"/>
  <topicref href="../topics/concept_gather_deploy_client_keys.dita"/>
  <topicref href="../topics/concept_copy_libvirt_secret_files.dita"/>
+ <topicref href="../topics/concept_add_libvirt_secret_files.dita"/>
+ <topicref href="../topics/concept_test_integration.dita"/>
+ <topicref href="../topics/concept_show_pool_usage.dita"/>
 </map>
