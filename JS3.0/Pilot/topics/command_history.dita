@@ -13,6 +13,10 @@
       <li><xref href="concept_create_volumes_keyring.dita#concept_create_volumes_keyring"/></li>
       <li><xref href="concept_create_backups_keyring.dita#concept_create_backups_keyring"/></li>
       <li><xref href="concept_gather_deploy_ceph.conf.dita#concept_gather_deploy_ceph.conf"/></li>
+      <li><xref href="concept_gather_deploy_client_keys.dita#concept_gather_deploy_client_keys"
+        /></li>
+      <li><xref href="concept_copy_libvirt_secret_files.dita#concept_copy_libvirt_secret_files"
+        /></li>
     </ul>
   </body>
 </topic>

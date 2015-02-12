@@ -11,4 +11,6 @@
  <topicref href="../topics/concept_create_volumes_keyring.dita"/>
  <topicref href="../topics/concept_create_backups_keyring.dita"/>
  <topicref href="../topics/concept_gather_deploy_ceph.conf.dita"/>
+ <topicref href="../topics/concept_gather_deploy_client_keys.dita"/>
+ <topicref href="../topics/concept_copy_libvirt_secret_files.dita"/>
 </map>
