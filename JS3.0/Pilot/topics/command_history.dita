@@ -9,6 +9,8 @@
       <li><xref href="concept_configuring_osds.dita#concept_configuring_osds"/></li>
       <li><xref href="concept_connect_to_calamari.dita#concept_connect_to_calamari"/></li>
       <li><xref href="concept_create_data_pools.dita#concept_create_data_pools"/></li>
+      <li><xref href="concept_create_images_keyring.dita#concept_create_images_keyring"/></li>
+      <li><xref href="concept_create_volumes_keyring.dita#concept_create_volumes_keyring"/></li>
     </ul>
   </body>
 </topic>

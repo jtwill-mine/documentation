@@ -7,4 +7,6 @@
  <topicref href="../topics/concept_configuring_osds.dita"/>
  <topicref href="../topics/concept_connect_to_calamari.dita"/>
  <topicref href="../topics/concept_create_data_pools.dita"/>
+ <topicref href="../topics/concept_create_images_keyring.dita"/>
+ <topicref href="../topics/concept_create_volumes_keyring.dita"/>
 </map>
