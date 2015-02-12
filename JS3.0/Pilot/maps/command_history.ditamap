@@ -9,4 +9,6 @@
  <topicref href="../topics/concept_create_data_pools.dita"/>
  <topicref href="../topics/concept_create_images_keyring.dita"/>
  <topicref href="../topics/concept_create_volumes_keyring.dita"/>
+ <topicref href="../topics/concept_create_backups_keyring.dita"/>
+ <topicref href="../topics/concept_gather_deploy_ceph.conf.dita"/>
 </map>

@@ -11,6 +11,8 @@
       <li><xref href="concept_create_data_pools.dita#concept_create_data_pools"/></li>
       <li><xref href="concept_create_images_keyring.dita#concept_create_images_keyring"/></li>
       <li><xref href="concept_create_volumes_keyring.dita#concept_create_volumes_keyring"/></li>
+      <li><xref href="concept_create_backups_keyring.dita#concept_create_backups_keyring"/></li>
+      <li><xref href="concept_gather_deploy_ceph.conf.dita#concept_gather_deploy_ceph.conf"/></li>
     </ul>
   </body>
 </topic>
