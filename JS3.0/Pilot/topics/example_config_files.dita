@@ -15,6 +15,12 @@
       <li><xref
           href="concept_example_ceph_client_images_keyring.dita#concept_example_ceph_client_images_keyring"
         /></li>
+      <li><xref
+          href="concept_example_ceph_client_volumes_keyring.dita#concept_example_ceph_client_volumes_keyring"
+        /></li>
+      <li><xref
+          href="concept_example_ceph_client_backups_keyring.dita#concept_example_ceph_client_backups_keyring"
+        /></li>
     </ul>
   </body>
 </topic>
