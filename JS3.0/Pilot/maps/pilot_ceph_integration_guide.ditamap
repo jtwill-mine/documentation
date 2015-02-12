@@ -33,4 +33,7 @@
   <topicref href="../../Common/references.dita">
     <topicref href="../../Common/to_learn_more.dita"/>
   </topicref>
+  <topicref href="../topics/appendices.dita">
+    <mapref href="appendices.ditamap" format="ditamap"/>
+  </topicref>
 </map>

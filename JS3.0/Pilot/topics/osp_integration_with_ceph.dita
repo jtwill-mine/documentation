@@ -13,7 +13,7 @@
       <li><xref href="libvirt_config.dita#libvirt_config"/></li>
       <li><xref href="deploy_ceph_config_files.dita#deploy_ceph_config_files"/></li>
       <li><xref href="configure_cinder_for_backups.dita#configure_cinder_for_backups"/></li>
-      <li>TBD</li>
+      <li><xref href="test_osp_integration.dita#test_osp_integration"/></li>
     </ul>
   </body>
 </topic>

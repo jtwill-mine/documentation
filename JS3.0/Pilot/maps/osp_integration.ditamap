@@ -10,4 +10,5 @@
  <topicref href="../topics/libvirt_config.dita"/>
  <topicref href="../topics/deploy_ceph_config_files.dita"/>
  <topicref href="../topics/configure_cinder_for_backups.dita"/>
+ <topicref href="../topics/test_osp_integration.dita"/>
 </map>
