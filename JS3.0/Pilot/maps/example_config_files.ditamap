@@ -9,4 +9,6 @@
  <topicref href="../topics/concept_example_ceph_client_images_keyring.dita"/>
  <topicref href="../topics/concept_example_ceph_client_volumes_keyring.dita"/>
  <topicref href="../topics/concept_example_ceph_client_backups_keyring.dita"/>
+ <topicref href="../topics/concept_example_storage_nodes_etc_sysconfig_iptables.dita"/>
+ <topicref href="../topics/concept_example_controller_node_etc_sysconfig_iptables.dita"/>
 </map>

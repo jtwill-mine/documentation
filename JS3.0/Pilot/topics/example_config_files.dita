@@ -21,6 +21,12 @@
       <li><xref
           href="concept_example_ceph_client_backups_keyring.dita#concept_example_ceph_client_backups_keyring"
         /></li>
+      <li><xref
+          href="concept_example_storage_nodes_etc_sysconfig_iptables.dita#concept_example_storage_nodes_etc_sysconfig_iptables"
+        /></li>
+      <li><xref
+          href="concept_example_controller_node_etc_sysconfig_iptables.dita#concept_example_controller_node_etc_sysconfig_iptables"
+        /></li>
     </ul>
   </body>
 </topic>
