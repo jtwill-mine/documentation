@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="appendices">
+  <title>Appendices</title>
+  <shortdesc>The following appendices provide additional information:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="command_history.dita#command_history"/></li>
+      <li></li>
+    </ul>
+  </body>
+</topic>

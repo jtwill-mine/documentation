@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="command_history">
+  <title>Command History</title>
+  <body>
+    <ul>
+      <li><xref href="concept_ice_install.dita#concept_ice_install"/></li>
+      <li><xref href="concept_ceph_monitor_config.dita#concept_ceph_monitor_config"/></li>
+    </ul>
+  </body>
+</topic>

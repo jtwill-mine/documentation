@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ceph_monitor_config">
+ <title>Ceph Monitor Configuration</title>
+ <conbody>
+  <codeblock>$ ceph-deploy new ospctl1-storage ospctl2-storage ospctl3-storage
+$ vi ceph.conf
+$ ceph-deploy install ospctl1-storage ospctl2-storage ospctl3-storage
+$ ceph-deploy mon create-initial</codeblock>
+ </conbody>
+</concept>

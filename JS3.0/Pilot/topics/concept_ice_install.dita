@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ice_install">
+ <title>ICE Install</title>
+ <conbody>
+  <codeblock>$ mkdir ice-1.2
+$ cd ice-1.2/
+$ #copy or download distribution file
+$ tar -zxvf ICE-1.2.2-rhel7.tar.gz
+$ sudo python ice_setup.py
+$ sudo calamari-ctl initialize</codeblock>
+ </conbody>
+</concept>
