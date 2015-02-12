@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_example_etc_ceph_ceph_conf">
+ <title>Example /etc/ceph/ceph.conf</title>
+ <conbody>
+  <codeblock>[[global]
+fsid = 38....6f
+mon_initial_members = ospctl1-storage, ospctl2-storage, ospctl3-storage
+mon_host = 172.31.139.71,172.31.139.72,172.31.139.73
+auth_cluster_required = cephx
+auth_service_required = cephx
+auth_client_required = cephx
+filestore_xattr_use_omap = true
+public_network = 172.31.0.0/16
+cluster_network = 172.30.0.0/16
+osd_pool_default_size = 2
+[client.images]
+keyring = /etc/ceph/ceph.client.images.keyring
+[client.volumes]
+keyring = /etc/ceph/ceph.client.volumes.keyring
+[client.backups]
+keyring = /etc/ceph/ceph.client.backups.keyring</codeblock>
+ </conbody>
+</concept>
