@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_connect_to_calamari">
+ <title>Connect to Calamari</title>
+ <conbody>
+  <codeblock>$ ceph-deploy calamari connect ospctl1 ospctl2 ospctl3 ceph-osd1 \
+ceph-osd2 ceph-osd3</codeblock>
+ </conbody>
+</concept>
