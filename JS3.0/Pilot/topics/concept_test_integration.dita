@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_test_integration">
+ <title>Test Integration</title>
+ <conbody>
+  <codeblock># glance image-create --name rhel65u --is-public true --disk-format qcow2 \
+--container-format bare –file \
+/pub/..../rhel-guest-image-6-6.5-20131115.0-1.qcow2.unlock
+# glance image-list
+# nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
+# nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
+# nova boot --flavor 2 --image rhel65u --key-name demokp inst1
+# nova boot --flavor 2 --image rhel65u --key-name demokp inst2
+# nova list
+# nova floating-ip-create
+# nova add-floating-ip inst1 10.19.139.217
+# ssh -i demokp.pem cloud-user@10.19.139.217
+# cinder create --display-name test 1
+# nova volume-list
+# nova volume-attach inst1 996a242c-ebaf-4265-a76a-e20da812de45 auto
+# ssh -i demokp.pem cloud-user@10.19.139.217
+# nova show inst2
+# ssh -i demokp.pem cloud-user@10.19.139.217 ping -c 3 10.0.1.5
+# cinder create --display-name test2 1
+# cinder backup-create 1488a3cd-5083-40a5-a189-969eb980576e --display-name
+# volume-backup --display-description "A volume backup"
+# cinder backup-list</codeblock>
+ </conbody>
+</concept>
