@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_example_etc_hosts_ice_admin">
+ <title>Example /etc/hosts on ICE Admin Host</title>
+ <conbody>
+  <codeblock>10.19.139.71 ospctl1-storage
+10.19.139.72 ospctl2-storage
+10.19.139.73 ospctl3-storage</codeblock>
+ </conbody>
+</concept>
