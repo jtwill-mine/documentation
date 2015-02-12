@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_example_cephdeploy_conf">
+ <title>Example cephdeploy.conf</title>
+ <conbody>
+  <codeblock># This file was automatically generated after ice_setup.py was run. It provides
+# the repository url and GPG information so that ceph-deploy can install the
+# repositories in remote hosts.
+#
+# ceph-deploy subcommands
+[ceph-deploy-calamari]
+master = ice-admin.cloud.lab.eng.bos.redhat.com
+# Repositories
+[calamari-minion]
+name=Calamari
+baseurl=http://ice-admin.cloud.lab.eng.bos.redhat.com/static/calamari-minions
+gpgkey=http://ice-admin.cloud.lab.eng.bos.redhat.com/static/calamari-minions
+/release.asc
+enabled=1
+proxy=_none_
+[ceph]
+name=Ceph
+baseurl=http://ice-admin.cloud.lab.eng.bos.redhat.com/static/ceph/0.80.4-1.g
+67b5193
+gpgkey=http://ice-admin.cloud.lab.eng.bos.redhat.com/static/ceph/0.80.4-1.g6
+7b5193/release.asc
+default=true
+proxy=_none_</codeblock>
+ </conbody>
+</concept>
