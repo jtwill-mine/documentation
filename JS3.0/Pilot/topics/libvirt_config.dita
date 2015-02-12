@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="libvirt_config">
-  <title><codeph>libvirt</codeph> Configuration</title>
+  <title>libvirt Configuration</title>
   <shortdesc>To configure <codeph>libvirt</codeph>:</shortdesc>
   <body>
     <ol>
