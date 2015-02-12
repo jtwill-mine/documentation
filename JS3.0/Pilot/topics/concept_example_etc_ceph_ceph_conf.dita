@@ -14,11 +14,12 @@ filestore_xattr_use_omap = true
 public_network = 172.31.0.0/16
 cluster_network = 172.30.0.0/16
 osd_pool_default_size = 2
+
 [client.images]
-keyring = /etc/ceph/ceph.client.images.keyring
+	keyring = /etc/ceph/ceph.client.images.keyring
 [client.volumes]
-keyring = /etc/ceph/ceph.client.volumes.keyring
+	keyring = /etc/ceph/ceph.client.volumes.keyring
 [client.backups]
-keyring = /etc/ceph/ceph.client.backups.keyring</codeblock>
+	keyring = /etc/ceph/ceph.client.backups.keyring</codeblock>
  </conbody>
 </concept>
