@@ -4,4 +4,7 @@
  <title>Command History Map</title>
  <topicref href="../topics/concept_ice_install.dita"/>
  <topicref href="../topics/concept_ceph_monitor_config.dita"/>
+ <topicref href="../topics/concept_configuring_osds.dita"/>
+ <topicref href="../topics/concept_connect_to_calamari.dita"/>
+ <topicref href="../topics/concept_create_data_pools.dita"/>
 </map>

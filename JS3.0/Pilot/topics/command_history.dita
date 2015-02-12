@@ -6,6 +6,9 @@
     <ul>
       <li><xref href="concept_ice_install.dita#concept_ice_install"/></li>
       <li><xref href="concept_ceph_monitor_config.dita#concept_ceph_monitor_config"/></li>
+      <li><xref href="concept_configuring_osds.dita#concept_configuring_osds"/></li>
+      <li><xref href="concept_connect_to_calamari.dita#concept_connect_to_calamari"/></li>
+      <li><xref href="concept_create_data_pools.dita#concept_create_data_pools"/></li>
     </ul>
   </body>
 </topic>
