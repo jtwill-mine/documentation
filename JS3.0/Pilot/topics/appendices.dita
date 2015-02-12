@@ -6,7 +6,7 @@
   <body>
     <ul>
       <li><xref href="command_history.dita#command_history"/></li>
-      <li>TBD</li>
+      <li><xref href="example_config_files.dita#example_config_files"/></li>
     </ul>
   </body>
 </topic>
