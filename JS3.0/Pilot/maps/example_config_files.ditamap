@@ -3,4 +3,6 @@
 <map>
  <title>Example Configuration Files Map</title>
  <topicref href="../topics/concept_example_etc_hosts_ice_admin.dita"/>
+ <topicref href="../topics/concept_example_etc_hosts_other_hosts.dita"/>
+ <topicref href="../topics/concept_example_cephdeploy_conf.dita"/>
 </map>

@@ -6,6 +6,10 @@
     <ul>
       <li><xref href="concept_example_etc_hosts_ice_admin.dita#concept_example_etc_hosts_ice_admin"
         /></li>
+      <li><xref
+          href="concept_example_etc_hosts_other_hosts.dita#concept_example_etc_hosts_other_hosts"
+        /></li>
+      <li><xref href="concept_example_cephdeploy_conf.dita#concept_example_cephdeploy_conf"/></li>
     </ul>
   </body>
 </topic>
