@@ -18,12 +18,12 @@
           <row>
             <entry/>
             <entry>
-              <p>Controller (Nova Network)</p>
+              <p>HA All In One Controller</p>
             </entry>
           </row>
           <row>
             <entry/>
-            <entry>Compute (Nova Network)</entry>
+            <entry>Compute (Neutron)</entry>
           </row>
           <row>
             <entry/>

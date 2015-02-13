@@ -6,7 +6,7 @@
   <body>
     <ol>
       <li>Execute the <cmdname>hammer hostgroup list</cmdname> command to determine the hostgroups' IDs:<codeblock># hammer hostgroup list</codeblock></li>
-      <li>Take note of the IDs for the <b>HA All In One Controller</b> and <b>Compute (Nova Network)</b> hostgroups.</li>
+      <li>Take note of the IDs for the <b>HA All In One Controller</b> and <b>Compute (Neutron)</b> hostgroups.</li>
     </ol>
   </body>
   

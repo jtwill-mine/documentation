@@ -1298,13 +1298,13 @@
         <strow>
           <stentry/>
 
-          <stentry>Controller (Nova Network)</stentry>
+          <stentry>HA All In One Controller</stentry>
         </strow>
 
         <strow>
           <stentry/>
 
-          <stentry>Compute (Nova Network)</stentry>
+          <stentry>Compute (Neutron)</stentry>
         </strow>
 
         <strow>

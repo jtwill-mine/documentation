@@ -65,7 +65,7 @@
     the must have a hostgroup assigned to them. </p><p>The IDs of the
     hostgroups must be determined. Execute the <b>hammer hostgroup list</b>
     command. Take note of the IDs for the HA All In One Controller and Compute
-    (Nova Network) hostgroups. </p><codeblock># hammer hostgroup list</codeblock></section>
+    (Neutron) hostgroups. </p><codeblock># hammer hostgroup list</codeblock></section>
 
     <section/>
 
