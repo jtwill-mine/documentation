@@ -12,11 +12,11 @@
       DVD</b> to the<codeph> /store/data/iso</codeph> directory. This ISO is
       used to install the Foreman virtual machine.</li>
 
-      <li>To set up the Foreman virtual machine, follow the<i> </i><u><i>Dell
-      Solution Admin Foreman Virtual Machine Deployment Guide</i></u>.</li>
+      <li>To set up the Foreman virtual machine, follow the procedures in <xref
+          href="foreman_vm_deployment.dita#foreman_vm_deployment"/>.</li>
 
-      <li>To set up the Ceph virtual machine, follow the <i><u>Dell Solution
-      Admin Ceph Virtual Machine Deployment Guide</u></i>.</li>
+      <li>To set up the Ceph virtual machine, follow the procedures in <xref
+          href="ceph_ice_vm_deployment.dita#ceph_ice_vm_deployment"/>.</li>
     </ol>
   </body>
 </topic>

@@ -9,8 +9,8 @@
 
   <body>
     <ol>
-      <li>Configure the Foreman instance for the environment, following the
-      applicable <u><i>Dell Pilot Deployment Guide</i></u>.</li>
+      <li>Configure the Foreman instance for the environment, following the procedures in <xref
+          href="../../Pilot/topics/configure_foreman_server.dita#configure_foreman_server"/>.</li>
     </ol>
   </body>
 </topic>
