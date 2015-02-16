@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="satellite_server">
+  <title>Satellite Server</title>
+  <shortdesc>The path included in the example below should work with most satellite installations; just replace <b>SATELLITE_SERVER</b> with the appropriate FQDN.</shortdesc>
+  <body>
+    <codeblock># hammer medium create --name "Dell OSP Pilot" --os-family Redhat \
+  --path 'http://SATELLITE_SERVER/ks/dist/ks-rhel-$arch-server-$major-$version'</codeblock>
+  </body>
+</topic>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="rhel_osp_platform">
+  <title>Red Hat Enterprise Linux OpenStack Platform 5.0</title>
+  <body>
+    <p>Red Hat Enterprise Linux OpenStack Platform delivers an integrated foundation to create, deploy, and scale a secure and reliable public or private OpenStack cloud. It delivers a cloud platform built from Red Hat OpenStack technology, co-engineered for and integrated with Red Hat Enterprise Linux, giving you the agility to scale and quickly meet customer demands without compromising on availability, security, or performance.</p>
+    <p>Red Hat Enterprise Linux OpenStack Platform 5 is built from the combination of Red Hat Enterprise Linux 7 and the latest Red Hat OpenStack technology, which is an enterprise-hardened version of the community Icehouse release. This version boasts all the community core features and functions, as well as some additional innovations by Red Hat.</p>
+    <p>Specifically, Red Hat Enterprise Linux OpenStack Platform 5 includes the latest features and functionality found in the Icehouse compute, networking, and storage services. In addition, version 5 includes improved support for VMware’s vCenter driver for seamless side-by-side integration with existing VMware infrastructure, and easing the challenges of future migrations to OpenStack. As well, Red Hat will be supporting dual versions of Red Hat Enterprise Linux OpenStack Platform, supporting installation on both Red Hat Enterprise Linux 6 as well as the next generation operating system, Red Hat Enterprise Linux 7. Finally, in an effort to provide a more seamless infrastructure to customers, it is integrated with additional Red Hat infrastructure tools, including Red Hat Storage to provide optional object, block, and image storage services. Red Hat CloudForms for unified operations management, and Red Hat Enterprise Virtualization for customers who are looking for an alternative scale-up virtual infrastructure.</p>
+  </body>
+  
+  <topic id="key_benefits" conref="key_benefits.dita#key_benefits">
+    <title/>
+  </topic>
+    
+</topic>

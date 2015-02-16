@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bom_overview">
+  <title>Overview</title>
+  <shortdesc>This guide provides Bill of Material information necessary to purchase the proper
+    hardware to deploy the Dell Red Hat Cloud Solutions with <tm
+      trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm> OpenStack.</shortdesc>
+  <body>
+    <p>This hardware includes Dell R630, R730, and R730xd servers with Dell PowerEdge H730 disk
+      controllers; and Dell Force10 S4810, and S55 network switches.</p>
+    <p>Please consult with your Dell sales representative to ensure proper preparation and submission of your hardware and software orders.</p>
+  </body>
+</topic>

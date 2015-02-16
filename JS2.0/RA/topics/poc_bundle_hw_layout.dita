@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poc_bundle_hw_layout">
+  <title>PoC Bundle Hardware Layout</title>
+  <shortdesc>All nodes are R620 nodes with:</shortdesc>
+  <body>
+    <ul>
+      <li>Dual 8-core Xeon processors:</li>
+      <li>4 TB raw drive space (2 TB usable)</li>
+      <li>128 GB RAM</li>
+      <li>1 Gb Ethernet</li>
+    </ul>
+    <p>See Table 4 and Table 5 for hardware configurations. The PoC Bundle nodes include:
+    <ul>
+      <li>Node 1: Solution Admin Host - Red Hat OpenStack Manager Server</li>
+      <li>Node 2: OpenStack Controller</li>
+      <li>Nodes 3-5: Nova Compute Nodes</li>
+    </ul></p>
+    <fig>
+      <title>PoC Bundle</title>
+      <image href="../../Customization/OpenTopic/common/artwork/poc_bundle.png"></image>
+    </fig>
+  </body>
+</topic>

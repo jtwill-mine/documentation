@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="update_kickstart_template">
+  <title>Update the Kickstart Template</title>
+  <shortdesc>The kickstart template must be modified to use the new snippet.</shortdesc>
+  <body>
+    <ol>
+      <li>Place the following line inside the <b>%post</b> section of the <i>Kickstart Provisioning Template</i>.<codeblock>&lt;%= snippets "bond_interfaces" %&gt;</codeblock></li>
+    </ol>
+  </body>
+</topic>

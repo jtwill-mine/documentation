@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="set_host_update_parameters">
+  <title>Set Host Update Parameters</title>
+  <shortdesc>Each node can use a separate pool ID and require different repositories. These parameters are set on a per host basis instead of an operating system.</shortdesc>
+  <body>
+    <p>The following parameters must be set on each host.<table frame="all" rowsep="1" colsep="1"
+        id="table_t5z_jgw_3q">
+        <title>Host Update Parameters</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Parameter</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <p><parmname>subscription_manager_pool</parmname></p>
+              </entry>
+              <entry>
+                <p>The ID of the pool to which to attach the host.</p>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <p><parmname>subscription_manager_repos</parmname></p>
+              </entry>
+              <entry>
+                <p>The repositories that should be enabled after the host is registered.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+  
+    
+</topic>

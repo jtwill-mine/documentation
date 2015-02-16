@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Dell Red Hat Cloud Solutions Reference Architecture Guide - Version
+  3.0</title>
+ <topicmeta><copyright>
+  <copyryear year="&#169; 2014-2015"/>
+  <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+ </copyright></topicmeta>
+
+ <topicref href="../../Common/trademarks.dita"/>
+
+ <topicref href="../../Common/notes_cautions_warnings.dita"/>
+
+ <topicref href="../topics/glossary.dita"/>
+
+ <topicref href="../topics/overview.dita">
+ <topicref href="../topics/taxonomy.dita"/>
+ <topicref href="../topics/rhel_osp_platform.dita"/>
+ </topicref>
+ <topicref href="../topics/openstack_architecture.dita"/>
+
+
+ <topicref href="../topics/storage_options.dita"/>
+
+ <topicref href="../topics/server_options.dita">
+  <mapref href="server_options.ditamap" format="ditamap"/>
+ </topicref>
+
+ <topicref href="../topics/op_notes.dita">
+  <mapref href="op_notes.ditamap" format="ditamap"/>
+ </topicref>
+
+ <topicref href="../topics/network_architecture.dita"/>
+
+ <topicref href="../topics/solution_bundles.dita">
+  <mapref href="solution_bundle.ditamap" format="ditamap"/>
+ </topicref>
+
+ <topicref href="../topics/update_history.dita"/>
+
+ <topicref href="../../Common/references.dita"/>
+
+</map>

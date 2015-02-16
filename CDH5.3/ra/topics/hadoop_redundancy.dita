@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hadoop_redundancy">
+  <title>Hadoop Redundancy</title>
+  <shortdesc>The Hadoop distributed filesystem implements redundant storage for data resiliency.</shortdesc>
+  <body>
+    <p>Data is replicated across multiple nodes, and across racks. This provides multiple copies of data for reliability in the case of disk failure or node failure, and can also increase performance. The number of replicas defaults to three, and can easily be changed. Hadoop will automatically maintain replicas when a node fails – the bonded network provides enough bandwidth to handle replication traffic as well as production traffic.</p>
+    <note>The Hadoop job parallelism model can scale to larger and smaller numbers of nodes, allowing jobs to run when parts of the cluster are offline.</note>
+  </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="references">
+  <title>References</title>
+  <shortdesc>Items that are not included, but must be referenced at the source:</shortdesc>
+  <body>
+    <ul>
+      <li>Ceph Adminstration - <xref href="http://www.inktank.com/resources/" format="html"
+          scope="external">http://www.inktank.com/resources/</xref></li>
+      <li>EqualLogic Installation, Setup and Administration - <xref
+          href="http://www.dell.com/equallogic" format="html" scope="external"
+          >www.dell.com/equallogic</xref></li>
+      <li>Red Hat Administration - <xref href="http://www.redhat.com" format="html" scope="external"
+          >www.redhat.com</xref></li>
+      <li>OpenStack Administration - <xref href="http://www.openstack.org" format="html"
+          scope="external">www.openstack.org</xref></li>
+    </ul>
+  </body>
+  <topic id="to_learn_more"
+    conref="../../Common/to_learn_more.dita#to_learn_more">
+    <title></title>
+  </topic>
+</topic>

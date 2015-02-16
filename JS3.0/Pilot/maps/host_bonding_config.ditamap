@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Host Bonding Config Map</title>
+ <topicref href="../topics/add_bonding_parameter.dita"/>
+ <topicref href="../topics/bonding_parameters.dita">
+  <topicref href="../topics/bonds_parameter.dita">
+   <topicref href="../topics/bonds_parameter_usage_example.dita"/></topicref>
+  <topicref href="../topics/bond_ifaces_parameter.dita">
+   <topicref href="../topics/bond_ifaces_usage_example.dita"/></topicref>
+  <topicref href="../topics/bond_opts_parameter.dita">
+   <topicref href="../topics/bond_opts_usage_example.dita"/></topicref>
+ </topicref>
+</map>

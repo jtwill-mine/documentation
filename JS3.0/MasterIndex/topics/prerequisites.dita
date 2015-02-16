@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="prerequisites">
+  <title>Prerequisites</title>
+  <shortdesc>All Solution and Ceph documents must be completed. In addition, you must
+    have:</shortdesc>
+  <body>
+    <ul>
+      <li>A machine that can be used to generate the Kickstart file for the SAH</li>
+      <li>A machine to connect to the servers’ iDRACs, or console access to the servers<ul
+          id="ul_wvm_wd1_tq">
+          <li>With console access you will need:<ul id="ul_mbk_xd1_tq">
+              <li>A USB key or DVD that contains the Kickstart file</li>
+              <li>Another USB key or DVD that contains the installation media</li>
+            </ul></li>
+        </ul></li>
+      <li>Access to the appropriate Red Hat repositories, and the correct methods to access them,
+        including but not limited to:<ul id="ul_ev4_121_tq">
+          <li>Credentials</li>
+          <li>FQDN</li>
+          <li>Proxy</li>
+        </ul></li>
+    </ul>
+  </body>
+</topic>

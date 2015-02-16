@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Resultant Configuration Files Map</title>
+ <topicref href="../topics/ifcfg-bond0.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond0.141.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond0.151.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond0.170.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond1.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond1.140.dita"></topicref>
+ <topicref href="../topics/ifcfg-bond1.150.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth0.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth1.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth2.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth3.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth4.dita"></topicref>
+ <topicref href="../topics/ifcfg-eth5.dita"></topicref>
+</map>

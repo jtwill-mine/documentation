@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_hammer_config_info">
+  <title>Foreman Hammer Configuration Information</title>
+  <shortdesc>Use this set of checklists to document your Foreman <codeph>hammer</codeph> configuration. Checklists include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="foreman_hammer_config_media.dita#foreman_hammer_config_media" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_partition_tables.dita#foreman_hammer_config_partition_tables" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_op_sys.dita#foreman_hammer_config_op_sys" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_subnets.dita#foreman_hammer_config_subnets" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_templates.dita#foreman_hammer_config_templates" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_environments.dita#foreman_hammer_config_environments" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_domains.dita#foreman_hammer_config_domains" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_puppet_proxies.dita#foreman_hammer_config_puppet_proxies" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_architectures.dita#foreman_hammer_config_architectures" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_hostgroups.dita#foreman_hammer_config_hostgroups" type="topic"></xref></li>
+      <li><xref href="foreman_hammer_config_hosts.dita#foreman_hammer_config_hosts" type="topic"></xref></li>
+    </ul>
+  </body>
+</topic>

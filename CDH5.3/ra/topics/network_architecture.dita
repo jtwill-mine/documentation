@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_architecture">
+  <title>Network Architecture</title>
+  <shortdesc>The cluster network is architected to meet the needs of a high performance and scalable
+    cluster, while providing redundancy and access to management capabilities.</shortdesc>
+  <body>
+    <p>The architecture supports two options for networking:</p>
+    <ul>
+      <li>1GbE</li>
+      <li>10GbE</li>
+    </ul>
+    <p>The 1GbE option uses Dell Force10 S60 switches as the top-of-rack connectivity to all
+      Hadoop-related nodes, while the 10GbE option uses Dell Force10 S4810 switches. Hadoop
+      applications are increasingly being deployed on 10GbE servers for the scale and price
+      advantages they bring, and this is the recommended configuration for new clusters.</p>
+    <p>Four distinct networks are used in the cluster:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_phn_qhw_wq">
+      <title>Cluster Networks</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Logical Network</entry>
+            <entry>Connection</entry>
+            <entry>Switch</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Cluster Data Network</entry>
+            <entry>Bonded 10GbE</entry>
+            <entry>Dual top of rack switches</entry>
+          </row>
+          <row>
+            <entry>Management Network</entry>
+            <entry>1GbE</entry>
+            <entry>Dedicated switch per rack</entry>
+          </row>
+          <row>
+            <entry>BMC Network</entry>
+            <entry>1GbE</entry>
+            <entry>Dedicated switch per rack</entry>
+          </row>
+          <row>
+            <entry>Edge Network</entry>
+            <entry>10GbE, optionally bonded</entry>
+            <entry>Top of rack or cluster switch</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Each network uses a separate VLAN, and dedicated components when possible. <xref
+        href="#network_architecture/hadoop_logical_networks" format="dita"/> shows the logical
+      organization of the network.</p>
+    <fig id="hadoop_logical_networks">
+      <title>Hadoop Logical Network Diagram</title>
+      <image href="../../Customization/OpenTopic/common/artwork/hadoop_logical_network_diagram.png"
+        align="left"/>
+    </fig>
+  </body>
+</topic>

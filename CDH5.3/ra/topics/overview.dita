@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="overview">
+  <title>Dell | Cloudera Apache Hadoop Solution Overview</title>
+  <shortdesc>The <tm trademark="Dell" tmtype="tm">Dell</tm> | <tm trademark="Cloudera" tmtype="tm">Cloudera</tm> <tm trademark="Apache" tmtype="tm">Apache</tm> <tm trademark="Hadoop" tmtype="reg">Hadoop</tm> Solution lowers the barrier to adoption for organizations intending to use Apache Hadoop in production. </shortdesc>
+  <body>
+    <p>Hadoop is an Apache project being built and used by a global community of contributors, using the Java programming language. Yahoo!, has been the largest contributor to this project, and uses Apache Hadoop extensively across its businesses. Core committers on the Hadoop project include employees from Cloudera, eBay, Facebook, Getopt, Hortonworks, Huawei, IBM, InMobi, INRIA, LinkedIn, MapR, Microsoft, Pivotal, Twitter, UC Berkeley, VMware, WANdisco, and Yahoo!, with contributions from many more individuals and organizations. </p>
+    <p>Although Hadoop is popular and widely used, installing, configuring, and running a production Hadoop cluster involves multiple considerations, including:
+    <ul>
+      <li>The appropriate Hadoop software distribution and extensions</li>
+      <li>Monitoring and management software</li>
+      <li>Allocation of Hadoop services to physical nodes</li>
+      <li>Selection of appropriate server hardware</li>
+      <li>Design of the network fabric</li>
+      <li>Sizing and Scalability</li>
+      <li>Performance</li>
+    </ul></p>
+    <p>These considerations are complicated by the need to understand the type of workloads that will be running on the cluster, the fast-moving pace of the core Hadoop project and the challenges of managing a system designed to scale to thousands of nodes in a single instance.</p>
+    <p>Dell’s customer-centered approach is to create rapidly deployable and highly optimized end-to-end Hadoop solutions running on hyperscale hardware. Dell listened to its customers and designed a Hadoop solution that is unique in the marketplace, combining optimized hardware, software and services to streamline deployment and improve the customer experience</p>
+    <p>The Dell | Cloudera Apache Hadoop Solution was jointly designed by Dell and Cloudera, and embodies all the hardware, software, resources and services needed to run Hadoop in a production environment. This end-to-end solution approach means that you can be in production with Hadoop in a shorter time than is typically possible with homegrown solutions.</p>
+    <p>The solution is based on the Cloudera Distribution for Apache Hadoop, and Dell PowerEdge and Force 10 hardware. This solution includes components that span the entire solution stack:
+    <ul>
+      <li>Reference architecture and best practices</li>
+        <li>Optimized server configurations</li>
+        <li>Optimized network infrastructure</li>
+        <li>Cloudera Distribution for Apache Hadoop</li>
+    </ul></p>
+  </body>
+</topic>

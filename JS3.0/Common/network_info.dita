@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_info">
+  <title>Configuring Server Network Settings</title>
+  <body>
+    <ol>
+      <li>Sets the iDRAC IP address, subnet mask, default gateway IP, and default vLAN (id is <i>10</i>).</li>
+      <li>Sets the iDRAC IP address source to be <i>static</i> IP addressing.</li>
+      <li>Sets the iDRAC NIC mode to <i>Dedicated</i> from <i>Shared</i>.</li>
+    </ol>
+  </body>
+</topic>

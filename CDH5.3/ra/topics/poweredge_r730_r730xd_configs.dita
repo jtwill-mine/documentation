@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r730_r730xd_configs">
+  <title>PowerEdge R730/R730xd Hardware Configurations</title>
+  <body>
+    <p>The Dell | Cloudera Apache Hadoop Solutions support the following server configurations:</p>
+    <ul>
+      <li><xref href="#poweredge_r730_r730xd_configs/table_fhf_354_wq" format="dita"/></li>
+      <li><xref href="#poweredge_r730_r730xd_configs/table_ydr_sv4_wq" format="dita"/></li>
+    </ul>
+    <table frame="all" rowsep="1" colsep="1" id="table_fhf_354_wq">
+      <title>Hardware Configurations – PowerEdge R730 Infrastructure Nodes </title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Machine Function</entry>
+            <entry>Infrastructure Nodes</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Platform</entry>
+            <entry>PowerEdge R730</entry>
+          </row>
+          <row>
+            <entry>Processor</entry>
+            <entry>2 x Intel Xeon E5-2650 v3 2.3GHz (10 core)</entry>
+          </row>
+          <row>
+            <entry>RAM (minimum)</entry>
+            <entry>128GB</entry>
+          </row>
+          <row>
+            <entry>Network Daughter Card</entry>
+            <entry>Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet (2 x 10GbE, 2x 1GbE)</entry>
+          </row>
+          <row>
+            <entry>Disk</entry>
+            <entry>8 x 1TB 7.2K SATA 3.5-in.</entry>
+          </row>
+          <row>
+            <entry>Storage Controller</entry>
+            <entry>PERC H730</entry>
+          </row>
+          <row>
+            <entry>RAID</entry>
+            <entry>RAID 10</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note>Be sure to consult your Dell account representative before changing the recommended disk sizes.</note>
+    <table frame="all" rowsep="1" colsep="1" id="table_ydr_sv4_wq">
+      <title>Hardware Configurations – PowerEdge R730xd Data Nodes</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Machine Function</entry>
+            <entry>Data Nodes</entry>
+            <entry>Data Nodes</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Platform</entry>
+            <entry>PowerEdge R730xd</entry>
+            <entry>PowerEdge R730xd</entry>
+          </row>
+          <row>
+            <entry>Chassis</entry>
+            <entry>Up to 12 x 3.5” Hard Drives</entry>
+            <entry>Up to 24 x 2.5” Hard Drives</entry>
+          </row>
+          <row>
+            <entry>Processor</entry>
+            <entry>2 x Intel Xeon E5-2650 v3 2.3GHz (10 core)</entry>
+            <entry>2 x E5-Intel Xeon E5-2690 v3 2.6GHz (12 core)</entry>
+          </row>
+          <row>
+            <entry>RAM (minimum)</entry>
+            <entry>128 GB</entry>
+            <entry>128 GB</entry>
+          </row>
+          <row>
+            <entry>Network Daughter Card</entry>
+            <entry>Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet (2 x 10GbE, 2x 1GbE)</entry>
+            <entry>Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet (2 x 10GbE, 2x 1GbE)</entry>
+          </row>
+          <row>
+            <entry>Disk</entry>
+            <entry>12 x 4TB 7.2K RPM NLSAS 6Gbps 3.5in</entry>
+            <entry>24 x 1.2TB 10K RPM SAS 6Gbps 2.5in</entry>
+          </row>
+          <row>
+            <entry>Flex Bay Disk</entry>
+            <entry>2 x 300GB 10K RPM SAS 6Gbps 2.5in</entry>
+            <entry>2 x 300GB 10K RPM SAS 6Gbps 2.5in</entry>
+          </row>
+          <row>
+            <entry>Storage Controller</entry>
+            <entry>PERC H730</entry>
+            <entry>PERC H730</entry>
+          </row>
+          <row>
+            <entry>RAID</entry>
+            <entry>RAID 1 - FlexBay JBOD – data drives</entry>
+            <entry>RAID 1 - FlexBay JBOD – data drives</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note>Be sure to consult your Dell account representative before changing the recommended disk sizes.</note>
+  </body>
+</topic>

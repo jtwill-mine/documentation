@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Dell Red Hat Cloud Solutions Bill of Materials Guide - Version
+  3.0</title>
+
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014-2015"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
+  
+  <topicref href="../../Common/trademarks.dita"/>
+
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+
+  <topicref href="../topics/bom_overview.dita"/>
+  
+  <topicref href="../topics/pilot_bom_r630.dita"/>
+
+  <topicref href="../topics/pilot_bom_r730xd.dita"/>
+  
+  <topicref href="../topics/bom_force10_s4810_s55.dita">
+    <topicref href="../topics/server_racks_power.dita"/>
+    <topicref href="../topics/networking_equipment.dita"/>
+  </topicref>
+
+  <topicref href="../../Common/references.dita"/>
+</map>

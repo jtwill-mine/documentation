@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_controller_hostgroup">
+  <title>Add Controller Hostgroup</title>
+  <body>
+    <ol>
+      <li>Apply the <b>HA All In One Controller</b> hostgroup to the controller node using the <cmdname>hammer host update command</cmdname>:<codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock></li>
+    </ol>
+  </body>
+</topic>

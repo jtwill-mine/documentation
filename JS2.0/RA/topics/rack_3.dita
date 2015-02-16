@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="rack_3">
+  <title>Rack 3</title>
+  <body>
+    <ul>
+      <li>2 S4810 TOR Switches</li>
+      <li>1 S55 Management Switch</li>
+    </ul>
+    <note>To split HA across the racks, you can move a controller from Rack 1 to Rack 2 (one controller per rack).</note>
+    <p>For additional nodes, you can add up to either:</p>
+    <ul>
+      <li>19 R620 Nova Compute Nodes, or</li>
+      <li>14 R720xd Storage Nodes or EqualLogic Arrays</li>
+    </ul>
+    <note>You can use a combination of the two options that does not exceed a total of 20 servers or 30 Us.</note>
+  </body>
+</topic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="rack">
+  <title>Rack</title>
+  <body>
+    <p>A rack is the smallest size designation for a Hadoop environment. A rack consists of all the necessary power, the network cabling and the two Ethernet switches necessary to support up to 15 data nodes. A rack should use its own power and space within the data center, separate from other racks, and should be treated as a fault zone.</p>
+  </body>
+</topic>

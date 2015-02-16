@@ -1,0 +1,18 @@
+*** DOCUMENT BUILD HOW-TO ***
+
+In order to build PDF documents locally, you must have a full Java Development 
+Kit (JDK) installed on your local machine.  
+
+You can download it here: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+=======================================
+
+If you want to build a Jetstream 2.0 document, do the following:
+----------------------------------------------------------------
+
+1) Drop to a command-line prompt
+2) Change directory to JS2.0
+3) If on Windows - Run the build_document.bat file.
+   If on Linux - Run the build_document.sh file.
+4) Choose the top-level ditamap file of the document you want to build
+5) The resulting PDF document will be output in the JS2.0/out/JS2.0 directory.

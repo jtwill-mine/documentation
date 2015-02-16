@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Dell Red Hat Cloud Solutions Pilot Hostgroups Deployment Guide - Version 2.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014-2015"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
+
+  <topicref href="../../Common/trademarks.dita"/>
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+  <topicref href="../../Common/overview.dita"/>
+  <topicref href="../topics/configure_hostgroup_parameters.dita"/>
+  <topicref href="../topics/configure_ceph.dita"/>
+  <topicref href="../topics/configure_nodes.dita"/>
+  <topicref href="../topics/excluding_ips_for_nova.dita"/>
+  <topicref href="../../Common/references.dita"/>
+</map>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="backup_recovery">
+  <title>Backup/Recovery</title>
+  <shortdesc>Since the system is designed for exploration that could later be extended to a production stage, backup and recovery have not been addressed in this configuration. The Red Hat OpenStack Manager Virtual Server, while not needed for normal operations of the services, is not redundant or backed up.</shortdesc>
+  <body></body>
+</topic>

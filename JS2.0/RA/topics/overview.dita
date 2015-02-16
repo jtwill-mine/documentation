@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ra_overview">
+  <title>Overview</title>
+  <shortdesc>This Reference Architecture focuses on helping organizations to begin evaluating <tm trademark="OpenStack" tmtype="reg">OpenStack</tm> software and/or create proofs of concept.Dell and Red Hat can provide guidance for more sophisticated deployments; however, they are beyond the scope of this document.</shortdesc>
+  <body>
+    <p>The Dell Red Hat Cloud Solutions with <tm trademark="Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm> OpenStack Platform encompasses software, hardware, operations, and integration in unique packages known as bundles. See Solution Bundles for more information.</p>
+  </body>
+
+  <topic id="openstack_maturity"
+  conref="openstack_maturity.dita#openstack_maturity">
+    <title/>
+  </topic>
+
+  <topic id="taxonomy"
+  conref="taxonomy.dita#taxonomy">
+    <title/>
+  </topic>
+  
+  <topic id="hardware_options"
+    conref="hardware_options.dita#hardware_options">
+    <title/>
+  </topic>
+  
+  <topic id="network_services"
+    conref="network_services.dita#network_services">
+    <title/>
+  </topic>
+  
+</topic>  

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_enterprise_software">
+  <title>Cloudera Enterprise Software</title>
+  <body>
+    <p>The Dell | Cloudera Solution is based on Cloudera Enterprise, which includes Cloudera’s distribution for Hadoop (CDH) 5.3 and Cloudera Manager.</p>
+    <p>Cloudera Enterprise software components include:</p>
+    <ul>
+      <li><xref href="cloudera_manager.dita#cloudera_manager"/></li>
+      <li><xref href="cloudera_rtq.dita#cloudera_rtq"/></li>
+      <li><xref href="cloudera_search.dita#cloudera_search"/></li>
+      <li><xref href="cloudera_bdr.dita#cloudera_bdr"/></li>
+      <li><xref href="cloudera_navigator.dita#cloudera_navigator"/></li>
+      <li><xref href="cloudera_support.dita#cloudera_support"/></li>
+    </ul>
+  </body>
+</topic>

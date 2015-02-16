@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tor_switches">
+  <title>Access Switch or Top of Rack (ToR)</title>
+  <shortdesc>The servers connect to ToR switches. Typically there are two in each rack. The switches recommended by Dell are:</shortdesc>
+  <body>
+    <ul>
+      <li><b>1GbE Connectivity</b> - Dell Force10 S55</li>
+      <li><b>10GbE Connectivity</b> - Dell Force10 S4810</li>
+    </ul>
+    <p>The 10GbE configuration utilizes Force10 S4810 switches as the ToR switches. Dell recommends
+      for HA this pair of switches run Virtual Link Trunking (VLT). This feature enables the servers
+      to terminate their LAG interfaces into two different switches instead of one. This enables
+      active-active bandwidth utilization. This feature provides redundancy within the rack if one
+      switch fails, or needs maintenance. The uplink to the aggregation pair is 80Gb, using a LAG
+      from each ToR switch. This is achieved by using two 40Gb interfaces in a LAG connecting to the
+      aggregation pair. Therefore, a collective bandwidth of 160Gb is available from each rack.</p>
+    <p>Each rack is managed as a separate entity from a switching perspective, and ToR switches connect only to the aggregation switches.</p>
+  </body>
+</topic>

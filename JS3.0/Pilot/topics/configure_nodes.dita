@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_nodes">
+  <title>Configure Nodes</title>
+  <shortdesc>After the nodes are installed, the must have a hostgroup assigned to them.</shortdesc>
+  <body>
+    <ol>
+      <li>Execute the <cmdname>hammer hostgroup list</cmdname> command to determine the hostgroups' IDs:<codeblock># hammer hostgroup list</codeblock></li>
+      <li>Take note of the IDs for the <b>HA All In One Controller</b> and <b>Compute (Neutron)</b> hostgroups.</li>
+    </ol>
+  </body>
+  
+  <topic id="add_controller_hostgroup" conref="add_controller_hostgroup.dita#add_controller_hostgroup">
+    <title/>
+  </topic>
+  
+  <topic id="configure_controller_node_parameters" conref="configure_controller_node_parameters.dita#configure_controller_node_parameters">
+    <title/>
+  </topic>
+  
+  <topic id="add_compute_hostgroup" conref="add_compute_hostgroup.dita#add_compute_hostgroup">
+    <title/>
+  </topic>
+  
+</topic>

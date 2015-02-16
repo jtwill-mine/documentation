@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r730xd_physical_config">
+  <title>Appendix A: Physical Configuration — PowerEdge R730xd</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_poweredge_r730xd_config">
+      <title>Rack Configuration – PowerEdge R730xd (or R730/R730xd)</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>RU</entry>
+            <entry>RACK1</entry>
+            <entry>RACK2</entry>
+            <entry>RACK3</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>42</entry>
+            <entry>R1- Switch 2: Force10 S4810</entry>
+            <entry>R2- Switch2: Force10 S4810</entry>
+            <entry>R3- Switch2: Force10 S4810</entry>
+          </row>
+          <row>
+            <entry>41</entry>
+            <entry>R1- Switch 1: Force10 S4810</entry>
+            <entry>R2- Switch1: Force10 S4810</entry>
+            <entry>R3- Switch1: Force10 S4810</entry>
+          </row>
+          <row>
+            <entry>40</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+          </row>
+          <row>
+            <entry>39</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+          </row>
+          <row>
+            <entry>38</entry>
+            <entry morerows="1">Master Name Node:R730xd or R730</entry>
+            <entry morerows="1">Edge01: R730xd or R730</entry>
+            <entry morerows="1">
+              <p>R3 - Switch 1: Force10 S4810</p>
+              <p>R3 - Switch 2: Force10 S4810</p>
+            </entry>
+          </row>
+          <row>
+            <entry>37</entry>
+          </row>
+          <row>
+            <entry>36</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+          </row>
+          <row>
+            <entry>35</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+            <entry>Cable Management</entry>
+          </row>
+          <row>
+            <entry>
+              <p>34</p>
+              <p>33</p>
+            </entry>
+            <entry>Admin Node R730xd or R730</entry>
+            <entry>Secondary Name Node R730xd or R730</entry>
+            <entry>HA Node: R730xd or R730</entry>
+          </row>
+          <row>
+            <entry>32</entry>
+            <entry>R1 - S55 iDRAC Mgmt switch</entry>
+            <entry>R2 - S55 iDRAC Mgmt switch</entry>
+            <entry>R3 - S55 iDRAC Mgmt switch</entry>
+          </row>
+          <row>
+            <entry>21-31</entry>
+            <entry>Empty</entry>
+            <entry>Empty</entry>
+            <entry>Empty</entry>
+          </row>
+          <row>
+            <entry>
+              <p>20</p>
+              <p>19</p>
+            </entry>
+            <entry>R1- Chassis10: R730xd</entry>
+            <entry>R2- Chassis10: R730xd</entry>
+            <entry>R3- Chassis10: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>18</p>
+              <p>17</p>
+            </entry>
+            <entry>R1- Chassis09: R730xd</entry>
+            <entry>R2- Chassis09: R730xd</entry>
+            <entry>R3- Chassis09: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>16</p>
+              <p>15</p>
+            </entry>
+            <entry>R1- Chassis08: R730xd</entry>
+            <entry>R2- Chassis08: R730xd</entry>
+            <entry>R3- Chassis08: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>14</p>
+              <p>13</p>
+            </entry>
+            <entry>R1- Chassis07: R730xd</entry>
+            <entry>R2- Chassis07: R730xd</entry>
+            <entry>R3- Chassis07: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>12</p>
+              <p>11</p>
+            </entry>
+            <entry>R1- Chassis06: R730xd</entry>
+            <entry>R2- Chassis06: R730xd</entry>
+            <entry>R3- Chassis06: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>10</p>
+              <p>9</p>
+            </entry>
+            <entry>R1- Chassis05: R730xd</entry>
+            <entry>R2- Chassis05: R730xd</entry>
+            <entry>R3- Chassis05: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>8</p>
+              <p>7</p>
+            </entry>
+            <entry>R1- Chassis04: R730xd</entry>
+            <entry>R2- Chassis04: R730xd</entry>
+            <entry>R3- Chassis04: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>6</p>
+              <p>5</p>
+            </entry>
+            <entry>R1- Chassis03: R730xd</entry>
+            <entry>R2- Chassis03: R730xd</entry>
+            <entry>R3- Chassis03: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>4</p>
+              <p>3</p>
+            </entry>
+            <entry>R1- Chassis02: R730xd</entry>
+            <entry>R2- Chassis02: R730xd</entry>
+            <entry>R3- Chassis02: R730xd</entry>
+          </row>
+          <row>
+            <entry>
+              <p>2</p>
+              <p>1</p>
+            </entry>
+            <entry>R1- Chassis01: R730xd</entry>
+            <entry>R2- Chassis01: R730xd</entry>
+            <entry>R3- Chassis01: R730xd</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

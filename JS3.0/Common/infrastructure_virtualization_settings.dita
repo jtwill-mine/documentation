@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="infrastructure_virtualization_settings">
+  <title>Infrastructure and Virtualization Node Settings</title>
+  <body>
+    <p>This section describes the settings for nodes that will be used on the Solution Admin Host,
+      OpenStack controllers, and Compute nodes. For the R620 the settings below need to be
+        double-checked.<table frame="all" rowsep="1" colsep="1" id="table_ot4_wrf_tq">
+        <title>R620 Virtualization Settings</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Type</entry>
+              <entry>Setting</entry>
+              <entry>State</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Integrated Devices</entry>
+              <entry> SR-IOV Global Enable</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Processor Setting</entry>
+              <entry>Execute Disable</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Processor Setting</entry>
+              <entry>Virtualization Technology</entry>
+              <entry>Enabled</entry>
+            </row>
+            <row>
+              <entry>Boot Settings</entry>
+              <entry>Boot Mode</entry>
+              <entry>BIOS</entry>
+            </row>
+            <row>
+              <entry>Boot Setting</entry>
+              <entry>Boot Order</entry>
+              <entry>
+                <ul id="ul_jdv_hsf_tq">
+                  <li>Boot mode</li>
+                  <li>Set PXE boot first</li>
+                  <li>Local drive second</li>
+                </ul>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+</topic>

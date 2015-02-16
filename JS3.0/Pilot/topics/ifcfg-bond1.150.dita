@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ifcfg-bond1.150">
+  <title><codeph>ifcfg-bond1.150</codeph></title>
+  <body>
+    <codeblock>DEVICE=bond1.150
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+BONDING_OPTS=""
+IPADDR=192.168.150.2
+NETMASK=255.255.255.0
+VLAN=yes</codeblock>
+  </body>
+</topic>

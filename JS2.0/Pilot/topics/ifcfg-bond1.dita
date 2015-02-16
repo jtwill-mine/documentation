@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ifcfg-bond1">
+  <title><codeph>ifcfg-bond1</codeph></title>
+  <body>
+    <codeblock>DEVICE=bond1
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=none
+BONDING_OPTS="mode=802.3ad"</codeblock>
+  </body>
+</topic>

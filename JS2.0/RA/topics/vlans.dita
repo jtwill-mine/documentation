@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="vlans">
+  <title>vLANs</title>
+  <shortdesc>This Reference Architecture implements at a minimum six (6) separate vLANs:</shortdesc>
+  <body>
+    <ul>
+      <li><b>Management/Out of Band (OOB) Network</b> - iDRAC connections can be routed to external network. All OpenStack HA controllers need direct access to this for IPMI operations.</li>
+      <li><b>Nova Network Private vLAN</b> - Sets up the backend network for nova and the VMs to use.</li>
+      <li><b>Nova Network Public vLAN</b> - Sets up the front network for routable traffic to individual VMs.</li>
+      <li><b>Provisioning Network vLAN</b> - Connects all nodes NICs into the fabric used for setup and provisioning of the servers.</li>
+      <li><b>Private API Network Cluster Management vLAN</b> - Used for communication between OS controllers and nodes for RESTFUL API and Cluster Heartbeat.</li>
+      <li><b>Public API Network Access vLAN</b> - Sets up access to the RESTful API, and the Horizon
+        GUI.</li>
+      <li><b>Storage Network vLAN</b> - Used by all the nodes for data plane writes/reads to communicate to OS storage (not in POC).</li>
+      <li><b>Storage Clustering Network vLAN</b> - Used by all the storage nodes for replication and data checks (for Ceph Clustering).</li>
+    </ul>
+  </body>
+</topic>

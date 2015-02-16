@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="layer2_layer3_switching">
+  <title>Layer-2 and Layer-3 Switching</title>
+  <shortdesc>The layer-2 and layer-3 boundaries are separated at the aggregation layer.</shortdesc>
+  <body>
+    <p>The Reference Architecture uses layer-2 as the reference up to the aggregation layer. That is why VLT is used on the aggregation switches. Red Hat Foreman OpenStack Manager requires a layer-2 domain in order to provision servers.</p>
+    <p>The three optional links (Provisioning, Storage, and Management) represent uplinks to a gateway device. The Provisioning network can use the Red Hat Foreman OpenStack Manager as a proxy for pulling packages from a subscription server, or a gateway can be added. The EqualLogic arrays on the Storage network may need access:</p>
+    <ul>
+      <li>From metrics and monitoring tools</li>
+      <li>To enable management and updates</li>
+      <li>To be used by EqualLogic Host Integration toolset</li>
+    </ul>
+    <p>There are many tools for OOB management for the iDRAC, by simply adding the gateway to the network and updating the iDRAC these tools can be used.</p>
+  </body>
+</topic>

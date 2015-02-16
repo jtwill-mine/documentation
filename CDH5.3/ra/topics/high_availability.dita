@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="high_availability">
+  <title>High Availability</title>
+  <body>
+    <p>The architecture implements high availability at multiple levels through a combination of hardware redundancy and software support.</p>
+  </body>
+</topic>

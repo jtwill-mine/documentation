@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_ceph">
+  <title>Configure Ceph</title>
+  <shortdesc>Ceph is configured by editing both a <codeph>PP</codeph> file and a
+    repository.</shortdesc>
+  <body>
+    <ol>
+      <li>Edit the
+          <codeph>/usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</codeph>
+          file.<ol id="ol_hld_ycl_jq">
+          <li>Comment out the <b>file { "etc-ceph"</b> section. This prevents Foreman and Puppet
+            from over-writing the ceph configuration on the controller
+            nodes:<codeblock># cp -v /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp{,.bak}
+
+# sed -i '/file { "etc-ceph":/,${s/^/#/;};$s/^#//' \
+  /usr/share/openstack-foreman-installer/puppet/modules/quickstack/manifests/ceph/config.pp</codeblock></li>
+        </ol></li>
+      <li>To ensure ceph installs packages from its repository, comment out the <b>priority</b> line
+        in the ceph
+        repository:<codeblock># sed -i 's/^\(priority.*\)/# \1/' /etc/yum.repos.d/ceph.repo</codeblock></li>
+    </ol>
+  </body>
+</topic>

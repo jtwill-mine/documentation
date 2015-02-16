@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hammer_help">
+  <title>Hammer Help</title>
+  <shortdesc>The <cmdname>hammer</cmdname> command takes the <codeph>--help</codeph> option. This option can be used with most of its sub-commands as well. It is useful to see the various options that can be used.</shortdesc>
+  <body></body>
+</topic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Dell Red Hat Cloud Solutions Release Notes - Version
+  3.0</title>
+ 
+ <topicmeta><copyright>
+  <copyryear year="&#169; 2014-2015"/>
+  <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+ </copyright></topicmeta>
+ 
+ <topicref href="../../Common/trademarks.dita"/>
+ 
+ <topicref href="../../Common/notes_cautions_warnings.dita"/>
+ 
+ <topicref href="../topics/defects.dita"/>
+ 
+ <topicref href="../../Common/references.dita"/>
+ 
+</map>

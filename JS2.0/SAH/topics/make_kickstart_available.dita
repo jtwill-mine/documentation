@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="make_kickstart_available">
+  <title>Make the Kickstart File Available for Installation</title>
+  <shortdesc>This procedure places the kickstart file inthe topl level of a USB image, and makes it available for instllation. This is useful if you are using the iDRAC virtual media to install.</shortdesc>
+  <body>
+    <note>The USB key must be formated as vfat or <i>ext2</i>.</note>
+    <ol>
+      <li>Create a USB image:<codeblock>mkfs.vfat -C ks_usb.img 1024</codeblock></li>
+      <li>Mount the image:<codeblock>mount -o loop ks_usb.img /mnt</codeblock></li>
+      <li>Place the <codeph>osp-mgmg.ks</codeph> file into the image:<codeblock>cp osp-sah.ks /mnt</codeblock></li>
+      <li>Unmount the image:<codeblock>sync</codeblock> <codeblock>umount /mnt</codeblock></li>
+      <li>Map the image as Removable Media on the iDRAC.<note>If only one physical hard disk is
+          presented to the server, the device name presented to the installer should be
+            <codeph>sdb</codeph>.</note>
+        <ol id="map_image">
+          <li>Boot the system using the Red Hat Enterprise Server 7 installation media.</li>
+          <li>At the installation menu, select the <b>Install</b> option. <i>Do not press the 
+              [Enter] key</i>.</li>
+          <li>Press the <b>Tab</b> key.</li>
+          <li>Move the cursor to the end of the line that begins with <codeph>vmlinuz</codeph>.</li>
+          <li>Append of the following to the end of the
+            line:<codeblock>ks=hd:sdb:/osp-sah.ks</codeblock></li>
+        </ol><note>The device <codeph>sdb</codeph> can change, depending upon the quantity of disks
+          being presented to the installation environment. These instructions assume that a single
+          disk is presented. If otherwise, adjust accordingly.</note></li>
+      <li>Press the <b>[Enter]</b> key to start the installation.</li>
+    </ol>
+    <p>It may take a few minutes before progress is seen on the screen.</p>
+  </body>
+</topic>

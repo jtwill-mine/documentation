@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_vm_deployment">
+  <title>Foreman Virtual Machine Deployment</title>
+  <shortdesc>The deployment of the Foreman virtual machine is performed using the <cmdname>deploy-foreman-vm.s</cmdname> script. This script creates a kickstart file and then executes the <cmdname>virt-install</cmdname> command to install the system.</shortdesc>
+  <body>
+    <p>The generated kickstart script performs the following steps:</p>
+    <ul>
+      <li>Partitions the system</li>
+      <li>Sets SELinux to permissive mode</li>
+      <li>Configures <cmdname>iptables</cmdname> to ensure the following services can pass
+          traffic:<ul id="foreman_vm_iptables">
+          <li>HTTP</li>
+          <li>HTTPS</li>
+          <li>DNS</li>
+          <li>TFTP</li>
+          <li>TCP port 8140</li>
+        </ul></li>
+      <li>Configures networking, including:<ul id="ul_foreman_vm_networking">
+          <li>Static IP addresses</li>
+          <li>Gateway</li>
+          <li>Name resolution</li>
+          <li>NTP time service</li>
+        </ul></li>
+      <li>Registers the system using the Red Hat Subscription Manager</li>
+      <li>Installs the Foreman installer<ul id="ul_i5c_2rs_lq">
+          <li>
+            <p>Configures the Foreman installer to not install the EPEL repository</p>
+          </li>
+        </ul></li>
+    </ul>
+  </body>
+  
+  <topic id="setup_foreman_deploy" conref="setup_foreman_deploy.dita#setup_foreman_deploy">
+    <title/>
+  </topic>
+  
+  <topic id="configure_foreman_deploy" conref="configure_foreman_deploy.dita#configure_foreman_deploy">
+    <title/>
+  </topic>
+  
+  <topic id="installing_foreman_vm" conref="installing_foreman_vm.dita#installing_foreman_vm">
+    <title/>
+  </topic>
+  
+  <topic id="foreman_password" conref="foreman_password.dita#foreman_password">
+    <title/>
+  </topic>
+  
+  <topic id="next_steps_foreman_deploy" conref="next_steps_foreman_deploy.dita#next_steps_foreman_deploy">
+    <title/>
+  </topic>
+  
+</topic>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="deployment_workflow">
+  <title>Deployment Workflow</title>
+  <shortdesc>This guide outlines the deployment sequence as follows:</shortdesc>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_en4_nv2_xq">
+      <title>Deployment Workflow</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Deployment Step</entry>
+            <entry>Information Reference</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>1. BIOS Configuration</entry>
+            <entry>BIOS Configuration on page 16</entry>
+          </row>
+          <row>
+            <entry>2. RAID Configuration</entry>
+            <entry>RAID Configuration on page 19</entry>
+          </row>
+          <row>
+            <entry>3. Partition Disks</entry>
+            <entry>File System Layout on page 20</entry>
+          </row>
+          <row>
+            <entry>4. Install Operating System</entry>
+            <entry>Red Hat Software Requirements on page 13</entry>
+          </row>
+          <row>
+            <entry>5. Configure Network Interfaces</entry>
+            <entry>Node Interface Bonds on page 28</entry>
+          </row>
+          <row>
+            <entry>6. Mount Data Node Drives</entry>
+            <entry>File Systems and Parameters on page 22</entry>
+          </row>
+          <row>
+            <entry>7. Format Disks</entry>
+            <entry>File Systems and Parameters on page 22</entry>
+          </row>
+          <row>
+            <entry>8. Configure <codeph>iptables</codeph></entry>
+            <entry>Firewall Settings on page 38</entry>
+          </row>
+          <row>
+            <entry>9. Configure <codeph>swappiness</codeph></entry>
+            <entry>Swap Settings on page 21</entry>
+          </row>
+          <row>
+            <entry>10. Disable IPv6</entry>
+            <entry>Firewall Settings on page 38</entry>
+          </row>
+          <row>
+            <entry>11. Disable Transparent Huge Page (THP) Compaction</entry>
+            <entry>Transparent Huge Page (THP) Compaction on page 38</entry>
+          </row>
+          <row>
+            <entry>12. Setting File and Process Limits</entry>
+            <entry>Process Limits on page 38</entry>
+          </row>
+          <row>
+            <entry>13. Enable NTP Services on All Cluster Hosts</entry>
+            <entry>Network Time Protocol on page 29</entry>
+          </row>
+          <row>
+            <entry>14. Disable Unused Services</entry>
+            <entry>Services on page 38</entry>
+          </row>
+          <row>
+            <entry>15. Register with the Red Hat Satellite Server</entry>
+            <entry>Red Hat Software Requirements on page 13</entry>
+          </row>
+          <row>
+            <entry>16. Install the Cloudera Manager Database</entry>
+            <entry>Cloudera Manager Required Database Packages on page 23</entry>
+          </row>
+          <row>
+            <entry>17. Download the Cloudera Manager Installer</entry>
+            <entry>Checking and Installing Packages on page 23</entry>
+          </row>
+          <row>
+            <entry>18. Run the Cloudera Manager Installer and Complete the Installation</entry>
+            <entry>Checking and Installing Packages on page 23</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

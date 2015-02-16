@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ifcfg-eth2">
+  <title><codeph>ifcfg-eth2</codeph></title>
+  <body>
+    <note>Original Configuration, configured by Foreman standard provisioning.</note>
+    <codeblock>DEVICE="eth2"
+BOOTPROTO="dhcp"
+DHCP_HOSTNAME="testhost.example.org"
+HOSTNAME="testhost.example.org"
+HWADDR="02:00:00:00:60:F0"
+IPV6INIT="yes"
+MTU="1500"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="f7527188-d3a3-4e6a-bff0-c9cc010f8a43"</codeblock>
+  </body>
+</topic>

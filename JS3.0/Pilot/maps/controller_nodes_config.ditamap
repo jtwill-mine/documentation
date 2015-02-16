@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Controller Nodes Configuration Map</title>
+ <topicref href="../topics/non_bonded_nic_config.dita"/>
+ <topicref href="../topics/bonded_nic_config.dita"/>
+ <topicref href="../topics/controller_nodes_version_locking.dita"/>
+</map>

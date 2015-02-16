@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_fabric_architecture">
+  <title>Network Fabric Architecture</title>
+  <body>
+    <p>The cluster network is architected to meet the needs of a high performance and scalable
+      cluster, while providing redundancy and access to management capabilities. <xref
+        href="#network_fabric_architecture/cluster_network_fabric_architecture" format="dita"/>
+      displays details:</p>
+    <fig id="cluster_network_fabric_architecture">
+      <title>Cluster Network Fabric Architecture</title>
+      <image href="../../Customization/OpenTopic/common/artwork/cluster_network_fabric_architecture.png" align="left" scalefit="yes"></image>
+    </fig>
+    <p>Four distinct networks are used in the cluster:</p>
+      <table frame="all" rowsep="1" colsep="1"
+        id="table_networks">
+        <title>Networks</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Logical Network</entry>
+              <entry>Connection</entry>
+              <entry>Switch</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Cluster Data Network</entry>
+              <entry>Bonded 10GbE</entry>
+              <entry>Dual top of rack switches</entry>
+            </row>
+            <row>
+              <entry>Management Network</entry>
+              <entry>1GbE</entry>
+              <entry>Switch per rack, dedicated or shared with BMC network</entry>
+            </row>
+            <row>
+              <entry>BMC/IPMI Network</entry>
+              <entry>1GbE</entry>
+              <entry>Switch per rack, dedicated or shared with Management network</entry>
+            </row>
+            <row>
+              <entry>Edge Network</entry>
+              <entry>10GbE, optionally bonded</entry>
+              <entry>Top of rack or aggregation switch</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+  </body>
+</topic>

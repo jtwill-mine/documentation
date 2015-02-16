@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="poc_checklist">
+  <title>PoC Environment</title>
+
+  <body>
+    <p/>
+
+    <section><title>Networks </title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Network / Mask</stentry>
+
+          <stentry>Controller Interface</stentry>
+
+          <stentry>Compute Interface</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Public API</stentry>
+
+          <stentry/>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Private API</stentry>
+
+          <stentry/>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Provisioning</stentry>
+
+          <stentry/>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Storage</stentry>
+
+          <stentry>N/A</stentry>
+
+          <stentry>N/A</stentry>
+
+          <stentry>N/A</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Foreman Server</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>eth0</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>eth1</stentry>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title><b>Controller Node </b></title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-assigned</stentry>
+        </strow>
+
+        <strow/>
+
+        <strow/>
+      </simpletable></section>
+
+    <section><p/></section>
+
+    <section><title>Compute Node1</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry>No Address</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable></section>
+
+    <section><p/></section>
+
+    <section><title>Compute Node2</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry>No Address</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable></section>
+
+    <section><p/></section>
+
+    <section><title>Compute Node3</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry>No Address</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable></section>
+
+    <section><p/></section>
+
+    <section><title>Foreman Hammer Configuration Information</title></section>
+
+    <section><title>Mediums</title><simpletable relcolwidth="249* 751*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OSP POc</stentry>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Partition Tables</title><simpletable
+        relcolwidth="250* 750*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>dell-poc-controller </stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>dell-poc-compute</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <p/>
+
+    <section><title>Operating Systems</title><simpletable
+        relcolwidth="250* 750*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>RedHat 6.5</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>RedHat 7.0</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Subnets</title><simpletable relcolwidth="250* 750*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Openstack</stentry>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Templates</title><simpletable relcolwidth="251* 749*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OpenStack Kickstart Template</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OpenStack PXE Template</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Environments</title><simpletable relcolwidth="247* 753*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>development</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>production</stentry>
+        </strow>
+      </simpletable></section>
+
+    <p/>
+
+    <section><title>Domains</title><simpletable relcolwidth="248* 752*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Puppet Proxies</title><simpletable relcolwidth="251* 749*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Architectures</title><simpletable relcolwidth="248* 752*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>i386</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>x86_64</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Hostgroups</title><simpletable relcolwidth="243* 757*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Controller (Nova Network)</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Compute (Nova Network)</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Hosts</title><simpletable relcolwidth="247* 753*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+  </body>
+</topic>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="taxonomy">
+  <title>Taxonomy</title>
+  <shortdesc>This solution contains the core components of a typical Red Hat Enterprise Linux OpenStack Platform solution:</shortdesc>
+  <body>
+    <ul>
+      <li>Block Storage (Cinder with LVM, Ceph, EqualLogic)</li>
+      <li>Compute (Nova)</li>
+      <li>Dashboard (Horizon)</li>
+      <li>Database (Trove)</li>
+      <li>Identity (Keystone)</li>
+      <li>Image Service (Glance)</li>
+      <li>Networking (Nova networking default; Neutron networking available)<fn>Neutron networking
+          and Swift are available via custom Services engagements, for customer evaluation only.
+          Dell currently recommends using Nova networking for production deployments of this
+          solution.</fn></li>
+      <li>Object Store (Swift, available but not part of the solution)<sup>1</sup></li>
+      <li>Orchestration (Heat)</li>
+      <li>Telemetry (Ceilometer)</li>
+    </ul>
+    <p>The taxonomy presented in Figure 1 reflects infrastructure components (shown in light green) and OpenStack-specific components (shown in red), that are under active development by the community, Dell, and Red Hat. The taxonomy reflects a DevOps perspective in that there are two sides for cloud users:</p>
+    <ul>
+      <li>Site-specific infrastructure</li>
+      <li>Standards-based API (shown in pink) interactions</li>
+    </ul>
+    <p>The standards-based APIs are the same between all OpenStack deployments, and let customers and vendor ecosystems operate across multiple clouds. The site-specific infrastructure combines open and proprietary software, Dell hardware, and operational processes to deliver cloud resources as a service.</p>
+    <p>The implementation choices for each cloud infrastructure are highly specific to the requirements of each site. Many of these choices can be standardized and automated using the tools in this Reference Architecture, and by following DevOps processes. Conforming to best practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red Hat and the broader OpenStack community.</p>
+    <fig>
+      <title>OpenStack Taxonomy</title>
+      <image href="../../Customization/OpenTopic/common/artwork/taxonomy.png"  align="left"></image>
+    </fig>
+  </body>
+</topic>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="lvm">
+  <title>Logical Volume Manager (LVM)</title>
+  <body>
+    <p>Logical Volume Manager (LVM) is a basic service provided by the kernel that can be used to create a volume that is used in conjunction with the iSCSI drivers to create volumes and mount them to Virtual Machines. Cinder can use this method when other options are unavailable.</p>
+    <table frame="all" rowsep="1" colsep="1" id="storage_options">
+      <title>Selecting Storage Options</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="0.2*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Storage Option</entry>
+            <entry>When to Use</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>LVM</entry>
+            <entry>Use only for single-node evaluations and Proof of Concept. This is available only
+              in the Dell PoC bundle. Not recommended for data requiring high availability, fault
+              resiliency, spanning multiple nodes or scale-out model with redundancy.</entry>
+          </row>
+          <row>
+            <entry>Ceph</entry>
+            <entry>Use for low-cost, scale-out storage, ideal as volume backend for Nova VMs and
+              also an object store Perfect for Dev/Test, back-up and storage-as-a-service use cases.
+              Not recommended for very high-performance and database applications.</entry>
+          </row>
+          <row>
+            <entry>Dell EqualLogic</entry>
+            <entry>Use for higher-performance block storage backend requirements for Nova VM’s and
+              application data. Ideal for customers who already have EQL arrays and want to utilize
+              them with OpenStack</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

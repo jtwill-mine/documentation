@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="overview">
+  <title>Overview</title>
+  <shortdesc>The Dell Red Hat Cloud Solutions Index of Documents contains links to all documents that you should read in order to successfully deploy the Dell Red Hat Cloud Solutions. The documents are listed in the order in which they are used.</shortdesc>
+  <body>
+    <p>In addition, the Index of Documents contains links to deployment scripts, tools, and workbooks.</p>
+  </body>
+  
+  <topic id="prerequisites" conref="prerequisites.dita#prerequisites">
+    <title/>
+  </topic>
+     
+</topic>

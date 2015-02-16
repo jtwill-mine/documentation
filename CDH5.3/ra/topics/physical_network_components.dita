@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="physical_network_components">
+  <title>Physical Network Components</title>
+  <shortdesc>The Dell | Cloudera Apache Hadoop Solutions physical networks consists of the following components:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="server_node_connections.dita#server_node_connections"/></li>
+      <li><xref href="tor_switches.dita#tor_switches"/></li>
+      <li><xref href="aggregation_switches.dita#aggregation_switches"/></li>
+      <li><xref href="core_network.dita#core_network"/></li>
+      <li><xref href="l2_l3.dita#l2_l3"/></li>
+      <li><xref href="management_network.dita#management_network"/></li>
+      <li><xref href="network_equipment_summary.dita#network_equipment_summary"/></li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_redundancy">
+  <title>Network Redundancy</title>
+  <body>
+    <p>The production network uses bonded connections to multiple switches in each rack. This allows operation at reduced capacity in the event of a network port, network cable, or switch failure. </p>
+  </body>
+</topic>

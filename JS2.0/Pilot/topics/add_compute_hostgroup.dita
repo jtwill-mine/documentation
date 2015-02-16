@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_compute_hostgroup">
+  <title>Add Compute Hostgroup</title>
+  <body>
+    <ol>
+      <li>Add the hostgroups to the compute node hosts <i>one at a time</i>.<codeblock># hammer host update --hostgroup-id HOSTGROUP_ID --id HOST_ID</codeblock></li>
+      <li>Run the following command between each:<codeblock>puppet agent -t -dv |&amp; tee /root/puppet.out</codeblock><note><b>Do not</b> add the next host in the list until the previous one is completely finished. Failure to do so can lead to a race condition that prevents proper installation and configuration of the compute nodes.</note></li>
+    </ol>
+  </body>
+</topic>

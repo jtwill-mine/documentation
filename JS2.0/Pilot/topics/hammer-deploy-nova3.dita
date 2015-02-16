@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hammer-deploy-nova3">
+  <title><cmdname>hammer-deploy-nova3</cmdname></title>
+  <body>
+    <codeblock>NAME=rh7nova3
+
+PTABLE=12
+
+MAC=B8:CA:3A:67:3D:C8
+
+IP=192.168.119.135
+
+hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+--build true --enabled true --managed true --environment-id 2 \
+--domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
+--subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
+
+hammer host list |grep ${NAME}</codeblock>
+  </body>
+</topic>

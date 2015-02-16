@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="resource_manager_high_availability">
+  <title>Resource Manager High Availability</title>
+  <shortdesc>The architecture supports high availability for the Hadoop YARN resource manager.</shortdesc>
+  <body>
+    <p>Without resource manager HA, a Hadoop resource manager failure causes currently executing jobs to fail. When resource manager HA is enabled, jobs can continue running in the event of a resource manager failure.</p>
+    <p>Furthermore, upon failover the applications can resume from their last check-pointed state; for example, completed map tasks in a MapReduce job are not rerun on a subsequent attempt. This allows events such as machine crashes or planned maintenance to be handled without any significant performance effect on running applications.</p>
+    <p>Resource manager HA is implemented by means of an Active/Standby pair of resource managers. On start-up, each resource manager is in the standby state: the process is started, but the state is not loaded. When transitioning to active, the resource manager loads the internal state from the designated state store and starts all the internal services. The stimulus to transition-to-active comes from either the administrator or through the integrated failover controller when automatic failover is enabled.</p>
+    <note>This feature is not always implemented in production clusters.</note>
+  </body>
+</topic>

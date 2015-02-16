@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="poweredge_r30xd_feature_summary">
+  <title>PowerEdge R730 Feature Summary</title>
+  <shortdesc>Dell PowerEdge R730 features include:</shortdesc>
+  <body>
+    <ul>
+      <li>Intel Grantley platform and Intel Xeon E5-2600v3 (Haswell-EP) processors</li>
+      <li>Up to 2133 MT/s DDR4 memory</li>
+      <li>24 DIMM slots</li>
+      <li>iDRAC8 with Lifecycle Controller</li>
+      <li>Network daughter cards for customer choice of LOM speed, fabric and brand</li>
+      <li>Front accessible hot-plug drives</li>
+      <li>Platinum efficiency power supplies</li>
+    </ul>
+  </body>
+</topic>

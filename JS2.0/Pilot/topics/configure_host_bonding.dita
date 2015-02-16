@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_host_bonding">
+  <title>Configure the Host for Bonding</title>
+  <shortdesc>Bonding is configured by setting three Puppet Class Host Parameters</shortdesc>
+  <body>
+    <ul>
+      <li><parmname>bonds</parmname></li>
+      <li><parmname>bond_ifaces</parmname></li>
+      <li><parmname>bond_opts</parmname> </li>
+    </ul>
+    
+  </body>
+  
+  <topic id="add_bonding_parameter" conref="add_bonding_parameter.dita#add_bonding_parameter">
+    <title/>
+  </topic>
+  
+  <topic id="bonding_parameters" conref="bonding_parameters.dita#bonding_parameters">
+    <title/>
+  </topic>
+  
+</topic>

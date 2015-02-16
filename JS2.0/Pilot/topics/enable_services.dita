@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="enable_services">
+  <title>Enable Services</title>
+  <body>
+    <ol>
+      <li>Execute the <cmdname>pcs status</cmdname> command on each node.<p>The end of the output contains a <b>Daemon Status</b> section.</p></li>
+      <li>Ensure all the daemons listed have an <b>active/enabled</b> status.<p>This ensure the daemons will start upon a reboot of the node.</p></li>
+      <li>If the status is active/disabled, execute the <cmdname>systemctl enable DAEMON_NAME</cmdname> command to enable it:<codeblock># pcs status
+
+[OUTPUT ABBREVIATED]
+
+Daemon Status:
+  corosync: active/enabled
+  pacemaker: active/disabled
+  pcsd: active/enabled
+
+
+# systemctl enable pacemaker
+ln -s '/usr/lib/systemd/system/pacemaker.service' '/etc/systemd/system/multi-user.target.wants/pacemaker.service'
+
+# pcs status
+
+[OUTPUT ABBREVIATED]
+
+Daemon Status:
+  corosync: active/enabled
+  pacemaker: active/enabled
+  pcsd: active/enabled</codeblock></li>
+    </ol>
+  </body>
+</topic>

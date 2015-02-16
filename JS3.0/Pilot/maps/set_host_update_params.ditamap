@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Set Host Update Parameters Map</title>
+ <topicref href="../topics/determine_pool_id.dita"/>
+ <topicref href="../topics/configure_pool_id.dita"/>
+ <topicref href="../topics/configure_repositories.dita"/>
+</map>

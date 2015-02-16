@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_architecture">
+  <title>Network Architecture</title>
+  <shortdesc>The Dell Red Hat cloud solutions with RHEL OpenStack Platform use Dell Force10 S55 1/10-Gigabit and/or Dell Force10 S4810 10-Gigabit Ethernet switches as the top-of-rack connectivity to all OpenStack-related nodes. This Reference Architecture is used to support consistency in rapid deployments through the minimal differences in the network configuration.</shortdesc>
+  <body></body>
+ 
+  <topic id="vlans" conref="vlans.dita#vlans">
+    <title/>
+  </topic>
+  
+  <topic id="infra_layouts" conref="infra_layouts.dita#infra_layouts">
+    <title/>
+  </topic>
+  
+  <topic id="network_components" conref="network_components.dita#network_components">
+    <title/>
+  </topic>
+  
+</topic>

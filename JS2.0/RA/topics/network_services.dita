@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_services">
+  <title>Networking and Network Services</title>
+  <shortdesc>This Reference Architecture uses a starter configuration for networking, which provides access to OpenStack capabilities while reducing the initial complexity during evaluation. After a review of the OpenStack Nova-Network and Neutron networking options, Dell has determined that Nova-Network is the best fit for initial deployments. Nova-Network’s advantages are that it:</shortdesc>
+  <body>
+    <ul>
+      <li>Spreads the network load across all nova servers</li>
+      <li>Keeps all routing and higher functions on the nodes themselves</li>
+      <li>Eliminates the Network Controller as a single point of failure</li>
+    </ul>
+    <p>For a production system, additional networking and redundancy configurations are required. This Reference Architecture supports adding these components as the system grows. This includes:</p>
+    <ul>
+      <li>Core and layered networking capabilities</li>
+      <li>10GbE networking</li>
+      <li>NIC teaming</li>
+      <li>Redundant trunking top-of-rack (ToR) switches into core routers</li>
+    </ul>
+    <p>See Network Architecture for guidelines. Detailed designs are available through Dell consulting services.</p>
+  </body>
+</topic>

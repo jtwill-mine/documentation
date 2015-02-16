@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_deployment">
+  <title>Ceph Deployment</title>
+  <shortdesc>If Ceph must be configured on these nodes:</shortdesc>
+  <body>
+    <ol>
+      <li>Follow the Red Hat Openstack Platform Integration with Ceph document.</li>
+    </ol>
+  </body>
+</topic>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_hammer_config_hosts">
+  <title>Hosts</title>
+  <body>
+    <table frame="all" rowsep="1" colsep="1" id="table_foreman_hammer_config_hosts">
+      <title>Hosts</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>ID</entry>
+            <entry>Name</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry/>
+            <entry>
+              <p>-</p>
+            </entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>-</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="resultant_config_files">
+  <title>Resultant Configuration Files</title>
+  <shortdesc>The following configuration files are created as a result of the bonding procedure described above:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="ifcfg-bond0.dita#ifcfg-bond0" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond0.141.dita#ifcfg-bond0.141" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond0.151.dita#ifcfg-bond0.151" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond0.170.dita#ifcfg-bond0.170" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond1.dita#ifcfg-bond1" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond1.140.dita#ifcfg-bond1.140" type="topic"></xref></li>
+      <li><xref href="ifcfg-bond1.150.dita#ifcfg-bond1.150" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth0.dita#ifcfg-eth0" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth1.dita#ifcfg-eth1" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth2.dita#ifcfg-eth2" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth3.dita#ifcfg-eth3" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth4.dita#ifcfg-eth4" type="topic"></xref></li>
+      <li><xref href="ifcfg-eth5.dita#ifcfg-eth5" type="topic"></xref></li>
+    </ul>
+  </body>
+</topic>

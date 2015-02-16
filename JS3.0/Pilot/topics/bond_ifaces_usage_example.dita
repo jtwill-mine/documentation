@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bond_ifaces_usage_example">
+  <title><codeph>bond_ifaces</codeph> Parameter Usage Example</title>
+  <shortdesc>The following entry assigns <codeph>eth1</codeph>, <codeph>eth4</codeph>, and <codeph>eth5</codeph> to <codeph>bond0</codeph>; and <codeph>eth0</codeph> and <codeph>eth3</codeph> to <codeph>bond1</codeph>.</shortdesc>
+  <body>
+    <codeblock>( [bond0]="eth1 eth4 eth5" [bond1]="eth0 eth3" )</codeblock>
+  </body>
+</topic>

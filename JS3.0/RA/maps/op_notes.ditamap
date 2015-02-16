@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Operational Notes Map</title>
+ 
+ <topicref href="../topics/backup_recovery.dita"/>
+ <topicref href="../topics/service_layout.dita"/>
+ <topicref href="../topics/deployment.dita"/>
+  
+</map>

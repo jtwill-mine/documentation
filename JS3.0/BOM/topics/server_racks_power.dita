@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="server_racks_power">
+  <title>Server Racks and Power</title>
+  <body>
+  <p><xref href="pilot_bom_r630.dita#pilot_bom_r630/table_r630"/> and <xref
+        href="pilot_bom_r730xd.dita#pilot_bom_r730xd/table_r730xd"/> do not include racks or power
+      distribution units, as they are generally site specific. The physical dimensions and power
+      requirements need to be reviewed. The R730 and R730xd both require rear cable management and
+      power distribution.</p>
+  </body>
+</topic>

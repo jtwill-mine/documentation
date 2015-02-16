@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Pilot Checklist Nodes Map</title>
+ <topicref href="../topics/pilot_networks.dita"></topicref>
+ <topicref href="../topics/foreman_server.dita"></topicref>
+ <topicref href="../topics/vips.dita"></topicref>
+ <topicref href="../topics/controller_node_1.dita"></topicref>
+ <topicref href="../topics/controller_node_2.dita"></topicref>
+ <topicref href="../topics/controller_node_3.dita"></topicref>
+ <topicref href="../topics/compute_node_1.dita"></topicref>
+ <topicref href="../topics/compute_node_2.dita"></topicref>
+ <topicref href="../topics/compute_node_3.dita"></topicref>
+ <topicref href="../topics/compute_node_4.dita"></topicref>
+ <topicref href="../topics/compute_node_5.dita"></topicref>
+</map>

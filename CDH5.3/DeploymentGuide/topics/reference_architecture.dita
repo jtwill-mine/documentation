@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="reference_architecture">
+  <title>Dell | Cloudera Apache Hadoop Solutions Reference Architecture</title>
+  <shortdesc>You must obtain, and have a thorough understanding of, the <i>Dell | Cloudera Apache Hadoop Solutions Reference Architecture</i>.</shortdesc>
+  <body>
+    <p>The reference architecture provides detailed descriptions of the solution, its hardware and software components, and deployment methodologies that you should consider. Please contact your Dell sales representative to obtain a copy of the <i>Dell | Cloudera Apache Hadoop Solutions Reference Architecture</i>.</p>
+  </body>
+</topic>

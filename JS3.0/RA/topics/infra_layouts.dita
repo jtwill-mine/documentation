@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="infra_layouts">
+  <title>Infrastructure Layouts</title>
+  <shortdesc>The network consists of the following major network infrastructure layouts:</shortdesc>
+  <body>
+    <ul>
+      <li><b>Core Network Infrastructure</b> - The connectivity of aggregation switches to the core for external connectivity.</li>
+      <li><b>Data Network Infrastructure</b> - The data network consists of the server NICs, the top-of-rack (ToR) switches, and the aggregation switches.</li>
+      <li><b>Management Network Infrastructure</b> - The BMC management network, consisting of iDRAC ports and the out-of-band management ports of the switches, is aggregated into a 1-RU s55 switch in one of the three racks in the cluster. This 1-RU switch in turn can connect to one of the Aggregation or Core switches to create a separate network with a separate vLAN.</li>
+    </ul>
+  </body>
+</topic>

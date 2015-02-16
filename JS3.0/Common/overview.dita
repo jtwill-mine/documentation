@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yn4_nlz_xp">
+  <title>Overview</title>
+  <shortdesc>This guide provides information necessary to deploy the Dell Red Hat Cloud Solutions
+    with <tm trademark="Red Hat Enterprise Linux" tmtype="tm">Red Hat Enterprise Linux</tm>
+    OpenStack Platform 5, on Dell R620, R720, and R720xd servers with Dell PowerEdge H710 disk
+    controller; and the network with Dell Force10 S4810 and S55 Switches.</shortdesc>
+  
+</topic>

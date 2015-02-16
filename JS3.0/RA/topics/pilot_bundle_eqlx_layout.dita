@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bundle_eqlx_layout">
+  <title>Solution Bundle with EqualLogic Storage Network Layout</title>
+  <shortdesc>The OpenStack controllers hosting Cinder and/or Glance servers and compute nodes must have access to the Dell EqualLogic Storage Group through the Storage network vLAN.</shortdesc>
+  <body>
+
+  </body>
+</topic>

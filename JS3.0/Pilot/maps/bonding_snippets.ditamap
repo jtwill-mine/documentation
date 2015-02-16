@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
+<map>
+  <title>Dell Red Hat Cloud Solutions OpenStack Foreman Network Bond Provisioning Guide - Version 3.0</title>
+  
+  <topicmeta><copyright>
+    <copyryear year="&#169; 2014-2015"/>
+    <copyrholder>Dell Revolutionary Cloud and Big Data Solutions</copyrholder>
+  </copyright></topicmeta>
+  
+  <topicref href="../../Common/trademarks.dita"/>
+  <topicref href="../../Common/notes_cautions_warnings.dita"/>
+  <topicref href="../topics/bonding_snippet_overview.dita"/>
+  <topicref href="../topics/create_provisioning_template_bonding.dita"/>
+  <topicref href="../topics/update_kickstart_template.dita"/>
+  <topicref href="../topics/configure_host_bonding.dita">
+    <mapref href="host_bonding_config.ditamap" format="ditamap"/>
+  </topicref>
+  <topicref href="../topics/example_config_bonds_vlans.dita">
+    <mapref href="resultant_config_files.ditamap" format="ditamap"/>
+  </topicref>
+  <topicref href="../../Common/references.dita">
+    <topicref href="../../Common/to_learn_more.dita"/>
+  </topicref>
+</map>

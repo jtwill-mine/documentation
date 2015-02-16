@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="bond_ifaces_parameter">
+  <title>The <codeph>bond_ifaces</codeph> Parameter</title>
+  <shortdesc>The <codeph>bond_ifaces</codeph> parameter specifies the interfaces to use for each bond.</shortdesc>
+  <body>
+    <p></p>
+  </body>
+  
+  <topic id="bond_ifaces_usage_example"
+    conref="bond_ifaces_usage_example.dita#bond_ifaces_usage_example">
+    <title/>
+  </topic>
+  
+</topic>

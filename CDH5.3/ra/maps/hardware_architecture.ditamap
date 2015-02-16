@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Hardware Architecture Map</title>
+ 
+ <topicref href="../topics/server_infrastructure_options.dita">
+  <topicref href="../topics/poweredge_r730_r730xd_server.dita">
+   <topicref href="../topics/poweredge_r730xd_feature_summary.dita"/>
+   <topicref href="../topics/poweredge_r730_r730xd_configs.dita"/>
+   <topicref href="../topics/poweredge_r730xd_config_notes.dita"/>
+   <topicref href="../topics/storage_sizing_notes.dita"/>
+  </topicref>
+ </topicref>
+ 
+ 
+ 
+</map>

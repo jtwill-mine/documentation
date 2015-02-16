@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openstack_components">
+  <title>OpenStack Components</title>
+  <body>
+    <p>The following component descriptions are from the OpenStack Foundation website. Extensive
+      documentation for the OpenStack components is available at<xref
+        href="http://www.openstack.org" format="html" scope="external">
+        http://docs.openstack.org/</xref>.</p>
+    <table frame="all" rowsep="1" colsep="1" id="openstack_components">
+      <title>OpenStack Components</title>
+      <tgroup cols="3">
+        <colspec colname="function" colnum="1" colwidth="1*"/>
+        <colspec colname="codename" colnum="2" colwidth="1*"/>
+        <colspec colname="description" colnum="3" colwidth="4*"/>
+        <thead>
+          <row>
+            <entry>Function</entry>
+            <entry>Code Name</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Identity</entry>
+            <entry>Keystone</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">Identity Service</xref> provides a central directory
+              of users mapped to the OpenStack services they can access. It acts as a common
+              authentication system across the cloud operating system and can integrate with
+              existing backend directory services.</entry>
+          </row>
+          <row>
+            <entry>Dashboard/Portal</entry>
+            <entry>Horizon</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-dashboard/" format="html"
+                scope="external">OpenStack Dashboard</xref> provides administrators and users a
+              graphical interface to access, provision and automate cloud-based resources. The
+              extensible design makes it easy to plug in and expose third party products and
+              services.</entry>
+          </row>
+          <row>
+            <entry>Compute/IaaS</entry>
+            <entry>Nova</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-compute/" format="html"
+                scope="external">OpenStack Compute</xref> is open source software designed to
+              provision and manage large networks of virtual machines, creating a redundant and
+              scalable cloud computing platform. It gives you the software, control panels, and APIs
+              required to orchestrate a cloud, including running instances, managing networks, and
+              controlling access through users and projects. OpenStack Compute strives to be both
+              hardware and hypervisor agnostic, currently supporting a variety of standard hardware
+              configurations and seven major hypervisors.</entry>
+          </row>
+          <row>
+            <entry>Virtual Images</entry>
+            <entry>Glance</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Image Service</xref> provides discovery,
+              registration, and delivery services for virtual disk images. The Image Service API
+              server provides a standard REST interface for querying information about virtual disk
+              images stored in a variety of back-end stores, including OpenStack Object Storage.
+              Clients can register new virtual disk images with the Image Service, query for
+              information on publicly available disk images, and use the Image Service’s client
+              library for streaming virtual disk images.</entry>
+          </row>
+          <row>
+            <entry>Block Storage</entry>
+            <entry>Cinder</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-storage/" format="html"
+                scope="external">OpenStack Block Storage</xref> provides persistent block level
+              storage devices for use with OpenStack compute instances. The block storage system
+              manages the creation, attaching and detaching of the block devices to servers. Block
+              storage volumes are fully integrated into OpenStack Compute and the Dashboard enabling
+              cloud users to manage their own storage needs. In addition to using simple <tm
+                tmtype="reg" trademark="Linux">Linux</tm> server storage, it has unified storage
+              support for numerous storage devices. <p>Block storage is appropriate for performance
+                sensitive scenarios such as database storage, expandable file systems, or providing
+                a server with access to raw block level storage. Snapshot management provides
+                powerful functionality for backing up data stored on block storage volumes.
+                Snapshots can be restored or used to create a new block storage volume.</p></entry>
+          </row>
+          <row>
+            <entry>Networking</entry>
+            <entry>Neutron</entry>
+            <entry><xref href="http://www.OpenStack.org/software/OpenStack-networking/"
+                format="html" scope="external">OpenStack Networking</xref> is a pluggable, scalable
+              and API-driven system for managing networks and IP addresses. Like other aspects of
+              the cloud operating system, it can be used by administrators and users to increase the
+              value of existing datacenter assets. OpenStack Networking ensures the network will not
+              be the bottleneck or limiting factor in a cloud deployment and gives users real
+              self-service, even over their network configurations.</entry>
+          </row>
+          <row>
+            <entry>Telemetry</entry>
+            <entry>Ceilometer</entry>
+            <entry><xref href="https://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Telemetry</xref> aggregates usage and
+              performance data across the services deployed in an OpenStack cloud. This powerful
+              capability provides visibility and insight into the usage of the cloud across dozens
+              of data points and enables cloud operators to view metrics globally or by individual
+              deployed resources.</entry>
+          </row>
+          <row>
+            <entry>Orchestration</entry>
+            <entry>Heat</entry>
+            <entry><xref href="https://www.OpenStack.org/software/OpenStack-shared-services/"
+                format="html" scope="external">OpenStack Orchestration</xref> is a template-driven
+              engine that enables application developers to describe and automate the deployment of
+              infrastructure. The flexible template language can specify compute, storage and
+              networking configurations as well as detailed post-deployment activity to automate the
+              full provisioning of infrastructure as well as services and applications. Through
+              integration with the Telemetry service, the Orchestration engine can also perform
+              auto-scaling of certain infrastructure elements.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+  </body>
+</topic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="server_infrastructure_options">
+  <title>Server Infrastucture Options</title>
+  <body>
+    <p>The <tm trademark="Dell" tmtype="tm">Dell</tm> | <tm trademark="Cloudera" tmtype="tm">Cloudera</tm> <tm trademark="Apache" tmtype="tm">Apache</tm> <tm trademark="Hadoop" tmtype="reg">Hadoop</tm> Solution includes the following server options:</p>
+    <ul>
+      <li><xref href="poweredge_r730_r730xd_server.dita#poweredge_r730_r730xd_server" type="topic"></xref></li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="deployment_methodology">
+  <title>Deployment Methodology</title>
+  <body>
+    <p>A suggested deployment workflow is documented in the <i>Dell | Cloudera Apache Hadoop Solution Deployment Guide</i>, which is a complement to this reference architecture.</p>
+  </body>
+</topic>

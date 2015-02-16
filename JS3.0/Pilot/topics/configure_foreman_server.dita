@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_foreman_server">
+  <title>Configure the Foreman Server</title>
+  <shortdesc>If the provisioning interface on the provisioned host is not the first interface returned in the puppet data, Foreman will overwrite the configuration in the database. This can cause issues later.</shortdesc>
+  <body>
+    <p>To prevent Foreman from changing the IP and MAC information to reflect the puppet data, change the <codeph>ignore_puppet_facts_for_provisioning</codeph> setting</p>
+    <ol>
+      <li>Log into the Foreman user interface. </li>
+      <li>Move the mouse over the <b>Administer</b> drop down menu on the right side of the interface.</li>
+      <li>Select <b>Settings</b> from the menu.</li>
+      <li>Select the <b>Provisioning</b> tab.</li>
+      <li>Select <b>Value</b> for the <codeph>ignore_puppet_facts_for_provisioning</codeph>
+          setting.<ol id="ol_jdr_bt2_hq">
+          <li>Change this setting to <i>true</i>.</li>
+        </ol></li>
+    </ol>
+  </body>
+  
+</topic>

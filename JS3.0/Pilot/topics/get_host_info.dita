@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="get_host_info">
+  <title>Get Host Information</title>
+  <shortdesc>The IDs of the newly-defined hosts are needed to finish their configuration.</shortdesc>
+  <body>
+    <ol>
+      <li>Execute the hammer host list command to get the host IDs.<codeblock># hammer host list</codeblock></li>
+      <li>Take note of these IDs.</li>        
+    </ol>
+  </body>
+</topic>

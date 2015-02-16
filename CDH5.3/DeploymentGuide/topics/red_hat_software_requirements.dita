@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="red_hat_software_requirements">
+  <title>Red Hat Software Requirements</title>
+  <shortdesc>Red Hat Enterprise Linux v6.5 must be obtained via one of the following means prior to installation:</shortdesc>
+  <body>
+    <ul>
+      <li>Local media access</li>
+      <li>Satellite server</li>
+      <li>Outbound public Internet connectivity</li>
+    </ul>
+    <note>Alternately, you can use CentOS 6.5; however, support for CentOS is limited to Dell hardware support only.</note>
+    <p>See Table 20: Dell | Cloudera Support Matrix on page 44 for a list of support options for Dell | Cloudera Solution components.</p>
+  </body>
+</topic>

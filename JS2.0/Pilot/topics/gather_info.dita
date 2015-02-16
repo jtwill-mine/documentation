@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="gather_info">
+  <title>Gather More Information</title>
+  <shortdesc>A few more IDs are required in order to install a host.</shortdesc>
+  <body>
+    <ol>
+      <li>Execute the following commands, and take note of the appropriate IDs.<ol
+          id="ol_xtv_f2q_3q">
+          <li>Environments:<codeblock># hammer environment list</codeblock></li>
+        <li>Domains:<codeblock># hammer domain list</codeblock></li>
+        <li>Puppet Proxy:<codeblock># hammer proxy list</codeblock></li>
+        <li>Architectures:<codeblock># hammer architecture list</codeblock></li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>

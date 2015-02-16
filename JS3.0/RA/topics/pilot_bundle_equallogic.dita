@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bundle_equallogic">
+  <title>Solution Bundle with Dell EqualLogic Storage added</title>
+  <shortdesc>The Solution Bundle with Dell EqualLogic Storage has the same characteristics; the only
+    change is the Storage backend software is setup to use both Ceph and EqualLogic.  The storage
+    node servers are supplemented with one or more Dell EqualLogic arrays.</shortdesc>
+  <body>
+    <p>The Solution bundle shown has a single Dell EqualLogic Storage Array; this can be one or more
+      depending on your Application and Storage needs. Prior to ordering your Sales Representative
+      will work to find the proper configuration for your needs.</p>
+    <p>The controller nodes will use the Storage Network vLAN to access the Storage Pools created on
+      the Storage Group for creation, deletion, and snapshots. The compute nodes must have access to
+      the storage nodes through the Storage Network vLAN in order for the iSCSI driver on that node
+      to interact with the volumes associated to Virtual Machines hosted by that node. EqualLogic
+      Arrays are connected to the Storage Networking vLAN untagged only and all other nodes use the
+      same layout as in <xref
+        href="pilot_bundle_ceph_netconfig.dita#pilot_bundle_ceph_netconfig/table_node_type_to_network_tagging"
+      />.</p>
+    </body>
+ 
+</topic>

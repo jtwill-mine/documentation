@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="management_network">
+  <title>Management Network</title>
+  <body>
+    <p>The management network of all the servers and switches is aggregated into a Dell Force10 S55 switch, which is located in each rack of the POD. It uplinks on a 10G link to the aggregation switches or the core directly, wherever the split for out-of-band is required.</p>
+  </body>
+</topic>

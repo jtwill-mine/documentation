@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="customize_kickstart_file">
+  <title>Customize the Kickstart File</title>
+  <shortdesc>The kickstart file must be customized for the environment into which it is being installed.</shortdesc>
+  <body>
+    <note>All changes that usually require changes are between the lines marked <b>CHANGEME</b> and
+        <b>END of CHANGEME</b>. Do not make other edits outside of these lines.</note>
+    <ol>
+      <li>Set the following variables:<table frame="all" rowsep="1" colsep="1" id="table_ik5_zzd_lq">
+          <title>Kickstart File Variables</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Variable</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><varname>HostName</varname></entry>
+                <entry>The FQDN of the server.</entry>
+              </row>
+              <row>
+                <entry><varname>SystemPassword</varname></entry>
+                <entry>The root user password for the system.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerUser</varname></entry>
+                <entry>The user credential when registering with Subscription Manager.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerPassword</varname></entry>
+                <entry>The user password when registering with Subscription Manager.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerPool</varname></entry>
+                <entry>The pool ID used when attaching the system to an entitlement.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerProxy</varname></entry>
+                <entry>Optional proxy server to use when attaching the system to an
+                  entitlement.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerProxyPort</varname></entry>
+                <entry>Optional port for the proxy server.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerProxyUser</varname></entry>
+                <entry>Optional username for the proxy server.</entry>
+              </row>
+              <row>
+                <entry><varname>SubscriptionManagerProxyPassword</varname></entry>
+                <entry>Optional password for the proxy server.</entry>
+              </row>
+              <row>
+                <entry><varname>Gateway</varname></entry>
+                <entry>The default gateway for the system.</entry>
+              </row>
+              <row>
+                <entry><varname>NameServers</varname></entry>
+                <entry>A comma-separated list of nameserver IP addresses.</entry>
+              </row>
+              <row>
+                <entry><varname>NTPServers</varname></entry>
+                <entry>A comma-separated list of time servers. This can be IP addresses or
+                  FQDNs.</entry>
+              </row>
+              <row>
+                <entry><varname>TimeZone</varname></entry>
+                <entry>The time zone in which the system resides.</entry>
+              </row>
+              <row>
+                <entry><varname>public_bond</varname></entry>
+                <entry>
+                  <p>This line configures the public bridge, the bond it attaches to, and the
+                    interfaces used within the bond. The line is in the form: </p>
+                  <codeblock>public_bond="BRIDGE_NAME</codeblock>
+                  <codeblock>BOND_NAME </codeblock>
+                  <codeblock>BRIDGE_IP </codeblock>
+                  <codeblock>BRIDGE_NETMASK INTERFACE1 </codeblock>
+                  <codeblock>INTERFACE2 …" </codeblock>
+                  <ul id="ul_qcb_3tl_lq">
+                    <li><b>BRIDGE_NAME</b>: The name of the bridge. This must be <i>public</i> for
+                      the public bond. </li>
+                    <li><b>BOND_NAME</b>: A name for the bond that is created for this bridge.
+                        <i>bond0</i> is a good choice.<ul id="ul_uhv_dvl_lq">
+                        <li>To configure the bridge and interface without bonding, set the
+                            <b>BOND_NAME</b> to <i>none</i>. The word <i>none</i> is case sensitive.
+                          If more than one interface is specified, only the first will be used.</li>
+                        <li><b>BRIDGE_IP</b>: The IP address used for this bridge.</li>
+                        <li><b>BRIDGE_NETMASK</b>: The network mask used for this bridge.</li>
+                        <li><b>INTERFACE*</b>: This is a space-separated list of interfaces that are
+                          used in this bond.</li>
+                      </ul></li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry><varname>provision_bond</varname></entry>
+                <entry>This line configures the provisioning bridge, bond, and interfaces used
+                  within the bond. <ul>
+                    <li>The bond name must be <i>provision</i>.</li>
+                    <li>A good name to use for
+                      the <b>BOND_NAME</b> is <i>bond1</i>.</li>
+                    <li>A bond name of <i>none</i> can be specified to configure the bridge and
+                      interface without bonding.<note>See the <varname>public_bond</varname> for a
+                        description of the parameters.</note></li>
+                  </ul>
+                  </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></li>
+    </ol>
+    
+  </body>
+</topic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Solution Bundle Map</title>
+ 
+ <topicref href="../topics/pilot_bundle.dita"/>
+ <topicref href="../topics/production_bundle.dita"/>
+ <topicref href="../topics/pilot_ceph_storage.dita"/>
+ <topicref href="../topics/pilot_bundle_ceph_netconfig.dita"/>
+ <topicref href="../topics/pilot_bundle_equallogic.dita"/>
+ <topicref href="../topics/solution_admin_host_network.dita"/>
+ <topicref href="../topics/pilot_bundles_expansion.dita"/>
+ 
+</map>

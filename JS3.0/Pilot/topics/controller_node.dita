@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="controller_nodes">
+  <title>Controller Nodes</title>
+  <shortdesc>The controller nodes have two bonded interfaces, one with two vLANs configured, and two remaining interfaces that are not bonded.</shortdesc>
+  <body>
+    <p>The Public API network is on a pair of bonded interfaces, and the Private API and Storage networks are on a separate pair of bonded interfaces.</p>
+    <p>The Private API and Storage networks are vLAN tagged networks on a bonded interface. The Provisioning and Management interfaces are on individual, non-bonded interfaces.</p>
+  </body>
+  
+  
+  
+</topic>

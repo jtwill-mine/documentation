@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="provisioning_nodes">
+  <title>Provisioning the Nodes</title>
+  <shortdesc>Variables are used to simplify nodes provisioning using the <cmdname>hammer</cmdname> command.</shortdesc>
+  <body>
+    <ol>
+      <li>Set the <b>NAME</b>, <b>PTABLE</b>, and <b>MAC</b> variables appropriately for a
+          host.<table frame="all" rowsep="1" colsep="1" id="table_nzm_g5q_3q">
+          <title>Node Provisioning Variables</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Variable</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>
+                  <p><parmname>NAME</parmname></p>
+                </entry>
+                <entry>
+                  <p>The hostname of the provisioned host. </p>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <p><parmname>PTABLE</parmname></p>
+                </entry>
+                <entry>
+                  <p>The ID of the partition table that should be used when deploying this host.
+                    This ID is the same for all the compute nodes, but the controller uses a
+                    different partition table ID. </p>
+                </entry>
+              </row>
+              <row>
+                <entry><parmname>MAC</parmname></entry>
+                <entry>
+                  <p>The hardware address of the provisioning interface for the node. </p>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></li>
+      <li>Execute the <cmdname>hammer host create</cmdname> command.</li>
+      <li>Once the host is created, reset the variables for the next host and then execute the same <cmdname>hammer</cmdname> command again.</li>
+      <li>Repeat this until all hosts are created.<note>Make sure to change the root password on the command line as needed</note></li>
+      <li>Change the remaining IDs in the command as appropriate.<codeblock># NAME=CHANGEME
+
+# PTABLE=CHANGEME
+
+# MAC=CHANGEME
+
+# hammer host create --name "${NAME}" --root-password 'CHANGEME' \
+    --build true --enabled true --managed true --environment-id 2 \
+    --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 2 \
+    --subnet-id 1 --architecture-id 1 --medium-id 9 \
+    --partition-table-id ${PTABLE} \
+    --mac ${MAC}</codeblock></li>
+    </ol>
+  </body>
+  
+  <topic id="get_host_info" conref="get_host_info.dita#get_host_info">
+    <title/>
+  </topic>
+  
+  <topic id="controller_nodes" conref="controller_node.dita#controller_nodes">
+    <title/>
+  </topic>  
+  
+  <topic id="compute_nodes" conref="compute_nodes.dita#compute_nodes">
+    <title/>
+  </topic>
+  
+  <topic id="ceph_storage_nodes" conref="ceph_storage_nodes.dita#ceph_storage_nodes">
+    <title/>
+  </topic>
+  
+  <topic id="set_host_update_parameters" conref="set_host_update_parameters.dita#set_host_update_parameters">
+    <title/>
+  </topic>
+  
+  <topic id="start_provisioning" conref="start_provisioning.dita#start_provisioning">
+    <title/>
+  </topic>
+  
+  <topic id="ceph_deployment" conref="ceph_deployment.dita#ceph_deployment">
+    <title/>
+  </topic>
+  
+  <topic id="next_steps" conref="next_steps.dita#next_steps">
+    <title/>
+  </topic>
+  
+    
+</topic>

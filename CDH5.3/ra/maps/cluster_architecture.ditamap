@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Cluster Architecture Map</title>
+ 
+ <topicref href="../topics/high_level_node_architecture.dita">
+  <topicref href="../topics/node_definitions.dita"/>
+ </topicref>
+ 
+ <topicref href="../topics/network_fabric_architecture.dita">
+  <topicref href="../topics/network_definitions.dita"/>
+ </topicref>
+ 
+ <topicref href="../topics/cluster_sizing.dita">
+  <topicref href="../topics/rack.dita"/>
+  <topicref href="../topics/pod.dita"/>
+  <topicref href="../topics/cluster.dita"/>
+  <topicref href="../topics/sizing_constraints.dita"/>
+ </topicref>
+ 
+ <topicref href="../topics/high_availability.dita">
+  <topicref href="../topics/hadoop_redundancy.dita"/>
+  <topicref href="../topics/network_redundancy.dita"/>
+  <topicref href="../topics/hdfs_highly_available_name_nodes.dita"/>
+  <topicref href="../topics/resource_manager_high_availability.dita"/>
+ </topicref>
+ 
+</map>

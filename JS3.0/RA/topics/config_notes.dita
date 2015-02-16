@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="config_notes">
+  <title>Configuration Notes</title>
+  <body>
+    <p>The <i>Dell Red Hat Cloud Solutions Bill of Materials Guide</i> contains the full bill of
+      materials (BOM) listing for the PowerEdge R630 and R730Xd server configurations.</p>
+    <p>The R630 and R730xd configurations are used with 10GbE networking. To use 10GbE networking
+      support, an additional network card is required in each node. Refer to the <i>Dell Red Hat
+        Cloud Solutions Bill of Materials Guide</i> for the details on the supported card.</p>
+  </body>
+</topic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cloudera_manager">
+  <title>Cloudera Manager</title>
+  <body>
+    <p>Cloudera Manager is designed to make administration of CDH simple and straightforward, at any scale. With Cloudera Manager, you can easily deploy and centrally operate the complete Hadoop stack. The application automates the installation process, reducing deployment time from weeks to minutes; gives you a cluster-wide, real-time view of nodes and services running; provides a single, central console to enact configuration changes across your cluster; and incorporates a full range of reporting and diagnostic tools to help you optimize performance and utilization.</p>
+    <p>Cloudera Manager is available as part of both the Cloudera Standard and Cloudera Enterprise product offerings. With Cloudera Standard, you get a full set of functionality to deploy, configure, manage, monitor, diagnose and scale your cluster—the most comprehensive and advanced set of management capabilities available from any vendor. When you upgrade to Cloudera Enterprise, you get additional capabilities for integration, process automation and disaster recovery that are focused on helping you operate your cluster successfully in enterprise environments.</p>
+  </body>
+</topic>

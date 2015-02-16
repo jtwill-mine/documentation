@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="revisions">
+  <title>Revisions</title>
+  <body>
+    <p><table frame="all" rowsep="1" colsep="1" id="table_owx_jq2_xq">
+        <title>Revisions</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="0.5*"/>
+          <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Date</entry>
+              <entry>Person</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>01/06/2015</entry>
+              <entry>MP</entry>
+              <entry>Initial updates for 5.3 release</entry>
+            </row>
+            <row>
+              <entry>01/09/2015</entry>
+              <entry>MP</entry>
+              <entry>Update disk controllers, filesystem layouts, updated URLs</entry>
+            </row>
+            <row>
+              <entry>01/10/2015</entry>
+              <entry>MP</entry>
+              <entry>New BIOS settings for R730, R730xd added</entry>
+            </row>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>This document is for informational purposes only and may contain typographical errors
+      and technical inaccuracies. The content is provided as is, without express or implied
+      warranties of any kind.</p>
+    <p>Information in this document is subject to change without notice.</p>
+  </body>
+</topic>

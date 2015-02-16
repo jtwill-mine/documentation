@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="l2_l3">
+  <title>Layer-2 and Layer-3</title>
+  <body>
+    <p>The layer-2 and layer-3 boundaries are separated at either the ToR or the aggregation layer.
+      Either of the options is equally viable. The colors blue and red in <xref
+        href="force10_z9000_cluster_aggregation.dita#force10_z9000_cluster_aggregation/z9000_multi_rack_equipment"
+      /> represent the layer-2 and layer-3 boundaries. This document uses layer-2 as the reference
+      up to the aggregation layer.</p>
+  </body>
+</topic>

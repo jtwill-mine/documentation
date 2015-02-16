@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_connectivity_summary">
+  <title>Network Connectivity Summary</title>
+  <body>
+    <p>The network interconnects between various hardware components of the solution are depicted in
+        <xref href="#network_connectivity_summary/10gbe_network_connections" format="dita"/>. For
+      more information, please see the <i>Dell | Cloudera Apache Hadoop Solution Deployment
+        Guide.</i></p>
+    <fig id="10gbe_network_connections">      
+      <title>Network Connections for 10GbE</title>
+      <image href="../../Customization/OpenTopic/common/artwork/10gbe_network_connections.png" align="left"/>
+    </fig>  
+  </body>
+</topic>

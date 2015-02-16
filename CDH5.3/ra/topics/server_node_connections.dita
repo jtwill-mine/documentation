@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="server_node_connections">
+  <title>Server Node Connections</title>
+  <shortdesc>Server connections to the network switches for the data network are bonded, and use an Active-Active LAN aggregation group (LAG) in a load-balance configuration. (Under Linux, this is balanced-alb or mode 6 bonding).</shortdesc>
+  <body>
+    <p>The connections are made to a pair of ToR switches, to provide redundancy in the case of port, cable, or switch failure.  The switch ports are configured as a LAG.  Each server has an additional 1GbE connection to the management network to facilitate server management and provisioning.</p>
+    <p>Connections to the BMC network use a single connection from the BMC port to a dedicated switch in each rack.</p>
+    <p>Edge nodes have an additional pair of 10GbE connections to the ToR switch. These connections facilitate high-performance ingest and cluster access between applications running on those nodes, and the core datacenter network.</p>
+    <fig id="r730xd_1gbe_interconnects">      
+      <title>PowerEdge R730xd Node 1GbE Network Interconnects</title>
+      <image href="../../Customization/OpenTopic/common/artwork/poweredge_r730xd_1gbe_interconnects.png" align="left"/>
+    </fig>
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_install_medium">
+  <title>Configure the Installation Medium</title>
+  <shortdesc>Configure the installation medium that will be used to provision the hosts.</shortdesc>
+  <body>
+    <ol>
+      <li>Use the <cmdname>hammer medium create</cmdname> command to add the entry. The command
+        requires the <codeph>--name</codeph>, <codeph>--os-family</codeph> and
+          <codeph>--path</codeph> options.<ol id="ol_ywc_ldg_hq">
+            <li>The <b>name</b> option should specify a name that is appropriate for the installation.</li>
+            <li>The <b>os-family</b> should remain <i>Redhat</i> in most cases.</li>
+            <li>The <b>path</b> option specifies the path or URL to the installation tree.</li>
+        </ol></li>
+    </ol>
+  </body>
+  
+  <!-- <topic id="satellite_server" conref="satellite_server.dita#satellite_server">
+    <title/>
+  </topic>
+  
+  <topic id="local_iso_foreman_node" conref="local_iso_foreman_node.dita#local_iso_foreman_node">
+    <title/>
+  </topic>
+  
+  <topic id="local_iso_sah" conref="local_iso_sah.dita#local_iso_sah">
+    <title/>
+  </topic> -->
+  
+</topic>

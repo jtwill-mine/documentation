@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Provisioning Nodes Map</title>
+ <topicref href="../topics/get_host_info.dita"/>
+ <topicref href="../topics/controller_node.dita">
+  <mapref href="../maps/controller_nodes_config.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/compute_nodes.dita"/>
+ <topicref href="../topics/ceph_storage_nodes.dita"/>
+ <topicref href="../topics/set_host_update_parameters.dita">
+  <mapref href="../maps/set_host_update_params.ditamap" format="ditamap"/>
+ </topicref>
+ <topicref href="../topics/start_provisioning.dita"/>
+ <topicref href="../topics/ceph_deployment.dita"/>
+ <topicref href="../topics/next_steps.dita"/>
+</map>

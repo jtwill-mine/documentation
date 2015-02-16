@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="version_4">
+  <title>Version 4</title>
+  <shortdesc>Updated with:</shortdesc>
+  <body>
+    <ul>
+      <li>New network diagram</li>
+      <li>Support for PowerEdge R630 and R730xd</li>
+      <li>Removed support of PoweEdge R620, R720 and R720xd</li>
+      <li>Added support of OpenStack Neutron and removed support for Nova-Network</li>
+      <li>removed the POC from the Solution</li>
+      <li>Updated to Juno</li>
+      <li>Updated to Red Hat OSP 6.0</li>
+    </ul>
+  </body>
+</topic>

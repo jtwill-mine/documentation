@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="installing_ceph_vm">
+  <title>Installing the Ceph Virtual Machine</title>
+  <shortdesc>To install the Ceph virtual machine:</shortdesc>
+  <body>
+    <ol>
+      <li>Invoke the <cmdname>deploy-Ceph-vm.sh</cmdname> script.<ol id="ol_sp4_53s_lq">
+          <li>Pass <codeph><b>ceph.cfg</b></codeph> as the first parameter.</li>
+          <li>Pass the <b>full path to the Red Hat Enterprise Server 6 Installation media</b> as the
+            second
+            option.<codeblock># ./deploy-ceph-vm.sh ceph.cfg /store/data/iso/rhel-server-7.0-x86_64-dvd.iso
+
+Starting install...
+Retrieving file .treeinfo...
+| 3.2 kB  00:00:00
+Retrieving file vmlinuz...
+| 7.9 MB  00:00:00
+Retrieving file initrd.img...
+|  64 MB  00:00:00
+Creating storage file ceph.img
+|  16 GB  00:00:00
+Creating domain...
+|    0 B  00:00:00
+Domain installation still in progress. You can reconnect to
+the console to complete the installation process.</codeblock><p>The installation begins, but no console is displayed.</p></li>
+        </ol></li>
+      <li> To display the console:<ol id="ol_gnf_fks_lq">
+          <li>Ensure you are logged into a GUI environment.</li>
+          <li>Open a terminal.</li>
+        <li>Enter the following command:<codeblock># virt-viewer ceph</codeblock><note>If you are connected to the Foreman server using a Windows system, you need to install <b>Xwin Server</b> before executing <cmdname>virt-viewer ceph</cmdname>.</note></li>
+      </ol><p>A console for the Ceph virtual machine will open.
+        After the virtual machine completes the installation, it will power itself off.</p></li>
+      <li>You can view the power state of the virtual machine by entering the following command:<codeblock># virsh list --all</codeblock><p>You will see output similar to the following:</p><codeblock>Id    Name                           State
+ ----------------------------------------------------
+ 2     ceph                        running</codeblock></li>
+      <li>You can start the virtual machine by entering the following command:<codeblock># virsh start ceph</codeblock></li>
+    </ol>
+  </body>
+</topic>

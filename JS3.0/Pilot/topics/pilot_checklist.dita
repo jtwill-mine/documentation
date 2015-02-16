@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
+<topic id="pilot_checklist">
+  <title>Pilot Environment</title>
+
+  <body>
+    <p/>
+
+    <section><title>Networks </title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Network / Mask</stentry>
+
+          <stentry>Bond / Interface</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Public API</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Private API</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Storage</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>Provisioning</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Foreman Server</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>eth0</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>eth1</stentry>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>VIPs</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>amqp</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>ceilometer admin </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>ceilometer private </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>ceilometer public </stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>cinder admin </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>cinder private </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>cinder public</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>db</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>glance admin</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>glance private </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>glance public</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat admin</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat private</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat public</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat_cfn admin</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat_cfn private</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>heat_cfn public</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>horizon admin </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>horizon private </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>horizon public </stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>keystone admin </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>keystone private </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>keystone public</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>loadbalancer </stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>nova admin </stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>nova private </stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>nova public </stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow/>
+
+        <strow/>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title><b>Controller Node1 </b></title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-assigned</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>iDRAC</stentry>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Controller Node2</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-assigned</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>iDRAC</stentry>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section/>
+
+    <section><title>Controller Node3</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Public API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-assigned</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>iDRAC</stentry>
+
+          <stentry>Management</stentry>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><p/></section>
+
+    <section><title>Compute Node1</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Compute Node2</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Compute Node3</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Compute Node4</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Compute Node5</title></section>
+
+    <section><title>Bonds</title><simpletable>
+        <sthead>
+          <stentry>Name</stentry>
+
+          <stentry>Interface</stentry>
+
+          <stentry>MAC</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>-</stentry>
+
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable></section>
+
+    <section><title>Interfaces</title><simpletable>
+        <sthead>
+          <stentry>Interface</stentry>
+
+          <stentry>Network</stentry>
+
+          <stentry>IP</stentry>
+        </sthead>
+
+        <strow>
+          <stentry>bond1</stentry>
+
+          <stentry>Nova Public</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Nova Private</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Private API</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry>bond0</stentry>
+
+          <stentry>Storage</stentry>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Provisioning</stentry>
+
+          <stentry>Auto-Assigned</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <p/>
+
+    <section><title>Foreman Hammer Configuration
+    Information</title><p/></section>
+
+    <section><title>Mediums</title><simpletable relcolwidth="249* 751*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OSP Pilot </stentry>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Partition Tables</title><simpletable
+        relcolwidth="248* 752*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>dell-pilot </stentry>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <p/>
+
+    <section><title>Operating Systems</title><simpletable
+        relcolwidth="250* 750*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>RedHat 6.5 </stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>RedHat 7.0</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Subnets</title><simpletable relcolwidth="250* 750*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Openstack</stentry>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Templates</title><simpletable relcolwidth="251* 749*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OpenStack Kickstart Template </stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Dell OpenStack PXE Template </stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Environments</title><simpletable relcolwidth="247* 753*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>development</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>production</stentry>
+        </strow>
+      </simpletable></section>
+
+    <p/>
+
+    <section><title>Domains</title><simpletable relcolwidth="248* 752*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Puppet Proxies</title><simpletable relcolwidth="251* 749*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow/>
+      </simpletable><p/></section>
+
+    <section><title>Architectures</title><simpletable relcolwidth="248* 752*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>i386</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>x86_64</stentry>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Hostgroups</title><simpletable relcolwidth="243* 757*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry>HA All In One Controller</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry>Compute (Neutron)</stentry>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+
+    <section><title>Hosts</title><simpletable relcolwidth="247* 753*">
+        <sthead>
+          <stentry>ID</stentry>
+
+          <stentry>Name</stentry>
+        </sthead>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+
+        <strow>
+          <stentry/>
+
+          <stentry/>
+        </strow>
+      </simpletable><p/></section>
+  </body>
+</topic>

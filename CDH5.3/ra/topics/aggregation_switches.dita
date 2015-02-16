@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="aggregation_switches">
+  <title>Cluster Aggregation Switches</title>
+  <shortdesc>For clusters consisting of one more pods, the architecture uses either of the following for aggregation switches:</shortdesc>
+  <body>
+    <ul>
+      <li>Force10 S4810</li>
+      <li>Force10 Z9000</li>
+    </ul>
+    <p>The choice depends on the initial size and planned scaling. The Force10 S4810-based aggregation design is preferred for lower cost and medium scalability. This design can handle up to six racks or two pods. The Z9000 is recommended for larger deployments.</p>
+    <p>Like the ToR switches, the aggregation switches are also connected in pairs using VLT. The uplink from each S4810 ToR switch to the aggregation pair is 80Gb, using a pair of 40G interfaces Since both S4810’s connect to the aggregation pair, there is a collective bandwidth of 160G available from each rack.</p>
+  </body>
+</topic>

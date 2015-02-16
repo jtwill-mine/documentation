@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_storage_nodes">
+  <title>Ceph Storage Nodes</title>
+  <body>
+    <ol>
+      <li>Execute the following command to make the RPM version locking file available during
+          provisioning.<ol id="ceph_storage_nodes">
+            <li>Replace <b>HOST_ID</b> with the host ID, and <b>FOREMAN_SERVER</b> with the IP
+            address of the Foreman server on the provisioning
+            network.<codeblock># hammer host set-parameter --host-id HOST_ID --name yum_versionlock_file \
+--value 'http://FOREMAN_SERVER/vlock_files/ceph.vlock'</codeblock></li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>

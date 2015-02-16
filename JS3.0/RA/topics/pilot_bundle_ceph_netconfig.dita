@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_bundle_ceph_netconfig">
+  <title>Solution Bundle with Ceph Network Configuration</title>
+  <shortdesc>The networks for this Solutuion and Larger bundles have been designed to support production-ready servers with a highly available network configuration.</shortdesc>
+  <body>
+    <p>The rack layout consists of two Dell Force10 S4810 switches as the ToR, and one Dell Force10
+      S55 as management (a second Force10 S55 should be considered for the Heartbeat to be truly
+      redundant). The switches take advantage of Virtual Link Trunking (VLT). Using  Dell Force10
+      features, the ports can be configured to support one or many virtual LANs; enabling the nodes
+      to communicate between themselves, while allowing network segregation of tenants utilizing
+      vLANs.</p>
+    <fig><title>Cluster Network Fabric Architecture</title>
+    <image href="../../Customization/OpenTopic/common/artwork/pilot_ceph_logical_network.png" align="center" placement="break"></image>
+    </fig>
+    <p>The Server function will determine how the switches are configured in delivering the
+      different networks. <xref
+        href="#pilot_bundle_ceph_netconfig/table_node_type_to_network_tagging" format="dita"/>
+      outlines the networks to the server function. The Management/OOB network is used by the
+      Cluster Software to manage the OpenStack Controllers, thus they are the only ones that need
+      direct connections. All iDRAC are plugged into this network without using tagging.<table
+        frame="all" rowsep="1" colsep="1" id="table_node_type_to_network_tagging">
+        <title>Node Type to Network 802.1q Tagging</title>
+        <tgroup cols="6">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <colspec colname="c4" colnum="4" colwidth="1*"/>
+          <colspec colname="c5" colnum="5" colwidth="1*"/>
+          <colspec colname="newCol6" colnum="6" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Network</entry>
+              <entry>Solution Admin Host</entry>
+              <entry>OpenStack Controller</entry>
+              <entry>OpenStack Compute</entry>
+              <entry>Ceph Storage</entry>
+              <entry>EqualLogic Array</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Provisioning</entry>
+              <entry>Tagged</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Nova-Network Public</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Public API Access</entry>
+              <entry>No Tagging</entry>
+              <entry>No Tagging</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Private API Network Cluster Management</entry>
+              <entry>Not Connected</entry>
+              <entry>Tagged</entry>
+              <entry>Tagged</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Nova-Network Private</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Tagged</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Storage Network</entry>
+              <entry>Tagged</entry>
+              <entry>Tagged</entry>
+              <entry>Tagged</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Tagged</entry>
+            </row>
+            <row>
+              <entry>Storage Clustering</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
+            </row>
+            <row>
+              <entry>Management/OOB</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Tagged</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+              <entry>Not Connected</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    
+  </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hadoop_for_the_enterprise">
+  <title>Hadoop for the Enterprise</title>
+  <body>
+    <p>Designed specifically for mission-critical environments, Cloudera Enterprise includes CDH, the world’s most popular open source Hadoop-based platform, as well as advanced system management and data management tools plus dedicated support and community advocacy from our world-class team of Hadoop developers and experts. Cloudera is your partner on the path to big data.</p>
+    <p>Cloudera Enterprise, with Apache Hadoop at the core, is:</p>
+    <ul>
+      <li>Unified – one integrated system, bringing diverse users and application workloads to one
+        pool of data on common infrastructure; no data movement required</li>
+      <li>Secure – perimeter security, authentication, granular authorization, and data
+        protection</li>
+      <li>Governed – enterprise-grade data auditing, data lineage, and data discovery</li>
+      <li>Managed – native high-availability, fault-tolerance and self-healing storage, automated
+        backup and disaster recovery, and advanced system and data management</li>
+      <li>Open – Apache-licensed open source to ensure your data and applications remain yours, and
+        an open platform to connect with all of your existing investments in technology and
+        skills</li>
+    </ul>
+  </body>
+</topic>

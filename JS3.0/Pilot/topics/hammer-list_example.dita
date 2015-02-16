@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hammer-list_example">
+  <title><cmdname>hammer-list</cmdname></title>
+ <body>
+    <codeblock>hammer medium create --name "Dell OSP Pilot" --os-family RedHat \
+  --path 'http://rh6fore.r5.lab/ks/dist/ks-rhel-$arch-server-$majo-$version'
+
+hammer medium list
+
+hammer partition-table create
+
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilo.partition
+
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilot.partition
+
+hammer partition-table create --name dell-pilot --os-family Redhat --file dell-pilot.partition
+
+hammer os create --name "RedHat" --major 7 --minor 0 --family Redhat
+
+hammer os list
+
+hammer os add-architecture --architecture x86_64 --id 3
+
+hammer os add-ptable --ptable-id 8 --id 3
+
+hammer subnet list
+
+hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
+
+hammer template create --name "Dell OpenStack Kickstart Template" \
+  --operatingsystem-ids "3" --file dell-osp-ks.template
+
+hammer template create --name "Dell OpenStack Kickstart Template" type provision \
+  --operatingsystem-ids "3" --file dell-osp-ks.template
+
+hammer template create --name "Dell OpenStack Kickstart Template" --type provision \
+  --operatingsystem-ids "3" --file dell-osp-ks.template
+
+hammer template create --name "Dell OpenStack PXE Template" --type PXELinux \
+  --operatingsystem-ids "3" --file dell-osp-pxe.template
+
+hammer template create --name "bond_interfaces" --type snippet \
+
+hammer template create --name "bond_interfaces" --type snippet--file bonding_snippet.template
+
+hammer template create --name "bond_interfaces" --type snippet --file bonding_snippet.templatehammer template create --name "interface_config" --type snippet --file interface_config.template
+
+hammer tempalte list
+
+hammer template list
+
+hammer  os update --config-template-ids "33,34" --medium-ids 8 --id 3
+
+hammer os set-default-template --config-template-id 34 --id 3
+
+hammer  os info --id 3
+
+hammer domain list
+
+hammer proxy  list
+
+hammer architecture list
+
+hammer os set-parameter
+
+hammer os set-parameter --operatingsystem-id
+
+hammer os list
+
+hammer os set-parameter --operatingsystem-id ${OS_ID} --name subscription_manager --value true
+
+hammer os set-parameter --operatingsystem-id ${OS_ID} --name  subscription_manager --value true
+
+hammer os set-parameter --operatingsystem-id ${OS_ID}  --name subscription_manager --value true
+
+hammer os set-parameter --operatingsystem-id 3  \
+  --name subscription_manager --value true
+
+hammer os set-parameter --operatingsystem-id 3  \
+  --name subscription_manager_username --value dellcloudsol
+
+hammer os set-parameter --operatingsystem-id 3  \
+  --name subscription_manager_password --value cr0wBar!
+
+hammer os list</codeblock>
+  </body>
+</topic>

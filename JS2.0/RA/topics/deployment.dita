@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="deployment">
+  <title>Deployment</title>
+  <shortdesc>Deployment consists of three phases:</shortdesc>
+  <body>
+    <ul>
+      <li><b>Hardware Setup:</b><ul id="ul_tj5_l4q_gq">
+          <li>Rack and stack</li>
+          <li>Cabling</li>
+          <li>BIOS configuration</li>
+          <li>RAID configuration</li>
+          <li>Switch configuration</li>
+        </ul></li>
+      <li><b>Software Setup:</b><ul id="ul_rbf_w4q_gq">
+          <li>Deploy Solution Admin Host for provisioning services<ul id="ul_ddp_z4q_gq">
+              <li>Deploy Ceph Service VM to the Solution Admin Host</li>
+              <li>Deploy Red Hat OpenStack Manager Virtual Server</li>
+            </ul></li>
+          <li>Deploy controller node(s)</li>
+          <li>Deploy storage services</li>
+          <li>Deploy compute nodes</li>
+        </ul></li>
+      <li><b>Testing environmen</b>t</li>
+    </ul>
+  </body>
+</topic>

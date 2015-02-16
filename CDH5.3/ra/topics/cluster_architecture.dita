@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cluster_architecture">
+  <title>Cluster Architecture</title>
+  <shortdesc>The overall architecture of the solution addresses all aspects of a production Hadoop cluster, including the software layers, the physical server hardware, the network fabric, as well as scalability, performance, and ongoing management.</shortdesc>
+  <body>
+    <p>This Cluster Architecture section summarizes the main aspects of the solution architecture. The remaining sections of the document cover the details in depth.</p>
+  </body>
+</topic>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Foreman Hammer Configuration Information Map</title>
+ <topicref href="../topics/foreman_hammer_config_media.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_partition_tables.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_op_sys.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_subnets.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_templates.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_environments.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_domains.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_puppet_proxies.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_architectures.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_hostgroups.dita"></topicref>
+ <topicref href="../topics/foreman_hammer_config_hosts.dita"></topicref>
+</map>

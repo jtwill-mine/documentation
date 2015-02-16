@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pilot_solution_guides">
+  <title>Solution Guides and Scripts</title>
+  <body>
+    <p><xref href="#pilot_solution_guides/table_documents" format="dita"/> contains the locations of
+      all documents and scripts needed to deploy the solution. Choose the script package based upon
+      your preference.</p>
+    <draft-comment author="dale_mcdonald">Update links for Jetstream 3.0.</draft-comment>
+    <table frame="all" rowsep="1" colsep="1" id="table_documents">
+      <title>Documents in Order of Usage</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="0.55*"/>
+        <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Reference Order</entry>
+            <entry>Document</entry>
+            <entry>Location</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>1</entry>
+            <entry>Reference Architecture</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/ra.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>2 (tgz compressed)</entry>
+            <entry>Solution templates and scripts</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.tgz?api=v2"
+                format="html" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>2  (zip compressed)</entry>
+            <entry>Solution templates and scripts</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/dell-pilot-deploy.zip?api=v2"
+                format="zip" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>3</entry>
+            <entry>Solution Checklist</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_checklist.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>4</entry>
+            <entry>Hardware Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/hw_dep_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>5</entry>
+            <entry>Workbook for Network and Hardware Configuration</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/Pilot-Bundle-ceph.xlsx?api=v2"
+                format="html" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>6</entry>
+            <entry>Admin Host (SAH) Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_dep_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>7</entry>
+            <entry>Foreman Virtual Machine Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_foreman_deploy_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>8</entry>
+            <entry>Ceph Virtual Machine Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/sah_ceph_deploy_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>9</entry>
+            <entry>OpenStack Foreman Installation Pilot Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_dep_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>10</entry>
+            <entry>Solution Hostgroups Deployment Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/pilot_hostgroups_deploy_guide.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>10</entry>
+            <entry>Ceph Deployment Guide with Foreman</entry>
+            <entry><xref
+                href="https://wiki.opencrowbar.org/download/attachments/6326050/RHOSP%20to%20Ceph%20Integration-Foreman.pdf?version=1&amp;modificationDate=1413400004987&amp;api=v2"
+                format="pdf" scope="external"/></entry>
+          </row>
+          <row>
+            <entry>12</entry>
+            <entry>OpenStack Foreman Network Bond Provisioning Guide</entry>
+            <entry><xref
+              href="http://10.9.244.32/job/Build%20JS%203.0%20Documentation%20from%20Github/lastSuccessfulBuild/artifact/JS3.0/artifacts/bonding_snippets.pdf"
+                format="pdf" scope="external"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

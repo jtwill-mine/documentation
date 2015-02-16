@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hammer_command_prep">
+  <title>Hammer Command Preparation</title>
+  <shortdesc>During the steps in this document, the <cmdname>hammer</cmdname> command is used to more
+    easily perform the configurations.</shortdesc>
+  <body>
+    <p>Usage of the <cmdname>hammer</cmdname> command requires identifiers for the various pieces of information stored within the Foreman server. This includes identifiers for the defined installation media, partitions, templates, hosts, as well as other items. A checklist file, <i>dell-pilot-checklist.pdf</i>, is available to easily keep track of this information.</p>
+    <p>Several steps in this document use files to configure the environment. These files are
+      available in a tar file called <i>dell-pilot-deploy.tgz</i>.</p>
+    <ol>
+      <li>Download and print the Dell Pilot Checklist from <xref
+        href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050" format="html"
+        scope="external"
+        >https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</xref>.</li>
+      <li>Write the various information gathered and needed on the checklist for reference as needed.</li>
+      <li>Download the tar file from <xref
+          href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050" format="html"
+          scope="external"
+        >https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050</xref>.</li>
+      <li>Unzip the tar file into the <i>/root/pilot</i> directory:</li>
+    </ol>
+    <codeblock># mkdir /root/pilot
+# cd /root/pilot
+# tar xzvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock>
+  </body>
+</topic>

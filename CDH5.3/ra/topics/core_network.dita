@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="core_network">
+  <title>Core Network</title>
+  <body>
+    <p>The aggregation layer functions as the network core for the cluster. In most instances, the
+      cluster will connect to a larger core within the enterprise, represented by the cloud in <xref
+        href="s4810_cluster_aggregation.dita#s4810_cluster_aggregation/s4810_multi_rack_equipment"
+      />. Details of the connection are site specific, and need to be determined as part of the
+      deployment planning.</p>
+  </body>
+</topic>

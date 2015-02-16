@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="solution_use_case_summary">
+  <title>Solution Use Case Summary</title>
+  <body>
+    <p>The Dell | Cloudera Apache Hadoop Solution is designed to address the use cases described in
+        <xref href="#solution_use_case_summary/table_solution_use_cases" format="dita"/>:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_solution_use_cases">
+      <title>Solution Use Cases</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Use case</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Big data analytics</entry>
+            <entry>Ability to query in real time at the speed of thought on petabyte scale
+              unstructured and semi structured data using HBase and Hive.</entry>
+          </row>
+          <row>
+            <entry>ETL Offload</entry>
+            <entry>Offload the Extract, Transform, Load (ETL) process from a relational management
+              database or enterprise data warehouse into a Hadoop cluster.</entry>
+          </row>
+          <row>
+            <entry>Data Warehouse Optimization</entry>
+            <entry>Augment the traditional relational management database or enterprise data
+              warehouse with Hadoop. Hadoop acts as single data hub for all data types.</entry>
+          </row>
+          <row>
+            <entry>Data storage</entry>
+            <entry>Collect and store unstructured and semi-structured data in a secure,
+              fault-resilient scalable data store that can be organized and sorted for indexing and
+              analysis.</entry>
+          </row>
+          <row>
+            <entry>Batch processing of unstructured data</entry>
+            <entry>Ability to batch-process (index, analyze, etc.) tens to hundreds of petabytes of
+              unstructured and semi- structured data.</entry>
+          </row>
+          <row>
+            <entry>Data archive</entry>
+            <entry>Active archival of medium-term (12–36 months) data from EDW/DBMS to expedite
+              access, increase data retention time, or meet data retention policies or compliance
+              requirements.</entry>
+          </row>
+          <row>
+            <entry>Integration with data warehouse</entry>
+            <entry>Extract, transfer and load data in and out of Hadoop into separate DBMS for
+              advanced analytics.</entry>
+          </row>
+          <row>
+            <entry>Big data visualization</entry>
+            <entry>Capture, index and visualize unstructured and semi structured big data in real
+              time.</entry>
+          </row>
+          <row>
+            <entry>Search and predictive analytics</entry>
+            <entry>Crawl, extract, index and transform semi structured and unstructured data for
+              search and predictive analytics.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
