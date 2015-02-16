@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="nova">
+  <title>Nova</title>
+  <body>
+    <p>Nova is the project name for OpenStack Compute, a cloud computing fabric controller; the main part of an IaaS system. Individuals and organizations can use Nova to host and manage their own cloud computing systems.</p>
+  </body>
+</topic>

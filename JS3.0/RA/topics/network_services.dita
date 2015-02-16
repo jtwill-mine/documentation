@@ -2,20 +2,20 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="network_services">
   <title>Networking and Network Services</title>
-  <shortdesc>This Reference Architecture uses a starter configuration for networking, which provides
-    access to OpenStack capabilities while reducing the initial complexity during evaluation. This
-    reference configuration is based on the Neutron networking services, with that there are several
-    choices in type backend networks that Neutron is based on, this solution is based on using the
+  <shortdesc>The configuration of the network is based on using the neutron based options supported
+    by the OSP Code base and not relying on 3rd pary drivers.  This reference configuration is based
+    on the Neutron networking services using the <codeph>OpenVswitch</codeph> with the
       <codeph>"vlan"</codeph> option. </shortdesc>
   <body>
-    <p>For a production system, additional networking and redundancy configurations are required. This 
-      Reference Architecture supports adding these components as the system grows. This includes:</p>
+    <p>Additional networking that can include:</p>
     <ul>
       <li>Core and layered networking capabilities</li>
       <li>10GbE networking</li>
       <li>NIC teaming</li>
       <li>Redundant trunking top-of-rack (ToR) switches into core routers</li>
     </ul>
-    <p>See Network Architecture for guidelines. Detailed designs are available through Dell consulting services.</p>
+    <p>This enable the solution operate in a full production environment.</p>
+    <p>See The Network Architecture Section for guidelines. Detailed designs are available through
+      Dell consulting services.</p>
   </body>
 </topic>

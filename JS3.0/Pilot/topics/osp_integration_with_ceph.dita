@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="osp_integration_with_ceph">
+  <title>OSP Integration with Ceph</title>
+  <shortdesc>This section discusses integrating OSP with Ceph. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="integration_requirements.dita#integration_requirements"/></li>
+      <li><xref href="integration_configuration_goal.dita#integration_configuration_goal"/></li>
+      <li><xref href="ceph_pool_keyring_config.dita#ceph_pool_keyring_config"/></li>
+      <li><xref href="foreman_config_ha_controller.dita#foreman_config_ha_controller"/></li>
+      <li><xref href="foreman_config_compute.dita#foreman_config_compute"/></li>
+      <li><xref href="libvirt_config.dita#libvirt_config"/></li>
+      <li><xref href="deploy_ceph_config_files.dita#deploy_ceph_config_files"/></li>
+      <li><xref href="configure_cinder_for_backups.dita#configure_cinder_for_backups"/></li>
+      <li><xref href="test_osp_integration.dita#test_osp_integration"/></li>
+    </ul>
+  </body>
+</topic>

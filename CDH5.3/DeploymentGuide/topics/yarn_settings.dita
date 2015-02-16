@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="yarn_settings">
+  <title>YARN Settings</title>
+  <shortdesc>YARN (or MapReduce2) is the default resource management/computation framework in CDH5. It is deployed as part of the core Hadoop components set when you install Cloudera Manager.</shortdesc>
+  <body>
+    <p>Cloudera Manager generates the necessary configuration files at installation time.</p>
+    <p>Once Cloudera services have been installed, some default settings need to be adjusted for
+      best performance. We recommend the settings in <xref
+        href="#yarn_settings/table_yarn_resource_mgr_settings" format="dita"/> below as a starting
+      point.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_yarn_resource_mgr_settings">
+      <title>YARN Resource Manager Settings</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Name</entry>
+            <entry>Required Value</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Container Memory</entry>
+            <entry>128 GiB</entry>
+            <entry>Amount of physical memory, in MiB, that can be allocated for containers.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="deploy_ceph_config_files">
+  <title>Deploy Ceph Configuration Files To Compute Hosts</title>
+  <shortdesc>Since Foreman does not manage the Ceph configuration files, the <codeph>/etc/ceph/ceph.conf</codeph> must be deployed to each compute host.</shortdesc>
+  <body>
+    <p>To deploy Ceph configuration files to compute hosts:</p>
+    <ol>
+      <li>Deploy <codeph>/etc/ceph/ceph.conf</codeph> to each compute host:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy config push ospcomp1
+[ceph-user@ice-admin cluster]$ ceph-deploy config push ospcomp2</codeblock></li>
+      <li>Copy the <codeph>ceph.client.images.keyring</codeph> and
+          <codeph>client.volumes.keyring</codeph> files.<ol id="ol_ehb_gq1_br">
+          <li>Copy the <codeph>ceph.client.backups.keyring</codeph> file if the backup service is
+            configured.</li>
+        </ol><codeblock>[ceph-user@ice-admin cluster]$ scp ceph.client.images.keyring \
+ceph.client.volumes.keyring ospcomp1
+[ceph-user@ice-admin cluster]$ scp ceph.client.images.keyring \
+ceph.client.volumes.keyring ospcomp2</codeblock></li>
+      <li>Place the keyring files in the <codeph>/etc/ceph</codeph> directory:<codeblock>[ceph-user@ice-admin cluster]$ ssh ospcomp1 sudo cp \
+ceph.cient.images.keyring ceph.client.volumes.keyring /etc/ceph
+[ceph-user@ice-admin cluster]$ ssh ospcomp2 sudo cp \
+ceph.cient.images.keyring ceph.client.volumes.keyring /etc/ceph</codeblock></li>
+    </ol>
+  </body>
+</topic>

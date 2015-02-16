@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_config_goal">
+  <title>Ceph Configuration Goal</title>
+  <body>
+    <p>Multiple networks as defined in <xref href="#ceph_config_goal/table_network_config"
+        format="dita"/> are used in this example configuration. IP addresses are assigned
+      consistently on hosts that require access to multiple networks. An <codeph>/etc/hosts</codeph>
+      file is used for hostname resolution on the storage network.</p>
+    <note>This solution does not scale, and a larger name resolution system is recommended for
+      larger or production deployments.</note>
+    <table frame="all" rowsep="1" colsep="1"
+        id="table_network_config">
+        <title>Network Configuration</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Name</entry>
+              <entry>Range</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Provisioning</entry>
+              <entry>10.19.0.0/16</entry>
+              <entry>
+                <p>Server installation, updates and configuration</p>
+                <p><cmdname>Ceph-deploy</cmdname> connectivity</p>
+                <p>Calamari monitoring</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Storage</entry>
+              <entry>172.31.0.0/16</entry>
+              <entry>
+                <p>Ceph Client to Ceph communication</p>
+                <p>Ceph monitor to OSD communication</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Storage Cluster</entry>
+              <entry>172.30.0.0/16</entry>
+              <entry>Ceph OSD to OSD communication</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    <p><xref href="#ceph_config_goal/table_ceph_hosts" format="dita"/> details the name of each
+      host, its purpose, IP address, and required network connectivity.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_ceph_hosts">
+      <title>Ceph Hosts</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Host</entry>
+            <entry>Purpose</entry>
+            <entry>IP</entry>
+            <entry>Network Connectivity</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Ospfm</entry>
+            <entry>
+              <p>Openstack</p>
+              <p>Foreman</p>
+            </entry>
+            <entry>10.19.141.60</entry>
+            <entry>Provisioning</entry>
+          </row>
+          <row>
+            <entry>ospctl1</entry>
+            <entry>
+              <p>Ceph Mon</p>
+              <p>OSP HA Controller</p>
+            </entry>
+            <entry>
+              <p>10.19.139.31</p>
+              <p>172.31.139.31</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ospctl2</entry>
+            <entry>
+              <p>Ceph Mon</p>
+              <p>OSP HA Controller</p>
+            </entry>
+            <entry>
+              <p>10.19.139.32</p>
+              <p>172.31.139.32</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ospctl3</entry>
+            <entry>
+              <p>Ceph Mon</p>
+              <p>OSP HA Controller</p>
+            </entry>
+            <entry>
+              <p>10.19.139.33</p>
+              <p>172.31.139.33</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ospcomp1</entry>
+            <entry>OSP Compute</entry>
+            <entry>
+              <p>10.19.139.34</p>
+              <p>172.31.139.34</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ospcomp2</entry>
+            <entry>OSP Compute</entry>
+            <entry>
+              <p>10.19.139.35</p>
+              <p>172.31.139.35</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ice-admin</entry>
+            <entry>ICE Administration</entry>
+            <entry>10.19.141.51</entry>
+            <entry>Provisioning</entry>
+          </row>
+          <row>
+            <entry>ceph-osd1</entry>
+            <entry>Ceph OSD</entry>
+            <entry>
+              <p>10.19.141.55</p>
+              <p>172.31.141.55</p>
+              <p>172.30.141.55</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+              <p>Storage Cluster</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ceph-osd2</entry>
+            <entry>Ceph OSD</entry>
+            <entry>
+              <p>10.19.141.56</p>
+              <p>172.31.141.56</p>
+              <p>172.30.141.56</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+              <p>Storage Cluster</p>
+            </entry>
+          </row>
+          <row>
+            <entry>ceph-osd3</entry>
+            <entry>Ceph OSD</entry>
+            <entry>
+              <p>10.19.141.57</p>
+              <p>172.31.141.57</p>
+              <p>172.30.141.57</p>
+            </entry>
+            <entry>
+              <p>Provisioning</p>
+              <p>Storage</p>
+              <p>Storage Cluster</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>In this example configuration, multiple OSDs are configured per Ceph storage host. A journal
+      disk is shared between multiple OSD partitions in a ratio of 1 to 5. The OSDs sharing a
+      journal device should be placed within the same CRUSH failure domain.</p>
+    <p><xref href="#ceph_config_goal/table_osd_config" format="dita"/> details the OSD host data and
+      journal drive configuration.</p>
+    <note>Partitions are automatically created on the Journal Device by the <cmdname>ceph-deploy</cmdname>
+      command. There should be unallocated available space to support the creation of a journal
+      partition per OSD.</note>
+    <table frame="all" rowsep="1" colsep="1" id="table_osd_config">
+      <title>OSD Configuration</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>OSD Host</entry>
+            <entry>Journal Device</entry>
+            <entry>Data Paths</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry morerows="1">ceph-osd1</entry>
+            <entry>/dev/sdl</entry>
+            <entry>/dev/sdb, /dev/sdc, /dev/sdd, /dev/sde, /dev/sdf</entry>
+          </row>
+          <row>
+            <entry>/dev/sdm</entry>
+            <entry>/dev/sdg, /dev/sdh, /dev/sdi, /dev/sdj, /dev/sdk</entry>
+          </row>
+          <row>
+            <entry morerows="1">ceph-osd2</entry>
+            <entry>/dev/sdl</entry>
+            <entry>/dev/sdb, /dev/sdc, /dev/sdd, /dev/sde, /dev/sdf</entry>
+          </row>
+          <row>
+            <entry>/dev/sdm</entry>
+            <entry>/dev/sdg, /dev/sdh, /dev/sdi, /dev/sdj, /dev/sdk</entry>
+          </row>
+          <row>
+            <entry morerows="1">ceph-osd3</entry>
+            <entry>/dev/sdl</entry>
+            <entry>/dev/sdb, /dev/sdc, /dev/sdd, /dev/sde, /dev/sdf</entry>
+          </row>
+          <row>
+            <entry>/dev/sdm</entry>
+            <entry>/dev/sdg, /dev/sdh, /dev/sdi, /dev/sdj, /dev/sdk</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>

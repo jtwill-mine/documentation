@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="implementation">
+  <title>Implementation</title>
+  <body>
+    <p>This section guides you though implementing the Dell Red Hat Cloud Solutions Openstack Platform Integration with Ceph. Topics include:</p>
+    <ul>
+      <li><xref href="ceph_preinstall_config_requirements.dita#ceph_preinstall_config_requirements"
+        /></li>
+      <li><xref href="ceph_installation.dita#ceph_installation"/></li>
+      <li><xref href="add_ceph_osd_hosts.dita#add_ceph_osd_hosts"/></li>
+      <li><xref href="osp_integration_with_ceph.dita#osp_integration_with_ceph"/></li>
+    </ul>
+  </body>
+</topic>

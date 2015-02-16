@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="next_steps_sah_deploy">
   <title>Next Steps</title>
+
   <body>
     <p>After the Solution Admin Host is installed:</p>
+
     <ol>
-      <li>Copy the ISO of the <b>Red Hat Enterprise Server 6 installation DVD</b> to the<codeph>
-          /store/data/iso</codeph> directory. This ISO is used to install the Foreman virtual
-          machine.</li>
-      <li>If the Ceph ICE virtual machine will be installed, also copy the ISO of <b>the Red Hat Enterprise Server 7 installation DVD</b> to the <codeph>/store/data/iso</codeph> directory.</li>
-      <li>To set up the Foreman virtual machine, follow the <u><i>Foreman Virtual Machine Deployment Guide</i></u>.</li>
-      <li>To set up the Ceph ICE virtual machine, follow the <i><u>Ceph ICE Virtual Machine Deployment Guide</u></i>.</li>
+      <li>Copy the ISO of the <b>Red Hat Enterprise Server 7 installation
+      DVD</b> to the<codeph> /store/data/iso</codeph> directory. This ISO is
+      used to install the Foreman virtual machine.</li>
+
+      <li>To set up the Foreman virtual machine, follow the procedures in <xref
+          href="foreman_vm_deployment.dita#foreman_vm_deployment"/>.</li>
+
+      <li>To set up the Ceph virtual machine, follow the procedures in <xref
+          href="ceph_ice_vm_deployment.dita#ceph_ice_vm_deployment"/>.</li>
     </ol>
   </body>
 </topic>

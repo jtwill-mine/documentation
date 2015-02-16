@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>OSP Integration with Ceph Map</title>
+ <topicref href="../topics/integration_requirements.dita"/>
+ <topicref href="../topics/integration_configuration_goal.dita"/>
+ <topicref href="../topics/ceph_pool_keyring_config.dita"/>
+ <topicref href="../topics/foreman_config_ha_controller.dita"/>
+ <topicref href="../topics/foreman_config_compute.dita"/>
+ <topicref href="../topics/libvirt_config.dita"/>
+ <topicref href="../topics/deploy_ceph_config_files.dita"/>
+ <topicref href="../topics/configure_cinder_for_backups.dita"/>
+ <topicref href="../topics/test_osp_integration.dita"/>
+</map>

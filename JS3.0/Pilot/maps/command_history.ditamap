@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Command History Map</title>
+ <topicref href="../topics/concept_ice_install.dita"/>
+ <topicref href="../topics/concept_ceph_monitor_config.dita"/>
+ <topicref href="../topics/concept_configuring_osds.dita"/>
+ <topicref href="../topics/concept_connect_to_calamari.dita"/>
+ <topicref href="../topics/concept_create_data_pools.dita"/>
+ <topicref href="../topics/concept_create_images_keyring.dita"/>
+ <topicref href="../topics/concept_create_volumes_keyring.dita"/>
+ <topicref href="../topics/concept_create_backups_keyring.dita"/>
+ <topicref href="../topics/concept_gather_deploy_ceph.conf.dita"/>
+ <topicref href="../topics/concept_gather_deploy_client_keys.dita"/>
+ <topicref href="../topics/concept_copy_libvirt_secret_files.dita"/>
+ <topicref href="../topics/concept_add_libvirt_secret_files.dita"/>
+ <topicref href="../topics/concept_test_integration.dita"/>
+ <topicref href="../topics/concept_show_pool_usage.dita"/>
+</map>

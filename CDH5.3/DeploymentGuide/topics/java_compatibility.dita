@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="java_compatibility">
+  <title>Java Compatibility</title>
+  <shortdesc>The Cloudera Enterprise software supports either Java 7 or Java 8.</shortdesc>
+  <body>
+    <ol>
+      <li>Verify that a supported version of Java is installed by running the following commands:</li>
+    </ol>
+    <codeblock>java -version
+javac -version
+update-java-alternatives --list
+alternatives --display java</codeblock>
+  </body>
+</topic>

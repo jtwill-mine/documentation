@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="prerequisites_add_osd_hosts">
+  <title>Prerequisites</title>
+  <shortdesc>You must ensure that:</shortdesc>
+  <body>
+    <ul>
+      <li>All configuration requirements in <xref
+          href="ceph_preinstall_config_requirements.dita#ceph_preinstall_config_requirements"/> have
+        been met</li>
+      <li>Configuration items from <xref href="ceph_installation.dita#ceph_installation"/> have been
+        completed</li>
+    </ul>
+  </body>
+</topic>

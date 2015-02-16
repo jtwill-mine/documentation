@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_preinstall_config_requirements">
+  <title>Ceph Pre-Installation Configuration Requirements</title>
+  <body>
+    <p>We suggest that a number of configuration settings be changed across the Ceph administration
+      nodes. The next sections provide a recommended set of configuration options. These options
+      should be tailored to meet local system configuration and operational requirements.</p>
+    <p>These settings include:</p>
+    <ul>
+      <li><xref href="time_synch.dita#time_synch"/></li>
+      <li><xref href="nonroot_administrative_user.dita#nonroot_administrative_user"/></li>
+      <li><xref href="sudo_access.dita#sudo_access"/></li>
+      <li><xref href="limiting_ssh_access.dita#limiting_ssh_access"/></li>
+      <li><xref href="ssh_key_authentication.dita#ssh_key_authentication"/></li>
+      <li><xref href="firewall_config_changes.dita#firewall_config_changes"/></li>
+    </ul>
+  </body>
+</topic>

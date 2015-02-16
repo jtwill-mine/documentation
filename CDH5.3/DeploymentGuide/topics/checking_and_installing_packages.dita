@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="checking_and_installing_packages">
+  <title>Checking and Installing Packages</title>
+  <shortdesc>Packages must be preinstalled if you plan to use them.</shortdesc>
+  <body>
+    <ol>
+      <li>To check to see if a package is installed, run the following command:<codeblock>yum list</codeblock></li>
+      <li>To install a package, run the following command:<codeblock>yum install &lt;<i>package_name</i>&gt;</codeblock></li>
+    </ol>
+  </body>
+</topic>

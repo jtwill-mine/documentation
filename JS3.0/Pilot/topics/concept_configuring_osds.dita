@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_configuring_osds">
+ <title>Configuring the OSDs</title>
+ <conbody>
+  <codeblock>$ ceph-deploy install ceph-osd1
+$ ceph-deploy disk list ceph-osd1
+$ ceph-deploy osd create ceph-osd1:/mnt/sdb:/dev/sdl
+$ ceph-deploy osd create ceph-osd1:/mnt/sdc:/dev/sdl</codeblock>
+ </conbody>
+</concept>

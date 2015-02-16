@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_config_compute">
+  <title>Foreman Configuration – Compute (Nova Network)</title>
+  <shortdesc>To configure Compute (Nova Netweork):</shortdesc>
+  <body>
+    <ol>
+      <li>Configure the following values in the Compute (Nova Network) host group.<ol
+          id="ol_elm_lsv_1r">
+          <li>Additional settings will need to be configured for the local environment.</li>
+          <li>The UUID value is replaced with the value generated in <xref
+              href="foreman_config_ha_controller.dita#foreman_config_ha_controller"/><table
+              frame="all" rowsep="1" colsep="1" id="table_compute_settings">
+              <title>Compute (Nova Network) Settings</title>
+              <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+                <thead>
+                  <row>
+                    <entry>Class</entry>
+                    <entry>Variable</entry>
+                    <entry>Value</entry>
+                  </row>
+                </thead>
+                <tbody>
+                  <row>
+                    <entry morerows="1">quickstack::nova_network::compute</entry>
+                    <entry>cinder_backend_rbd</entry>
+                    <entry>true</entry>
+                  </row>
+                  <row>
+                    <entry>rbd_secret_uuid</entry>
+                    <entry>UUID</entry>
+                  </row>
+                </tbody>
+              </tgroup>
+            </table>.</li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>

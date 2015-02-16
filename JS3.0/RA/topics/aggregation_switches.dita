@@ -2,15 +2,27 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="aggregation_switches">
   <title>Aggregation Switches</title>
-  <shortdesc>For a deployment of three to nine racks of 10G servers (12 racks max), Dell recommends the Dell Force10 S4810 as the aggregation switch. It is both 10GbE and 40GbE capable.</shortdesc>
+  <shortdesc>For a deployment from one to three racks of 10G servers, Dell recommends the Dell
+    Force10 S4810 as the aggregation switch. It is both 10GbE and 40GbE capable.</shortdesc>
   <body>
     <p>The 40GbE interfaces on the S4810 could be converted into four 10GbE interfaces, thereby converting this switch into 64 10GbE-capable ports. ToR switches connect to aggregate switches via uplinks of 10GbE interfaces from the ToR Force10 S4810 to the Force10 S4810.</p>
-    <p>Dell’s recommended architecture uses Virtual Link Trunking (VLT) between the two Force10 S4810 switches in aggregation. This feature enables a multi-chassis LAG from the ToR switches in each rack. The stacks in each rack can divide their links between this pair for switches to achieve powerful active-active forwarding, while using full bandwidth capability, with no requirement for spanning tree. Running 40GbE Ethernet switches, like the Dell Force10 Z9000, in aggregation can achieve a scale of up to hundreds of 1G deployed nodes.</p>
+    <p>Dell’s recommended architecture uses Virtual Link Trunking (VLT) between the two Force10
+      S4810 switches in each rack and then aggregation to a core switch. This feature enables a
+      multi-chassis LAG from the ToR switches in each rack. The stacks in each rack can divide their
+      links between this pair for switches to achieve powerful active-active forwarding, while using
+      full bandwidth capability, with no requirement for spanning tree. Running 40GbE Ethernet
+      switches, like the Dell Force10 Z9000, in aggregation can achieve a scale of up to hundreds of
+      1G deployed nodes.</p>
     <p>For the 10G server deployment, Dell’s recommendation depends upon:</p>
     <ul>
       <li>The scale at which the rack layouts are planned</li>
       <li>Required future scaling</li>
     </ul>
-    <p>When designing a large deployment, Dell recommends the Force10 S4810 for aggregation for smaller scale and the Force10 Z9000 for larger deployments. The Force10 Z9000 is a 32-port, 40G high-capacity switch. It can aggregate up to 15 racks of high-density PowerEdge R620, R720 and R720xd servers. The rack-to-rack bandwidth needed in OpenStack would be most suitably handled by a 40G-capable, non-blocking switch. The Force10 Z9000 can provide a cumulative bandwidth of 1.5TB of throughput at line-rate traffic from every port.</p>
+    <p>When designing a large deployment, Dell recommends the Force10 S4810 for aggregation for
+      smaller scale and the Force10 Z9000 for larger deployments. The Force10 Z9000 is a 32-port,
+      40G high-capacity switch. It can aggregate up to 15 racks of high-density PowerEdge R630 and
+      R730xd servers. The rack-to-rack bandwidth needed in OpenStack would be most suitably handled
+      by a 40G-capable, non-blocking switch. The Force10 Z9000 can provide a cumulative bandwidth of
+      1.5TB of throughput at line-rate traffic from every port.</p>
   </body>
 </topic>

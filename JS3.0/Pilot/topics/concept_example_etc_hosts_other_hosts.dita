@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_example_etc_hosts_other_hosts">
+ <title>Example /etc/hosts on All Other Hosts</title>
+ <conbody>
+  <codeblock>172.31.139.71 ospctl1-storage
+172.31.139.72 ospctl2-storage
+172.31.139.73 ospctl3-storage
+172.31.139.74 ospcomp1-storage
+172.31.139.75 ospcomp2-storage
+172.31.141.55 ceph-osd1-storage
+172.31.141.56 ceph-osd2-storage
+172.31.141.57 ceph-osd3-storage</codeblock>
+ </conbody>
+</concept>

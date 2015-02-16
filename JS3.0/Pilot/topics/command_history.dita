@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="command_history">
+  <title>Command History</title>
+  <body>
+    <ul>
+      <li><xref href="concept_ice_install.dita#concept_ice_install"/></li>
+      <li><xref href="concept_ceph_monitor_config.dita#concept_ceph_monitor_config"/></li>
+      <li><xref href="concept_configuring_osds.dita#concept_configuring_osds"/></li>
+      <li><xref href="concept_connect_to_calamari.dita#concept_connect_to_calamari"/></li>
+      <li><xref href="concept_create_data_pools.dita#concept_create_data_pools"/></li>
+      <li><xref href="concept_create_images_keyring.dita#concept_create_images_keyring"/></li>
+      <li><xref href="concept_create_volumes_keyring.dita#concept_create_volumes_keyring"/></li>
+      <li><xref href="concept_create_backups_keyring.dita#concept_create_backups_keyring"/></li>
+      <li><xref href="concept_gather_deploy_ceph.conf.dita#concept_gather_deploy_ceph.conf"/></li>
+      <li><xref href="concept_gather_deploy_client_keys.dita#concept_gather_deploy_client_keys"
+        /></li>
+      <li><xref href="concept_copy_libvirt_secret_files.dita#concept_copy_libvirt_secret_files"
+        /></li>
+      <li><xref href="concept_add_libvirt_secret_files.dita#concept_add_libvirt_secret_files"/></li>
+      <li><xref href="concept_test_integration.dita#concept_test_integration"/></li>
+      <li><xref href="concept_show_pool_usage.dita#concept_show_pool_usage"/></li>
+    </ul>
+  </body>
+</topic>

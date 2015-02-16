@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="references_dg">
+  <title>References</title>
+  <body>
+    <ul>
+      <li>Ghemawat, S. Gobioff, H. and Leung, S.-T. The Google File System. Proceedings of the 19th ACM Symposium on Operating Systems Principles. pp. 29--43. Bolton Landing, NY, USA. 2003. &#169; 2003, ACM.</li>
+      <li>Borthakur, Dhruba. The Hadoop Distributed File System: Architecture and Design. &#169; 2007, The Apache Software Foundation.</li>
+      <li>Hadoop DFS User Guide. &#169; 2007, The Apache Software Foundation.</li>
+      <li>HDFS: Permissions User and Administrator Guide. &#169; 2007, The Apache Software Foundation.</li>
+      <li>HDFS API Javadoc &#169; 2008, The Apache Software Foundation.</li>
+      <li>HDFS source code</li>
+      <li><xref href="http://pig.apache.org/docs/r0.14.0/start.html#tutorial" format="html" scope="external">
+          Pig tutorial </xref></li>
+      <li><xref href="http://pig.apache.org/docs/r0.14.0/start.html" format="html" scope="external">
+          Pig Getting Started guide</xref></li>
+      <li><xref href="http://zookeeper.apache.org/doc/trunk/zookeeperOver.html" format="html" scope="external">
+          Zookeeper overview</xref></li>
+      <li><xref href="http://www.nagios.org/" format="html" scope="external">Nagios</xref></li>
+      <li><xref href="http://ganglia.sourceforge.net/" format="html" scope="external"
+        >Ganglia</xref></li>
+    </ul>
+    <p>Additional information can be obtained at <xref href="http://www.dell.com/hadoop"
+        format="html" scope="external">www.dell.com/hadoop</xref> or by e-mailing <xref
+        href="mailto:hadoop@dell.com" format="html" scope="external">hadoop@dell.com</xref>.</p>
+  </body>
+</topic>

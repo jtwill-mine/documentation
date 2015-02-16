@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="network_configuration">
+  <title>Network Configuration</title>
+  <body>
+    <p>This section describes how to configure network for the Dell | Cloudera Apache Hadoop Solutions. Topics convered include:</p>
+    <ul>
+      <li><xref href="high_level_network_architecture.dita#high_level_network_architecture"/></li>
+      <li><xref href="ip_addressing.dita#ip_addressing"/></li>
+      <li><xref href="cluster_networks_and_vlans.dita#cluster_networks_and_vlans"/></li>
+      <li><xref href="node_interface_bonds.dita#node_interface_bonds"/></li>
+      <li><xref href="dns.dita#dns"/></li>
+      <li><xref href="ntp.dita#ntp"/></li>
+    </ul>
+  </body>
+</topic>

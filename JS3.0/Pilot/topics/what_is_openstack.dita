@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="what_is_openstack">
+  <title>What is Openstack?</title>
+  <body>
+    <p>OpenStack is an open-source project for building a private or public Infrastructure-as-a-Service (IaaS) cloud running on standard hardware. The typical analogy is that OpenStack gives you public, cloud-like capabilities in your datacenter.</p>
+    <p>OpenStack is a cloud operating system that controls all the infrastructure resources -
+      compute, storage, and networking -  throughout a datacenter, all managed through a central
+      dashboard called Horizon.</p>
+  </body>
+</topic>

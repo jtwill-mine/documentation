@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN"
+"topic.dtd">
 <topic id="next_steps_foreman_deploy">
   <title>Next Steps</title>
-  <shortdesc>After the Foreman virtual machine is installed, and the Foreman installer is executed:</shortdesc>
+
+  <shortdesc>After the Foreman virtual machine is installed, and the Foreman
+  installer is executed:</shortdesc>
+
   <body>
     <ol>
-      <li>Configure the Foreman instance for the environment, following the applicable <u><i>Foreman Configuration Guide</i></u>.</li>
+      <li>Configure the Foreman instance for the environment, following the procedures in <xref
+          href="../../Pilot/topics/configure_foreman_server.dita#configure_foreman_server"/>.</li>
     </ol>
   </body>
 </topic>

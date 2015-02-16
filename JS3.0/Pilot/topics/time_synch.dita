@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="time_synch">
+  <title>Time Synchronization</title>
+  <body>
+    <p>Clock synchronization is very important for a functioning Ceph cluster. We recommend that
+      all hosts use the same time reference.</p>
+    <ol>
+      <li>Perform this configuration during the
+        kickstart process with the following configuration option. Be sure to update it for local
+        configuration and administrative rights:</li>
+    </ol>
+    <codeblock>timezone America/New_York --isUtc –ntpservers=XXX.XXX.XXX.XXX</codeblock>
+  </body>
+</topic>

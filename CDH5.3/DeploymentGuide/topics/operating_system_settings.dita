@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="operating_system_settings">
+  <title>Operating System Settings</title>
+  <body>
+    <p>This section describes how to configure the operating system for the Dell | Cloudera Apache Hadoop Solutions.
+      Topics convered include:</p>
+    <ul>
+      <li><xref href="process_limits.dita#process_limits"/></li>
+      <li><xref href="memory_management_settings.dita#memory_management_settings"/></li>
+      <li><xref href="selinux_settings.dita#selinux_settings"/></li>
+      <li><xref href="services_and_daemons.dita#services_and_daemons"/></li>
+      <li><xref href="firewall_settings.dita#firewall_settings"/></li>
+      <li><xref href="ports_listing.dita#ports_listing"/></li>
+      <li><xref href="disable_ipv6.dita#disable_ipv6"/></li>
+      <li><xref href="disable_network_manager.dita#disable_network_manager"/></li>
+      <li><xref href="ssh_keys.dita#ssh_keys"/></li>
+      <li><xref href="user_accounts_and_groups.dita#user_accounts_and_groups"/></li>
+    </ul>
+  </body>
+</topic>

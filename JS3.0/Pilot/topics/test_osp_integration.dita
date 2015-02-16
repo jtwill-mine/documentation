@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="test_osp_integration">
+  <title>Test OSP Integration</title>
+  <body>
+    <p>To test OSP integration with Ceph:</p>
+    <note>Additional steps may be required depending on local configuration needs.</note>
+    <ol>
+      <li>Create an OS image to test the Images pool:<codeblock>[root@ospctl1 ~]# glance image-create ...</codeblock></li>
+      <li>List available images:<codeblock>[root@ospctl1 ~]# glance image-list</codeblock></li>
+      <li>Boot the virtual image:<codeblock>[root@ospctl1 ~]# nova boot ...</codeblock></li>
+      <li>List running images:<codeblock>[root@ospctl1 ~]# nova list</codeblock></li>
+      <li>Create a new volume to test the Volumes pool:<codeblock>[root@ospctl1 ~]# cinder create ...</codeblock></li>
+      <li>List images:<codeblock>[root@ospctl1 ~]# nova volume-list</codeblock></li>
+      <li>Attach to a running virtual image:<codeblock>[root@ospctl1 ~]# nova volume-attach ...</codeblock></li>
+      <li>Log into the image.<ol id="ol_df2_f51_br">
+          <li>Verify access by formatting it.</li>
+        </ol><codeblock>[root@inst1 ~]# fdisk /dev/vdb</codeblock></li>
+      <li>Make a backup of the volume to test the Backups pool:<codeblock>[root@ospctl1 ~]# cinder backup-create ...</codeblock></li>
+      <li>List backups:<codeblock>[root@ospctl1 ~]# cinder backup-list</codeblock></li>
+    </ol>
+  </body>
+</topic>

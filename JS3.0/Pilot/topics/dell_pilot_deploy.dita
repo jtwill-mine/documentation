@@ -44,16 +44,17 @@
     reference as needed.</p>
 
     <p>Several steps in this document use files to configure the environment.
-    These files are available in a TAR file called dell-pilot-deploy.tgz. This
-    TAR file is available from <b><xref format="html"
+    These archive files are available from <b><xref format="html"
     href="https://wiki.opencrowbar.org/pages/viewpage.action?pageId=6326050">https://wiki.opencrowbar.org</xref></b>.</p>
 
-    <p>Download the tarfile and unzip it into the /root/pilot directory.</p>
+    <p>Download the dell-mgmt-node and dell-pilot-deploy archive (zip or tgz)
+    files and extract them into the /root directory as per the example
+    below.</p>
 
     <codeblock># mkdir /root/pilot
 # cd /root/pilot
-# tar xzvf /PATH/TO/FILE/dell-pilot-deploy.tgz
-</codeblock>
+# unzip /PATH/TO/FILE/dell-mgmt-node.zip or tar zxvf /PATH/TO/FILE/dell-mgmt-node.tgz
+# unzip /PATH/TO/FILE/dell-pilot-deploy.zip or tar zxvf /PATH/TO/FILE/dell-pilot-deploy.tgz</codeblock>
 
     <section><lines/><title>The hammer command</title><ol>
         <li>Install the packages that contain the <b>hammer</b>
@@ -607,7 +608,7 @@ Parameters:</msgblock>
 
     <p>For example:</p>
 
-    <msgblock>'( "[bond0]="mode=active-passive" )'</msgblock>
+    <msgblock>'( "[bond0]="mode=balance-tlb miimon=100" )'</msgblock>
 
     <p>Create the three needed parameters using the <b>hammer host
     set-parameter </b>command. Replace the <b>HOST_ID</b>,<b> VLAN</b>, and<b>
@@ -633,8 +634,8 @@ Parameters:</msgblock>
     networks. Each network on the second bond are VLAN tagged. </p><p>Set the
     <b>bonds, bond_ifaces,</b> and<b> bond_opts</b> parameters for each
     compute node. </p><p>Make sure the <b>bond_opts</b> sets the<b>
-    </b><b>MODE</b> to balance-tlb and <b>PROMISC</b> to yes. </p><p>An
-    example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
+    </b><b>MODE</b> to balance-tlb miimon=100 and <b>PROMISC</b> to yes.
+    </p><p>An example set of commands follows: </p><msgblock># hammer host set-parameter --host-id HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.300]="onboot static vlan 172.20.139.110/255.255.255.0"
  [bond0.301]="onboot static vlan 172.30.139.110/255.255.255.0"
  [bond0.302]="onboot static vlan 172.40.139.110/255.255.255.0"
@@ -642,7 +643,7 @@ Parameters:</msgblock>
 # hammer host set-parameter --host-id HOST_ID --name bond_ifaces \
  --value '( [bond0]="p3p1 p3p2" [bond1]="em1 em2")'
 # hammer host set-parameter --host-id HOST_ID --name bond_opts \
- --value '( [bond0]="mode=balance-tlb PROMISC=yes" [bond1]="mode=balance-tlb PROMISC=yes")</msgblock></section>
+ --value '( [bond0]="mode=balance-tlb  miimon=100 PROMISC=yes" [bond1]="mode=balance-tlb  miimon=100 PROMISC=yes")</msgblock></section>
 
     <section><p/><title>Set Host Update Parameters</title></section>
 
@@ -797,11 +798,11 @@ hammer os set-parameter --operatingsystem-id ${OS_ID} --name subscription_manage
 hammer os set-parameter --operatingsystem-id 3 \
  --name subscription_manager --value true
 hammer os set-parameter --operatingsystem-id 3 \
- --name subscription_manager_username --value dellcloudsol
+ --name subscription_manager_username --value changeme
 hammer os set-parameter --operatingsystem-id 3 \
- --name subscription_manager_password --value cr0wBar!
+ --name subscription_manager_password --value changeme
 hammer os list</msgblock><p/><p><b>hammer-nic-bond-cntl1 </b></p><msgblock>HOST_ID='15'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name nics \
  --value '([em2]="onboot static 192.168.110.127/255.255.255.0")'
 hammer host set-parameter --host-id $HOST_ID --name bonds \
@@ -822,7 +823,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-cntl2</b>
     </p><msgblock>HOST_ID='16'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name nics \
  --value '([em2]="onboot static 192.168.110.128/255.255.255.0")'
 hammer host set-parameter --host-id $HOST_ID --name bonds \
@@ -842,7 +843,7 @@ hammer host set-parameter --host-id ${HOST_ID} --name subscription_manager_pool 
 hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-cntl3</b></p><msgblock>HOST_ID='21'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name nics \
  --value '([em2]="onboot static 192.168.110.129/255.255.255.0")'
 hammer host set-parameter --host-id $HOST_ID --name bonds \
@@ -863,7 +864,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms</msgblock><p/><p><b>hammer-nic-bond-nova1
     </b></p><msgblock>HOST_ID='24'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.133/255.255.255.0"
  [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.133/255.255.255.0"
@@ -883,7 +884,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-nova2
     </b></p><msgblock>HOST_ID='25'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.134/255.255.255.0"
  [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.134/255.255.255.0"
@@ -903,7 +904,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-nova3
     </b></p><msgblock>HOST_ID='26'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.135/255.255.255.0"
  [bond0]="onboot none" [bond0.130]="onboot static vlan 192.168.130.135/255.255.255.0"
@@ -923,7 +924,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph1
     </b></p><msgblock>HOST_ID='28'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.140/255.255.255.0"
  [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.140/255.255.255.0" )'
@@ -941,7 +942,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph2
     </b></p><msgblock>HOST_ID='29' 
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.141/255.255.255.0"
  [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.141/255.255.255.0" )'
@@ -959,7 +960,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
  --value "rhel-server-rhscl-7-rpms, rhel-7-server-rpms,
  rhel-7-server-openstack-5.0-rpms, rhel-ha-for-rhel-7-server-rpms"</msgblock><p/><p><b>hammer-nic-bond-ceph3
     </b></p><msgblock>HOST_ID='30'
-POOLID=8a85f98744091dea0144314ba24c726c
+POOLID=changeme
 hammer host set-parameter --host-id $HOST_ID --name bonds \
  --value '( [bond0]="onboot none" [bond0.190]="onboot static vlan 192.168.190.142/255.255.255.0"
  [bond1]="onboot none" [bond1.191]="onboot static vlan 192.168.191.142/255.255.255.0" )'
@@ -980,7 +981,7 @@ hammer host set-parameter --host-id $HOST_ID --name subscription_manager_repos \
 PTABLE=12
 MAC=B8:CA:3A:68:67:54
 IP=192.168.119.130
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -989,7 +990,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-cntl2
 PTABLE=12
 MAC=B8:CA:3A:68:67:68
 IP=192.168.119.131
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -998,14 +999,14 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-cntl3
 PTABLE=12
 MAC=B8:CA:3A:67:43:6C
 IP=192.168.119.132
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}NAME=rh7cntl3
 PTABLE=12
 MAC=B8:CA:3A:67:43:6C
 IP=192.168.119.132
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1014,7 +1015,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova1
 PTABLE=12
 MAC=B8:CA:3A:67:3C:D0
 IP=192.168.119.133
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1023,7 +1024,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova2
 PTABLE=12
 MAC=B8:CA:3A:67:3F:68
 IP=192.168.119.134
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1032,7 +1033,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-nova3
 PTABLE=12
 MAC=B8:CA:3A:67:3D:C8
 IP=192.168.119.135
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1041,7 +1042,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph1</b>
 PTABLE=12
 MAC=B8:CA:3A:67:17:4C
 IP=192.168.119.140
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1049,7 +1050,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph2</b></p><m
 PTABLE=12
 MAC=B8:CA:3A:67:0C:7C
 IP=192.168.119.141
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}
@@ -1058,7 +1059,7 @@ hammer host list |grep ${NAME}</msgblock><p/><p><b>hammer-deploy-ceph3
 PTABLE=12
 MAC=B8:CA:3A:67:0D:38
 IP=192.168.119.142
-hammer host create --name "${NAME}" --root-password 'cr0wBar!' \
+hammer host create --name "${NAME}" --root-password 'changeme' \
 --build true --enabled true --managed true --environment-id 2 \
 --domain-id 1 --puppet-proxy-id 1 --operatingsystem-id 3 --ip ${IP} \
 --subnet-id 1 --architecture-id 1 --medium-id 9 --partition-table-id ${PTABLE} --mac ${MAC}

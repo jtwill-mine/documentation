@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_create_data_pools">
+ <title>Create Data Pools</title>
+ <conbody>
+  <codeblock>$sudo ceph osd pool create images 1024
+$sudo ceph osd pool create volumes 1024
+$sudo ceph osd pool create backups 1024
+$sudo ceph osd lspools</codeblock>
+ </conbody>
+</concept>

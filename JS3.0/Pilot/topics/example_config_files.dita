@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="example_config_files">
+  <title>Example Configuration Files</title>
+  <body>
+    <ul>
+      <li><xref href="concept_example_etc_hosts_ice_admin.dita#concept_example_etc_hosts_ice_admin"
+        /></li>
+      <li><xref
+          href="concept_example_etc_hosts_other_hosts.dita#concept_example_etc_hosts_other_hosts"
+        /></li>
+      <li><xref href="concept_example_cephdeploy_conf.dita#concept_example_cephdeploy_conf"/></li>
+      <li><xref href="concept_example_etc_ceph_ceph_conf.dita#concept_example_etc_ceph_ceph_conf"
+        /></li>
+      <li><xref
+          href="concept_example_ceph_client_images_keyring.dita#concept_example_ceph_client_images_keyring"
+        /></li>
+      <li><xref
+          href="concept_example_ceph_client_volumes_keyring.dita#concept_example_ceph_client_volumes_keyring"
+        /></li>
+      <li><xref
+          href="concept_example_ceph_client_backups_keyring.dita#concept_example_ceph_client_backups_keyring"
+        /></li>
+      <li><xref
+          href="concept_example_storage_nodes_etc_sysconfig_iptables.dita#concept_example_storage_nodes_etc_sysconfig_iptables"
+        /></li>
+      <li><xref
+          href="concept_example_controller_node_etc_sysconfig_iptables.dita#concept_example_controller_node_etc_sysconfig_iptables"
+        /></li>
+    </ul>
+  </body>
+</topic>

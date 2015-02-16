@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="node_interface_bonds">
+  <title>Node Interface Bonds</title>
+  <body>
+    <p>Layer 2 Interface bonding is used on the core cluster network to increase performance and bandwidth. Bonding can also be used on the Edge network for the same reasons, depending on the interfaces required to existing networks:</p>
+    <ul>
+      <li><xref href="active_standby_name_nodes.dita#active_standby_name_nodes"/></li>
+      <li><xref href="edge_node_bonds.dita#edge_node_bonds"/></li>
+      <li><xref href="data_nodes_bonds.dita#data_node_bonds"/></li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Network Architecture Map</title>
+ <topicref href="../topics/high_level_network_architecture.dita"/>
+ <topicref href="../topics/ip_addressing.dita">
+  <topicref href="../topics/sample_naming_and_addressing.dita">
+   <topicref href="../topics/hadoop_rack_awareness.dita"/>
+  </topicref>
+ </topicref>
+ <topicref href="../topics/cluster_networks_and_vlans.dita"/>
+ <topicref href="../topics/node_interface_bonds.dita">
+  <topicref href="../topics/active_standby_name_nodes.dita"/>
+  <topicref href="../topics/edge_node_bonds.dita"/>
+  <topicref href="../topics/data_nodes_bonds.dita"/>
+ </topicref>
+ <topicref href="../topics/dns.dita"/>
+ <topicref href="../topics/ntp.dita"/>
+</map>

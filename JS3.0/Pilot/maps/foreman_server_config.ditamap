@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
+"map.dtd">
 <map>
- <title>Foreman Server Configuration Map</title>
- 
- <topicref href="../topics/hammer_command_prep.dita"/>
- <topicref href="../topics/foreman_node_version_locking.dita"/>
- <topicref href="../topics/hammer_command.dita"/>
- <topicref href="../topics/hammer_help.dita"/>
- <topicref href="../topics/configure_install_medium.dita">
-  <mapref href="configure_install_medium.ditamap" format="ditamap"/>
- </topicref>
- <topicref href="../topics/note_medium_id.dita"/>
- <topicref href="../topics/configure_partition_table.dita"/>
- <topicref href="../topics/configure_os.dita"/>
- <topicref href="../topics/configure_subnets.dita"/>
- <topicref href="../topics/configure_templates.dita"/>
- <topicref href="../topics/gather_info.dita"/>
- <topicref href="../topics/configure_facts_updates.dita"/>
- <topicref href="../topics/configure_os_updates.dita">
-  <topicref href="../topics/optional_proxy_settings.dita"/>
- </topicref>
+  <title>Foreman Server Configuration Map</title>
+
+  <topicref href="../topics/hammer_command_prep.dita"/>
+
+  <topicref href="../topics/foreman_node_version_locking.dita"/>
+
+  <topicref href="../topics/hammer_command.dita"/>
+
+  <topicref href="../topics/hammer_help.dita"/>
+
+  <topicref href="../topics/configure_install_medium.dita">
+    <mapref format="ditamap" href="configure_install_medium.ditamap"/>
+  </topicref>
+
+  <topicref href="../topics/note_medium_id.dita"/>
+
+  <topicref href="../topics/configure_partition_table.dita"/>
+
+  <topicref href="../topics/configure_os.dita"/>
+
+  <topicref href="../topics/configure_subnets.dita"/>
+
+  <topicref href="../topics/configure_templates.dita"/>
+
+  <topicref href="../topics/gather_info.dita"/>
+
+  <topicref href="../topics/configure_os_updates.dita">
+    <topicref href="../topics/optional_proxy_settings.dita"/>
+  </topicref>
 </map>

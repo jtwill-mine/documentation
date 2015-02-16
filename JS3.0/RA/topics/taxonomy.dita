@@ -8,16 +8,16 @@
       <li>Block Storage (Cinder with  Ceph and EqualLogic)</li>
       <li>Compute (Nova)</li>
       <li>Dashboard (Horizon)</li>
-      <li>Database (Trove, available but not part of the solution)<fn>Trove, Sahara, and  Swift are available via custom Services engagements, for customer evaluation only.
+      <li>Database (Trove, available but not part of the solution)<fn>Trove and Sahara are available via custom Services engagements, for customer evaluation only.
          </fn></li>
       <li>Identity (Keystone)</li>
       <li>Image Service (Glance)</li>
       <li>Networking (Neutron )</li>
 
-      <li>Object Store (Swift, available but not part of the solution)<sup>1</sup></li>
+      <li>Object Store (Ceph object gateway)<sup>1</sup></li>
       <li>Orchestration (Heat)</li>
-      <li>Data Process (Sahara, available but not part of the soluiton)<sup>1</sup></li>
-      <li>Telemetry (Ceilometer)</li>
+      <li>Data Process (Sahara, available but not part of the solution)<sup>1</sup></li>
+      <li>Telemetry (Ceilometer, available but not part of the solution)<sup>1</sup></li>
     </ul>
     <p>The taxonomy presented in <xref href="taxonomy.dita#taxonomy/taxonomy" type="fig"/> reflects infrastructure components (shown in light green) and OpenStack-specific components (shown in red), that are under active development by the community, Dell, and Red Hat. The taxonomy reflects a DevOps perspective in that there are two sides for cloud users:</p>
     <ul>
@@ -25,7 +25,11 @@
       <li>Standards-based API (shown in pink) interactions</li>
     </ul>
     <p>The standards-based APIs are the same between all OpenStack deployments, and let customers and vendor ecosystems operate across multiple clouds. The site-specific infrastructure combines open and proprietary software, Dell hardware, and operational processes to deliver cloud resources as a service.</p>
-    <p>The implementation choices for each cloud infrastructure are highly specific to the requirements of each site. Many of these choices can be standardized and automated using the tools in this Reference Architecture, and by following DevOps processes. Conforming to best practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red Hat and the broader OpenStack community.</p>
+    <p>The implementation choices for each cloud infrastructure are highly specific to the
+      requirements of each site. Many of these choices can be standardized and automated using the
+      tools in this Reference Architecture and by following DevOps processes. Conforming to best
+      practices helps reduce operational risk by leveraging the accumulated experience of Dell, Red
+      Hat and the broader OpenStack community.</p>
     <fig id="taxonomy">
       <title>OpenStack Taxonomy</title>
       <image href="../../Customization/OpenTopic/common/artwork/taxonomy.png"  align="center" placement="break"></image>

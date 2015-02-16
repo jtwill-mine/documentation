@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="exec_summary">
+  <title>Executive Summary</title>
+  <shortdesc>This document provides a detailed set of instructions
+    on how to integrate Red Hat Openstack Platform (OSP) with Ceph.</shortdesc>
+  <body>
+    <ul>
+      <li>The OSP controllers are configured to be highly available (HA).</li>
+      <li>The OSP storage back end is configured to use Ceph storage via the RBD client library.</li>
+      <li>Ceph pools will be created for OSP images, volumes and backups.</li>
+      <li>All node access will be controlled via the <codeph>cephx</codeph> authentication
+        protocol.</li>
+    </ul> 
+       
+  </body>
+</topic>

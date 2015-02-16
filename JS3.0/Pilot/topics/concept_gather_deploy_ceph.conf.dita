@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gather_deploy_ceph.conf">
+ <title>Gather and Deploy ceph.conf</title>
+ <conbody>
+  <codeblock>$ ceph-deploy --overwrite-conf config pull ospctl1
+$ ceph-deploy --overwrite-conf config push ospctl1 ospctl2 ospctl3 \
+ospcomp1 ospcomp2 ceph-osd1 ceph-osd2 ceph-osd3</codeblock>
+ </conbody>
+</concept>

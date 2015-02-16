@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="swap_settings">
+  <title>Swap Settings</title>
+  <shortdesc>The <cmdname>vm.swappiness</cmdname> Linux kernel parameter controls how aggressively
+    memory pages are swapped to disk. It can be set to a value between <i>0-100</i>. The higher the
+    value, the more aggressively the kernel seeks out inactive memory pages and swaps them to
+    disk.</shortdesc>
+  <body>
+    <p>On most systems this parameter is set to <i>60</i> by default. This is not suitable for Hadoop clusters nodes because it can cause processes to swap out even when there is free memory available. This can affect stability and performance, and may cause problems such as lengthy garbage collection pauses for important system daemons. Cloudera recommends that <cmdname>vm.swappiness</cmdname> be set to <i>0</i> for Hadoop-related deployments.</p>
+    <ul>
+      <li>To check the <cmdname>vm.swappiness</cmdname> setting, run:<codeblock>cat /proc/sys/vm/swappiness</codeblock></li>
+      <li>To set the <cmdname>vm.swappiness</cmdname> parameter, run:<codeblock>sysctl -w vm.swappiness=0</codeblock></li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_cinder_for_backups">
+  <title>Configure Cinder For Backups (Optional)</title>
+  <shortdesc>These configuration steps are only needed if the Cinder backup service is configured.</shortdesc>
+  <body>
+    <p>To configure Cinder for backups:</p>
+    <ol>
+      <li>On each controller node, set the following values in <codeph>/etc/cinder/cinder.conf</codeph>:<codeblock>[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_conf /etc/ceph/ceph.conf
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_user backups
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_chunk_size 134217728
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_pool backups
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_stripe_unit 0
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_ceph_stripe_count 0
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT restore_discard_excess_bytes true
+[ceph-user@ospctl1 ~]$ sudo openstack-config --set \
+/etc/cinder/cinder.conf DEFAULT backup_driver cinder.backup.drivers.ceph</codeblock></li>
+      <li>Restart the Cinder backup service:<codeblock>[ceph-user@ospctl1 ~]$ sudo pcs resource disable openstack-cinder-backup
+[ceph-user@ospctl1 ~]$ sudo pcs resource enable openstack-cinder-backup</codeblock></li>
+    </ol>
+  </body>
+</topic>

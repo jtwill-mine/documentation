@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_osd_config_process">
+  <title>Ceph OSD Configuration Process</title>
+  <shortdesc>The commands to configure <i>ceph-osd1</i> are listed below. The configuration commands
+    for <i>ceph-osd2</i>, <i>ceph-osd3</i>, or additional storage servers are similar.</shortdesc>
+  <body>
+    <ol>
+      <li>Prepare the OSDs on each host according to <xref
+        href="ceph_config_goal.dita#ceph_config_goal/table_osd_config"/>.</li>
+      <li>Deploy the Ceph software to the OSD hosts:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy install ceph-osd1</codeblock></li>
+      <li>Create additional network ports to allow daemon restart.<note>The Ceph OSD opens three network ports per OSD starting at TCP:6800. For example, if 5 OSDs are configured on a server then 15 TCP ports are needed. If 10 OSDs are configured then 30 ports are needed.</note><codeblock>[ceph-user@ceph-osd1 ~]$ sudo iptables -I INPUT 1 -p tcp -m multiport
+--dports 6800-6840 -j ACCEPT
+[ceph-user@ceph-osd1 ~]$ sudo service iptables save</codeblock></li>
+      <li>Llist all disks attached to the OSD server:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy osd disk list ceph-osd1</codeblock></li>
+      <li>Clear any existing partitions on a device which will be used as an OSD or
+            journal.<note><b>Do not</b> run this command against the device hosting the operating
+          system or other needed
+        information.</note><codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy osd disk zap \
+ceph-osd1:/dev/sdb</codeblock></li>
+      <li>Partition and format the data disks and allocate space for the journal.<note>The OSD data paths are mounted when the Ceph OSD process starts. The
+        default mount path is <i>/var/lib/ceph/osd/{cluster}-{osd}</i>. The path can be overridden via
+        the <parmname>osd data</parmname> configuration parameter.</note><codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdb:/dev/sdl
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdc:/dev/sdl
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdd:/dev/sdl
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sde:/dev/sdl
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdf:/dev/sdl
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdg:/dev/sdm
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdh:/dev/sdm
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdi:/dev/sdm
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdj:/dev/sdm
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd1:/dev/sdk:/dev/sdm</codeblock></li>
+      <li>Verify OSD status.<note>The health status should be <codeph>HEALTH_OK</codeph>, and all OSDs should be up.</note><codeblock>[ceph-user@ospctl1 ~]$ sudo ceph health
+HEALTH_OK
+[ceph-user@ospctl1 ~]$ sudo ceph osd tree
+# id weight type name up/down reweight
+-1 27.3 root default
+-2 9.1 host ceph-sd1
+0 0.91 osd.0 up 1
+1 0.91 osd.1 up 1
+2 0.91 osd.2 up 1
+.... Output truncated</codeblock></li>
+      <li>Troubleshoot any issues before continuing.</li>
+    </ol>
+  </body>
+</topic>

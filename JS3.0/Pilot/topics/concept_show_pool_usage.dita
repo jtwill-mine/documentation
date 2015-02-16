@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_show_pool_usage">
+ <title>Show Pool Usage</title>
+ <conbody>
+  <codeblock># ceph osd lspools
+# rados df -p images
+# rados df -p volumes
+# rados df -p backups</codeblock>
+ </conbody>
+</concept>

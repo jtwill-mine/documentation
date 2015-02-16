@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="file_system_layout">
+  <title>File System Layout</title>
+  <body>
+    <p>This section describes the following filesystem layout deployment parameters:</p>
+    <ul>
+      <li><xref href="fs_layout_infra_nodes.dita#fs_layout_infra_nodes"/></li>
+      <li><xref href="fs_layout_data_nodes.dita#fs_layout_data_nodes"/></li>
+      <li><xref href="swap_settings.dita#swap_settings"/></li>
+      <li><xref href="filesystems_and_parameters.dita#filesystems_and_parameters"/></li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cluster_networks_and_vlans">
+  <title>Cluster Networks and vLANs</title>
+  <body>
+    <p>The Dell | Cloudera solution implements four distinct vLANs for cluster functions. The
+      networks are described in <xref href="#cluster_networks_and_vlans/table_cluster_networks"
+        format="dita"/>.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_cluster_networks">
+      <title>Cluster Networks</title>
+      <tgroup cols="4">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Network</entry>
+            <entry>Description</entry>
+            <entry>Recommended vLAN Tag</entry>
+            <entry>Tagged</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Cluster</entry>
+            <entry>This network interconnects all nodes that access the HDFS file system. The
+              purpose of this network is to provide a high speed interconnect for the movement data
+              used in the map/reduce cycle.</entry>
+            <entry>16</entry>
+            <entry>802.1q</entry>
+          </row>
+          <row>
+            <entry>Management</entry>
+            <entry>This network operates all of the infrastructure and data nodes. This includes
+              providing DNS, NTP, IT Management, and all other network-based services. All such
+              services on all nodes should be configured with IP addresses in this range, to ensure
+              segregation from the cluster network.</entry>
+            <entry>17</entry>
+            <entry>Untagged</entry>
+          </row>
+          <row>
+            <entry>BMC/IPMI</entry>
+            <entry>This network is used for access to all of the BMC/IPMI/iDRAC interfaces on each
+              node. This provides BIOS/boot-level access to each node.</entry>
+            <entry>18</entry>
+            <entry>Untagged</entry>
+          </row>
+          <row>
+            <entry>Edge</entry>
+            <entry>This is an optional network to allow outside access to the cluster. This network
+              may have a firewall configured to selectively protect the cluster from outside
+              access.</entry>
+            <entry>2251</entry>
+            <entry>802.1q</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note>The management and BMC networks are assumed to be in the same L2 network, but can be separate.</note>
+  </body>
+</topic>

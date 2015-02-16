@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="glance">
+  <title>Glance</title>
+  <body>
+    <p>The Glance project provides services for discovering, registering, and retrieving virtual
+      machine images. Glance has a RESTful API that allows querying of VM image metadata as
+      well as retrieval of the actual image.</p>
+  </body>
+</topic>

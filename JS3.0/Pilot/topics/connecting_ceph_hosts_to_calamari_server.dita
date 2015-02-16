@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="connecting_ceph_hosts_to_calamari_server">
+  <title>Connecting Ceph Hosts to the Calamari Server</title>
+  <shortdesc>To connect Ceph hosts to the Calamari server:</shortdesc>
+  <body>
+    <ol>
+      <li>Use <cmdname>ceph-deploy</cmdname> to connect hosts to the Calamari server:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy calamari connect ospctl1 \
+ospctl2 ospctl3 ceph-osd1 ceph-osd2</codeblock></li>
+      <li>Log into the Calamari web GUI using the login credentials from both <xref
+          href="deploy_ice_calamari_server.dita#deploy_ice_calamari_server"/>, <i>and</i> the
+        Calamari Server:<codeblock>[ceph-user@ice-admin cluster]$ firefox http://ceph-osd1</codeblock></li>
+      <li>Add all hosts that are pending approval.</li>
+    </ol>
+    <p>ICE, Ceph, and Calamari are now installed and in a default configuration. Additional configuration items must be performed as needed to satisfy local operational needs.</p>
+  </body>
+</topic>

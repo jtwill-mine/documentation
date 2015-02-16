@@ -69,7 +69,7 @@
             <entry><xref href="http://www.OpenStack.org/software/OpenStack-storage/" format="html"
                 scope="external">OpenStack Block Storage</xref> provides persistent block level
               storage devices for use with OpenStack compute instances. The block storage system
-              manages the creation, attaching and detaching of the block devices to servers. Block
+              manages the creation, attaching, and detaching of the block devices to servers. Block
               storage volumes are fully integrated into OpenStack Compute and the Dashboard enabling
               cloud users to manage their own storage needs. In addition to using simple <tm
                 tmtype="reg" trademark="Linux">Linux</tm> server storage, it has unified storage

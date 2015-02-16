@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="limiting_ssh_access">
+  <title>Limiting SSH Access</title>
+  <body>
+    <p>Secure Shell (SSH) can be updated to restrict access to a restricted list of users or groups.</p>
+    <ol>
+      <li>Run the commands below to permit members of the admin group to <codeph>ssh</codeph> into
+        the server. Be sure to update them to satisfy local administrative requirements, and ensure
+        proper access to the host:</li>
+    </ol>
+    <codeblock># echo “AllowGroups admin” >> /etc/ssh/sshd_config
+# systemctl restart sshd</codeblock>
+    <note>Running these commands unmodified may prevent the root user from logging in
+      remotely. Provisions should be added to allow other account access as needed.</note>
+  </body>
+</topic>

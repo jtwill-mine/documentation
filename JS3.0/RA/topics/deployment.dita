@@ -8,8 +8,8 @@
       <li><b>Hardware Setup:</b><ul id="ul_tj5_l4q_gq">
           <li>Rack and stack</li>
           <li>Cabling</li>
-          <li>BIOS configuration</li>
-          <li>RAID configuration</li>
+          <li>Server BIOS configuration</li>
+          <li>Server RAID configuration</li>
           <li>Switch configuration</li>
         </ul></li>
       <li><b>Software Setup:</b><ul id="ul_rbf_w4q_gq">
@@ -17,11 +17,11 @@
               <li>Deploy Ceph Service VM to the Solution Admin Host</li>
               <li>Deploy Red Hat OpenStack Manager Virtual Server</li>
             </ul></li>
-          <li>Deploy controller node(s)</li>
-          <li>Deploy storage services</li>
-          <li>Deploy compute nodes</li>
+          <li>Provision all nodes with Operating Systems</li>
+          <li>Validate all nodes networking</li>
+          <li>Provsions services to nodes based on their node types</li>
         </ul></li>
-      <li><b>Testing environmen</b>t</li>
+      <li><b>Testing environment</b></li>
     </ul>
   </body>
 </topic>

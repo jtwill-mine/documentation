@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ssh_key_authentication">
+  <title>SSH Key Authentication</title>
+  <body>
+    <p>An SSH authentication key pair needs to be created for the Ceph administration users on the
+      ICE administration host.</p>
+    <ol>
+      <li>Run the commands below to generate a key pair and copy them to each of the Ceph servers. The key size and type should be adjusted as needed to satisfy local administrative requirements.</li>
+    </ol>
+    <note>In this example, the <varname>$CEPH_HOST_LIST</varname> variable is replaced with a list
+      of all of the Ceph hostnames.</note>
+    <codeblock>[ceph-user@ice-admin ~]$ ssh-keygen
+[ceph-user@ice-admin ~]$ for HOST in $CEPH_HOST_LIST; do ssh-copy-id $HOST;
+done</codeblock>
+  </body>
+</topic>

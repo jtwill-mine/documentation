@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_create_images_keyring">
+ <title>Create Images Keyring</title>
+ <conbody>
+  <codeblock>$ sudo ceph auth get-or-create client.images mon 'allow r' osd 'allow
+class-read object_prefix rbd_children, allow rwx pool=images'
+$ sudo ceph auth get-or-create client.images \
+> ceph.client.images.keyring</codeblock>
+ </conbody>
+</concept>

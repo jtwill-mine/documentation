@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="integration_requirements">
+  <title>Integration Requirements</title>
+  <shortdesc>Integrating OSP with Ceph requires:</shortdesc>
+  <body>
+    <ul>
+      <li>Foreman admin server installed and functioning</li>
+      <li>Deployed and functional Ceph ICE 1.2.x installation</li>
+      <li>Base RHEL7 installed on OSP controller and compute nodes with puppet running</li>
+      <li><cmdname>ceph-deploy</cmdname> commands are run from the ICE configuration directory</li>
+      <li>SSH access is allowed between the ICE Administration host and all OSP hosts</li>
+      <li>SSH key access is allowed from ICE Administration host to all OSP hosts</li>
+      <li>Selinux must be in permissive mode on all OSP nodes</li>
+      <li>Hosts are configured according to <xref
+          href="ceph_config_goal.dita#ceph_config_goal/table_ceph_hosts"/></li>
+    </ul>
+  </body>
+</topic>

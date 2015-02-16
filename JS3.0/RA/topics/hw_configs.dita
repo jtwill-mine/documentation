@@ -5,14 +5,108 @@
   <body>
     <p>
       <table frame="all" rowsep="1" colsep="1" id="table_r630_configs">
-        <title>Compute, Controller, and Infrastructure Node Hardware Configurations – PowerEdge R630 </title>
+        <title>Controller Node Hardware Configurations – PowerEdge R630 </title>
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="0.25*"/>
           <colspec colname="c2" colnum="2" colwidth="0.5*"/>
           <thead>
             <row>
               <entry>Machine Function</entry>
-              <entry>Solution Bundle Infrastructure, Controller and Compute Nodes</entry>
+              <entry>Solution Bundle  Controller Nodes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Platform</entry>
+              <entry>PowerEdge R630</entry>
+            </row>
+            <row>
+              <entry>CPU</entry>
+              <entry>2 x E5-2650</entry>
+            </row>
+            <row>
+              <entry>RAM (Minimum)</entry>
+              <entry>128 GB</entry>
+            </row>
+            <row>
+              <entry>LOM</entry>
+              <entry>2 x 1Gb, 2 x Intel X520 10Gb</entry>
+            </row>
+            <row>
+              <entry>Add-in Network</entry>
+              <entry>1 x Intel X520 DP 10Gb DA/SFP+</entry>
+            </row>
+            <row>
+              <entry>Disk</entry>
+              <entry>4 x 500GB 7.2k NLSAS</entry>
+            </row>
+            <row>
+              <entry>Storage Controller</entry>
+              <entry>PERC H730</entry>
+            </row>
+            <row>
+              <entry>RAID</entry>
+              <entry>RAID 10</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all" rowsep="1" colsep="1" id="table_r630_Compute">
+        <title>Compute Node Hardware Configurations – PowerEdge R630 </title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="0.25*"/>
+          <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+          <thead>
+            <row>
+              <entry>Machine Function</entry>
+              <entry>Solution Bundle Compute Nodes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Platform</entry>
+              <entry>PowerEdge R630</entry>
+            </row>
+            <row>
+              <entry>CPU</entry>
+              <entry>2 x E5-2650v3</entry>
+            </row>
+            <row>
+              <entry>RAM (Minimum)</entry>
+              <entry>128 GB</entry>
+            </row>
+            <row>
+              <entry>LOM</entry>
+              <entry>2 x 1Gb, 2 x Intel X520 10Gb</entry>
+            </row>
+            <row>
+              <entry>Add-in Network</entry>
+              <entry>1 x Intel X520 DP 10Gb DA/SFP+</entry>
+            </row>
+            <row>
+              <entry>Disk</entry>
+              <entry>6 x 600GB 10k SAS</entry>
+            </row>
+            <row>
+              <entry>Storage Controller</entry>
+              <entry>PERC H730</entry>
+            </row>
+            <row>
+              <entry>RAID</entry>
+              <entry>RAID 10</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all" rowsep="1" colsep="1" id="table_r630_controller">
+        <title>Infrastructure Node Hardware Configurations – PowerEdge R630 </title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="0.25*"/>
+          <colspec colname="c2" colnum="2" colwidth="0.5*"/>
+          <thead>
+            <row>
+              <entry>Machine Function</entry>
+              <entry>Solution Bundle Infrastructure Nodes</entry>
             </row>
           </thead>
           <tbody>
@@ -26,7 +120,7 @@
             </row>
             <row>
               <entry>RAM (Minimum)</entry>
-              <entry>128 GB</entry>
+              <entry>32 GB</entry>
             </row>
             <row>
               <entry>LOM</entry>
@@ -34,11 +128,11 @@
             </row>
             <row>
               <entry>Add-in Network</entry>
-              <entry>2 x Intel X520 DP 10Gb DA/SFP+</entry>
+              <entry>1 x Intel X520 DP 10Gb DA/SFP+</entry>
             </row>
             <row>
               <entry>Disk</entry>
-              <entry>4 x 1.2TB 7.2K SAS 2.5-inch</entry>
+              <entry>4 x 500GB 7.2 NLSAS</entry>
             </row>
             <row>
               <entry>Storage Controller</entry>
@@ -65,7 +159,7 @@
         </thead>
         <tbody>
           <row>
-            <entry>Platform</entry>
+            <entry>Platforms</entry>
             <entry>PowerEdge R730xd</entry>
           </row>
           <row>
@@ -78,7 +172,7 @@
           </row>
           <row>
             <entry>LOM</entry>
-            <entry>2 x 1Gb, 2 x Intel X520 10Gb</entry>
+            <entry>1 x 1Gb, 2 x Intel X520 10Gb</entry>
           </row>
           <row>
             <entry>Add-in Network</entry>
@@ -95,7 +189,7 @@
           </row>
           <row>
             <entry>RAID</entry>
-            <entry><p>RAID 1 (OS)</p> <p>pass through SSD</p> <p>pass through each data disk</p></entry>
+            <entry><p>RAID 1 (operating system)</p> <p>pass through SSD</p> <p>pass through each data disk</p></entry>
           </row>
         </tbody>
       </tgroup>

@@ -78,10 +78,10 @@ hammer os set-parameter --operatingsystem-id 3  \
   --name subscription_manager --value true
 
 hammer os set-parameter --operatingsystem-id 3  \
-  --name subscription_manager_username --value dellcloudsol
+  --name subscription_manager_username --value changeme
 
 hammer os set-parameter --operatingsystem-id 3  \
-  --name subscription_manager_password --value cr0wBar!
+  --name subscription_manager_password --value changeme
 
 hammer os list</codeblock>
   </body>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="new_host_ceph_installation">
+  <title>Ceph Installation on New OSD Hosts</title>
+  <shortdesc>To install Ceph on new OSD hosts:</shortdesc>
+  <body>
+    <ol>
+      <li>Install Ceph packages onto the new host from the ICE Administration host:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy install ceph-osd3</codeblock></li>
+      <li>Prepare and activate the OSD disks available on the new host as required by system
+        requirements:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy disk list ceph-osd3
+[ceph-user@ice-admin cluster]$ ceph-deploy osd create \
+ceph-osd3:/dev/sdb:/dev/sdl</codeblock></li>
+      <li>Verify OSD status:<codeblock>[ceph-user@ospctl1 ~]$ sudo ceph health
+HEALTH_OK
+[ceph-user@ospctl1 ~]$ sudo ceph osd tree</codeblock></li>
+      <li>You can monitor placement group rebalancing via the Calamari GUI using the <cmdname>ceph
+        status</cmdname> command, from a host with administrative rights.<note>The number of placement groups may need to be adjusted as the number of
+          OSDs increases.</note></li>
+      <li>Connect the new OSD to the Calamari administration server:<codeblock>[ceph-user@ice-admin cluster]$ ceph-deploy calamari connect ceph-osd3</codeblock></li>
+    </ol>
+  </body>
+</topic>

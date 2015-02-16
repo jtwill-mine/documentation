@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="vrrp_on_s4810">
+  <title>VRRP on S4810</title>
+  <body>
+    <p>The following configuration shows a sample VRRP configuration on the S4810 switches. This
+      configuration is created on the vLAN interfaces of the S4810. Since there is only a single vLAN 100 in the
+      cluster of three racks, a single instance of this configuration is needed.</p>
+    <codeblock>Force10_VLTpeer1(conf)#int vlan 100
+Force10_VLTpeer1(conf-if-gi-1/1)#vrrp-group 100
+Force10_VLTpeer1(conf-if-gi-1/1-vrid-111)#virtual-address 10.10.10.1
+#One or more these virtual IP addresses can be configured, which can be used
+#as the unique gateway per rack or cluster.
+Force10_VLTpeer1(conf-if-gi-1/1-vrid-111)# priority 125
+
+# Priority from 1-255 can be used to determine which switch owns the VIP and
+becomes the VRRP master.
+
+# Repeat the same configuration on the second VLT peer, except for a different
+priority.</codeblock>
+  </body>
+</topic>

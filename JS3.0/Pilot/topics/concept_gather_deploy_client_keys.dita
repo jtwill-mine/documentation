@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gather_deploy_client_keys">
+ <title>Gather and Deploy New Client Keys</title>
+ <conbody>
+  <codeblock>$ ssh ospctl1 cat /etc/ceph/ceph.client.backups.keyring > \
+ceph.client.backups.keyring
+$ ssh ospctl1 cat /etc/ceph/ceph.client.images.keyring > \
+ceph.client.images.keyring
+$ ssh ospctl1 cat /etc/ceph/ceph.client.volumes.keyring > \
+ceph.client.volumes.keyring
+$ scp ceph.client.backups.keyring ceph.client.images.keyring \
+ceph.client.volumes.keyring ospctl2:/etc/ceph
+$ scp ceph.client.backups.keyring ceph.client.images.keyring \
+ceph.client.volumes.keyring ospctl3:/etc/ceph
+$ scp ceph.client.backups.keyring ceph.client.images.keyring \
+ceph.client.volumes.keyring ospcomp1:/etc/ceph
+$ scp ceph.client.backups.keyring ceph.client.images.keyring \
+ceph.client.volumes.keyring ospcomp2:/etc/ceph</codeblock>
+ </conbody>
+</concept>

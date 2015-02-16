@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tor_switch_config">
+  <title>Top of Rack Switch Configuration</title>
+  <body>
+    <p><xref href="#tor_switch_config/table_tor_switch_settings" format="dita"/> describes ToR
+      switch configuration settings and parameters.</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_tor_switch_settings">
+      <title>Network Top of Rack Configuration</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Setting  </entry>
+            <entry>Parameter</entry>
+            <entry>Ports</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Spanning-Tree</entry>
+            <entry>Enable</entry>
+            <entry>ALL</entry>
+          </row>
+          <row>
+            <entry>Port-Fast</entry>
+            <entry>Enable</entry>
+            <entry>ALL</entry>
+          </row>
+          <row>
+            <entry>Flow-Control</entry>
+            <entry>Enable</entry>
+            <entry>ALL</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+  </body>
+</topic>

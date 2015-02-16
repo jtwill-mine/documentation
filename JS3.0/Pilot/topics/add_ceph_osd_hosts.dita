@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add_ceph_osd_hosts">
+  <title>Add Ceph OSD Hosts</title>
+  <shortdesc>This section discusses adding Ceph OSD hosts. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="prerequisites_add_osd_hosts.dita#prerequisites_add_osd_hosts"/></li>
+      <li><xref href="new_host_ceph_installation.dita#new_host_ceph_installation"/></li>
+      <li><xref
+          href="grant_ceph_admin_rights_nonmonitor_host.dita#grant_ceph_admin_rights_nonmonitor_host"
+        /></li>
+      <li><xref href="modifying_osd_placement_groups.dita#modifying_osd_placement_groups"/></li>
+    </ul>
+  </body>
+</topic>

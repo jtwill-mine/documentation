@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Cluster Testing Map</title>
+ <topicref href="../topics/before_hadoop_cluster_deployment.dita"/>
+ <topicref href="../topics/after_hadoop_cluster_deployment.dita"/>
+</map>

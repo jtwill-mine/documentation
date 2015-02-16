@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="foreman_config_ha_controller">
+  <title>Foreman Configuration – HA All In One Controller</title>
+  <shortdesc>To configure the HA All In One Controller:</shortdesc>
+  <body>
+    <ol>
+      <li>Configure the following values in the <i>HA All In One Controller</i> host group.<ol
+          id="ol_v5m_vpv_1r">
+          <li>Additional settings will need to be configured for the local environment.</li>
+          <li>The UUID value is replaced with the output of <cmdname>uuidgen</cmdname> or a similar
+            UUID generation program.</li>
+        </ol></li>
+    </ol>
+    <table frame="all" rowsep="1" colsep="1" id="table_ha_controller_settings">
+      <title>HA All In One Controller Settings</title>
+      <tgroup cols="3">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Class</entry>
+            <entry>Variable</entry>
+            <entry>Value</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry morerows="1">quickstack::pacemaker::cinder  </entry>
+            <entry>backend_rbd</entry>
+            <entry>true</entry>
+          </row>
+          <row>
+            <entry>rbd_secret_uuid</entry>
+            <entry>UUID</entry>
+          </row>
+          <row>
+            <entry morerows="1">quickstack::pacemaker::glance</entry>
+            <entry>backend</entry>
+            <entry>rbd</entry>
+          </row>
+          <row>
+            <entry>pcmk_fs_manage</entry>
+            <entry>false</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

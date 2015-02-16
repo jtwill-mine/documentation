@@ -13,18 +13,12 @@
             <li>The <b>path</b> option specifies the path or URL to the installation tree.</li>
         </ol></li>
     </ol>
+    <p>You can configure the installation medium on one of three servers. Select the appropriate
+      method:</p>
+    <ul>
+      <li><xref href="satellite_server.dita#satellite_server"/></li>
+      <li><xref href="local_iso_foreman_node.dita#local_iso_foreman_node"/></li>
+      <li><xref href="local_iso_sah.dita#local_iso_sah"/></li>
+    </ul>
   </body>
-  
-  <!-- <topic id="satellite_server" conref="satellite_server.dita#satellite_server">
-    <title/>
-  </topic>
-  
-  <topic id="local_iso_foreman_node" conref="local_iso_foreman_node.dita#local_iso_foreman_node">
-    <title/>
-  </topic>
-  
-  <topic id="local_iso_sah" conref="local_iso_sah.dita#local_iso_sah">
-    <title/>
-  </topic> -->
-  
 </topic>

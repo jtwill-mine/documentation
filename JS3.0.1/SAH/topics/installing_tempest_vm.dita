@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="installing_tempest_vm">
+  <title>Installing the Tempest Virtual Machine</title>
+  <shortdesc>To install the Tempest virtual machine:</shortdesc>
+  <body>
+    <ol>
+      <li>Invoke the <cmdname>deploy-tempest-vm.sh</cmdname> script.<ol id="ol_sp4_53s_lq">
+          <li>Pass <codeph><b>tempest.cfg</b></codeph> as the first parameter.</li>
+          <li>Pass the <b>full path to the Red Hat Enterprise Server 6 Installation media</b> as the
+            second
+            option.<codeblock># ./deploy-tempest-vm.sh tempest.cfg /store/data/iso/RHEL-7.0-20140507.0-Server-x86_64-dvd1.iso
+			</codeblock>
+			<p>The installation begins, but no console is displayed.</p></li>
+        </ol></li>
+      <li> To display the console:<ol id="ol_gnf_fks_lq">
+          <li>Ensure you are logged into a GUI environment.</li>
+          <li>Open a terminal.</li>
+        <li>Enter the following command:<codeblock># virt-viewer tempest</codeblock><note>If you are connected to the Foreman server using a Windows system, you need to install <b>Xwin Server</b> before executing <cmdname>virt-viewer tempest</cmdname>.</note></li>
+      </ol><p>A console for the Tempest virtual machine will open.
+        After the virtual machine completes the installation, it will power itself off.</p></li>
+      <li>You can view the power state of the virtual machine by entering the following command:<codeblock># virsh list --all</codeblock><p>You will see output similar to the following:</p><codeblock>Id    Name                           State
+ ----------------------------------------------------
+ 2     tempest                        running</codeblock></li>
+      <li>You can start the virtual machine by entering the following command:<codeblock># virsh start tempest</codeblock></li>
+    </ol>
+  </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="high_level_network_architecture">
+  <title>High-level Network Architecture</title>
+  <body>
+    <p>All servers in the cluster are tied together using TCP/IP networks. These networks form a data interconnect across which individual servers pass data back and forth, return query results, and load/unload data. These networks are also used for management and interfaces to an existing corporate network.</p>
+    <p>A combination of network switches and Layer 2 vLANs are used to segregate traffic in the
+      cluster. Network interface bonding is used to provide higher performance for selected
+      networks. A high level overview of the network organization is provided in <xref
+        href="#high_level_network_architecture/cluster_networking" format="dita"/>.</p>
+    <p>The administration node manages all of the cluster nodes. It provides all of the UNIX-level network management and network services required for the cluster. Management of HDFS and other Hadoop services is performed by Cloudera Manager, and is usually installed on the administration node. The administration node will usually provide the following services:</p>
+    <ul>
+      <li>DHCP server — assigns and manages IPs for the compute and storage nodes</li>
+      <li>NTP server (Network Time Protocol server) — makes sure all nodes are keeping the same
+        time</li>
+      <li>DNS server — manages the name resolution for the nodes and can be configured to provide
+        external name forwarding</li>
+    </ul>
+    <fig id="cluster_networking">      
+      <title>Dell | Cloudera Solution Cluster Networking</title>
+      <image href="../../Customization/OpenTopic/common/artwork/cluster_network_fabric_architecture.png" align="left"/>
+    </fig>
+  </body>
+</topic>

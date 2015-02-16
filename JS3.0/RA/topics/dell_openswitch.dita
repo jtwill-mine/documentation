@@ -4,7 +4,10 @@
   <title>Dell OpenSwitch Solution</title>
   <shortdesc>In addition to the Dell switch-based Reference Architecture, Dell provides an open standard that enables you to choose other brands and configurations of switches for your OpenStack environment.</shortdesc>
   <body>
-    <p>You are expected to ensure that the switches conform to these requirements, and that they are configured according this reference architecture’s guidelines. The following list of requirements will enable other brands of switches to properly operate with Dell's required tools and configurations:</p>
+    <p>You are expected to ensure that the switches conform to these requirements, and that they are
+      configured according to this reference architecture’s guidelines. The following list of
+      requirements will enable other brands of switches to properly operate with Dell's required
+      tools and configurations:</p>
     <ul>
       <li>Support for IEEE 802.1Q vLAN traffic and port tagging</li>
       <li>Support using one untagged and multiple tagged vLANs on the same port</li>

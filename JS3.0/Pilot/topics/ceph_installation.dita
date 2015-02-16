@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ceph_installation">
+  <title>Ceph Installation</title>
+  <shortdesc>This section discusses Ceph installation. Topics include:</shortdesc>
+  <body>
+    <ul>
+      <li><xref href="ceph_requirements.dita#ceph_requirements"/></li>
+      <li><xref href="ceph_config_goal.dita#ceph_config_goal"/></li>
+      <li><xref href="deploy_ice_calamari_server.dita#deploy_ice_calamari_server"/></li>
+      <li><xref href="ceph_mon_config_process.dita#ceph_mon_config_process"/></li>
+      <li><xref href="ceph_osd_config_process.dita#ceph_osd_config_process"/></li>
+      <li><xref
+          href="connecting_ceph_hosts_to_calamari_server.dita#connecting_ceph_hosts_to_calamari_server"
+        /></li>
+    </ul>
+  </body>
+</topic>

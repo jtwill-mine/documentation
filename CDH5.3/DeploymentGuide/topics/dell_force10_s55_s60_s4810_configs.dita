@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dell_force10_s55_s60_s4810_configs">
+  <title>Configuring the Dell Force 10 S55/S60/S4810</title>
+  <shortdesc>Follow the steps outlined to setup your network.</shortdesc>
+  <body>
+    <ol>
+      <li>Create a planning spreadsheet that identifies each port on each switch, how they are
+        connected to the servers and what vLANs need to be tagged or untagged.<ol id="ol_gy4_2hp_yq">
+          <li>Using your planning sheet and vLAN information, mark which vLAN is either untagged or
+            tagged, for each connected port. Not all vLANs will be used on each port.</li>
+        </ol></li>
+      <li>Using the planning spreadsheet you can now create your configuration:<ol
+          id="ol_xzh_3hp_yq">
+        <li>Individual Port Config Example for S55 or S60<codeblock>no ip address
+portmode hybrid
+switchport
+spanning-tree rstp edge-port</codeblock></li>
+          <li>Individual Port Config example for S4810<codeblock>no ip address
+portmode hybrid
+switchport
+flowcontrol rx on tx off
+spanning-tree rstp edge-port</codeblock></li>
+          <li>Configuring vLANs. With option “portmode hybrid” on each port, you can program one
+            vLAN to be untagged and other vLANs as tagged. This will send all untagged traffic to
+            the vLAN that is marked untagged. For example, DHCP Request will be placed on that vLAN,
+            and a DHCP server listening on that vLAN will be able to respond.<p>Example vLAN config
+              with overlapping tagged and untagged
+              ports:<codeblock>Int vlan 100
+no ip address
+! From your Spread Sheet
+tagged TenGigabitEthernet 0/1 - 47
+untagged TenGigabitEthernet 0/0
+!
+int vlan 200
+tagged TenGigabitEthernet 0/0-47
+int vlan 300
+untagged TenGigabitEther 0/1-10
+!
+!
+int vlan 300
+tagged TenGigabitEthernet 0/0-47
+int vlan 300
+untagged TenGigabitEther 0/1-10
+!</codeblock></p></li>
+          <li>General switch options for the S55/S60 and
+            S4810:<codeblock>!
+hostname YOUR_HOSTNAME
+!
+username Tome password 7 MYpassword 1 privilege 15
+!
+protocol spanning-tree rstp
+no disable
+hello-time 1
+max-age 6
+forward-delay 4
+bridge-priority 16384 ! no ip telnet server enable
+!
+arp learn-enable
+!
+clock timezone EST -5
+!
+ip ssh server enable
+!
+protocol lldp
+advertise dot1-tlv port-protocol-vlan-id
+advertise dot3-tlv max-frame-size
+advertise management-tlv system-description system-name
+advertise med
+no disable
+!
+reload-type normal-reload
+!</codeblock></li>
+          <li>Create a VLT Domain on the
+            S4810:<codeblock>!
+vlt domain 899
+peer-link port-channel 100
+primary-priority 4096
+unit-id 0
+!
+!
+interface Port-channel 100
+description Connection to VLT peer
+no ip address
+channel-member fortyGigE 0/48
+no shutdown
+!</codeblock></li>
+        </ol></li>
+    </ol>
+    <note>You do not need to add the <codeph>port-channel</codeph> or the <codeph>vlt</codeph> to a
+      vLAN. All vLANs will be used on it.</note>
+  </body>
+</topic>

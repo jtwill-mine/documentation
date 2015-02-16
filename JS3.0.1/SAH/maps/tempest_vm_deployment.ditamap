@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Tempest VM Deployment</title>
+ <topicref href="../topics/setup_tempest_deploy.dita"/>
+ <topicref href="../topics/configure_tempest_deploy.dita"/>
+ <topicref href="../topics/installing_tempest_vm.dita"/>
+ <topicref href="../topics/next_steps_tempest_deploy.dita"/>
+</map>

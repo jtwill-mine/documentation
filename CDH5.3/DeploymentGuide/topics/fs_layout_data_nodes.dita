@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="fs_layout_data_nodes">
+  <title>Data Nodes</title>
+  <shortdesc>The data nodes in the cluster are the processing and data storage nodes. When using R730xd servers we recommend that the two Flex Bay drives in the back of the chassis be configured as a mirrored pair, and used for the operating system.</shortdesc>
+  <body>
+    <p>All of the other disks attached to the system should be configured as HBA or JBOD.</p>
+    <note>This should already have been completed.</note>
+    <table frame="all" rowsep="1" colsep="1" id="table_infra_nodes_partitionsq">
+      <title>Data Nodes System Disk Partitions</title>
+      <tgroup cols="5">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Partition</entry>
+            <entry>Name</entry>
+            <entry>Size</entry>
+            <entry>File System Type</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>/dev/sdq1</entry>
+            <entry>/boot/efi </entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>EFI boot partition</entry>
+          </row>
+          <row>
+            <entry>/dev/sdq2</entry>
+            <entry>/boot </entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>Contains BIOS boot files that must be within first 2 2GB of disk</entry>
+          </row>
+          <row>
+            <entry>/dev/sdq3</entry>
+            <entry>pv.01</entry>
+            <entry>Auto</entry>
+            <entry>N/A</entry>
+            <entry>Physical volume for remaining space</entry>
+          </row>
+          <row>
+            <entry>VG</entry>
+            <entry>pv.01</entry>
+            <entry>Auto</entry>
+            <entry>N/A</entry>
+            <entry>Logical volume for file systems</entry>
+          </row>
+          <row>
+            <entry>LV_ROOT</entry>
+            <entry>/</entry>
+            <entry>100 GB</entry>
+            <entry>ext4</entry>
+            <entry>Root filesystem</entry>
+          </row>
+          <row>
+            <entry>LV_SWAP</entry>
+            <entry>&lt;swap></entry>
+            <entry>3072 MB</entry>
+            <entry>ext4</entry>
+            <entry>Operating system swap space partition</entry>
+          </row>
+          <row>
+            <entry>LV_HOME</entry>
+            <entry>/home</entry>
+            <entry>1024 MB</entry>
+            <entry>ext4</entry>
+            <entry>User home directories</entry>
+          </row>
+          <row>
+            <entry>LV_VAR</entry>
+            <entry>/var</entry>
+            <entry>Remaining space</entry>
+            <entry>ext4</entry>
+            <entry>Contains variable data like system logging files, databases, mail and printer
+              spool directories, transient and temporary files</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <table frame="all" rowsep="1" colsep="1" id="table_data_nodes_partitions">
+      <title>Data Nodes Data Disk Partitions</title>
+      <tgroup cols="5">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>Partition</entry>
+            <entry>Name</entry>
+            <entry>Size</entry>
+            <entry>File System Type</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>/dev/sda1</entry>
+            <entry>/data/1</entry>
+            <entry>All available space</entry>
+            <entry>ext4</entry>
+            <entry>Contains HDFS data</entry>
+          </row>
+          <row>
+            <entry>/dev/sdb1</entry>
+            <entry>/data/2</entry>
+            <entry>All available space</entry>
+            <entry>ext4</entry>
+            <entry>Contains HDFS data</entry>
+          </row>
+          <row>
+            <entry>/dev/sd&lt;x>/1</entry>
+            <entry>/data/&lt;n></entry>
+            <entry>All available space</entry>
+            <entry>ext4</entry>
+            <entry>Contains HDFS data</entry>
+          </row>
+          <row>
+            <entry>/dev/sdp1</entry>
+            <entry>/data/16</entry>
+            <entry>All available space</entry>
+            <entry>ext4</entry>
+            <entry>Contains HDFS data</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note>The partition layout in <xref href="#fs_layout_data_nodes/table_data_nodes_partitions"
+        format="dita"/> applies to all the data drives in all the data nodes. There will be either
+      12 or 24 data drives depending on the data node drive configuration.</note>
+  </body>
+</topic>

@@ -8,7 +8,7 @@
   </glossentry>
   <glossentry id="cdh">
     <glossterm>CDH</glossterm>
-    <glossdef>Cloudera Distribution for Hadoop</glossdef>
+    <glossdef>Cloudera Distribution for Apache Hadoop</glossdef>
   </glossentry>
   <glossentry id="clos">
     <glossterm>Clos</glossterm>
@@ -27,6 +27,10 @@
     <glossterm>EoR</glossterm>
     <glossdef>End-of-row switch/router</glossdef>
   </glossentry>
+  <glossentry id="hba">
+    <glossterm>HBA</glossterm>
+    <glossdef>Host Bus Adapter</glossdef>
+  </glossentry>
   <glossentry id="hdfs">
     <glossterm>HDFS</glossterm>
     <glossdef>Hadoop File System</glossdef>
@@ -34,6 +38,14 @@
   <glossentry id="ipmi">
     <glossterm>IPMI</glossterm>
     <glossdef>Intelligent Platform Management Interface</glossdef>
+  </glossentry>
+  <glossentry id="jbod">
+    <glossterm>JBOD</glossterm>
+    <glossdef>Just a Bunch of Disks</glossdef>
+  </glossentry>
+  <glossentry id="lag">
+    <glossterm>LAG</glossterm>
+    <glossdef>Link Aggregation Group</glossdef>
   </glossentry>
   <glossentry id="lom">
     <glossterm>LOM</glossterm>
@@ -47,13 +59,29 @@
     <glossterm>OS</glossterm>
     <glossdef>Operating system</glossdef>
   </glossentry>
+  <glossentry id="rstp">
+    <glossterm>RSTP</glossterm>
+    <glossdef>Rapid Spanning Tree Protocol</glossdef>
+  </glossentry>
   <glossentry id="siem">
     <glossterm>SIEM</glossterm>
     <glossdef>Security Information and Event Management</glossdef>
   </glossentry>
+  <glossentry id="thp">
+    <glossterm>THP</glossterm>
+    <glossdef>Transparent Huge Pages</glossdef>
+  </glossentry>
   <glossentry id="tor">
     <glossterm>ToR</glossterm>
     <glossdef>Top-of-rack switch/router</glossdef>
+  </glossentry>
+  <glossentry id="vlt">
+    <glossterm>VLT</glossterm>
+    <glossdef>Virtual Link Trunking</glossdef>
+  </glossentry>
+  <glossentry id="vrrp">
+    <glossterm>VRRP</glossterm>
+    <glossdef>Virtual Router Redundancy Protocol</glossdef>
   </glossentry>
   <glossentry id="yarn">
     <glossterm>YARN</glossterm>

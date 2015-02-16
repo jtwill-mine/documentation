@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="modifying_osd_placement_groups">
+  <title>Modifying OSD Placement Groups</title>
+  <shortdesc>The number of placement groups (PG) and placement groups for placement (PGP) may require
+    adjusting as the number of OSDs increase in the cluster, or the number of replicas change for
+    a pool.</shortdesc>
+  <body>
+    <p>The number of placement groups depends on the number of OSDs, the number of
+      replicas and is the result of the calculation (number OSD * 100) / number of replicas rounded
+      up to the nearest power of 2. In this example, there are 20 OSDs and 2 replicas with 1024
+      being the nearest power of 2.</p>
+    <p>See <xref href="http://ceph.com/docs/master/rados/operations/placement-groups/" format="html"
+        scope="external">this webpage</xref> for information on how to calculate placement
+      groups.</p>
+    <note>If the number of placement groups needs to be increased by a large amount, then the
+      change should be made in multiple steps.</note>
+    <p>For example:</p>
+    <example>For a Ceph cluster with 10 OSDs, and two replicas for each pool, the number of
+      placement groups will be calculated as (10 * 100) / 2 = 500 rounded to 512.<p>If the number of OSDs in increased to 30, then the number of placement groups will be
+        calculated as (30 * 100) / 2 = 1500 rounded to 2048</p></example>
+    <ol>
+      <li>Increase the number of placement groups for the data pool by running the following command
+        from any Ceph host with administrative rights:<codeblock>[ceph-user@ospctl1 ~]$ sudo ceph osd pool set data pg_num 2048</codeblock></li>
+      <li>Increase the number of placement groups for placement:<codeblock>[ceph-user@ospctl1 ~]$ sudo ceph osd pool set data pgp_num 2048</codeblock></li>
+    </ol>
+  </body>
+</topic>
